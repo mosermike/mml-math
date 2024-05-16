@@ -39,7 +39,7 @@ install: $(MOBJ)
 clean:
 	rm -f $(MOBJ)
 	rm -f lib/$(MDST)
-	
+
 debug: $(MDST)
 
 %.o: %.cpp
