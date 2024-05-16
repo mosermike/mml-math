@@ -12,7 +12,7 @@ CFLAGS_GDB	+= -Wall -fPIC -std=c++20 -O0 -ggdb -fstack-protector-strong
 
 MLDFLAGS = -Wl,-soname,libmml-math.so -lmml
 
-MINCLUDE += -I include
+MINCLUDE += -I include -I include/mml-math
 
 LIBRARY += -L ./
 
@@ -43,7 +43,7 @@ clean:
 debug: $(MDST)
 
 %.o: %.cpp
-	$(GCC) $(DVARS) $(INCLUDE) $(CFLAGS) -c -o $@ $<
+	$(GCC) $(DVARS) $(MINCLUDE) $(CFLAGS) -c -o $@ $<
 
 libmml-math.so: $(MOBJ)
 	$(GCC) -shared -o lib/$(MDST) $(MOBJ) $(MLDFLAGS) $(LIBRARY)

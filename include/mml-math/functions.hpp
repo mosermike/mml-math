@@ -18,10 +18,13 @@ namespace mml {
 	
 		/**
 		* @note Das alte Ergebnis zum Ergebnis addieren/subtrahieren/dividieren/multiplizieren
-		* 
+		* @param args Arguments form the shell
+		* @param double the result
+		* @param string Path to the logfile
+		* @return double Old Results
 		* @author Mike
 		*/
-		double add_oldresult(mml::shell::arg args, double result);
+		double add_oldresult(mml::shell::arg args, double result, std::string log_file);
 		
 		/**
 		 * Grad zu Radiant

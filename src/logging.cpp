@@ -17,9 +17,9 @@
 #include <string>
 #include "../include/mml-math/logging.hpp"
 
-void mml::rechner::backup_logfile(shell::arg args) {
+void mml::rechner::backup_logfile(shell::arg args, std::string logfile) {
 	
-	mml::log log(_rechner_log);
+	mml::log log(logfile);
 	log.backup(args.exist("-v","--verbose"));
 }
 
@@ -45,17 +45,17 @@ mml::string mml::rechner::delete_zeros(double result) {
 	return temp1 + temp;
 }
 
-void mml::rechner::reset_logfile(shell::arg args) {
+void mml::rechner::reset_logfile(shell::arg args, std::string logfile) {
 	
-	mml::log log(_rechner_log);
+	mml::log log(logfile);
 	
 	log.reset(args.exist("-v","--verbose"));
 }
 
 
-void mml::rechner::save_result(mml::shell::arg args, mml::string equation, double result) {
+void mml::rechner::save_result(mml::shell::arg args, mml::string equation, double result, std::string logfile) {
 	
-	mml::log log(_rechner_log);
+	mml::log log(logfile);
 	
 	equation = equation + " = " + delete_zeros(result).str();
 	if(args.exist("-k","--comment"))
@@ -64,9 +64,9 @@ void mml::rechner::save_result(mml::shell::arg args, mml::string equation, doubl
 	log << equation;
 }
 
-void mml::rechner::save_matrix(mml::shell::arg args, mml::string matrix_equation, mml::string matrix_result) {
+void mml::rechner::save_matrix(mml::shell::arg args, mml::string matrix_equation, mml::string matrix_result, std::string logfile) {
 	
-	mml::log log(_rechner_log);
+	mml::log log(logfile);
 	
 	if(args.exist("-k","--comment"))
 		matrix_result = matrix_result + "  \\\\ " + args[args.positionArg("-k","--comment") + 1].str();

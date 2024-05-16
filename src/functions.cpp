@@ -7,34 +7,6 @@
 #include "../include/mml-math/functions.hpp"
 #include "../include/mml-math/basic_operations.hpp"
 
-double mml::rechner::add_oldresult(mml::shell::arg args, double result) {
-	
-	if(mml::Unix::exist(_rechner_log) && args.findArg("-o+", "-o-", "-o*", "-o/")){
-			
-			mml::string	temp_value	= "";
-			
-			mml::log log(_rechner_log);
-			mml::string temp = log.lastline();
-			uint32_t it = 1;
-			while(temp.exist("[")) {
-				temp = log.getline_back(it);
-				it++;
-			}
-			
-			temp_value = temp.substr(temp.find("=")+2);
-
-			if(args.findArg("-o+"))
-				return result	+ temp_value.atof();
-			else if(args.findArg("-o-"))
-				return result	- temp_value.atof();
-			else if(args.findArg("-o*"))
-				return result	* temp_value.atof();
-			else if(args.findArg("-o/"))
-				return result	/ temp_value.atof();
-	}
-	
-	return result;
-}
 
 
 mml::string mml::rechner::operations(mml::shell::arg args, mml::string equation, mml::string command, uint16_t tabs) {
@@ -299,23 +271,6 @@ mml::string mml::rechner:: replace(mml::shell::arg args, mml::string equation) {
 	 * @note , durch . ersetzen
 	 */
 	equation.replace(",",".",true,0,true);
-
-	/** 
-	 * @note Alte Rechnungsergebnis verwenden
-	 */
-	if(mml::Unix::exist(_rechner_log) && (args.findArg("-o") || args.findArg("-cs","--calculations")) ){
-			
-			mml::log log(_rechner_log);
-			mml::string	temp_value	= log.lastline();
-			temp_value = temp_value.sub(temp_value.find("=") + 2, temp_value.size()-1);
-			
-			if(equation.exist("&")) {
-				while(equation.exist("&")) 
-					equation.replace("&",temp_value,true);
-			}
-		}
-	else if(equation.exist("&"))
-		mml::shell::error("[replace] & found and the missing argument -o");
 		
 	/** 
 	 * @note Variablen ersetzen

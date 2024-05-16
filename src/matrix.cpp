@@ -129,7 +129,7 @@ mml::string mml::rechner::matrix_calculation(mml::shell::arg args, mml::string m
 	// TEMP
 	//std::cout << "Matrix in Eingabeform(temporär): " << matrix << std::endl;
 	// TEMP
-	mml::rechner::save_matrix(args, matrix_l1, matrix);
+	
 	mml::rechner::matrix_print(matrix);
 	return matrix;
 }

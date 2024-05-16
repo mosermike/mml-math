@@ -14,8 +14,6 @@
 
 namespace mml {
 	namespace rechner {
-		
-		extern void save_result(shell::arg args, mml::string equation, double result);
 
 		/**
 		 * @note Addition von Werten mit Enter als Eingabe
@@ -36,35 +34,34 @@ namespace mml {
 		
 		/**
 		* @note Mehrere Berechnungen ausführen
-		* 
-		* @return double
+		* @param args Arguments from the shell
+		* @param vector Vector where all the equations are saved
+		* @return vector All the results as a double
 		* @author Mike
 		*/
-		double calculations(mml::shell::arg args);
+		std::vector<double> calculations(mml::shell::arg args, std::vector<mml::string> &equations);
+		
 		/**
 		 * @note Berechnungen ausführen für andere Programme (keine Ausgaben)
-		 * 
 		 * @return double
 		 * @author Mike
 		 */
-		double calculate_intern(string equation, bool verbose = false, bool replace = true);
+		double calculate_intern(string equation, bool verbose=false, bool replace=true);
 		
 		/**
 		 * @note Werte multiplizieren
-		 * 
 		 * @return double
 		 * @author Mike
 		 */
-		double multiply(mml::shell::arg args, mml::string, bool replace = true);
+		double multiply(mml::shell::arg args, mml::string, bool replace);
 
 
 		/**
 		* @note Werte addieren
-		* 
 		* @return double
 		* @author Mike
 		*/
-		double summation(mml::shell::arg args, mml::string equation, bool replace = true);
+		double summation(mml::shell::arg args, mml::string equation, bool replace);
 
 	}
 }

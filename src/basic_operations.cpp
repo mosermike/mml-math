@@ -3,8 +3,8 @@
 #include <fstream>
 #include <math.h>
 #include <limits>
-#include "../include/mml-math/functions.hpp"
 #include "../include/mml-math/basic_operations.hpp"
+#include "../include/mml-math/functions.hpp"
 #include <signal.h>
 
 // TODO Remove args in general
@@ -109,10 +109,9 @@ double mml::rechner::calculate(mml::shell::arg args, mml::string equation, bool 
 	std::size_t			after		= 0;
 	mml::string			temp		= "";
 
-	if(!equation.exist("+","-","*","/") && !equation.exist("^","(") && args.notArg("-o+","-o-","-o*","-o/"))
+	if(!equation.exist("+","-","*","/") && !equation.exist("^","("))
 		return equation.atof();
-	else if(!equation.exist("+","-","*","/") && !equation.exist("^","(") && args.findArg("-o+","-o-","-o*","-o/"))
-		return mml::rechner::add_oldresult(args,equation.atof());
+
 
 	// Keine Addition:
 	if(!mml::range(plus,minus))
@@ -212,20 +211,18 @@ double mml::rechner::calculate(mml::shell::arg args, mml::string equation, bool 
 	}
 	
 	result = summation(args,equation,false);
-	
-	// Altes Ergebnis hinzuaddieren
-	result = add_oldresult(args,result);
 
 	return result;
 }
 
 
-double mml::rechner::calculations(mml::shell::arg args) {
+std::vector<double> mml::rechner::calculations(mml::shell::arg args, std::vector<mml::string> &equations) {
 	
 	double					result			= 0;
 	mml::string				equation		= "";
     mml::string				equation_save	= "";
 	std::vector<double>		results;
+	
 		
 		while(1) {
 			std::cout << "Eingabe der Gleichung " + std::to_string(results.size() + 1) << ": ";
@@ -233,7 +230,7 @@ double mml::rechner::calculations(mml::shell::arg args) {
 
 			std::cin >> equation;
 			if(equation == "q")
-				return 0;
+				return results;
 			equation_save = equation;
 			// Eingabe von Strg+D:
 			if(equation == "") {
@@ -275,15 +272,16 @@ double mml::rechner::calculations(mml::shell::arg args) {
 			
 			result = mml::rechner::calculate(args,equation);
 			results.push_back(result);
+			equations.push_back(equation_save);
 			std::cout << "Result: " << result << std::endl;
 			
-            mml::rechner::save_result(args, equation_save, result);
+            //mml::rechner::save_result(args, equation_save, result);
             
 			// Strg-D abfangen:
 			equation = "";
 		}
 	
-	return result;
+	return results;
 }
 
 double mml::rechner::calculate_intern(mml::string equation, bool verbose, bool replace){
@@ -543,8 +541,6 @@ double mml::rechner::summation(mml::shell::arg args, mml::string equation, bool 
 	if(verbose)
 		std::cout << "[summation] After: " << result << std::endl;
 	
-	result = add_oldresult(args,result);
-	
 	return result;
 } 
 
@@ -615,9 +611,6 @@ double mml::rechner::multiply(mml::shell::arg args, mml::string equation, bool r
 				result /= equation.substr(i+1).atof();
 		}
 	}
-
-	// Altes Ergebnis hinzuaddieren
-	result = add_oldresult(args, result);
 	
 	if(verbose)
 		std::cout << "[multiply] After: " << result << std::endl;
