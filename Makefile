@@ -21,7 +21,7 @@ INSTALL_DIR = /usr/local/lib
 MSRC = $(wildcard src/*.cpp)
 MOBJ = $(MSRC:%.cpp=%.o)
 
-MDST = libmml-math.a
+MDST = libmml-math.so
 
 HPP = $(wildcard include/*.hpp )
 
@@ -34,11 +34,20 @@ all: $(MDST)
 
 install: $(MOBJ)
 	cp -ar include /usr/local/
-	ar rcs $(INSTALL_DIR)/$(MDST) $(MOBJ)
+	#ar rcs $(INSTALL_DIR)/$(MDST) $(MOBJ)
+	$(GCC) -shared -o $(INSTALL_DIR)/$(MDST) $(MOBJ) $(MLDFLAGS) $(LIBRARY)
+	ldconfig
 
 clean:
 	rm -f $(MOBJ)
 	rm -f lib/$(MDST)
+
+distclean:
+	rm -f $(MOBJ)
+	rm -f lib/$(MDST)
+	rm -r $(INSTALL_DIR)/$(MDST)
+	rm -f /usr/local/include/mml-math.hpp
+	rm -rf /usr/local/include/mml-math
 
 debug: $(MDST)
 

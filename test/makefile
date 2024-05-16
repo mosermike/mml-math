@@ -12,6 +12,10 @@ CFLAGS += -Wall -O2 -pipe -Weffc++ -flto=4 -std=$(std)
 
 CFLAGS_GDB = -Wall -Weffc++ -O0 -ggdb #-Werror
 
+#INCLUDE = -I/usr/local/include
+
+#LIBRARY = -L/usr/local/lib
+
 LDFLAGS = -lmml -lmml-math
 target debug   : override CFLAGS = $(CFLAGS_GDB)
 
@@ -30,7 +34,7 @@ clean:
 debug: $(DST)
 
 %.o: %.cpp
-	$(GCC) $(LDFLAGS) $(INCLUDE) $(CFLAGS) -c -o $@ $<
+	$(GCC) $(LIBRARY) $(LDFLAGS) $(INCLUDE) $(CFLAGS) -c -o $@ $<
 
 %.x: %.o
 	$(GCC) $< $(CFLAGS) $(INCLUDE) $(LIBRARY) $(LDFLAGS) -o $@
