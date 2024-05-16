@@ -16,7 +16,7 @@ MINCLUDE += -I include -I include/mml-math
 
 LIBRARY += -L ./
 
-INSTALL_DIR = /usr/local/lib
+INSTALL_DIR = /usr/lib
 
 MSRC = $(wildcard src/*.cpp)
 MOBJ = $(MSRC:%.cpp=%.o)
