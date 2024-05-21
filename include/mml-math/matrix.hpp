@@ -3,7 +3,7 @@
  * 
  * @file matrix.hpp
  * 
- * @description Enthält verschiedene Matrizenberechungen
+ * @note 
  * 
 */
 
