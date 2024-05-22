@@ -228,8 +228,7 @@ int main(int argc, char **argv) {
 			}
 			else
 				std::cout << "The determinant is " << mat.det() << "." << std::endl;
-
-			return 0;
+			// TODO save matrix
 		}
 		else if (args.findArg("-i","--inverse")) {
 			
@@ -244,7 +243,7 @@ int main(int argc, char **argv) {
 			
 			mat = mat.inverse();
 			mat.print();
-			return 0;
+			// TODO save matrix
 
 		}
 		else if (args.findArg("-tr","--transpose")) {
@@ -260,8 +259,7 @@ int main(int argc, char **argv) {
 			
 			mat = mat.transpose();
 			mat.print();
-			return 0;
-
+			// TODO save matrix
 		}
 		else {
 			matrix = mml::rechner::matrix_calculation(args, args[args.positionArg("-m","--matrix") + 1]);

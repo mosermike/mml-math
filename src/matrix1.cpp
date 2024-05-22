@@ -130,8 +130,10 @@ mml::math::matrix mml::math::matrix::inverse() {
 	
 	// Compute determinant as needed later
 	double Det = det();
-	if(Det == 0)
-		mml::shell::warn("| Matrix is singular");
+	if(Det == 0) {
+		std::cout << "[inverse] Inverse not defined. Matrix is singular (det = 0)" << std::endl;
+		return *this;
+	}
 	
 	// ===================
 	// Compute adjugate:
@@ -342,7 +344,7 @@ void mml::math::matrix::print() {
 	// Print to shell
 	for(uint32_t i = 0; i < print.size(); i++) {
 		for(uint32_t j = 0; j < print[0].size(); j++) {
-			if(mml::is_num(print[i][j][0]))
+			if(mml::is_num(print[i][j][0]) || mml::is_num(print[i][j][1]))
 				std::cout << std::stof(print[i][j]);
 			else
 				std::cout << print[i][j];
@@ -568,7 +570,7 @@ void mml::math::print_2matrix(mml::math::matrix mat1, std::string add, mml::math
 	// Print to shell
 	for(uint32_t i = 0; i < print.size(); i++) {
 		for(uint32_t j = 0; j < print[0].size(); j++) {
-			if(mml::is_num(print[i][j][0]))
+			if(mml::is_num(print[i][j][0]) || mml::is_num(print[i][j][1]))
 				std::cout << std::stof(print[i][j]);
 			else
 				std::cout << print[i][j];
@@ -760,7 +762,7 @@ void mml::math::print_3matrix(mml::math::matrix mat1, std::string add1, mml::mat
 	// Print to shell
 	for(uint32_t i = 0; i < print.size(); i++) {
 		for(uint32_t j = 0; j < print[0].size(); j++) {
-			if(mml::is_num(print[i][j][0]))
+			if(mml::is_num(print[i][j][0]) || mml::is_num(print[i][j][1]))
 				std::cout << std::stof(print[i][j]);
 			else
 				std::cout << print[i][j];

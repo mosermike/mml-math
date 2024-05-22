@@ -15,11 +15,13 @@ CFLAGS += -Wall -O2 -pipe -Weffc++ -flto=4 -std=$(std)
 
 CFLAGS_GDB = -Wall -Weffc++ -O0 -ggdb #-Werror
 
-INCLUDE += -I./include -I./src
+INCLUDE += -I../include 
 
 DST = calc.x
 
-LIBRARY = -lmml-math -lmml
+LIBRARY = -L ../lib
+
+LDFLAGS = -lmml-math -lmml
 
 INSTALL_DIR = /usr/local/bin
 
@@ -36,10 +38,11 @@ clean:
 
 
 install: $(OBJ)
-	$(GCC) $(OBJ) $(CFLAGS) $(INCLUDE) $(LIBRARY) $(LDFLAGS) -o $(INSTALL_DIR)/$(PROJECT)
+	@echo Note that the libraries libmml and libmml-math must be installed!
+	$(GCC) $(OBJ) $(CFLAGS) $(INCLUDE) $(LDFLAGS) -o $(INSTALL_DIR)/$(PROJECT)
 
 uninstall:
-	rm $(OBJ) $(ISNTALL_DIR)/$(PROJECT)
+	rm $(OBJ) $(INSTALL_DIR)/$(PROJECT)
 
 debug: $(DST)
 

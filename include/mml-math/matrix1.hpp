@@ -221,7 +221,7 @@ namespace mml {
 			 * @author Mike
 			 */
 			mml::math::matrix inverse();
-
+			
 			/**
 			 * @note Compute determinant of the matrix
 			 * 
