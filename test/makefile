@@ -19,10 +19,9 @@ LIBRARY = -L../lib
 LDFLAGS = -lmml -lmml-math
 target debug   : override CFLAGS = $(CFLAGS_GDB)
 
-DST = test1.x matrix.x
-
 SRC = $(wildcard ./src/*.cpp *.cpp )
 OBJ = $(SRC:%.cpp=%.o)
+DST =  $(SRC:%.cpp=%.x)
 
 .SECONDARY: $(OBJ) # Keep the object files
 
@@ -38,3 +37,11 @@ debug: $(DST)
 
 %.x: %.o
 	$(GCC) $< $(CFLAGS) $(INCLUDE) $(LIBRARY) $(LDFLAGS) -o $@
+
+test:
+	@for i in $(DST) ;\
+	do\
+		./$$i;\
+	done
+	
+

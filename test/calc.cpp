@@ -1,3 +1,6 @@
+/**
+ * Performing test for the calculations
+*/
 #include <mml.hpp>
 #include <mml-math.hpp>
 #include <iostream>

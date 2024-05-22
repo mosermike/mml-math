@@ -258,48 +258,99 @@ void mml::math::matrix::operator()(std::string str1) {
 
 
 void mml::math::matrix::print() {
+
+	// ===================================
+	// Determine Length of biggest numbers
+	// ===================================
+	uint32_t digit1[cols] = {0};
 	
-	// Find length of biggest number
-	uint32_t digit[cols] = {0};
 	for(uint32_t i = 0; i < cols; i++) {
 		for(uint32_t n = 0; n < rows; n++) {
-			if(mml::functions::digits(data[n][i]) > digit[i]) {
-				digit[i] = mml::functions::digits(data[n][i]);
-			}
+			if(mml::functions::digits(data[n][i]) > digit1[i])
+				digit1[i] = mml::functions::digits(data[n][i]);
 		}
 	}
-
-	// =====
-	// Print
-	// =====
 	
-	std::cout << " ╭";
-	uint32_t num_space = 0; // Number of spaces in each column
+
+	// ======================================
+	// Define dimension of the printable area
+	// ======================================	
+	// Number of spaces between brackets
+	uint32_t num_space1 = 1; // Number of spaces in each column
 	for (uint32_t i = 0; i < cols; i++)
-		num_space += digit[i]+1;
-	for (uint32_t i = 0; i < num_space; i++)
-		std::cout << " ";
-        std::cout << " ╮" << std::endl;
+		num_space1 += digit1[i]+1;
+	
+	// ===============================================
+	// Initialize vector and positions for each matrix
+	// ===============================================
+
+	// Create print area
+	std::vector<std::vector<std::string>> print = std::vector<std::vector<std::string>>(
+		rows+2,std::vector<std::string>(num_space1+2," "));
+
+	// Start and end positions of each matrix
+	std::size_t start_mat1_col = 0;
+	std::size_t start_mat1_row = rows-rows;
+	
+	std::size_t end_mat1_col = start_mat1_col + num_space1 + 2 - 1;
+	std::size_t end_mat1_row = rows+1;
+	
+	// =============
+	// Assign values
+	// =============
+	// Put brackets
+	print[start_mat1_row][start_mat1_col] = "╭";
+	
+	print[start_mat1_row][end_mat1_col] = "╮";
+	
+	print[end_mat1_row][start_mat1_col] = "╰";
+	
+	print[end_mat1_row][end_mat1_col] = "╯";
+	
+	// Assign values of first matrix
 	for(uint32_t i = 0; i < rows; i++) {
-		std::cout << " │";
+		std::size_t skips = 0;
 		
+		print[start_mat1_row+1 + i][start_mat1_col] = "│";
+
 		for(uint32_t j = 0; j < cols; j++) {
-			// Korrektur damit nicht -0 ausgegeben wird
+			// Correction for -0
 			if(data[i][j] == -0)
 				data[i][j] = 0;
+			
+			// Skip so many entries due to different numbers
+			for(uint32_t n = mml::functions::digits(data[i][j]); n <= digit1[j]; n++) {
+				skips++;
+			}
 
-			for(uint32_t n = mml::functions::digits(data[i][j]); n <= digit[j]; n++)
-				std::cout << " ";
-				
-			std::cout << data[i][j];
+			print[start_mat1_row+1 + i ][start_mat1_col+1 + j + skips] = std::to_string(data[i][j]);
 		}
-		std::cout << " │" << std::endl;	
+
+		// Delete all additional spaces between the bracket and the last number in a column
+		for(uint32_t n = end_mat1_col-2; ; n--) {
+			if(print[start_mat1_row+1 + i ][n][0] == ' ')
+				print[start_mat1_row+1 + i ][n] = "";
+			else
+				break;
+		}
+
+		print[start_mat1_row+1 +i][end_mat1_col] = "│";
 	}
-	std::cout << " ╰";
-	for (uint32_t i = 0; i < num_space; i++)
-		std::cout << " ";
-	std::cout <<  " ╯" << std::endl;
+
 	
+
+	// Print to shell
+	for(uint32_t i = 0; i < print.size(); i++) {
+		for(uint32_t j = 0; j < print[0].size(); j++) {
+			if(mml::is_num(print[i][j][0]))
+				std::cout << std::stof(print[i][j]);
+			else
+				std::cout << print[i][j];
+		}
+		std::cout << std::endl;
+	}	
+	return;
+
 }
 
 mml::math::matrix mml::math::matrix::reduce(uint32_t row, uint32_t column) {
@@ -381,8 +432,7 @@ mml::math::matrix mml::math::matrix::transpose() {
 
 
 void mml::math::print_2matrix(mml::math::matrix mat1, std::string add, mml::math::matrix mat2) {
-	// TODO for different numbers (10 100 1000) in a row for example
-	std::cout << "Needs to be checked" << std::endl;
+
 	// ===================================
 	// Determine Length of biggest numbers
 	// ===================================
@@ -455,24 +505,27 @@ void mml::math::print_2matrix(mml::math::matrix mat1, std::string add, mml::math
 		std::size_t skips = 0;
 		
 		print[start_mat1_row+1 + i][start_mat1_col] = "│";
+
 		for(uint32_t j = 0; j < mat1.cols; j++) {
 			// Correction for -0
 			if(mat1(i,j) == -0)
 				mat1(i,j) = 0;
 			
 			// Skip so many entries due to different numbers
-
 			for(uint32_t n = mml::functions::digits(mat1(i,j)); n <= digit1[j]; n++) {
 				skips++;
 			}
 
 			print[start_mat1_row+1 + i ][start_mat1_col+1 + j + skips] = std::to_string(mat1(i,j));
-				
 		}
 
-		// Shorten strings when number are bigger than 1 number
-		//for(uint32_t n = num_space1-mat1.cols-skips; n > 0; n--)
-		//		print[start_mat1_row+1+i][end_mat1_col-n] = "";
+		// Delete all additional spaces between the bracket and the last number in a column
+		for(uint32_t n = end_mat1_col-2; ; n--) {
+			if(print[start_mat1_row+1 + i ][n][0] == ' ')
+				print[start_mat1_row+1 + i ][n] = "";
+			else
+				break;
+		}
 
 		print[start_mat1_row+1 +i][end_mat1_col] = "│";
 	}
@@ -487,6 +540,7 @@ void mml::math::print_2matrix(mml::math::matrix mat1, std::string add, mml::math
 		std::size_t skips = 0;
 		
 		print[start_mat2_row+1 + i][start_mat2_col] = "│";
+
 		for(uint32_t j = 0; j < mat2.cols; j++) {
 			// Correction for -0
 			if(mat2(i,j) == -0)
@@ -497,12 +551,16 @@ void mml::math::print_2matrix(mml::math::matrix mat1, std::string add, mml::math
 			}
 			
 			print[start_mat2_row+1 + i ][start_mat2_col+1 + j + skips] = std::to_string(mat2(i,j));
-			
 		}
-		std::cout << "In row " << i << " skips:" << skips << std::endl;
-		// Shorten strings when number are bigger than 1 number
-		//for(uint32_t n = skips-mat2.cols; n > 1; n--)
-		//	print[start_mat2_row+1+i][end_mat2_col-n] = "";
+
+		// Delete all additional spaces between the bracket and the last number in a column
+		for(uint32_t n = end_mat2_col-2; ; n--) {
+			if(print[start_mat2_row+1 + i ][n][0] == ' ')
+				print[start_mat2_row+1 + i ][n] = "";
+			else
+				break;
+		}
+
 		
 		print[start_mat2_row+1 +i][end_mat2_col] = "│";
 	}
@@ -510,7 +568,7 @@ void mml::math::print_2matrix(mml::math::matrix mat1, std::string add, mml::math
 	// Print to shell
 	for(uint32_t i = 0; i < print.size(); i++) {
 		for(uint32_t j = 0; j < print[0].size(); j++) {
-			if((int) print[i][j][0] < 58 && (int) print[i][j][0] > 47)
+			if(mml::is_num(print[i][j][0]))
 				std::cout << std::stof(print[i][j]);
 			else
 				std::cout << print[i][j];
@@ -628,6 +686,14 @@ void mml::math::print_3matrix(mml::math::matrix mat1, std::string add1, mml::mat
 			print[start_mat1_row+1 + i ][start_mat1_col+1 + j + skips] = std::to_string(mat1(i,j));
 			
 		}
+		// Delete all additional spaces between the bracket and the last number in a column
+		for(uint32_t n = end_mat1_col-2; ; n--) {
+			if(print[start_mat1_row+1 + i ][n][0] == ' ')
+				print[start_mat1_row+1 + i ][n] = "";
+			else
+				break;
+		}
+
 		print[start_mat1_row+1 +i][end_mat1_col] = "│";
 	}
 
@@ -650,6 +716,13 @@ void mml::math::print_3matrix(mml::math::matrix mat1, std::string add1, mml::mat
 
 			print[start_mat2_row+1 + i ][start_mat2_col+1 + j + skips] = std::to_string(mat2(i,j));
 			
+		}
+		// Delete all additional spaces between the bracket and the last number in a column
+		for(uint32_t n = end_mat2_col-2; ; n--) {
+			if(print[start_mat2_row+1 + i ][n][0] == ' ')
+				print[start_mat2_row+1 + i ][n] = "";
+			else
+				break;
 		}
 		print[start_mat2_row+1 +i][end_mat2_col] = "│";
 	}
@@ -674,13 +747,20 @@ void mml::math::print_3matrix(mml::math::matrix mat1, std::string add1, mml::mat
 			print[start_mat3_row+1 + i ][start_mat3_col+1 + j + skips] = std::to_string(mat3(i,j));
 			
 		}
+		// Delete all additional spaces between the bracket and the last number in a column
+		for(uint32_t n = end_mat3_col-2; ; n--) {
+			if(print[start_mat3_row+1 + i ][n][0] == ' ')
+				print[start_mat3_row+1 + i ][n] = "";
+			else
+				break;
+		}
 		print[start_mat3_row+1 +i][end_mat3_col] = "│";
 	}
 
 	// Print to shell
 	for(uint32_t i = 0; i < print.size(); i++) {
 		for(uint32_t j = 0; j < print[0].size(); j++) {
-			if((int) print[i][j][0] < 58 && (int) print[i][j][0] > 47)
+			if(mml::is_num(print[i][j][0]))
 				std::cout << std::stof(print[i][j]);
 			else
 				std::cout << print[i][j];
