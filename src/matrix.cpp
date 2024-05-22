@@ -45,7 +45,7 @@ mml::string mml::rechner::matrix_calculation(mml::shell::arg args, mml::string m
 			}
 			matrix2 = matrix.sub(pos+1,pos2);
 			temp = matrix_multiply(matrix1, matrix2);
-			matrix.replace((mml::string) (matrix1.str() + "*" + matrix2.str()), mml::to_string(("[" + temp.str() + "]").c_str()), true);
+			matrix = matrix.replace((mml::string) (matrix1.str() + "*" + matrix2.str()), mml::to_string(("[" + temp.str() + "]").c_str()));
 
 			
 		} while(matrix.exist("*"));
@@ -83,7 +83,7 @@ mml::string mml::rechner::matrix_calculation(mml::shell::arg args, mml::string m
 			}
 			matrix2 = matrix.sub(pos+1,pos2);
 			temp = matrix_addition(matrix1, matrix2);
-			matrix.replace((mml::string) (matrix1.str() + "+" + matrix2.str()), mml::to_string(("[" + temp.str() + "]").c_str()), true);
+			matrix = matrix.replace((mml::string) (matrix1.str() + "+" + matrix2.str()), mml::to_string(("[" + temp.str() + "]").c_str()));
 
 			
 		} while(matrix.exist("+"));
@@ -121,7 +121,7 @@ mml::string mml::rechner::matrix_calculation(mml::shell::arg args, mml::string m
 			}
 			matrix2 = matrix.sub(pos+1,pos2);
 			temp = matrix_addition(matrix1, matrix2,'-');
-			matrix.replace((mml::string) (matrix1.str() + "-" + matrix2.str()), mml::to_string(("[" + temp.str() + "]").c_str()), true);
+			matrix = matrix.replace((mml::string) (matrix1.str() + "-" + matrix2.str()), mml::to_string(("[" + temp.str() + "]").c_str()));
 
 			
 		} while(matrix.exist("-"));

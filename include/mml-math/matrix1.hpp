@@ -12,6 +12,7 @@
 
 #include <mml.hpp>
 #include <vector>
+
 namespace mml {
 	namespace math {
 		class matrix{ 
@@ -256,110 +257,17 @@ namespace mml {
 		/**
 		 * @note Print two matrices with a string inbetween
 		 * @param matrix First Matrix
-		 * @param matrix Second Matrix
 		 * @param string String between the two matrices
+		 * @param matrix Second Matrix
+		 * @author Mike Moser
 		*/
-		/*
-		void temp_print_2matrix(mml::math::matrix mat1, mml::math::matrix mat2, std::string add) {
-			// TODO for unequal rows
-			// Anzahl Stellen der grössten Zahl bestimmen
-			uint32_t digit1[mat1.cols] = {0};
-			uint32_t digit2[mat2.cols] = {0};
-			for(uint32_t i = 0; i < mat1.cols; i++) {
-				for(uint32_t n = 0; n < mat1.rows; n++) {
-					if(mml::functions::digits(mat1(n,i)) > digit1[i])
-						digit1[i] = mml::functions::digits(mat1(n,i));
-				}
-			}
-			for(uint32_t i = 0; i < mat2.cols; i++) {
-				for(uint32_t n = 0; n < mat2.rows; n++) {
-					if(mml::functions::digits(mat2(n,i)) > digit2[i])
-						digit2[i] = mml::functions::digits(mat2(n,i));
-				}
-			}
-
-			// Actual Print Out
-			std::cout << " ╭";
-			uint32_t num_space1 = 0; // Number of spaces in each column
-			for (uint32_t i = 0; i < mat1.cols; i++)
-				num_space1 += digit1[i]+1;
-
-			for (uint32_t i = 0; i < num_space1; i++)
-				std::cout << " ";
-			std::cout << " ╮";
-
-			for (uint32_t i = 1; i < add.size(); i++)
-				std::cout << " ";
-			std::cout << " ╭";
-			uint32_t num_space2 = 0; // Number of spaces in each column
-			for (uint32_t i = 0; i < mat2.cols; i++)
-				num_space2 += digit2[i]+1;
-			for (uint32_t i = 0; i < num_space2; i++)
-				std::cout << " ";
-			std::cout << " ╮" << std::endl;
-			for(uint32_t i = 0; i < mat1.rows; i++) {
-				std::cout << " │";
-
-				// Print row of matrix 1		
-				for(uint32_t j = 0; j < mat1.cols; j++) {
-					// Korrektur damit nicht -0 ausgegeben wird
-					if(mat1(i,j) == -0)
-						mat1(i,j) = 0;
-
-					for(uint32_t n = mml::functions::digits(mat1(i,j)); n <= digit1[j]; n++)
-						std::cout << " ";
-					std::cout << mat1(i,j);
-				}
-				std::cout << " │";
-
-				if(i == mat1.rows/2)
-					std::cout << add;
-				else {
-					for(uint32_t j = 0; j < add.size(); j++)
-						std::cout << " ";
-				}
-				std::cout << "│";
-
-				// Print row of matrix 1		
-				for(uint32_t j = 0; j < mat2.cols; j++) {
-					// Korrektur damit nicht -0 ausgegeben wird
-					if(mat2(i,j) == -0)
-						mat2(i,j) = 0;
-
-					for(uint32_t n = mml::functions::digits(mat2(i,j)); n <= digit2[j]; n++)
-						std::cout << " ";
-					std::cout << mat2(i,j);
-				}
-				std::cout << " │" << std::endl;
-
-			}
-			
-			std::cout << " ╰";
-			for (uint32_t i = 0; i < num_space1; i++)
-				std::cout << " ";
-			std::cout <<  " ╯";
-			for (uint32_t i = 1; i < add.size(); i++)
-				std::cout << " ";
-			std::cout << " ╰";
-			for (uint32_t i = 0; i < num_space2; i++)
-				std::cout << " ";
-			std::cout <<  " ╯" << std::endl;
-			
-			return;
-
-		}
-		*/
-
-
-
+		void print_2matrix(mml::math::matrix mat1, std::string add, mml::math::matrix mat2);
 		/**
 		 * @note Print two matrices with a string inbetween
 		 * @param matrix First Matrix
 		 * @param matrix Second Matrix
 		 * @param string String between the two matrices
 		*/
-		void print_2matrix(mml::math::matrix mat1, mml::math::matrix mat2, std::string add);
-
 		void print_3matrix(mml::math::matrix mat1, std::string add1, mml::math::matrix mat2, std::string add2, mml::math::matrix mat3);
 	}
 	

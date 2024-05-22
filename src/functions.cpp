@@ -48,49 +48,49 @@ mml::string mml::rechner::operations(mml::shell::arg args, mml::string equation,
 					if(pos_auf_others == 0) {
 						// BEGIN Calculate all the operators and replace
 						if(command =="ln(")
-							equation.replace(equation.sub(pos_auf,j),mml::to_string(std::log(rechnung(args,equation.sub(pos_auf+command.size(),j-1),tabs+1).atof())),true, pos_auf);
+							equation = equation.replace(equation.sub(pos_auf,j),mml::to_string(std::log(rechnung(args,equation.sub(pos_auf+command.size(),j-1),tabs+1).atof())),pos_auf);
 						else if(command == "log(")
-							equation.replace(equation.sub(pos_auf,j),mml::to_string(std::log10(rechnung(args,equation.sub(pos_auf+command.size(),j-1),tabs+1).atof())),true, pos_auf);
+							equation = equation.replace(equation.sub(pos_auf,j),mml::to_string(std::log10(rechnung(args,equation.sub(pos_auf+command.size(),j-1),tabs+1).atof())),pos_auf);
 						else if(command == "log2(")
-							equation.replace(equation.sub(pos_auf,j),mml::to_string(std::log2(rechnung(args,equation.sub(pos_auf+command.size(),j-1),tabs+1).atof())),true, pos_auf);
+							equation = equation.replace(equation.sub(pos_auf,j),mml::to_string(std::log2(rechnung(args,equation.sub(pos_auf+command.size(),j-1),tabs+1).atof())), pos_auf);
 // 						else if(command == "l")
 // 							equation.replace(equation.sub(pos_auf,j),mml::to_string(std::log(rechnung(args,equation.sub(pos_auf+command.size(),j-1)).atof())),true, pos_auf);
 						else if(command == "sqrt(") {
 							temp = rechnung(args,equation.sub(pos_auf+command.size(),j-1),tabs+1).atof();
 							if(temp < 0)
 								mml::shell::warn("[sqrt] Domain error");
-							equation.replace(equation.sub(pos_auf,j),mml::to_string(std::sqrt(temp)),true, pos_auf);
+							equation = equation.replace(equation.sub(pos_auf,j),mml::to_string(std::sqrt(temp)), pos_auf);
 						}
 						else if(command == "exp(")
-							equation.replace(equation.sub(pos_auf,j),mml::to_string(std::exp(rechnung(args,equation.sub(pos_auf+command.size(),j-1),tabs+1).atof())),true, pos_auf);
+							equation = equation.replace(equation.sub(pos_auf,j),mml::to_string(std::exp(rechnung(args,equation.sub(pos_auf+command.size(),j-1),tabs+1).atof())), pos_auf);
 						else if(command == "sin(") {
 							temp = mml::rechner::rad_or_grad(args,rechnung(args,equation.sub(pos_auf+command.size(),j-1),tabs++).atof());
-							equation.replace(equation.sub(pos_auf,j),mml::to_string(std::sin(temp)),true, pos_auf);
+							equation = equation.replace(equation.sub(pos_auf,j),mml::to_string(std::sin(temp)), pos_auf);
 						}
 						else if(command == "arcsin(") {
 							temp = rechnung(args,equation.sub(pos_auf+command.size(),j-1),tabs+1).atof();
 							if (temp > 1 || temp < -1) // arcsin nur von -1 bis 1 definiert
 								mml::shell::warn("[arcsin] Domain error");
-							equation.replace(equation.sub(pos_auf,j),mml::to_string(mml::rechner::grad_or_rad(args,std::asin(temp))),true, pos_auf);
+							equation = equation.replace(equation.sub(pos_auf,j),mml::to_string(mml::rechner::grad_or_rad(args,std::asin(temp))), pos_auf);
 						}
 						else if(command == "cos(") {
 							temp = mml::rechner::rad_or_grad(args,rechnung(args,equation.sub(pos_auf+command.size(),j-1),tabs++).atof());
-							equation.replace(equation.sub(pos_auf,j),mml::to_string(std::cos(temp)),true, pos_auf);
+							equation = equation.replace(equation.sub(pos_auf,j),mml::to_string(std::cos(temp)),pos_auf);
 						}
 						else if(command == "arccos(") {
 							temp = rechnung(args,equation.sub(pos_auf+command.size(),j-1),tabs++).atof();
 							if (temp > 1 || temp < -1)
 								mml::shell::warn("[arcsin] Domain error");
-							equation.replace(equation.sub(pos_auf,j),mml::to_string(mml::rechner::grad_or_rad(args,std::acos(temp))),true, pos_auf);
+							equation = equation.replace(equation.sub(pos_auf,j),mml::to_string(mml::rechner::grad_or_rad(args,std::acos(temp))),pos_auf);
 							
 						}
 						else if(command == "tan(") {
 							temp = mml::rechner::rad_or_grad(args,rechnung(args,equation.sub(pos_auf+command.size(),j-1),tabs++).atof());
-							equation.replace(equation.sub(pos_auf,j),mml::to_string(mml::rechner::grad_or_rad(args,std::tan(temp))),true, pos_auf);
+							equation = equation = equation.replace(equation.sub(pos_auf,j),mml::to_string(mml::rechner::grad_or_rad(args,std::tan(temp))),pos_auf);
 						}
 						else if(command == "arctan(") {
 							temp = rechnung(args,equation.sub(pos_auf+command.size(),j-1),tabs++).atof();
-							equation.replace(equation.sub(pos_auf,j),mml::to_string(mml::rechner::grad_or_rad(args,std::atan(temp))),true, pos_auf);
+							equation = equation.replace(equation.sub(pos_auf,j),mml::to_string(mml::rechner::grad_or_rad(args,std::atan(temp))),pos_auf);
 						}
 						else if(command == "^(") {
 							
@@ -121,7 +121,7 @@ mml::string mml::rechner::operations(mml::shell::arg args, mml::string equation,
 														base = base*(-1);
 												}
 												// END Correctur...
-												equation.replace(equation.sub(n,pos_zu),mml::to_string(base),true, n, false); // replace base
+												equation = equation.replace(equation.sub(n,pos_zu),mml::to_string(base),n); // replace base
 												return mml::rechner::rechnung(args,equation);
 												break;
 											}
@@ -159,15 +159,15 @@ mml::string mml::rechner::operations(mml::shell::arg args, mml::string equation,
 								
 								// NOTE If in the exponent is an equation
 								if(equation.sub(pos_auf+command.size(),j-1).exist("+","-","/","*")) {
-									equation.replace(equation.sub(base_pos,j),mml::to_string(std::pow(base,mml::rechner::rechnung(args,equation.sub(pos_auf+command.size(),j-1)).atof())),true, base_pos);
+									equation = equation.replace(equation.sub(base_pos,j),mml::to_string(std::pow(base,mml::rechner::rechnung(args,equation.sub(pos_auf+command.size(),j-1)).atof())), base_pos);
 								}
 								else
-									equation.replace(equation.sub(base_pos,j),mml::to_string(std::pow(base,equation.sub(pos_auf+command.size(),j-1).atof())),true, base_pos);
+									equation = equation.replace(equation.sub(base_pos,j),mml::to_string(std::pow(base,equation.sub(pos_auf+command.size(),j-1).atof())),base_pos);
 								equation = mml::rechner::rechnung(args,equation);
  								}
 						}
 						else if(command == "(") {
-							equation = equation.replace(equation.sub(pos_auf,j),rechnung(args,equation.sub(pos_auf+1,j-1)),true, pos_auf);
+							equation = equation.replace(equation.sub(pos_auf,j),rechnung(args,equation.sub(pos_auf+1,j-1)), pos_auf);
 						}
 						else
 							mml::shell::error("[Operations] " + command.str() + " is not working or not implemented. Please contact programmer");
@@ -270,7 +270,7 @@ mml::string mml::rechner:: replace(mml::shell::arg args, mml::string equation) {
 	/**
 	 * @note , durch . ersetzen
 	 */
-	equation.replace(",",".",true,0,true);
+	equation = equation.replace(",",".");
 		
 	/** 
 	 * @note Variablen ersetzen
@@ -294,11 +294,11 @@ mml::string mml::rechner:: replace(mml::shell::arg args, mml::string equation) {
 				// Value bestimmen vor :
 				value = variables.substr(temp + 1, pos - temp - 1).str();
 				
-				equation.replace(var,value,true);
+				equation = equation.replace(var,value);
 			}
 			// kein : vorhanden, nur noch eine Variable übrig
 			else {
-				equation.replace(var, variables.substr(temp + 1), true);		// Variable durch den Wert ersetzen
+				equation = equation.replace(var, variables.substr(temp + 1));		// Variable durch den Wert ersetzen
 				break;
 			}
 			// variables kürzen
@@ -314,22 +314,24 @@ mml::string mml::rechner:: replace(mml::shell::arg args, mml::string equation) {
 	/** 
 	 * @note Physikalische Werte ersetzen
 	 */
-		equation.replace("P_c", "299792458", true);										// Lichtgeschwindigkeit
-		equation.replace("P_µ", "1.256637e-6", true);								// Magnetische Permeabilität
-		equation.replace("P_e", "1.602177e-19", true);								// Elementarladung
-		equation.replace("P_k", "1.380648e-23", true);								// Boltzmann-Konstanten
-		equation.replace("P_h", "6.626070e-34", true);								// Planksches Wirkungsquantum
-		equation.replace("P_m", "9.109384e-31", true);								// Elektronenmasse
-		equation.replace("P_G", "6.67e-11", true);									// Gravitationskonstante
-		equation.replace("P_u", "1.660539066e-27", true);							// Atomare Masseneinheit
-		equation.replace("P_NA", "6.02214076e+23", true);							// Avogadro Konstante
+		equation = equation.replace("P_c", "299792458");										// Lichtgeschwindigkeit
+		equation = equation.replace("P_µ", "1.256637e-6");								// Magnetische Permeabilität
+		equation = equation.replace("P_e", "1.602177e-19");								// Elementarladung
+		equation = equation.replace("P_k", "1.380648e-23");								// Boltzmann-Konstanten
+		equation = equation.replace("P_h", "6.626070e-34");								// Planksches Wirkungsquantum
+		equation = equation.replace("P_m", "9.109384e-31");								// Elektronenmasse
+		equation = equation.replace("P_G", "6.67e-11");									// Gravitationskonstante
+		equation = equation.replace("P_u", "1.660539066e-27");							// Atomare Masseneinheit
+		equation = equation.replace("P_NA", "6.02214076e+23");							// Avogadro Konstante
 	
 	/**
 	 * @note Mathematische Sachen ersetzen
 	 */
 		std::string pi = "3.14159265358979323846"; //std::format("{}\n", M_PI);
-		equation.replace("P_Pi",pi,"Pi",pi,true);		// PI herausfiltern und durch Wert ersetzen
-		equation.replace("pi",pi,"PI",pi,true);	// Pi herausfiltern und durch Wert ersetzen
+		equation = equation.replace("P_Pi",pi.c_str());		// PI herausfiltern und durch Wert ersetzen
+		equation = equation.replace("Pi",pi.c_str());		// PI herausfiltern und durch Wert ersetzen
+		equation = equation.replace("pi",pi.c_str());	// Pi herausfiltern und durch Wert ersetzen
+		equation = equation.replace("PI",pi.c_str());	// Pi herausfiltern und durch Wert ersetzen
 	
 	/**
 	 * @note e ersetzen
@@ -337,7 +339,7 @@ mml::string mml::rechner:: replace(mml::shell::arg args, mml::string equation) {
 		if(equation.exist("E") || equation.exist("exp")) {
 			
 			if(equation.exist("E"))
-				equation.replace("E",std::to_string(M_E),true);	// e herausfiltern und durch Wert ersetzen
+				equation = equation.replace("E",std::to_string(M_E).c_str());	// e herausfiltern und durch Wert ersetzen
 			
 			else {
 			
@@ -388,14 +390,14 @@ mml::string mml::rechner:: replace(mml::shell::arg args, mml::string equation) {
 				break;
 			
 			switch(praefix) {
-				case -12 : equation.replace("p","*0.000000000001",true)				; break;
-				case -9  : equation.replace("n","*0.000000001",true)					; break;
-				case -6  : equation.replace("µ","*" + std::to_string(pow(10,praefix)),true)	; break;
-				case -3  : equation.replace("m","*" + std::to_string(pow(10,praefix)),true)	; break;
-				case  3  : equation.replace("k","*" + std::to_string(pow(10,praefix)),true)	; break;
-				case  6  : equation.replace("M","*" + std::to_string(pow(10,praefix)),true)	; break;
-				case  9  : equation.replace("G","*" + std::to_string(pow(10,praefix)),true)	; break;
-				case  12 : equation.replace("T","*" + std::to_string(pow(10,praefix)),true)	; break;
+				case -12 : equation = equation.replace("p","*0.000000000001")				; break;
+				case -9  : equation = equation.replace("n","*0.000000001")					; break;
+				case -6  : equation = equation.replace((std::string) "µ","*" + std::to_string(pow(10,praefix)))	; break;
+				case -3  : equation = equation.replace((std::string) "m","*" + std::to_string(pow(10,praefix)))	; break;
+				case  3  : equation = equation.replace((std::string) "k","*" + std::to_string(pow(10,praefix)))	; break;
+				case  6  : equation = equation.replace((std::string) "M","*" + std::to_string(pow(10,praefix)))	; break;
+				case  9  : equation = equation.replace((std::string) "G","*" + std::to_string(pow(10,praefix)))	; break;
+				case  12 : equation = equation = equation.replace((std::string) "T","*" + std::to_string(pow(10,praefix)))	; break;
 				default  : break;
 			}
 			

@@ -211,6 +211,8 @@ void mml::math::matrix::operator()(std::string str1) {
 	}
 				
 	// Determine Number of rows == Number of [
+	rows = 0;
+	cols = 0;
 	for(uint32_t i = 1; i < str.size(); i++) {
 		if(str[i] == '[')
 			rows++;
@@ -378,9 +380,12 @@ mml::math::matrix mml::math::matrix::transpose() {
 
 
 
-void mml::math::print_2matrix(mml::math::matrix mat1, mml::math::matrix mat2, std::string add) {
-	
-	// Anzahl Stellen der grössten Zahl bestimmen
+void mml::math::print_2matrix(mml::math::matrix mat1, std::string add, mml::math::matrix mat2) {
+	// TODO for different numbers (10 100 1000) in a row for example
+	std::cout << "Needs to be checked" << std::endl;
+	// ===================================
+	// Determine Length of biggest numbers
+	// ===================================
 	uint32_t digit1[mat1.cols] = {0};
 	uint32_t digit2[mat2.cols] = {0};
 	for(uint32_t i = 0; i < mat1.cols; i++) {
@@ -395,7 +400,10 @@ void mml::math::print_2matrix(mml::math::matrix mat1, mml::math::matrix mat2, st
 				digit2[i] = mml::functions::digits(mat2(n,i));
 		}
 	}
-	
+
+	// ======================================
+	// Define dimension of the printable area
+	// ======================================	
 	// Max number of rows
 	std::size_t rows = std::max(mat1.rows,mat2.rows);
 
@@ -407,8 +415,13 @@ void mml::math::print_2matrix(mml::math::matrix mat1, mml::math::matrix mat2, st
 	for (uint32_t i = 0; i < mat2.cols; i++)
 		num_space2 += digit2[i]+1;
 
+	// ===============================================
+	// Initialize vector and positions for each matrix
+	// ===============================================
+
 	// Create print area
-	std::vector<std::vector<std::string>> print = std::vector<std::vector<std::string>>(rows+2,std::vector<std::string>(num_space1+num_space2+2+1+add.size()," "));
+	std::vector<std::vector<std::string>> print = std::vector<std::vector<std::string>>(
+		rows+2,std::vector<std::string>(num_space1+num_space2+2+1+add.size()," "));
 
 	// Start and end positions of each matrix
 	std::size_t start_mat1_col = 0;
@@ -421,6 +434,9 @@ void mml::math::print_2matrix(mml::math::matrix mat1, mml::math::matrix mat2, st
 	std::size_t end_mat2_col = start_mat2_col + num_space2;
 	std::size_t end_mat2_row = rows+1;
 
+	// =============
+	// Assign values
+	// =============
 	// Put brackets
 	print[start_mat1_row][start_mat1_col] = "╭";
 	print[start_mat2_row][start_mat2_col] = "╭";
@@ -444,15 +460,24 @@ void mml::math::print_2matrix(mml::math::matrix mat1, mml::math::matrix mat2, st
 			if(mat1(i,j) == -0)
 				mat1(i,j) = 0;
 			
-			for(uint32_t n = mml::functions::digits(mat1(i,j)); n <= digit1[j]; n++)
+			// Skip so many entries due to different numbers
+
+			for(uint32_t n = mml::functions::digits(mat1(i,j)); n <= digit1[j]; n++) {
 				skips++;
+			}
 
 			print[start_mat1_row+1 + i ][start_mat1_col+1 + j + skips] = std::to_string(mat1(i,j));
-			
+				
 		}
+
+		// Shorten strings when number are bigger than 1 number
+		//for(uint32_t n = num_space1-mat1.cols-skips; n > 0; n--)
+		//		print[start_mat1_row+1+i][end_mat1_col-n] = "";
+
 		print[start_mat1_row+1 +i][end_mat1_col] = "│";
 	}
 
+	
 
 	for(uint32_t i = 0; i < add.size(); i++ )
 		print[((int)rows/2+0.5)+1][end_mat1_col+1 + i] =  add[i];
@@ -466,13 +491,19 @@ void mml::math::print_2matrix(mml::math::matrix mat1, mml::math::matrix mat2, st
 			// Correction for -0
 			if(mat2(i,j) == -0)
 				mat2(i,j) = 0;
-			
-			for(uint32_t n = mml::functions::digits(mat2(i,j)); n <= digit2[j]; n++)
-				skips++;
 
+			for(uint32_t n = mml::functions::digits(mat2(i,j)); n <= digit2[j]; n++) {
+				skips++;
+			}
+			
 			print[start_mat2_row+1 + i ][start_mat2_col+1 + j + skips] = std::to_string(mat2(i,j));
 			
 		}
+		std::cout << "In row " << i << " skips:" << skips << std::endl;
+		// Shorten strings when number are bigger than 1 number
+		//for(uint32_t n = skips-mat2.cols; n > 1; n--)
+		//	print[start_mat2_row+1+i][end_mat2_col-n] = "";
+		
 		print[start_mat2_row+1 +i][end_mat2_col] = "│";
 	}
 
@@ -491,10 +522,10 @@ void mml::math::print_2matrix(mml::math::matrix mat1, mml::math::matrix mat2, st
 }
 
 void mml::math::print_3matrix(mml::math::matrix mat1, std::string add1, mml::math::matrix mat2, std::string add2, mml::math::matrix mat3) {
-	std::cout << "Not properly tested" << std::endl;
-	return;
 
-	// Anzahl Stellen der grössten Zahl bestimmen
+	// ===================================
+	// Determine Length of biggest numbers
+	// ===================================
 	uint32_t digit1[mat1.cols] = {0};
 	uint32_t digit2[mat2.cols] = {0};
 	uint32_t digit3[mat3.cols] = {0};
@@ -520,6 +551,10 @@ void mml::math::print_3matrix(mml::math::matrix mat1, std::string add1, mml::mat
 		}
 	}
 	
+	// ======================================
+	// Define dimension of the printable area
+	// ======================================
+
 	// Max number of rows
 	std::size_t rows = std::max(mat1.rows,std::max(mat2.rows,mat3.rows));
 
@@ -534,7 +569,11 @@ void mml::math::print_3matrix(mml::math::matrix mat1, std::string add1, mml::mat
 	for (uint32_t i = 0; i < mat3.cols; i++)
 		num_space3 += digit3[i]+1;
 
-	// Create print area
+	// ===============================================
+	// Initialize vector and positions for each matrix
+	// ===============================================
+	
+	// Initialize vector
 	std::vector<std::vector<std::string>> print = std::vector<std::vector<std::string>>(rows+2,std::vector<std::string>(num_space1+num_space2+num_space3+2+2+add1.size()+add2.size()," "));
 
 	// Start and end positions of each matrix
@@ -553,6 +592,9 @@ void mml::math::print_3matrix(mml::math::matrix mat1, std::string add1, mml::mat
 	std::size_t end_mat3_col = start_mat3_col + num_space3;
 	std::size_t end_mat3_row = rows+1;
 
+	// =============
+	// Assign values
+	// =============
  	// Put brackets
 	print[start_mat1_row][start_mat1_col] = "╭";
 	print[start_mat2_row][start_mat2_col] = "╭";
@@ -589,7 +631,7 @@ void mml::math::print_3matrix(mml::math::matrix mat1, std::string add1, mml::mat
 		print[start_mat1_row+1 +i][end_mat1_col] = "│";
 	}
 
-
+	// Add the additional string
 	for(uint32_t i = 0; i < add1.size(); i++ )
 		print[((int)rows/2+0.5)+1][end_mat1_col+1 + i] =  add1[i];
 
@@ -612,6 +654,7 @@ void mml::math::print_3matrix(mml::math::matrix mat1, std::string add1, mml::mat
 		print[start_mat2_row+1 +i][end_mat2_col] = "│";
 	}
 
+	// Add the additional string
 	for(uint32_t i = 0; i < add2.size(); i++ )
 		print[((int)rows/2+0.5)+1][end_mat2_col+1 + i] =  add2[i];
 

@@ -263,7 +263,7 @@ std::vector<double> mml::rechner::calculations(mml::shell::arg args, std::vector
 						}
 					}
 					
-					equation.replace("r" + mml::to_string(temp).str(), mml::to_string(results[temp - 1]),true);
+					equation = equation.replace("r" + mml::to_string(temp).str(), std::to_string(results[temp - 1]));
 					
 					pos = equation.find("r");
 				} while(mml::range(pos));

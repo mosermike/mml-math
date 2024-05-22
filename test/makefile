@@ -12,14 +12,14 @@ CFLAGS += -Wall -O2 -pipe -Weffc++ -flto=4 -std=$(std)
 
 CFLAGS_GDB = -Wall -Weffc++ -O0 -ggdb #-Werror
 
-#INCLUDE = -I/usr/local/include
+INCLUDE = -I../include
 
-#LIBRARY = -L/usr/local/lib
+LIBRARY = -L../lib
 
 LDFLAGS = -lmml -lmml-math
 target debug   : override CFLAGS = $(CFLAGS_GDB)
 
-DST = test1.x
+DST = test1.x matrix.x
 
 SRC = $(wildcard ./src/*.cpp *.cpp )
 OBJ = $(SRC:%.cpp=%.o)
