@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="logging_8cpp" kind="file" language="C++">
+    <compoundname>logging.cpp</compoundname>
+    <includes local="no">mml.hpp</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">string</includes>
+    <includes refid="logging_8hpp" local="yes">../include/mml-math/logging.hpp</includes>
+    <incdepgraph>
+      <node id="5">
+        <label>../include/mml-math/logging.hpp</label>
+        <link refid="logging_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>mml.hpp</label>
+      </node>
+      <node id="4">
+        <label>string</label>
+      </node>
+      <node id="1">
+        <label>src/logging.cpp</label>
+        <link refid="logging_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>: <simplesect kind="author"><para>Mike Moser : </para>
+</simplesect>
+<simplesect kind="date"><para>07.03.2020 : : : : Beschreibung: : Logging Informationen : : : : </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;mml.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../include/mml-math/logging.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1_1rechner_1ae12dc270ab8df302b28cb23db2ca5cba" kindref="member">mml::rechner::backup_logfile</ref>(shell::arg<sp/>args,<sp/>std::string<sp/>logfile)<sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>mml::log<sp/>log(logfile);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>log.backup(args.exist(</highlight><highlight class="stringliteral">&quot;-v&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;--verbose&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">mml::string<sp/><ref refid="namespacemml_1_1rechner_1a649dd4cd86801d2c6b36580041636a45" kindref="member">mml::rechner::delete_zeros</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>result)<sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>mml::string<sp/><sp/><sp/><sp/><sp/>result_str<sp/><sp/>=<sp/>mml::to_string(result);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>mml::string<sp/><sp/><sp/><sp/><sp/>temp<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>result_str.substr(result_str.find(</highlight><highlight class="charliteral">&apos;.&apos;</highlight><highlight class="normal">)+1);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>mml::string<sp/><sp/><sp/><sp/><sp/>temp1<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>result_str.substr(0,result_str.find(</highlight><highlight class="charliteral">&apos;.&apos;</highlight><highlight class="normal">)+1);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>std::size_t<sp/><sp/><sp/><sp/><sp/>length<sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>temp.size();</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>comma<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//<sp/>only<sp/>delete<sp/>zeros<sp/>after<sp/>the<sp/>comma<sp/>not<sp/>before</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(uint32_t<sp/>i<sp/>=<sp/>length<sp/>-<sp/>1;<sp/>i<sp/>&gt;<sp/>0;<sp/>i--)<sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(temp[i]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;.&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>comma<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!comma)</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(temp[i]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;0&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp<sp/>=<sp/>temp.substr(0,temp.size()<sp/>-<sp/>1);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>temp1<sp/>+<sp/>temp;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1_1rechner_1ad780938d04a50376b2275f9ecb60348f" kindref="member">mml::rechner::reset_logfile</ref>(shell::arg<sp/>args,<sp/>std::string<sp/>logfile)<sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>mml::log<sp/>log(logfile);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>log.reset(args.exist(</highlight><highlight class="stringliteral">&quot;-v&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;--verbose&quot;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1_1rechner_1a1d6654f4dd0e7291ab5862dacb8b9a94" kindref="member">mml::rechner::save_result</ref>(mml::shell::arg<sp/>args,<sp/>mml::string<sp/>equation,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>result,<sp/>std::string<sp/>logfile)<sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>mml::log<sp/>log(logfile);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>equation<sp/>=<sp/>equation<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>=<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/><ref refid="namespacemml_1_1rechner_1a649dd4cd86801d2c6b36580041636a45" kindref="member">delete_zeros</ref>(result).str();</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(args.exist(</highlight><highlight class="stringliteral">&quot;-k&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;--comment&quot;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>equation<sp/>=<sp/>equation<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/>\\\\<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>args[args.positionArg(</highlight><highlight class="stringliteral">&quot;-k&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;--comment&quot;</highlight><highlight class="normal">)<sp/>+<sp/>1].str();</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>log<sp/>&lt;&lt;<sp/>equation;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1_1rechner_1a96b844e16c756f7599cf5c7674c15a5e" kindref="member">mml::rechner::save_matrix</ref>(mml::shell::arg<sp/>args,<sp/>mml::string<sp/>matrix_equation,<sp/>mml::string<sp/>matrix_result,<sp/>std::string<sp/>logfile)<sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>mml::log<sp/>log(logfile);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(args.exist(</highlight><highlight class="stringliteral">&quot;-k&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;--comment&quot;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>matrix_result<sp/>=<sp/>matrix_result<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/>\\\\<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>args[args.positionArg(</highlight><highlight class="stringliteral">&quot;-k&quot;</highlight><highlight class="normal">,</highlight><highlight class="stringliteral">&quot;--comment&quot;</highlight><highlight class="normal">)<sp/>+<sp/>1].str();</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>log<sp/>&lt;&lt;<sp/>matrix_equation<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>=<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>matrix_result.str();</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/logging.cpp"/>
+  </compounddef>
+</doxygen>

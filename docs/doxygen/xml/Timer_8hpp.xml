@@ -1,0 +1,186 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="Timer_8hpp" kind="file" language="C++">
+    <compoundname>Timer.hpp</compoundname>
+    <includes local="no">chrono</includes>
+    <includes local="no">cstdint</includes>
+    <includedby refid="mml_8hpp" local="yes">include/mml.hpp</includedby>
+    <includedby refid="Timer_8cpp" local="yes">src/Timer.cpp</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>cstdint</label>
+      </node>
+      <node id="2">
+        <label>chrono</label>
+      </node>
+      <node id="1">
+        <label>include/mml/Timer.hpp</label>
+        <link refid="Timer_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>include/mml.hpp</label>
+        <link refid="mml_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>src/Timer.cpp</label>
+        <link refid="Timer_8cpp"/>
+      </node>
+      <node id="4">
+        <label>src/help.cpp</label>
+        <link refid="help_8cpp"/>
+      </node>
+      <node id="9">
+        <label>test/test2.cpp</label>
+        <link refid="test2_8cpp"/>
+      </node>
+      <node id="7">
+        <label>src/Unix.cpp</label>
+        <link refid="Unix_8cpp"/>
+      </node>
+      <node id="8">
+        <label>test/test1.cpp</label>
+        <link refid="test1_8cpp"/>
+      </node>
+      <node id="5">
+        <label>src/shell.cpp</label>
+        <link refid="shell_8cpp"/>
+      </node>
+      <node id="1">
+        <label>include/mml/Timer.hpp</label>
+        <link refid="Timer_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>src/file.cpp</label>
+        <link refid="file_8cpp"/>
+      </node>
+      <node id="6">
+        <label>src/Thread.cpp</label>
+        <link refid="Thread_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classmml_1_1Timer" prot="public">mml::Timer</innerclass>
+    <innernamespace refid="namespacemml">mml</innernamespace>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="Timer_8hpp_1a8c64f1849169fec46f30321ccbbf9848" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(mml::Timer &amp;t, std::ostream &amp;os)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type><ref refid="classmml_1_1Timer" kindref="compound">mml::Timer</ref> &amp;</type>
+          <declname>t</declname>
+        </param>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/Timer.hpp" line="132" column="1" bodyfile="src/Timer.cpp" bodystart="164" bodyend="168" declfile="include/mml/Timer.hpp" declline="132" declcolumn="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Lucas, Mike</para>
+</simplesect>
+<simplesect kind="note"><para>Enthält verschiedene Timerfunktionen </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MML_INCLUDE_MML_TIMER_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MML_INCLUDE_MML_TIMER_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;chrono&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacemml" kindref="compound">mml</ref><sp/>{</highlight></codeline>
+<codeline lineno="20" refid="classmml_1_1Timer" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classmml_1_1Timer" kindref="compound">Timer</ref><sp/>{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::chrono::high_resolution_clock::time_point<sp/>ticksStart;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::chrono::high_resolution_clock::time_point<sp/>ticksEnd;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::chrono::high_resolution_clock::time_point<sp/>ticksZwischenstart;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::chrono::high_resolution_clock::time_point<sp/>_now()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>noexcept;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>break_time_mus<sp/>=<sp/>0.0;<sp/></highlight><highlight class="comment">//<sp/>µs</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="36" refid="classmml_1_1Timer_1a8388437a554236e800ef35d37ceba950" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmml_1_1Timer_1a8388437a554236e800ef35d37ceba950" kindref="member">Timer</ref>()<sp/></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>ticksStart(_now()),<sp/>ticksEnd(),<sp/>ticksZwischenstart()</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="classmml_1_1Timer_1abe0acc0023a0116c764232929c0adcb2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmml_1_1Timer_1abe0acc0023a0116c764232929c0adcb2" kindref="member">Timer</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1Timer" kindref="compound">Timer</ref>&amp;<sp/>t)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/>ticksStart(t.ticksStart),<sp/>ticksEnd(t.ticksEnd),<sp/>ticksZwischenstart()</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="classmml_1_1Timer_1ad28f8000cda033d3eb7dadab5554a9b5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmml_1_1Timer_1ad28f8000cda033d3eb7dadab5554a9b5" kindref="member">~Timer</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Timer()<sp/>:<sp/>ticksStart(),<sp/>ticksEnd(),<sp/>ticksZwischenstart(),<sp/>break_time_mus()<sp/>{};</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Timer(const<sp/>Timer&amp;<sp/>t);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//~Timer();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1Timer_1ad95a6cccf71bdcb1753affecb16ec19b" kindref="member">break_start</ref>();</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1Timer_1a13ab728d658a504ce2e39d47ff06a230" kindref="member">break_stop</ref>();</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1Timer_1a33c476f593ac89d840660a4bdddf7828" kindref="member">cout</ref>(std::string<sp/>text<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>format_print<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>newline<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1Timer_1a5be128b48dd7e5ccd73935b5d9cb639b" kindref="member">start</ref>()<sp/>noexcept;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1Timer_1aa33d1da476db3f9e46796f5875a8346b" kindref="member">stop</ref>()<sp/>noexcept;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint64_t<sp/><ref refid="classmml_1_1Timer_1acbc5feb01146cf9067c08c52991300d4" kindref="member">getUS</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1Timer_1aa33d1da476db3f9e46796f5875a8346b" kindref="member">stop</ref><sp/>=<sp/>true)<sp/>noexcept;</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1Timer_1a7ab3c31ff55f77a5fb16740df5d056c1" kindref="member">getMS</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1Timer_1aa33d1da476db3f9e46796f5875a8346b" kindref="member">stop</ref><sp/>=<sp/>true)<sp/>noexcept;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1Timer_1a5138fe5353603b4fd5d12dfa5e0f6a22" kindref="member">getS</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1Timer_1aa33d1da476db3f9e46796f5875a8346b" kindref="member">stop</ref><sp/>=<sp/>true)<sp/>noexcept;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1Timer_1a1857a5be5649d7d640d89fa7e22763c5" kindref="member">toInt</ref>()<sp/>noexcept;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1Timer_1a72f8a2da44ec59a76ac7884e2db9352c" kindref="member">toString</ref>()<sp/>noexcept;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>struct<sp/>time;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1Timer_1aeadb046285a068a189a4359e9302ed3e" kindref="member">clock</ref>()<sp/>noexcept;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1Timer_1a901cde7e7108eb41a97da7e3835844d8" kindref="member">range</ref>()<sp/>noexcept;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="130"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal">std::ostream&amp;<sp/>operator&lt;&lt;(<ref refid="namespacemml" kindref="compound">mml</ref>::<ref refid="classmml_1_1Timer" kindref="compound">Timer</ref>&amp;<sp/>t,<sp/>std::ostream&amp;<sp/>os);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="include/mml/Timer.hpp"/>
+  </compounddef>
+</doxygen>

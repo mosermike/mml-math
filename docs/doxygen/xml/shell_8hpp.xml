@@ -1,0 +1,410 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="shell_8hpp" kind="file" language="C++">
+    <compoundname>shell.hpp</compoundname>
+    <includes local="no">iostream</includes>
+    <includes local="no">vector</includes>
+    <includes refid="vector_8hpp" local="yes">mml/vector.hpp</includes>
+    <includes refid="functions_8hpp" local="yes">mml/functions.hpp</includes>
+    <includedby refid="mml_8hpp" local="yes">include/mml.hpp</includedby>
+    <includedby refid="arg_8cpp" local="yes">src/arg.cpp</includedby>
+    <includedby refid="functions_8cpp" local="yes">src/functions.cpp</includedby>
+    <includedby refid="log_8cpp" local="yes">src/log.cpp</includedby>
+    <includedby refid="shell_8cpp" local="yes">src/shell.cpp</includedby>
+    <includedby refid="string_8cpp" local="yes">src/string.cpp</includedby>
+    <incdepgraph>
+      <node id="13">
+        <label>mml/log.hpp</label>
+        <link refid="log_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>float.h</label>
+      </node>
+      <node id="5">
+        <label>string</label>
+      </node>
+      <node id="11">
+        <label>mml/definitions.hpp</label>
+        <link refid="definitions_8hpp"/>
+      </node>
+      <node id="14">
+        <label>fstream</label>
+      </node>
+      <node id="9">
+        <label>random</label>
+      </node>
+      <node id="8">
+        <label>string.h</label>
+      </node>
+      <node id="3">
+        <label>vector</label>
+      </node>
+      <node id="4">
+        <label>mml/vector.hpp</label>
+        <link refid="vector_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>sstream</label>
+      </node>
+      <node id="6">
+        <label>mml/standards.hpp</label>
+        <link refid="standards_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>include/mml/shell.hpp</label>
+        <link refid="shell_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>iostream</label>
+      </node>
+      <node id="15">
+        <label>mml/functions.hpp</label>
+        <link refid="functions_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>algorithm</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="11">
+        <label>src/functions.cpp</label>
+        <link refid="functions_8cpp"/>
+      </node>
+      <node id="2">
+        <label>include/mml.hpp</label>
+        <link refid="mml_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>src/string.cpp</label>
+        <link refid="string_8cpp"/>
+      </node>
+      <node id="12">
+        <label>src/log.cpp</label>
+        <link refid="log_8cpp"/>
+      </node>
+      <node id="4">
+        <label>src/help.cpp</label>
+        <link refid="help_8cpp"/>
+      </node>
+      <node id="9">
+        <label>test/test2.cpp</label>
+        <link refid="test2_8cpp"/>
+      </node>
+      <node id="7">
+        <label>src/Unix.cpp</label>
+        <link refid="Unix_8cpp"/>
+      </node>
+      <node id="8">
+        <label>test/test1.cpp</label>
+        <link refid="test1_8cpp"/>
+      </node>
+      <node id="1">
+        <label>include/mml/shell.hpp</label>
+        <link refid="shell_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>src/arg.cpp</label>
+        <link refid="arg_8cpp"/>
+      </node>
+      <node id="5">
+        <label>src/shell.cpp</label>
+        <link refid="shell_8cpp"/>
+      </node>
+      <node id="3">
+        <label>src/file.cpp</label>
+        <link refid="file_8cpp"/>
+      </node>
+      <node id="6">
+        <label>src/Thread.cpp</label>
+        <link refid="Thread_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classmml_1_1shell_1_1arg" prot="public">mml::shell::arg</innerclass>
+    <innernamespace refid="namespacemml">mml</innernamespace>
+    <innernamespace refid="namespacemml_1_1shell">mml::shell</innernamespace>
+    <innernamespace refid="namespacemml_1_1functions">mml::functions</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MML_INCLUDE_MML_SHELL_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MML_INCLUDE_MML_SHELL_HPP<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="vector_8hpp" kindref="compound">mml/vector.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="functions_8hpp" kindref="compound">mml/functions.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacemml" kindref="compound">mml</ref>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//class<sp/>string;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//extern<sp/>template<sp/>class<sp/>vector&lt;string&gt;;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceconf_1a332f430461432dc465213f884a1e4967" kindref="member">shell</ref></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="23" refid="classmml_1_1shell_1_1arg" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classmml_1_1shell_1_1arg" kindref="compound">arg</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1vector" kindref="compound">mml::vector</ref>&lt;mml::string&gt;<sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="26" refid="classmml_1_1shell_1_1arg_1adc4d7547233ccee2ca6f20c394a4754d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1shell_1_1arg_1adc4d7547233ccee2ca6f20c394a4754d" kindref="member">argc</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="28" refid="classmml_1_1shell_1_1arg_1a46c90e04ef02da028cdbc5ba12fbe938" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**<ref refid="classmml_1_1shell_1_1arg_1a46c90e04ef02da028cdbc5ba12fbe938" kindref="member">argv</ref><sp/>=<sp/>{};</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//std::vector&lt;mml::string&gt;<sp/>vec<sp/>=<sp/>{};</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Mit<sp/>Initialisierung<sp/>eins<sp/>Vektors:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>arg(std::vector&lt;mml::string&gt;<sp/>vec_temp)<sp/>:<sp/><sp/>vec(vec_temp){}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Mit<sp/>direkter<sp/>Initialisierung<sp/>der<sp/>Argumenten:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="classmml_1_1shell_1_1arg_1a0939900c2df4f70544a8a0403e39cdb2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmml_1_1shell_1_1arg_1a0939900c2df4f70544a8a0403e39cdb2" kindref="member">arg</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc1,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**argv1,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>getarg<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/>std::string<sp/>except1<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;xxxxx&quot;</highlight><highlight class="normal">,<sp/>std::string<sp/>except2<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;xxxxx&quot;</highlight><highlight class="normal">,<sp/>std::string<sp/>except3<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;xxxxx&quot;</highlight><highlight class="normal">,<sp/>std::string<sp/>except4<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;xxxxx&quot;</highlight><highlight class="normal">,<sp/>std::string<sp/>except5<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;xxxxx&quot;</highlight><highlight class="normal">,<sp/>std::string<sp/>except6<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;xxxxx&quot;</highlight><highlight class="normal">,<sp/>std::string<sp/>except7<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;xxxxx&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmml_1_1shell_1_1arg_1adc4d7547233ccee2ca6f20c394a4754d" kindref="member">argc</ref><sp/><sp/><sp/><sp/>=<sp/><sp/><sp/>argc1;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmml_1_1shell_1_1arg_1a46c90e04ef02da028cdbc5ba12fbe938" kindref="member">argv</ref><sp/><sp/><sp/><sp/>=<sp/><sp/><sp/>argv1;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;mml::string&gt;<sp/>vec_temp(<ref refid="classmml_1_1shell_1_1arg_1a46c90e04ef02da028cdbc5ba12fbe938" kindref="member">argv</ref>,<ref refid="classmml_1_1shell_1_1arg_1a46c90e04ef02da028cdbc5ba12fbe938" kindref="member">argv</ref>+<ref refid="classmml_1_1shell_1_1arg_1adc4d7547233ccee2ca6f20c394a4754d" kindref="member">argc</ref>);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmml_1_1vector_1a3b2d65ffa645eff2e56012d9e7c661e8" kindref="member">vec</ref><sp/>=<sp/>vec_temp;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(getarg)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmml_1_1shell_1_1arg_1a4aee1c5181a0cccc14c7a219a8969d85" kindref="member">getArg</ref>(except1,<sp/>except2,<sp/>except3,<sp/>except4,except5,except6,except7);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Aufruf<sp/>mml::shell::arg<sp/>arg(argc,argv);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="49" refid="classmml_1_1shell_1_1arg_1aa6622e4fe1d8757b9b5548d8c4228e7b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmml_1_1shell_1_1arg_1aa6622e4fe1d8757b9b5548d8c4228e7b" kindref="member">arg</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**argv1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc1)<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmml_1_1shell_1_1arg_1adc4d7547233ccee2ca6f20c394a4754d" kindref="member">argc</ref><sp/><sp/><sp/><sp/>=<sp/><sp/><sp/>argc1;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmml_1_1shell_1_1arg_1a46c90e04ef02da028cdbc5ba12fbe938" kindref="member">argv</ref><sp/><sp/><sp/><sp/>=<sp/><sp/><sp/>argv1;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;mml::string&gt;<sp/>vec_temp(<ref refid="classmml_1_1shell_1_1arg_1a46c90e04ef02da028cdbc5ba12fbe938" kindref="member">argv</ref>,<ref refid="classmml_1_1shell_1_1arg_1a46c90e04ef02da028cdbc5ba12fbe938" kindref="member">argv</ref>+<ref refid="classmml_1_1shell_1_1arg_1adc4d7547233ccee2ca6f20c394a4754d" kindref="member">argc</ref>);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmml_1_1vector_1a3b2d65ffa645eff2e56012d9e7c661e8" kindref="member">vec</ref><sp/>=<sp/>vec_temp;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Aufruf<sp/>mml::shell::arg<sp/>arg(argv,argc);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Mit<sp/>direkter<sp/>Wertübergabe:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="classmml_1_1shell_1_1arg_1abace6a9091a7b2ddd74c1cb5e1e73311" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmml_1_1shell_1_1arg_1abace6a9091a7b2ddd74c1cb5e1e73311" kindref="member">arg</ref>(<ref refid="classmml_1_1string" kindref="compound">mml::string</ref><sp/>a){</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmml_1_1vector_1a3b2d65ffa645eff2e56012d9e7c661e8" kindref="member">vec</ref>.push_back(a);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63" refid="classmml_1_1shell_1_1arg_1a961d8826d7d997e969554eb1f17113a3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmml_1_1shell_1_1arg_1a961d8826d7d997e969554eb1f17113a3" kindref="member">arg</ref>(<ref refid="classmml_1_1string" kindref="compound">mml::string</ref><sp/>a,<sp/><ref refid="classmml_1_1string" kindref="compound">mml::string</ref><sp/>b){</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmml_1_1vector_1a3b2d65ffa645eff2e56012d9e7c661e8" kindref="member">vec</ref>.push_back(a);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmml_1_1vector_1a3b2d65ffa645eff2e56012d9e7c661e8" kindref="member">vec</ref>.push_back(b);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="67" refid="classmml_1_1shell_1_1arg_1a442600800a4d78ca1fad60923d64ac75" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmml_1_1shell_1_1arg_1a442600800a4d78ca1fad60923d64ac75" kindref="member">arg</ref>(<ref refid="classmml_1_1string" kindref="compound">mml::string</ref><sp/>a,<sp/><ref refid="classmml_1_1string" kindref="compound">mml::string</ref><sp/>b,<sp/><ref refid="classmml_1_1string" kindref="compound">mml::string</ref><sp/>c){</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmml_1_1vector_1a3b2d65ffa645eff2e56012d9e7c661e8" kindref="member">vec</ref>.push_back(a);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmml_1_1vector_1a3b2d65ffa645eff2e56012d9e7c661e8" kindref="member">vec</ref>.push_back(b);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmml_1_1vector_1a3b2d65ffa645eff2e56012d9e7c661e8" kindref="member">vec</ref>.push_back(c);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="72" refid="classmml_1_1shell_1_1arg_1ab53c609890f3535dc7c2357513e53fb0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmml_1_1shell_1_1arg_1ab53c609890f3535dc7c2357513e53fb0" kindref="member">arg</ref>(std::vector&lt;std::string&gt;<sp/>vec_temp){</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(uint32_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>vec_temp.size();<sp/>i++)</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmml_1_1vector_1a3b2d65ffa645eff2e56012d9e7c661e8" kindref="member">vec</ref>.push_back(vec_temp[i]);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Mit<sp/>direkter<sp/>Wertübergabe:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//arg(std::vector&lt;mml::string&gt;<sp/>val)<sp/>:<sp/><sp/>arg(val){}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//arg(const<sp/>arg<sp/>&amp;val)<sp/>:<sp/><sp/>vec(val.vec){}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*arg(mml::vector&lt;mml::string&gt;<sp/>vec_temp){</highlight></codeline>
+<codeline lineno="82"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for(uint32_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>vec_temp.size();<sp/>i++)</highlight></codeline>
+<codeline lineno="83"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vec.push_back(vec_temp[i]);</highlight></codeline>
+<codeline lineno="84"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Ohne<sp/>direkte<sp/>Initialisierung:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="classmml_1_1shell_1_1arg_1af44c7cca70d975a2e084e4044032fbf4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmml_1_1shell_1_1arg_1af44c7cca70d975a2e084e4044032fbf4" kindref="member">arg</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="88" refid="classmml_1_1shell_1_1arg_1a25993080b5a2c1694d5659fa97640be7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmml_1_1shell_1_1arg_1a25993080b5a2c1694d5659fa97640be7" kindref="member">arg</ref>(<ref refid="classmml_1_1shell_1_1arg" kindref="compound">arg</ref><sp/>&amp;vec_copy)<sp/>{<ref refid="classmml_1_1vector_1a3b2d65ffa645eff2e56012d9e7c661e8" kindref="member">vec</ref><sp/>=<sp/>vec_copy.<ref refid="classmml_1_1vector_1a4526d4a08cea6b802ee229868250a7b3" kindref="member">tovec</ref>();}<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Kopierkonstruktor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>arg(const<sp/>std::vector&lt;mml::string&gt;<sp/>vec_temp)<sp/>:<sp/><sp/>vec(vec_temp){}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>arg<sp/>&amp;operator=(std::vector&lt;mml::string&gt;<sp/>vec_temp){</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;vec<sp/>=<sp/>vec_temp;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>*this;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/>//<sp/>Zuweisung<sp/>über<sp/>=<sp/>an<sp/>value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Als<sp/>Kopierkonstruktor:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="classmml_1_1shell_1_1arg_1abaed096f0d4a7151beb3cfaa447b93ab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmml_1_1shell_1_1arg" kindref="compound">arg</ref><sp/>&amp;<ref refid="classmml_1_1shell_1_1arg_1abaed096f0d4a7151beb3cfaa447b93ab" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1shell_1_1arg" kindref="compound">arg</ref><sp/>&amp;vec_temp){</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmml_1_1vector_1a3b2d65ffa645eff2e56012d9e7c661e8" kindref="member">vec</ref><sp/>=<sp/>vec_temp.<ref refid="classmml_1_1vector_1a3b2d65ffa645eff2e56012d9e7c661e8" kindref="member">vec</ref>;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Zuweisung<sp/>über<sp/>=<sp/>an<sp/>value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="103" refid="classmml_1_1shell_1_1arg_1a28fe3e99a59020810e69e619604c28eb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmml_1_1shell_1_1arg" kindref="compound">arg</ref><sp/>&amp;<ref refid="classmml_1_1shell_1_1arg_1a28fe3e99a59020810e69e619604c28eb" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;std::string&gt;<sp/>&amp;vec_temp){</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmml_1_1vector_1a3b2d65ffa645eff2e56012d9e7c661e8" kindref="member">vec</ref><sp/>=<sp/><ref refid="classmml_1_1shell_1_1arg_1acb1530a2a45ef924ff80e6e36bc75bba" kindref="member">tostr</ref>(vec_temp);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Zuweisung<sp/>über<sp/>=<sp/>an<sp/>value</highlight></codeline>
+<codeline lineno="113"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;mml::string&gt;<sp/>&amp;<ref refid="classmml_1_1shell_1_1arg_1a99936bb70b9cdd6260567670ff21df21" kindref="member">operator()</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**argv1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc1,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>getarg<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>bestimmte<sp/>Position<sp/>ausgeben</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;mml::string&gt;<sp/>&amp;<ref refid="classmml_1_1shell_1_1arg_1a99936bb70b9cdd6260567670ff21df21" kindref="member">operator()</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>argc1,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>**argv1,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>getarg<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mml::string<sp/>&amp;operator[](int<sp/>index);<sp/><sp/><sp/><sp/><sp/>//<sp/>bestimmte<sp/>Position<sp/>ausgeben</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::size_t<sp/><ref refid="classmml_1_1shell_1_1arg_1a95b8109c95d6042e03a0263ee231bac6" kindref="member">beginArg</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/><ref refid="classmml_1_1shell_1_1arg_1afa4ab834f779143f5b829b6d3593acbf" kindref="member">str</ref>);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>void<sp/>cout();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="140" refid="classmml_1_1shell_1_1arg_1a384438b63ee669b925204f135a90c990" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1shell_1_1arg_1a384438b63ee669b925204f135a90c990" kindref="member">erase</ref>(std::size_t<sp/>pos1,<sp/>std::size_t<sp/>pos2<sp/>=<sp/>0);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1shell_1_1arg_1a9ba8ad16a067d9ef576d69144ee02df2" kindref="member">exist</ref>(std::string<sp/>search);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1shell_1_1arg_1a9ba8ad16a067d9ef576d69144ee02df2" kindref="member">exist</ref>(std::string<sp/>search1,<sp/>std::string<sp/>search2);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1shell_1_1arg_1a9ba8ad16a067d9ef576d69144ee02df2" kindref="member">exist</ref>(std::string<sp/>search1,<sp/>std::string<sp/>search2,<sp/>std::string<sp/>search3);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1shell_1_1arg_1a9ba8ad16a067d9ef576d69144ee02df2" kindref="member">exist</ref>(std::string<sp/>search1,<sp/>std::string<sp/>search2,<sp/>std::string<sp/>search3,<sp/>std::string<sp/>search4);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1shell_1_1arg_1a9ba8ad16a067d9ef576d69144ee02df2" kindref="member">exist</ref>(std::size_t<sp/>pos,std::string<sp/>name);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1shell_1_1arg_1ac6061c84c6857660638221a1bf97d497" kindref="member">findArg</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/><ref refid="classmml_1_1shell_1_1arg_1afa4ab834f779143f5b829b6d3593acbf" kindref="member">str</ref>);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1shell_1_1arg_1ac6061c84c6857660638221a1bf97d497" kindref="member">findArg</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>str1,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>str2)<sp/>;</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1shell_1_1arg_1ac6061c84c6857660638221a1bf97d497" kindref="member">findArg</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>str1,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>str2,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>str3);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1shell_1_1arg_1ac6061c84c6857660638221a1bf97d497" kindref="member">findArg</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>str1,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>str2,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>str3,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>str4);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1shell_1_1arg_1a4aee1c5181a0cccc14c7a219a8969d85" kindref="member">getArg</ref>(std::string<sp/>except1<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;xxxxx&quot;</highlight><highlight class="normal">,<sp/>std::string<sp/>except2<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;xxxxx&quot;</highlight><highlight class="normal">,<sp/>std::string<sp/>except3<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;xxxxx&quot;</highlight><highlight class="normal">,<sp/>std::string<sp/>except4<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;xxxxx&quot;</highlight><highlight class="normal">,<sp/>std::string<sp/>except5<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;xxxxx&quot;</highlight><highlight class="normal">,<sp/>std::string<sp/>except6<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;xxxxx&quot;</highlight><highlight class="normal">,<sp/>std::string<sp/>excep7<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;xxxxx&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1shell_1_1arg_1a3a5ffe4ef50e17eac746e7f47eceb8cf" kindref="member">init</ref>(std::string<sp/>except1<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;xxxxx&quot;</highlight><highlight class="normal">,<sp/>std::string<sp/>except2<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;xxxxx&quot;</highlight><highlight class="normal">,<sp/>std::string<sp/>except3<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;xxxxx&quot;</highlight><highlight class="normal">,<sp/>std::string<sp/>except4<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;xxxxx&quot;</highlight><highlight class="normal">,<sp/>std::string<sp/>except5<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;xxxxx&quot;</highlight><highlight class="normal">,<sp/>std::string<sp/>except6<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;xxxxx&quot;</highlight><highlight class="normal">,<sp/>std::string<sp/>except7<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;xxxxx&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1shell_1_1arg_1afa84b2c314dc28522851c49089f9ed7b" kindref="member">notArg</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>str1);</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1shell_1_1arg_1afa84b2c314dc28522851c49089f9ed7b" kindref="member">notArg</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>str1,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>str2);</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1shell_1_1arg_1afa84b2c314dc28522851c49089f9ed7b" kindref="member">notArg</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>str1,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>str2,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>str3);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1shell_1_1arg_1afa84b2c314dc28522851c49089f9ed7b" kindref="member">notArg</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>str1,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>str2,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>str3,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>str4);</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::size_t<sp/><ref refid="classmml_1_1shell_1_1arg_1a4bc61588a188b42495d326ca18a0563c" kindref="member">positionArg</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/><ref refid="classmml_1_1shell_1_1arg_1afa4ab834f779143f5b829b6d3593acbf" kindref="member">str</ref>);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::size_t<sp/><ref refid="classmml_1_1shell_1_1arg_1a4bc61588a188b42495d326ca18a0563c" kindref="member">positionArg</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/><ref refid="classmml_1_1shell_1_1arg_1afa4ab834f779143f5b829b6d3593acbf" kindref="member">str</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>str2);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;mml::string&gt;<sp/><ref refid="classmml_1_1shell_1_1arg_1a466d76ae0d4cc5c8d4f70f5afbad8d58" kindref="member">replace</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>sign_old,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>sign_new);</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;mml::string&gt;<sp/><ref refid="classmml_1_1shell_1_1arg_1a466d76ae0d4cc5c8d4f70f5afbad8d58" kindref="member">replace</ref>(std::string<sp/>str_old,<sp/>std::string<sp/>str_new);</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1shell_1_1arg_1a6a5bb96cdd99de1ab52aadb3cba7ef56" kindref="member">sort</ref>();</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;mml::string&gt;<sp/><ref refid="classmml_1_1shell_1_1arg_1afa4ab834f779143f5b829b6d3593acbf" kindref="member">str</ref>();<sp/></highlight><highlight class="comment">//<sp/>Umwandlung<sp/>zu<sp/>string</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;std::string&gt;<sp/><ref refid="classmml_1_1shell_1_1arg_1a56ee16d9987b1fd90b4e57596f3e6edf" kindref="member">str_change</ref>();<sp/><sp/></highlight><highlight class="comment">//<sp/>Umwandlung<sp/>zu<sp/>std::string</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;mml::string&gt;<sp/><ref refid="classmml_1_1shell_1_1arg_1acb1530a2a45ef924ff80e6e36bc75bba" kindref="member">tostr</ref>(std::vector&lt;std::string&gt;<sp/>temp);<sp/><sp/></highlight><highlight class="comment">//<sp/>Umwandlung<sp/>zu<sp/>mml::string</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="241" refid="classmml_1_1shell_1_1arg_1a225c1fad4652407d495f60fddd0ce118" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmml_1_1shell_1_1arg_1a225c1fad4652407d495f60fddd0ce118" kindref="member">~arg</ref>(){<sp/>}</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="243"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1_1shell_1ab1339179fc2b533a1b07704d734a3006" kindref="member">background</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>colour);</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1_1shell_1a0f52651c4d20d63a2276d13239c00189" kindref="member">chapter</ref>(std::string<sp/>text,</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>newline<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1_1shell_1a6fdea2a309969573d0f01bf2bc832e04" kindref="member">cout</ref>(<ref refid="classmml_1_1string" kindref="compound">mml::string</ref><sp/>text,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>newline<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">,<sp/>std::string<sp/>colour<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;lightgreen&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1_1shell_1a7cc39c00b4f3c918c1380a04fbd180f5" kindref="member">error</ref>(std::string<sp/>text);</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1_1shell_1a4edbe4309f804bb4d8552b8f5734c9f6" kindref="member">formation</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>format1);</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1_1shell_1a6c84d770587829ca7dc7c8147329d139" kindref="member">letter</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>colour);</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1_1shell_1a00c8e2a2ee520b8270b9f8898906231b" kindref="member">normal</ref>();</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1_1shell_1adbd82f8c931de0e11499c651fcbbce70" kindref="member">note</ref>(std::string<sp/>text,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>newline<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//bool<sp/>findArg(const<sp/>std::vector&lt;std::basic_string&lt;char&gt;<sp/>&gt;&amp;<sp/>args,<sp/>const<sp/>std::string&amp;<sp/>str);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//bool<sp/>findArg(const<sp/>std::vector&lt;string&gt;&amp;<sp/>args,<sp/>const<sp/>std::string&amp;<sp/>str);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//bool<sp/>findArg(const<sp/>std::vector&lt;std::string&gt;&amp;<sp/>args,<sp/>const<sp/>std::string&amp;<sp/>str1,const<sp/>std::string&amp;<sp/>str2);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//bool<sp/>findArg(const<sp/>std::vector&lt;string&gt;&amp;<sp/>args,<sp/>const<sp/>std::string&amp;<sp/>str1,const<sp/>std::string&amp;<sp/>str2);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//bool<sp/>findArg(const<sp/>std::vector&lt;std::string&gt;&amp;<sp/>args,<sp/>const<sp/>std::string&amp;<sp/>str1,const<sp/>std::string&amp;<sp/>str2,<sp/>const<sp/>std::string&amp;<sp/>str3);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//bool<sp/>findArg(const<sp/>std::vector&lt;string&gt;&amp;<sp/>args,<sp/>const<sp/>std::string&amp;<sp/>str1,const<sp/>std::string&amp;<sp/>str2,<sp/>const<sp/>std::string&amp;<sp/>str3);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1_1shell_1a8b511d7cd5acf56b224558cf2ab59034" kindref="member">option</ref>(std::string<sp/><ref refid="namespacemml_1_1shell_1a0f52651c4d20d63a2276d13239c00189" kindref="member">chapter</ref>,std::string<sp/><ref refid="namespacemml_1_1shell_1a8b511d7cd5acf56b224558cf2ab59034" kindref="member">option</ref>);</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="namespacemml_1_1shell_1a1a1a82593cac384a3d698003740cd408" kindref="member">password</ref>(std::string<sp/>ausgabe,<sp/>std::string<sp/>source);</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1_1shell_1a1beda25649ea427bb646ea6be704904c" kindref="member">warn</ref>(std::string<sp/>text,</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>newline<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1_1shell_1ad39babde10f8181169d97a1600e30cb8" kindref="member">warn_opt</ref>(std::string<sp/>text,</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>newline<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="341"><highlight class="normal"></highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">functions{</highlight></codeline>
+<codeline lineno="346" refid="namespacemml_1_1functions_1aed3e32c593011593a726a6c90cf24be5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/><ref refid="classmml_1_1shell_1_1arg" kindref="compound">mml::shell::arg</ref><sp/><ref refid="namespacemml_1_1functions_1aed3e32c593011593a726a6c90cf24be5" kindref="member">vector</ref>;<sp/></highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="348"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="include/mml/shell.hpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,259 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classmml_1_1matrix_1_1matrix" kind="class" language="C++" prot="public">
+    <compoundname>mml::matrix::matrix</compoundname>
+    <includes refid="matrix1_8hpp" local="no">matrix1.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classmml_1_1matrix_1_1matrix_1a1d0d3765873259cdf59c8258de5f288a" prot="private" static="no" mutable="no">
+        <type>mml::vector&lt; mml::vector&lt; double &gt; &gt;</type>
+        <definition>mml::vector&lt;mml::vector&lt;double&gt; &gt; mml::matrix::matrix::data</definition>
+        <argsstring></argsstring>
+        <name>data</name>
+        <initializer>= {{0.0f}}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/matrix1.hpp" line="21" column="13" bodyfile="include/mml-math/matrix1.hpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classmml_1_1matrix_1_1matrix_1aa45c8044268d8f6256bf3686d0abe7f7" prot="public" static="no" mutable="no">
+        <type>std::size_t</type>
+        <definition>std::size_t mml::matrix::matrix::rows</definition>
+        <argsstring></argsstring>
+        <name>rows</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/matrix1.hpp" line="56" column="13" bodyfile="include/mml-math/matrix1.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmml_1_1matrix_1_1matrix_1a3759caffa289d8de1ab575f2afb0bd6d" prot="public" static="no" mutable="no">
+        <type>std::size_t</type>
+        <definition>std::size_t mml::matrix::matrix::cols</definition>
+        <argsstring></argsstring>
+        <name>cols</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/matrix1.hpp" line="57" column="13" bodyfile="include/mml-math/matrix1.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classmml_1_1matrix_1_1matrix_1abe56e3add9f49fc0b23b458bddc6ca19" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmml_1_1matrix_1_1matrix" kindref="compound">mml::matrix::matrix</ref></type>
+        <definition>mml::matrix::matrix mml::matrix::matrix::add</definition>
+        <argsstring>(mml::matrix::matrix matrix)</argsstring>
+        <name>add</name>
+        <param>
+          <type><ref refid="classmml_1_1matrix_1_1matrix" kindref="compound">mml::matrix::matrix</ref></type>
+          <declname>matrix</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Add a matrix from the right side </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>matrix</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Matrix which is added </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>result </para>
+</simplesect>
+<simplesect kind="author"><para>Mike Moser </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/matrix1.hpp" line="29" column="21" bodyfile="src/matrix1.cpp" bodystart="4" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1matrix_1_1matrix_1a142e0a968d8c8852eed2ce286847cb16" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmml_1_1matrix_1_1matrix" kindref="compound">mml::matrix::matrix</ref></type>
+        <definition>mml::matrix::matrix mml::matrix::matrix::multiply</definition>
+        <argsstring>(mml::matrix::matrix matrix)</argsstring>
+        <name>multiply</name>
+        <param>
+          <type><ref refid="classmml_1_1matrix_1_1matrix" kindref="compound">mml::matrix::matrix</ref></type>
+          <declname>matrix</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Multiply this matrix with another one from the right side </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>matrix</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Matrix which is multiplied </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>new matrix </para>
+</simplesect>
+<simplesect kind="author"><para>Mike Moser </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/matrix1.hpp" line="37" column="21" bodyfile="src/matrix1.cpp" bodystart="158" bodyend="183"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1matrix_1_1matrix_1a4d64cdb249f2bb11b3b58d0a9c6766b4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmml_1_1matrix_1_1matrix" kindref="compound">mml::matrix::matrix</ref></type>
+        <definition>mml::matrix::matrix mml::matrix::matrix::multiply</definition>
+        <argsstring>(double scalar)</argsstring>
+        <name>multiply</name>
+        <param>
+          <type>double</type>
+          <declname>scalar</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Multiply this matrix with a scalar </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>double</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value which is multiplied to each element </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>new matrix </para>
+</simplesect>
+<simplesect kind="author"><para>Mike Moser </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/matrix1.hpp" line="45" column="21" bodyfile="src/matrix1.cpp" bodystart="185" bodyend="200"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1matrix_1_1matrix_1af382597fba49eccaf6957956badee173" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmml_1_1matrix_1_1matrix" kindref="compound">mml::matrix::matrix</ref></type>
+        <definition>mml::matrix::matrix mml::matrix::matrix::sub</definition>
+        <argsstring>(mml::matrix::matrix matrix)</argsstring>
+        <name>sub</name>
+        <param>
+          <type><ref refid="classmml_1_1matrix_1_1matrix" kindref="compound">mml::matrix::matrix</ref></type>
+          <declname>matrix</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Subtract a matrix from the right side </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>matrix</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Matrix which is subtracted </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>result </para>
+</simplesect>
+<simplesect kind="author"><para>Mike Moser </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/matrix1.hpp" line="53" column="21"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmml_1_1matrix_1_1matrix_1adb1780f55bd9f07ab96b8eed7fd20329" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>mml::matrix::matrix::matrix</definition>
+        <argsstring>(std::size_t r, std::size_t c)</argsstring>
+        <name>matrix</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/matrix1.hpp" line="59" column="5" bodyfile="include/mml-math/matrix1.hpp" bodystart="59" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1matrix_1_1matrix_1ae53f1bd3b24e9a8ad440bc35e44f4e02" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>mml::matrix::matrix::matrix</definition>
+        <argsstring>(std::string str1)</argsstring>
+        <name>matrix</name>
+        <param>
+          <type>std::string</type>
+          <declname>str1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Initialise matrix with a string. E.g. like this: [[1,1],[1,1]] </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Values as a string </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Instance of the class with the values from the string </para>
+</simplesect>
+<simplesect kind="author"><para>Mike Moser </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/matrix1.hpp" line="69" column="1" bodyfile="include/mml-math/matrix1.hpp" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/mml-math/matrix1.hpp" line="18" column="1" bodyfile="include/mml-math/matrix1.hpp" bodystart="18" bodyend="252"/>
+    <listofallmembers>
+      <member refid="classmml_1_1matrix_1_1matrix_1abe56e3add9f49fc0b23b458bddc6ca19" prot="private" virt="non-virtual"><scope>mml::matrix::matrix</scope><name>add</name></member>
+      <member refid="classmml_1_1matrix_1_1matrix_1a3759caffa289d8de1ab575f2afb0bd6d" prot="public" virt="non-virtual"><scope>mml::matrix::matrix</scope><name>cols</name></member>
+      <member refid="classmml_1_1matrix_1_1matrix_1a1d0d3765873259cdf59c8258de5f288a" prot="private" virt="non-virtual"><scope>mml::matrix::matrix</scope><name>data</name></member>
+      <member refid="classmml_1_1matrix_1_1matrix_1adb1780f55bd9f07ab96b8eed7fd20329" prot="public" virt="non-virtual"><scope>mml::matrix::matrix</scope><name>matrix</name></member>
+      <member refid="classmml_1_1matrix_1_1matrix_1ae53f1bd3b24e9a8ad440bc35e44f4e02" prot="public" virt="non-virtual"><scope>mml::matrix::matrix</scope><name>matrix</name></member>
+      <member refid="classmml_1_1matrix_1_1matrix_1a142e0a968d8c8852eed2ce286847cb16" prot="private" virt="non-virtual"><scope>mml::matrix::matrix</scope><name>multiply</name></member>
+      <member refid="classmml_1_1matrix_1_1matrix_1a4d64cdb249f2bb11b3b58d0a9c6766b4" prot="private" virt="non-virtual"><scope>mml::matrix::matrix</scope><name>multiply</name></member>
+      <member refid="classmml_1_1matrix_1_1matrix_1aa45c8044268d8f6256bf3686d0abe7f7" prot="public" virt="non-virtual"><scope>mml::matrix::matrix</scope><name>rows</name></member>
+      <member refid="classmml_1_1matrix_1_1matrix_1af382597fba49eccaf6957956badee173" prot="private" virt="non-virtual"><scope>mml::matrix::matrix</scope><name>sub</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

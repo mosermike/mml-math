@@ -1,0 +1,343 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespacemml_1_1help" kind="namespace" language="C++">
+    <compoundname>mml::help</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacemml_1_1help_1a9dcb0812d703e4f61c7b94e1ba5b51ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::help::check_root</definition>
+        <argsstring>()</argsstring>
+        <name>check_root</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Ausgabe der jeweiligen Hilfetexte</para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/help.hpp" line="27" column="6" bodyfile="src/help.cpp" bodystart="82" bodyend="97" declfile="include/mml/help.hpp" declline="27" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1help_1af68a38a5b5edae14bb0c48e8ccad0492" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::help::cifs</definition>
+        <argsstring>()</argsstring>
+        <name>cifs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/help.hpp" line="28" column="6" bodyfile="src/help.cpp" bodystart="99" bodyend="124" declfile="include/mml/help.hpp" declline="28" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1help_1af6ff7471d95837a6e357e83e23d81146" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::help::convert</definition>
+        <argsstring>()</argsstring>
+        <name>convert</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/help.hpp" line="29" column="6" bodyfile="src/help.cpp" bodystart="126" bodyend="148" declfile="include/mml/help.hpp" declline="29" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1help_1a3978351d7301b2be83bdc46e976d030e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::help::cop</definition>
+        <argsstring>()</argsstring>
+        <name>cop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/help.hpp" line="30" column="6" bodyfile="src/help.cpp" bodystart="151" bodyend="181" declfile="include/mml/help.hpp" declline="30" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1help_1ab7c3684386d58dad93acae57b8605c2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::help::copy</definition>
+        <argsstring>()</argsstring>
+        <name>copy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/help.hpp" line="31" column="6" bodyfile="src/help.cpp" bodystart="184" bodyend="210" declfile="include/mml/help.hpp" declline="31" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1help_1ab01cf639d5ae44f4139d5861bd63ffdd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::help::farben</definition>
+        <argsstring>()</argsstring>
+        <name>farben</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/help.hpp" line="32" column="6" bodyfile="src/help.cpp" bodystart="212" bodyend="228" declfile="include/mml/help.hpp" declline="32" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1help_1a8c7b528a6fdce332a92230ac90ea003d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::help::finanzen</definition>
+        <argsstring>()</argsstring>
+        <name>finanzen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/help.hpp" line="33" column="6" bodyfile="src/help.cpp" bodystart="230" bodyend="245" declfile="include/mml/help.hpp" declline="33" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1help_1a4fa535a397a367b86af91e61c151e283" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::help::hhelp</definition>
+        <argsstring>()</argsstring>
+        <name>hhelp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/help.hpp" line="34" column="6" bodyfile="src/help.cpp" bodystart="248" bodyend="257" declfile="include/mml/help.hpp" declline="34" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1help_1aa108f1fd9a7926224fa455f94ad56bd9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::help::hhelp_commands</definition>
+        <argsstring>()</argsstring>
+        <name>hhelp_commands</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/help.hpp" line="35" column="6" bodyfile="src/help.cpp" bodystart="258" bodyend="312" declfile="include/mml/help.hpp" declline="35" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1help_1a0d3054a6b1494b5e6051238734bb8a30" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::help::R_cop</definition>
+        <argsstring>()</argsstring>
+        <name>R_cop</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/help.hpp" line="36" column="6" bodyfile="src/help.cpp" bodystart="314" bodyend="338" declfile="include/mml/help.hpp" declline="36" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1help_1a8d391a507817cbce59f1117c7364a3b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::help::R_dns_filter</definition>
+        <argsstring>()</argsstring>
+        <name>R_dns_filter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/help.hpp" line="38" column="6" bodyfile="src/help.cpp" bodystart="340" bodyend="365" declfile="include/mml/help.hpp" declline="38" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1help_1a128b2bcdce2b677d3d2ceaea60070640" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::help::rechner</definition>
+        <argsstring>()</argsstring>
+        <name>rechner</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/help.hpp" line="39" column="6" bodyfile="src/help.cpp" bodystart="367" bodyend="422" declfile="include/mml/help.hpp" declline="39" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1help_1a16ce13af175e32d8de860b816e83b6ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::help::sizeof_h</definition>
+        <argsstring>()</argsstring>
+        <name>sizeof_h</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/help.hpp" line="40" column="6" bodyfile="src/help.cpp" bodystart="424" bodyend="438" declfile="include/mml/help.hpp" declline="40" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1help_1af4841cdf2e481b424f11043dc912bbbc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::help::statistik</definition>
+        <argsstring>()</argsstring>
+        <name>statistik</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/help.hpp" line="41" column="6" bodyfile="src/help.cpp" bodystart="440" bodyend="471" declfile="include/mml/help.hpp" declline="41" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1help_1a7c4cd5cc193b9fe05c02fed824c5bccb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::help::timer</definition>
+        <argsstring>()</argsstring>
+        <name>timer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/help.hpp" line="42" column="6" bodyfile="src/help.cpp" bodystart="473" bodyend="496" declfile="include/mml/help.hpp" declline="42" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1help_1a6deeceeb5c1a37549f37f5133a17af15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::help::todos</definition>
+        <argsstring>()</argsstring>
+        <name>todos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/help.hpp" line="43" column="6" bodyfile="src/help.cpp" bodystart="498" bodyend="512" declfile="include/mml/help.hpp" declline="43" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1help_1adada0110d9f8fa7c5ba95a35a8a017d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::help::userinfo</definition>
+        <argsstring>()</argsstring>
+        <name>userinfo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/help.hpp" line="44" column="6" bodyfile="src/help.cpp" bodystart="513" bodyend="543" declfile="include/mml/help.hpp" declline="44" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1help_1afe14f31b66244bc704fcaf2d819be286" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::help::foot</definition>
+        <argsstring>(std::string version, std::string month, int year)</argsstring>
+        <name>foot</name>
+        <param>
+          <type>std::string</type>
+          <declname>version</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>month</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>year</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Ausgabe der Fußzeile mit Angabe zum Autor und Datum </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Version Number </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Month </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>year </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/help.hpp" line="53" column="6" bodyfile="src/help.cpp" bodystart="26" bodyend="31" declfile="include/mml/help.hpp" declline="53" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1help_1a9e7febbcf7bfe7817a766881fc57528d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::help::header</definition>
+        <argsstring>(std::string befehl, std::string option=&quot;&quot;)</argsstring>
+        <name>header</name>
+        <param>
+          <type>std::string</type>
+          <declname>befehl</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>option</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Ausgabe des Headers, dass nur von Variablen abhängig ist</para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/help.hpp" line="62" column="6" bodyfile="src/help.cpp" bodystart="15" bodyend="24" declfile="include/mml/help.hpp" declline="62" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1help_1acfa6f75011432c10e311874b40084544" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::help::help</definition>
+        <argsstring>(mml::string output)</argsstring>
+        <name>help</name>
+        <param>
+          <type><ref refid="classmml_1_1string" kindref="compound">mml::string</ref></type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Ausgabe in der Konsole</para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/help.hpp" line="69" column="6" bodyfile="src/help.cpp" bodystart="545" bodyend="629" declfile="include/mml/help.hpp" declline="69" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/mml/help.hpp" line="19" column="1"/>
+  </compounddef>
+</doxygen>

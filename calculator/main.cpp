@@ -46,7 +46,7 @@
 #include <fstream>
 #include <iomanip>	// setprecision
 #include <mml.hpp>
-#include <mml-math.hpp>
+#include "mml-math.hpp"
 
 #ifndef calc_log
 #define calc_log 		"./calc.log"
@@ -205,7 +205,7 @@ int main(int argc, char **argv) {
 		
 		if (args.findArg("-a","--adjugate")) {
 			
-			mml::math::matrix mat(args[args.positionArg("-m","--matrix") + 1].str());
+			mml::matrix::matrix mat(args[args.positionArg("-m","--matrix") + 1].str());
 			if(args.exist("-v","--verbose")) {
 				std::cout << "The adjugate of the matrix" << std::endl;
 				mat.print();
@@ -220,7 +220,7 @@ int main(int argc, char **argv) {
 
 		}
 		else if (args.exist("-d","--det")) {
-			mml::math::matrix mat(args[args.positionArg("-m","--matrix") + 1].str());
+			mml::matrix::matrix mat(args[args.positionArg("-m","--matrix") + 1].str());
 			if(args.exist("-v","--verbose")) {
 				std::cout << "The determinant of the matrix" << std::endl;
 				mat.print();
@@ -232,7 +232,7 @@ int main(int argc, char **argv) {
 		}
 		else if (args.findArg("-i","--inverse")) {
 			
-			mml::math::matrix mat(args[args.positionArg("-m","--matrix") + 1].str());
+			mml::matrix::matrix mat(args[args.positionArg("-m","--matrix") + 1].str());
 			if(args.exist("-v","--verbose")) {
 				std::cout << "The inverse of the matrix" << std::endl;
 				mat.print();
@@ -248,7 +248,7 @@ int main(int argc, char **argv) {
 		}
 		else if (args.findArg("-tr","--transpose")) {
 			
-			mml::math::matrix mat(args[args.positionArg("-m","--matrix") + 1].str());
+			mml::matrix::matrix mat(args[args.positionArg("-m","--matrix") + 1].str());
 			if(args.exist("-v","--verbose")) {
 				std::cout << "The transpose of the matrix" << std::endl;
 				mat.print();
@@ -262,8 +262,10 @@ int main(int argc, char **argv) {
 			// TODO save matrix
 		}
 		else {
-			matrix = mml::rechner::matrix_calculation(args, args[args.positionArg("-m","--matrix") + 1]);
-			mml::rechner::save_matrix(args, args[args.positionArg("-m","--matrix") + 1], matrix,calc_log);
+			mml::matrix::matrix res = mml::matrix::calc(args[args.positionArg("-m","--matrix") + 1]);
+			std::cout << "The result is" << std::endl;
+			res.print();
+			//mml::rechner::save_matrix(args, args[args.positionArg("-m","--matrix") + 1], matrix,calc_log);
 		}
 	}
 	else if (args.findArg("-s","--summation")){

@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="README_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>mml-math</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Dependency</highlight></codeline>
+<codeline><highlight class="normal">The<sp/>code<sp/>depends<sp/>on<sp/>the<sp/>library<sp/>mml<sp/>and<sp/>can<sp/>be<sp/>downloaded<sp/>here:</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>On<sp/>[github](https://github.com/mosermike/mml)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>On<sp/>[gitlab](https://gitlab.moser.mywire.org/moser/mml)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Installation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Usage</highlight></codeline>
+    </programlisting>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>

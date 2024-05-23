@@ -6,7 +6,9 @@
 #include <iostream>
 
 int main() {
-	std::cout << "Performing test for calculations" << std::endl;
+	std::cout << "====================================" << std::endl;
+	std::cout << "= Performing test for calculations =" << std::endl;
+	std::cout << "====================================" << std::endl;
 
 	std::cout << "------------------------------------------------------" << std::endl;
 

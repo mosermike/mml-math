@@ -1,0 +1,1105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classmml_1_1shell_1_1arg" kind="class" language="C++" prot="public">
+    <compoundname>mml::shell::arg</compoundname>
+    <basecompoundref refid="classmml_1_1vector" prot="public" virt="non-virtual">mml::vector&lt; mml::string &gt;</basecompoundref>
+    <includes refid="shell_8hpp" local="no">shell.hpp</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classmml_1_1shell_1_1arg_1adc4d7547233ccee2ca6f20c394a4754d" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mml::shell::arg::argc</definition>
+        <argsstring></argsstring>
+        <name>argc</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/shell.hpp" line="26" column="5" bodyfile="include/mml/shell.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmml_1_1shell_1_1arg_1a46c90e04ef02da028cdbc5ba12fbe938" prot="protected" static="no" mutable="no">
+        <type>char **</type>
+        <definition>char** mml::shell::arg::argv</definition>
+        <argsstring></argsstring>
+        <name>argv</name>
+        <initializer>= {}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/shell.hpp" line="28" column="6" bodyfile="include/mml/shell.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmml_1_1shell_1_1arg_1a0939900c2df4f70544a8a0403e39cdb2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>mml::shell::arg::arg</definition>
+        <argsstring>(int argc1, char **argv1, bool getarg=false, std::string except1=&quot;xxxxx&quot;, std::string except2=&quot;xxxxx&quot;, std::string except3=&quot;xxxxx&quot;, std::string except4=&quot;xxxxx&quot;, std::string except5=&quot;xxxxx&quot;, std::string except6=&quot;xxxxx&quot;, std::string except7=&quot;xxxxx&quot;)</argsstring>
+        <name>arg</name>
+        <param>
+          <type>int</type>
+          <declname>argc1</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv1</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>getarg</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>except1</declname>
+          <defval>&quot;xxxxx&quot;</defval>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>except2</declname>
+          <defval>&quot;xxxxx&quot;</defval>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>except3</declname>
+          <defval>&quot;xxxxx&quot;</defval>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>except4</declname>
+          <defval>&quot;xxxxx&quot;</defval>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>except5</declname>
+          <defval>&quot;xxxxx&quot;</defval>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>except6</declname>
+          <defval>&quot;xxxxx&quot;</defval>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>except7</declname>
+          <defval>&quot;xxxxx&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/shell.hpp" line="37" column="1" bodyfile="include/mml/shell.hpp" bodystart="37" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1shell_1_1arg_1aa6622e4fe1d8757b9b5548d8c4228e7b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>mml::shell::arg::arg</definition>
+        <argsstring>(char **argv1, int argc1)</argsstring>
+        <name>arg</name>
+        <param>
+          <type>char **</type>
+          <declname>argv1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>argc1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/shell.hpp" line="49" column="1" bodyfile="include/mml/shell.hpp" bodystart="49" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1shell_1_1arg_1abace6a9091a7b2ddd74c1cb5e1e73311" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>mml::shell::arg::arg</definition>
+        <argsstring>(mml::string a)</argsstring>
+        <name>arg</name>
+        <param>
+          <type><ref refid="classmml_1_1string" kindref="compound">mml::string</ref></type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/shell.hpp" line="60" column="1" bodyfile="include/mml/shell.hpp" bodystart="60" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1shell_1_1arg_1a961d8826d7d997e969554eb1f17113a3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>mml::shell::arg::arg</definition>
+        <argsstring>(mml::string a, mml::string b)</argsstring>
+        <name>arg</name>
+        <param>
+          <type><ref refid="classmml_1_1string" kindref="compound">mml::string</ref></type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type><ref refid="classmml_1_1string" kindref="compound">mml::string</ref></type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/shell.hpp" line="63" column="1" bodyfile="include/mml/shell.hpp" bodystart="63" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1shell_1_1arg_1a442600800a4d78ca1fad60923d64ac75" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>mml::shell::arg::arg</definition>
+        <argsstring>(mml::string a, mml::string b, mml::string c)</argsstring>
+        <name>arg</name>
+        <param>
+          <type><ref refid="classmml_1_1string" kindref="compound">mml::string</ref></type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type><ref refid="classmml_1_1string" kindref="compound">mml::string</ref></type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type><ref refid="classmml_1_1string" kindref="compound">mml::string</ref></type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/shell.hpp" line="67" column="1" bodyfile="include/mml/shell.hpp" bodystart="67" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1shell_1_1arg_1ab53c609890f3535dc7c2357513e53fb0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>mml::shell::arg::arg</definition>
+        <argsstring>(std::vector&lt; std::string &gt; vec_temp)</argsstring>
+        <name>arg</name>
+        <param>
+          <type>std::vector&lt; std::string &gt;</type>
+          <declname>vec_temp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/shell.hpp" line="72" column="1" bodyfile="include/mml/shell.hpp" bodystart="72" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1shell_1_1arg_1af44c7cca70d975a2e084e4044032fbf4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>mml::shell::arg::arg</definition>
+        <argsstring>()</argsstring>
+        <name>arg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/shell.hpp" line="86" column="1" bodyfile="include/mml/shell.hpp" bodystart="86" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1shell_1_1arg_1a25993080b5a2c1694d5659fa97640be7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>mml::shell::arg::arg</definition>
+        <argsstring>(arg &amp;vec_copy)</argsstring>
+        <name>arg</name>
+        <param>
+          <type><ref refid="classmml_1_1shell_1_1arg" kindref="compound">arg</ref> &amp;</type>
+          <declname>vec_copy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/shell.hpp" line="88" column="1" bodyfile="include/mml/shell.hpp" bodystart="88" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1shell_1_1arg_1abaed096f0d4a7151beb3cfaa447b93ab" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classmml_1_1shell_1_1arg" kindref="compound">arg</ref> &amp;</type>
+        <definition>arg&amp; mml::shell::arg::operator=</definition>
+        <argsstring>(const arg &amp;vec_temp)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classmml_1_1shell_1_1arg" kindref="compound">arg</ref> &amp;</type>
+          <declname>vec_temp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/shell.hpp" line="98" column="5" bodyfile="include/mml/shell.hpp" bodystart="98" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1shell_1_1arg_1a28fe3e99a59020810e69e619604c28eb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classmml_1_1shell_1_1arg" kindref="compound">arg</ref> &amp;</type>
+        <definition>arg&amp; mml::shell::arg::operator=</definition>
+        <argsstring>(const std::vector&lt; std::string &gt; &amp;vec_temp)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const std::vector&lt; std::string &gt; &amp;</type>
+          <declname>vec_temp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/shell.hpp" line="103" column="5" bodyfile="include/mml/shell.hpp" bodystart="103" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1shell_1_1arg_1a99936bb70b9cdd6260567670ff21df21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="classmml_1_1string" kindref="compound">mml::string</ref> &gt; &amp;</type>
+        <definition>std::vector&lt; mml::string &gt; &amp; mml::shell::arg::operator()</definition>
+        <argsstring>(char **argv1, int argc1, bool getarg=false)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>char **</type>
+          <declname>argv1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>argc1</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>getarg</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Initialisierung mit direkter Übergabe der argv und argc Werte</para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/shell.hpp" line="113" column="13" bodyfile="src/arg.cpp" bodystart="295" bodyend="304"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1shell_1_1arg_1a2141771685e1a8d924d0317cb2d994ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="classmml_1_1string" kindref="compound">mml::string</ref> &gt; &amp;</type>
+        <definition>std::vector&lt; mml::string &gt; &amp; mml::shell::arg::operator()</definition>
+        <argsstring>(int argc1, char **argv1, bool getarg=false)</argsstring>
+        <name>operator()</name>
+        <param>
+          <type>int</type>
+          <declname>argc1</declname>
+        </param>
+        <param>
+          <type>char **</type>
+          <declname>argv1</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>getarg</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/shell.hpp" line="114" column="13" bodyfile="src/arg.cpp" bodystart="284" bodyend="293"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1shell_1_1arg_1a95b8109c95d6042e03a0263ee231bac6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t mml::shell::arg::beginArg</definition>
+        <argsstring>(const std::string &amp;str)</argsstring>
+        <name>beginArg</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Positionsbestimmung, sobald ein String beginnend am Anfang mit einem Wert übereinstimmt</para>
+</simplesect>
+<simplesect kind="return"><para>Position </para>
+</simplesect>
+<simplesect kind="author"><para>Mike</para>
+</simplesect>
+<simplesect kind="author"><para>Mike Moser</para>
+</simplesect>
+Quelldatei args.cpp Enthält verschiedene Funktionen für die Klasse arg </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/shell.hpp" line="125" column="13" bodyfile="src/arg.cpp" bodystart="17" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1shell_1_1arg_1a384438b63ee669b925204f135a90c990" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::shell::arg::erase</definition>
+        <argsstring>(std::size_t pos1, std::size_t pos2=0)</argsstring>
+        <name>erase</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>pos1</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>pos2</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Ausgabe aller Elemente im Vektor</para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+<simplesect kind="note"><para>Ein Element oder mehrere entfernen</para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/shell.hpp" line="140" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1shell_1_1arg_1a9ba8ad16a067d9ef576d69144ee02df2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool mml::shell::arg::exist</definition>
+        <argsstring>(std::string search)</argsstring>
+        <name>exist</name>
+        <param>
+          <type>std::string</type>
+          <declname>search</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>nachschauen ob ein String im Vektor vec vorkommt</para>
+</simplesect>
+<simplesect kind="return"><para>true oder false </para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/shell.hpp" line="149" column="6" bodyfile="src/arg.cpp" bodystart="25" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1shell_1_1arg_1a1e77af158fc020b40c2fae73b4be9df0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool mml::shell::arg::exist</definition>
+        <argsstring>(std::string search1, std::string search2)</argsstring>
+        <name>exist</name>
+        <param>
+          <type>std::string</type>
+          <declname>search1</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>search2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/shell.hpp" line="150" column="6" bodyfile="src/arg.cpp" bodystart="35" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1shell_1_1arg_1a03ed3b9213c46a2262d639c1a9c3d57c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool mml::shell::arg::exist</definition>
+        <argsstring>(std::string search1, std::string search2, std::string search3)</argsstring>
+        <name>exist</name>
+        <param>
+          <type>std::string</type>
+          <declname>search1</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>search2</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>search3</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/shell.hpp" line="151" column="6" bodyfile="src/arg.cpp" bodystart="39" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1shell_1_1arg_1a9432d048dd8ebdba3e6b7664f4ea0385" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool mml::shell::arg::exist</definition>
+        <argsstring>(std::string search1, std::string search2, std::string search3, std::string search4)</argsstring>
+        <name>exist</name>
+        <param>
+          <type>std::string</type>
+          <declname>search1</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>search2</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>search3</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>search4</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/shell.hpp" line="152" column="6" bodyfile="src/arg.cpp" bodystart="43" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1shell_1_1arg_1a8eb78e58f89e85f3035d915aaf1e105f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool mml::shell::arg::exist</definition>
+        <argsstring>(std::size_t pos, std::string name)</argsstring>
+        <name>exist</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Nachschauen, ob ein String in einem bestimmten String vorkommt</para>
+</simplesect>
+<simplesect kind="return"><para>true oder false </para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/shell.hpp" line="160" column="6" bodyfile="src/arg.cpp" bodystart="47" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1shell_1_1arg_1ac6061c84c6857660638221a1bf97d497" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool mml::shell::arg::findArg</definition>
+        <argsstring>(const std::string &amp;str)</argsstring>
+        <name>findArg</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Finden von Argumenten</para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/shell.hpp" line="167" column="6" bodyfile="src/arg.cpp" bodystart="53" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1shell_1_1arg_1ae74ce127cebc1bd5a0ebb6d04180a1ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool mml::shell::arg::findArg</definition>
+        <argsstring>(const std::string &amp;str1, const std::string &amp;str2)</argsstring>
+        <name>findArg</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>str1</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>str2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/shell.hpp" line="168" column="6" bodyfile="src/arg.cpp" bodystart="62" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1shell_1_1arg_1a6164de1ffaa01a41895e62d31a61d17f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool mml::shell::arg::findArg</definition>
+        <argsstring>(const std::string &amp;str1, const std::string &amp;str2, const std::string &amp;str3)</argsstring>
+        <name>findArg</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>str1</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>str2</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>str3</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/shell.hpp" line="169" column="6" bodyfile="src/arg.cpp" bodystart="66" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1shell_1_1arg_1ac9243a71288ca0af76260f7ddc9f171b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool mml::shell::arg::findArg</definition>
+        <argsstring>(const std::string &amp;str1, const std::string &amp;str2, const std::string &amp;str3, const std::string &amp;str4)</argsstring>
+        <name>findArg</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>str1</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>str2</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>str3</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>str4</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/shell.hpp" line="170" column="6" bodyfile="src/arg.cpp" bodystart="70" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1shell_1_1arg_1a4aee1c5181a0cccc14c7a219a8969d85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::shell::arg::getArg</definition>
+        <argsstring>(std::string except1=&quot;xxxxx&quot;, std::string except2=&quot;xxxxx&quot;, std::string except3=&quot;xxxxx&quot;, std::string except4=&quot;xxxxx&quot;, std::string except5=&quot;xxxxx&quot;, std::string except6=&quot;xxxxx&quot;, std::string excep7=&quot;xxxxx&quot;)</argsstring>
+        <name>getArg</name>
+        <param>
+          <type>std::string</type>
+          <declname>except1</declname>
+          <defval>&quot;xxxxx&quot;</defval>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>except2</declname>
+          <defval>&quot;xxxxx&quot;</defval>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>except3</declname>
+          <defval>&quot;xxxxx&quot;</defval>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>except4</declname>
+          <defval>&quot;xxxxx&quot;</defval>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>except5</declname>
+          <defval>&quot;xxxxx&quot;</defval>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>except6</declname>
+          <defval>&quot;xxxxx&quot;</defval>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>excep7</declname>
+          <defval>&quot;xxxxx&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Argumente bei -xyz bestimmen</para>
+<para><simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/shell.hpp" line="177" column="6" bodyfile="src/arg.cpp" bodystart="74" bodyend="200"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1shell_1_1arg_1a3a5ffe4ef50e17eac746e7f47eceb8cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::shell::arg::init</definition>
+        <argsstring>(std::string except1=&quot;xxxxx&quot;, std::string except2=&quot;xxxxx&quot;, std::string except3=&quot;xxxxx&quot;, std::string except4=&quot;xxxxx&quot;, std::string except5=&quot;xxxxx&quot;, std::string except6=&quot;xxxxx&quot;, std::string except7=&quot;xxxxx&quot;)</argsstring>
+        <name>init</name>
+        <param>
+          <type>std::string</type>
+          <declname>except1</declname>
+          <defval>&quot;xxxxx&quot;</defval>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>except2</declname>
+          <defval>&quot;xxxxx&quot;</defval>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>except3</declname>
+          <defval>&quot;xxxxx&quot;</defval>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>except4</declname>
+          <defval>&quot;xxxxx&quot;</defval>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>except5</declname>
+          <defval>&quot;xxxxx&quot;</defval>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>except6</declname>
+          <defval>&quot;xxxxx&quot;</defval>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>except7</declname>
+          <defval>&quot;xxxxx&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Initialisierung bei Start zum Ausführen von Standardoperationen</para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/shell.hpp" line="184" column="6" bodyfile="src/arg.cpp" bodystart="202" bodyend="204"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1shell_1_1arg_1afa84b2c314dc28522851c49089f9ed7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool mml::shell::arg::notArg</definition>
+        <argsstring>(const std::string &amp;str1)</argsstring>
+        <name>notArg</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>str1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Finden von nicht vorhandenen Argumenten</para>
+</simplesect>
+<simplesect kind="return"><para>true, wenn nicht gefunden </para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/shell.hpp" line="192" column="6" bodyfile="src/arg.cpp" bodystart="206" bodyend="211"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1shell_1_1arg_1a227253b8afad8794c6d084ba85787362" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool mml::shell::arg::notArg</definition>
+        <argsstring>(const std::string &amp;str1, const std::string &amp;str2)</argsstring>
+        <name>notArg</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>str1</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>str2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/shell.hpp" line="193" column="6" bodyfile="src/arg.cpp" bodystart="213" bodyend="215"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1shell_1_1arg_1ac3aa4ba516a47e736020cb649c38c6b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool mml::shell::arg::notArg</definition>
+        <argsstring>(const std::string &amp;str1, const std::string &amp;str2, const std::string &amp;str3)</argsstring>
+        <name>notArg</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>str1</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>str2</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>str3</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/shell.hpp" line="194" column="6" bodyfile="src/arg.cpp" bodystart="217" bodyend="219"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1shell_1_1arg_1afc0255ef6d1d47d31d59451b0d04e1fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool mml::shell::arg::notArg</definition>
+        <argsstring>(const std::string &amp;str1, const std::string &amp;str2, const std::string &amp;str3, const std::string &amp;str4)</argsstring>
+        <name>notArg</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>str1</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>str2</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>str3</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>str4</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/shell.hpp" line="195" column="6" bodyfile="src/arg.cpp" bodystart="221" bodyend="223"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1shell_1_1arg_1a4bc61588a188b42495d326ca18a0563c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t mml::shell::arg::positionArg</definition>
+        <argsstring>(const std::string &amp;str)</argsstring>
+        <name>positionArg</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Positionsbestimmungen, wo ein gesuchter String steht</para>
+</simplesect>
+<simplesect kind="return"><para>Positionnamespace mml{ </para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/shell.hpp" line="203" column="13" bodyfile="src/arg.cpp" bodystart="225" bodyend="230"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1shell_1_1arg_1a6710a60fba797b62cc0c2779e29ba4c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t mml::shell::arg::positionArg</definition>
+        <argsstring>(const std::string &amp;str, const std::string &amp;str2)</argsstring>
+        <name>positionArg</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>str2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/shell.hpp" line="204" column="13" bodyfile="src/arg.cpp" bodystart="232" bodyend="235"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1shell_1_1arg_1a466d76ae0d4cc5c8d4f70f5afbad8d58" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="classmml_1_1string" kindref="compound">mml::string</ref> &gt;</type>
+        <definition>std::vector&lt; mml::string &gt; mml::shell::arg::replace</definition>
+        <argsstring>(char sign_old, char sign_new)</argsstring>
+        <name>replace</name>
+        <param>
+          <type>char</type>
+          <declname>sign_old</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>sign_new</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Ersetzen eines chars oder eines Strings in einem Vektor</para>
+</simplesect>
+<simplesect kind="return"><para>Vektor mit den ersetzten Werten </para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/shell.hpp" line="212" column="13" bodyfile="src/arg.cpp" bodystart="238" bodyend="244"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1shell_1_1arg_1aaf34e8664b98323584ef1e4586f71536" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="classmml_1_1string" kindref="compound">mml::string</ref> &gt;</type>
+        <definition>std::vector&lt; mml::string &gt; mml::shell::arg::replace</definition>
+        <argsstring>(std::string str_old, std::string str_new)</argsstring>
+        <name>replace</name>
+        <param>
+          <type>std::string</type>
+          <declname>str_old</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>str_new</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/shell.hpp" line="213" column="13" bodyfile="src/arg.cpp" bodystart="246" bodyend="252"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1shell_1_1arg_1a6a5bb96cdd99de1ab52aadb3cba7ef56" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::shell::arg::sort</definition>
+        <argsstring>()</argsstring>
+        <name>sort</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Nachträgliche Initialisierung der Werte von übergebenen Werten</para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+<simplesect kind="note"><para>Sortieren der Werte</para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/shell.hpp" line="226" column="6" bodyfile="src/arg.cpp" bodystart="254" bodyend="260"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1shell_1_1arg_1afa4ab834f779143f5b829b6d3593acbf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="classmml_1_1string" kindref="compound">mml::string</ref> &gt;</type>
+        <definition>std::vector&lt; mml::string &gt; mml::shell::arg::str</definition>
+        <argsstring>()</argsstring>
+        <name>str</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Umwandlungen der Werte in einen Standard String Vektor</para>
+</simplesect>
+<simplesect kind="return"><para>String Vektor </para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/shell.hpp" line="234" column="13" bodyfile="src/arg.cpp" bodystart="262" bodyend="264"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1shell_1_1arg_1a56ee16d9987b1fd90b4e57596f3e6edf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt; std::string &gt; mml::shell::arg::str_change</definition>
+        <argsstring>()</argsstring>
+        <name>str_change</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/shell.hpp" line="235" column="13" bodyfile="src/arg.cpp" bodystart="266" bodyend="273"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1shell_1_1arg_1acb1530a2a45ef924ff80e6e36bc75bba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="classmml_1_1string" kindref="compound">mml::string</ref> &gt;</type>
+        <definition>std::vector&lt; mml::string &gt; mml::shell::arg::tostr</definition>
+        <argsstring>(std::vector&lt; std::string &gt; temp)</argsstring>
+        <name>tostr</name>
+        <param>
+          <type>std::vector&lt; std::string &gt;</type>
+          <declname>temp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/shell.hpp" line="236" column="13" bodyfile="src/arg.cpp" bodystart="275" bodyend="281"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1shell_1_1arg_1a225c1fad4652407d495f60fddd0ce118" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>mml::shell::arg::~arg</definition>
+        <argsstring>()</argsstring>
+        <name>~arg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/shell.hpp" line="241" column="1" bodyfile="include/mml/shell.hpp" bodystart="241" bodyend="241"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>std::vector&lt; mml::string  &gt;</label>
+      </node>
+      <node id="1">
+        <label>mml::shell::arg</label>
+        <link refid="classmml_1_1shell_1_1arg"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>mml::vector&lt; mml::string &gt;</label>
+        <link refid="classmml_1_1vector"/>
+        <childnode refid="3" relation="private-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>std::vector&lt; mml::string  &gt;</label>
+      </node>
+      <node id="1">
+        <label>mml::shell::arg</label>
+        <link refid="classmml_1_1shell_1_1arg"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>mml::vector&lt; mml::string &gt;</label>
+        <link refid="classmml_1_1vector"/>
+        <childnode refid="3" relation="private-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="include/mml/shell.hpp" line="23" column="1" bodyfile="include/mml/shell.hpp" bodystart="23" bodyend="243"/>
+    <listofallmembers>
+      <member refid="classmml_1_1shell_1_1arg_1a0939900c2df4f70544a8a0403e39cdb2" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>arg</name></member>
+      <member refid="classmml_1_1shell_1_1arg_1aa6622e4fe1d8757b9b5548d8c4228e7b" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>arg</name></member>
+      <member refid="classmml_1_1shell_1_1arg_1abace6a9091a7b2ddd74c1cb5e1e73311" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>arg</name></member>
+      <member refid="classmml_1_1shell_1_1arg_1a961d8826d7d997e969554eb1f17113a3" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>arg</name></member>
+      <member refid="classmml_1_1shell_1_1arg_1a442600800a4d78ca1fad60923d64ac75" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>arg</name></member>
+      <member refid="classmml_1_1shell_1_1arg_1ab53c609890f3535dc7c2357513e53fb0" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>arg</name></member>
+      <member refid="classmml_1_1shell_1_1arg_1af44c7cca70d975a2e084e4044032fbf4" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>arg</name></member>
+      <member refid="classmml_1_1shell_1_1arg_1a25993080b5a2c1694d5659fa97640be7" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>arg</name></member>
+      <member refid="classmml_1_1shell_1_1arg_1adc4d7547233ccee2ca6f20c394a4754d" prot="protected" virt="non-virtual"><scope>mml::shell::arg</scope><name>argc</name></member>
+      <member refid="classmml_1_1shell_1_1arg_1a46c90e04ef02da028cdbc5ba12fbe938" prot="protected" virt="non-virtual"><scope>mml::shell::arg</scope><name>argv</name></member>
+      <member refid="classmml_1_1vector_1a8dcf3737728770802554ed5183d4bb23" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>begin</name></member>
+      <member refid="classmml_1_1shell_1_1arg_1a95b8109c95d6042e03a0263ee231bac6" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>beginArg</name></member>
+      <member refid="classmml_1_1vector_1a116b25064a0299e5cd4658fad09a0539" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>count</name></member>
+      <member refid="classmml_1_1vector_1a5f13b0c1d8c38fa1641a3af44af9416b" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>cout</name></member>
+      <member refid="classmml_1_1vector_1a6277254d3ae5f6921c1d7d854feac214" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>del</name></member>
+      <member refid="classmml_1_1vector_1a3853ad9b92cb418a26057005f11c1b23" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>empty</name></member>
+      <member refid="classmml_1_1vector_1a58a162fc048ef944b8196a4051982ed8" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>end</name></member>
+      <member refid="classmml_1_1shell_1_1arg_1a384438b63ee669b925204f135a90c990" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>erase</name></member>
+      <member refid="classmml_1_1vector_1a9c6ac6de56377585c640f7cf4526b865" prot="public" virt="non-virtual" ambiguityscope="vector&lt; mml::string &gt;::"><scope>mml::shell::arg</scope><name>erase</name></member>
+      <member refid="classmml_1_1vector_1a45f83c9f49ea3cf4b6bd2544bfdd808c" prot="public" virt="non-virtual" ambiguityscope="vector&lt; mml::string &gt;::"><scope>mml::shell::arg</scope><name>erase</name></member>
+      <member refid="classmml_1_1shell_1_1arg_1a9ba8ad16a067d9ef576d69144ee02df2" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>exist</name></member>
+      <member refid="classmml_1_1shell_1_1arg_1a1e77af158fc020b40c2fae73b4be9df0" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>exist</name></member>
+      <member refid="classmml_1_1shell_1_1arg_1a03ed3b9213c46a2262d639c1a9c3d57c" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>exist</name></member>
+      <member refid="classmml_1_1shell_1_1arg_1a9432d048dd8ebdba3e6b7664f4ea0385" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>exist</name></member>
+      <member refid="classmml_1_1shell_1_1arg_1a8eb78e58f89e85f3035d915aaf1e105f" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>exist</name></member>
+      <member refid="classmml_1_1vector_1ac4b25f2693130108499bb71f565cc558" prot="public" virt="non-virtual" ambiguityscope="vector&lt; mml::string &gt;::"><scope>mml::shell::arg</scope><name>exist</name></member>
+      <member refid="classmml_1_1vector_1a50fbac82c7e83bc826d02ff2b3c44820" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>find</name></member>
+      <member refid="classmml_1_1shell_1_1arg_1ac6061c84c6857660638221a1bf97d497" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>findArg</name></member>
+      <member refid="classmml_1_1shell_1_1arg_1ae74ce127cebc1bd5a0ebb6d04180a1ef" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>findArg</name></member>
+      <member refid="classmml_1_1shell_1_1arg_1a6164de1ffaa01a41895e62d31a61d17f" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>findArg</name></member>
+      <member refid="classmml_1_1shell_1_1arg_1ac9243a71288ca0af76260f7ddc9f171b" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>findArg</name></member>
+      <member refid="classmml_1_1vector_1a846b3b92f10f17eee061c39ef2b1848f" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>get_data</name></member>
+      <member refid="classmml_1_1shell_1_1arg_1a4aee1c5181a0cccc14c7a219a8969d85" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>getArg</name></member>
+      <member refid="classmml_1_1shell_1_1arg_1a3a5ffe4ef50e17eac746e7f47eceb8cf" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>init</name></member>
+      <member refid="classmml_1_1vector_1ae4cae150b7b30e91e3b937d7a529a16f" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>insert</name></member>
+      <member refid="classmml_1_1vector_1a35466b7dc2f7af8333b354edc7475001" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>log</name></member>
+      <member refid="classmml_1_1shell_1_1arg_1afa84b2c314dc28522851c49089f9ed7b" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>notArg</name></member>
+      <member refid="classmml_1_1shell_1_1arg_1a227253b8afad8794c6d084ba85787362" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>notArg</name></member>
+      <member refid="classmml_1_1shell_1_1arg_1ac3aa4ba516a47e736020cb649c38c6b5" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>notArg</name></member>
+      <member refid="classmml_1_1shell_1_1arg_1afc0255ef6d1d47d31d59451b0d04e1fe" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>notArg</name></member>
+      <member refid="classmml_1_1shell_1_1arg_1a99936bb70b9cdd6260567670ff21df21" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>operator()</name></member>
+      <member refid="classmml_1_1shell_1_1arg_1a2141771685e1a8d924d0317cb2d994ea" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>operator()</name></member>
+      <member refid="classmml_1_1vector_1ae12feeb04e187d250995d67b327eac9d" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>operator*</name></member>
+      <member refid="classmml_1_1vector_1a521aa464534c98ecd70315632ad25f25" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>operator+</name></member>
+      <member refid="classmml_1_1vector_1a372daa94b7f21f06a70a755111114ee6" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>operator+=</name></member>
+      <member refid="classmml_1_1shell_1_1arg_1abaed096f0d4a7151beb3cfaa447b93ab" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>operator=</name></member>
+      <member refid="classmml_1_1shell_1_1arg_1a28fe3e99a59020810e69e619604c28eb" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>operator=</name></member>
+      <member refid="classmml_1_1vector_1a52d2bb1a8ce2c1fe10784fe52d22803b" prot="public" virt="non-virtual" ambiguityscope="vector&lt; mml::string &gt;::"><scope>mml::shell::arg</scope><name>operator=</name></member>
+      <member refid="classmml_1_1vector_1a72f4406c5722f9fb621ea2afdd722877" prot="public" virt="non-virtual" ambiguityscope="vector&lt; mml::string &gt;::"><scope>mml::shell::arg</scope><name>operator=</name></member>
+      <member refid="classmml_1_1vector_1ade81b1e79cf8cfdf66c28cf9ea3da910" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>operator[]</name></member>
+      <member refid="classmml_1_1vector_1a935789a9cb1c2a8acdeedac8f5179278" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>operator^</name></member>
+      <member refid="classmml_1_1vector_1a9f0bde55f6f6514461e624c6426ef6fc" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>pop_back</name></member>
+      <member refid="classmml_1_1shell_1_1arg_1a4bc61588a188b42495d326ca18a0563c" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>positionArg</name></member>
+      <member refid="classmml_1_1shell_1_1arg_1a6710a60fba797b62cc0c2779e29ba4c3" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>positionArg</name></member>
+      <member refid="classmml_1_1vector_1a0f23f42bb84218cdd6ec2cc523933e0e" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>push_back</name></member>
+      <member refid="classmml_1_1shell_1_1arg_1a466d76ae0d4cc5c8d4f70f5afbad8d58" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>replace</name></member>
+      <member refid="classmml_1_1shell_1_1arg_1aaf34e8664b98323584ef1e4586f71536" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>replace</name></member>
+      <member refid="classmml_1_1vector_1aff5f8402662b01d3eef81aab88dc112a" prot="public" virt="non-virtual" ambiguityscope="vector&lt; mml::string &gt;::"><scope>mml::shell::arg</scope><name>replace</name></member>
+      <member refid="classmml_1_1vector_1a901fab5579bf780856051f9493ffbb69" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>set</name></member>
+      <member refid="classmml_1_1vector_1a4acab0d5c924664fe2b216b94f06c9b2" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>size</name></member>
+      <member refid="classmml_1_1shell_1_1arg_1a6a5bb96cdd99de1ab52aadb3cba7ef56" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>sort</name></member>
+      <member refid="classmml_1_1shell_1_1arg_1afa4ab834f779143f5b829b6d3593acbf" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>str</name></member>
+      <member refid="classmml_1_1shell_1_1arg_1a56ee16d9987b1fd90b4e57596f3e6edf" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>str_change</name></member>
+      <member refid="classmml_1_1vector_1a09c4bf51180082747d807fd1d8d5ae84" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>sum</name></member>
+      <member refid="classmml_1_1shell_1_1arg_1acb1530a2a45ef924ff80e6e36bc75bba" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>tostr</name></member>
+      <member refid="classmml_1_1vector_1ae2121141f484344e07345eddf7caa77c" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>toT</name></member>
+      <member refid="classmml_1_1vector_1a4526d4a08cea6b802ee229868250a7b3" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>tovec</name></member>
+      <member refid="classmml_1_1vector_1a3b2d65ffa645eff2e56012d9e7c661e8" prot="protected" virt="non-virtual"><scope>mml::shell::arg</scope><name>vec</name></member>
+      <member refid="classmml_1_1vector_1ae33ede1abf01d6d2579d554e0e4ece65" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>vector</name></member>
+      <member refid="classmml_1_1vector_1ad44c393d85ce94e01ae6d851abfe3a60" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>vector</name></member>
+      <member refid="classmml_1_1vector_1ac6bb999219a514400d27c3ae0a1c38d8" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>vector</name></member>
+      <member refid="classmml_1_1vector_1a110a81cb89a1d8d3747a59ec4bb12ec3" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>vector</name></member>
+      <member refid="classmml_1_1vector_1a4c33b7774ac7303c95fb4be1195059da" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>vector</name></member>
+      <member refid="classmml_1_1vector_1a12d163b0b93882c366b0fbd9bee30e64" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>vector</name></member>
+      <member refid="classmml_1_1vector_1aab00229f585e0382fc1ff5c89cd77816" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>vector</name></member>
+      <member refid="classmml_1_1vector_1add2b8c228c9f3be8fcad971b7e22a429" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>vector</name></member>
+      <member refid="classmml_1_1shell_1_1arg_1a225c1fad4652407d495f60fddd0ce118" prot="public" virt="non-virtual"><scope>mml::shell::arg</scope><name>~arg</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

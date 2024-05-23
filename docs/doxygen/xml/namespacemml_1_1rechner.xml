@@ -1,0 +1,940 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespacemml_1_1rechner" kind="namespace" language="C++">
+    <compoundname>mml::rechner</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacemml_1_1rechner_1a8fb791fea6c89ed76525a731bb361a2f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>mml::vector&lt; double &gt;</type>
+        <definition>mml::vector&lt; double &gt; mml::rechner::add</definition>
+        <argsstring>(mml::shell::arg args)</argsstring>
+        <name>add</name>
+        <param>
+          <type>mml::shell::arg</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Addition von Werten mit Enter als Eingabe</para>
+</simplesect>
+<simplesect kind="return"><para>double </para>
+</simplesect>
+<simplesect kind="author"><para>mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/basic_operations.hpp" line="24" column="13" bodyfile="src/basic_operations.cpp" bodystart="12" bodyend="58" declfile="include/mml-math/basic_operations.hpp" declline="24" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1rechner_1a18e519bbf2f66dac7f5057c4d2b0243a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double mml::rechner::calculate</definition>
+        <argsstring>(mml::shell::arg args, mml::string equation, bool replace=true)</argsstring>
+        <name>calculate</name>
+        <param>
+          <type>mml::shell::arg</type>
+          <declname>args</declname>
+        </param>
+        <param>
+          <type>mml::string</type>
+          <declname>equation</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>replace</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Gleichung mit mehreren Operationen </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ARguments from shell </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Equation to be computed </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bool</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Execute function &quot;replace&quot; to replace operations </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>double </para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/basic_operations.hpp" line="33" column="8" bodyfile="src/basic_operations.cpp" bodystart="60" bodyend="216" declfile="include/mml-math/basic_operations.hpp" declline="33" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1rechner_1a114f8707b5ebd54263ffd2123b46deaa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt; double &gt; mml::rechner::calculations</definition>
+        <argsstring>(mml::shell::arg args, std::vector&lt; mml::string &gt; &amp;equations)</argsstring>
+        <name>calculations</name>
+        <param>
+          <type>mml::shell::arg</type>
+          <declname>args</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; mml::string &gt; &amp;</type>
+          <declname>equations</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Mehrere Berechnungen ausführen </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Arguments from the shell </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vector</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector where all the equations are saved </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>vector All the results as a double </para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/basic_operations.hpp" line="42" column="13" bodyfile="src/basic_operations.cpp" bodystart="219" bodyend="285" declfile="include/mml-math/basic_operations.hpp" declline="42" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1rechner_1ae38c88f173cb93aa5a57980646075067" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double mml::rechner::calculate_intern</definition>
+        <argsstring>(string equation, bool verbose=false, bool replace=true)</argsstring>
+        <name>calculate_intern</name>
+        <param>
+          <type>string</type>
+          <declname>equation</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>verbose</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>replace</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Berechnungen ausführen für andere Programme (keine Ausgaben) </para>
+</simplesect>
+<simplesect kind="return"><para>double </para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/basic_operations.hpp" line="49" column="8" declfile="include/mml-math/basic_operations.hpp" declline="49" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1rechner_1a1f701177d0c98cff43a4e395f5328cc7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double mml::rechner::multiply</definition>
+        <argsstring>(mml::shell::arg args, mml::string, bool replace)</argsstring>
+        <name>multiply</name>
+        <param>
+          <type>mml::shell::arg</type>
+          <declname>args</declname>
+        </param>
+        <param>
+          <type>mml::string</type>
+          <defname>equation</defname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>replace</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Werte multiplizieren </para>
+</simplesect>
+<simplesect kind="return"><para>double </para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/basic_operations.hpp" line="56" column="8" bodyfile="src/basic_operations.cpp" bodystart="547" bodyend="619" declfile="include/mml-math/basic_operations.hpp" declline="56" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1rechner_1a603581c9b71bbc4ed0e17fc104d49f06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double mml::rechner::summation</definition>
+        <argsstring>(mml::shell::arg args, mml::string equation, bool replace)</argsstring>
+        <name>summation</name>
+        <param>
+          <type>mml::shell::arg</type>
+          <declname>args</declname>
+        </param>
+        <param>
+          <type>mml::string</type>
+          <declname>equation</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>replace</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Werte addieren </para>
+</simplesect>
+<simplesect kind="return"><para>double </para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/basic_operations.hpp" line="64" column="8" bodyfile="src/basic_operations.cpp" bodystart="453" bodyend="545" declfile="include/mml-math/basic_operations.hpp" declline="64" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1rechner_1a5141578fde449117642c5c9b2c4c3399" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>mml::string</type>
+        <definition>mml::string mml::rechner::operations</definition>
+        <argsstring>(mml::shell::arg args, mml::string equation, mml::string command, uint16_t tabs)</argsstring>
+        <name>operations</name>
+        <param>
+          <type>mml::shell::arg</type>
+          <declname>args</declname>
+        </param>
+        <param>
+          <type>mml::string</type>
+          <declname>equation</declname>
+        </param>
+        <param>
+          <type>mml::string</type>
+          <declname>command</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>tabs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Grad zu Radiant</para>
+<para><simplesect kind="return"><para>Wert in Radiant </para>
+</simplesect>
+<simplesect kind="author"><para>Mike Zu einem Operator berechnungen durchführen</para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/functions.hpp" line="33" column="13" bodyfile="src/functions.cpp" bodystart="12" bodyend="191" declfile="include/mml-math/functions.hpp" declline="33" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1rechner_1ad23025f3e5d5166e5f8db42d912bf448" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t mml::rechner::pos_bracket</definition>
+        <argsstring>(mml::string equation, std::size_t temp, std::size_t temp_end)</argsstring>
+        <name>pos_bracket</name>
+        <param>
+          <type>mml::string</type>
+          <declname>equation</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>temp</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>temp_end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Position der richtigen Klammer zu berechnen</para>
+</simplesect>
+<simplesect kind="return"><para>neue Position </para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/functions.hpp" line="41" column="13" bodyfile="src/functions.cpp" bodystart="194" bodyend="223" declfile="include/mml-math/functions.hpp" declline="41" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1rechner_1aebc2f71019d64ef26f91be9b8d86ec0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double mml::rechner::rad_or_grad</definition>
+        <argsstring>(mml::shell::arg args, double grad)</argsstring>
+        <name>rad_or_grad</name>
+        <param>
+          <type>mml::shell::arg</type>
+          <declname>args</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>grad</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Radiant oder Grad wenn in args <ndash/>grad</para>
+<para><simplesect kind="return"><para>Wert in Grad oder Radiant </para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/functions.hpp" line="49" column="8" bodyfile="src/functions.cpp" bodystart="225" bodyend="225" declfile="include/mml-math/functions.hpp" declline="49" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1rechner_1a8470177a5cbf53bf5e23bab2be6bd040" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double mml::rechner::grad_or_rad</definition>
+        <argsstring>(mml::shell::arg args, double grad)</argsstring>
+        <name>grad_or_rad</name>
+        <param>
+          <type>mml::shell::arg</type>
+          <declname>args</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>grad</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/functions.hpp" line="50" column="8" bodyfile="src/functions.cpp" bodystart="226" bodyend="226" declfile="include/mml-math/functions.hpp" declline="50" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1rechner_1a9b68ec5ee55ae9f92b827e81c2d3914c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>mml::string</type>
+        <definition>mml::string mml::rechner::rechnung</definition>
+        <argsstring>(mml::shell::arg args, mml::string equation, uint16_t tabs=0)</argsstring>
+        <name>rechnung</name>
+        <param>
+          <type>mml::shell::arg</type>
+          <declname>args</declname>
+        </param>
+        <param>
+          <type>mml::string</type>
+          <declname>equation</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>tabs</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Radiant zu Grad</para>
+<para><simplesect kind="return"><para>Wert in Grad </para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+<simplesect kind="note"><para>Verschiedene Operatoren durchführen</para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/functions.hpp" line="64" column="13" bodyfile="src/functions.cpp" bodystart="230" bodyend="267" declfile="include/mml-math/functions.hpp" declline="64" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1rechner_1ae5b75e6332404d3b16b105eb20cb720b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>mml::string</type>
+        <definition>mml::string mml::rechner::replace</definition>
+        <argsstring>(mml::shell::arg args, mml::string equation)</argsstring>
+        <name>replace</name>
+        <param>
+          <type>mml::shell::arg</type>
+          <declname>args</declname>
+        </param>
+        <param>
+          <type>mml::string</type>
+          <declname>equation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Sachen ersetzen und auch bestimmte Funktionen(sqrt,^) berechnen</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Arguments from the shell. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>equation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Equation to calculate and replace. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tabs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>For verbose, how many tabs are printed to show hierarchy of calculation.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Replaced string with the result</para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para><simplesect kind="note"><para>, durch . ersetzen</para>
+</simplesect>
+<simplesect kind="note"><para>Variablen ersetzen</para>
+</simplesect>
+<simplesect kind="note"><para>Physikalische Werte ersetzen</para>
+</simplesect>
+<simplesect kind="note"><para>Mathematische Sachen ersetzen</para>
+</simplesect>
+<simplesect kind="note"><para>e ersetzen</para>
+</simplesect>
+<simplesect kind="note"><para>SI-Präfixe ersetzen</para>
+</simplesect>
+</para>
+        </inbodydescription>
+        <location file="include/mml-math/functions.hpp" line="76" column="13" bodyfile="src/functions.cpp" bodystart="269" bodyend="1197" declfile="include/mml-math/functions.hpp" declline="76" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1rechner_1ae12dc270ab8df302b28cb23db2ca5cba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::rechner::backup_logfile</definition>
+        <argsstring>(shell::arg args, std::string logfile)</argsstring>
+        <name>backup_logfile</name>
+        <param>
+          <type>shell::arg</type>
+          <declname>args</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>logfile</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Logfile backup </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Arguments from the shell </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Logfile </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/logging.hpp" line="24" column="6" bodyfile="src/logging.cpp" bodystart="20" bodyend="24" declfile="include/mml-math/logging.hpp" declline="24" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1rechner_1a649dd4cd86801d2c6b36580041636a45" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>mml::string</type>
+        <definition>mml::string mml::rechner::delete_zeros</definition>
+        <argsstring>(double equation)</argsstring>
+        <name>delete_zeros</name>
+        <param>
+          <type>double</type>
+          <declname>equation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Nullen am Ende löschen </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>double</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>string </para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/logging.hpp" line="32" column="13" bodyfile="src/logging.cpp" bodystart="26" bodyend="46" declfile="include/mml-math/logging.hpp" declline="32" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1rechner_1a96b844e16c756f7599cf5c7674c15a5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::rechner::save_matrix</definition>
+        <argsstring>(mml::shell::arg args, mml::string matrix_equation, mml::string matrix_result, std::string logfile)</argsstring>
+        <name>save_matrix</name>
+        <param>
+          <type>mml::shell::arg</type>
+          <declname>args</declname>
+        </param>
+        <param>
+          <type>mml::string</type>
+          <declname>matrix_equation</declname>
+        </param>
+        <param>
+          <type>mml::string</type>
+          <declname>matrix_result</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>logfile</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Altes Ergebnis speichern </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Arguments from the shell </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>equation </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>result </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Logfile </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/logging.hpp" line="42" column="6" bodyfile="src/logging.cpp" bodystart="67" bodyend="75" declfile="include/mml-math/logging.hpp" declline="42" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1rechner_1a1d6654f4dd0e7291ab5862dacb8b9a94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::rechner::save_result</definition>
+        <argsstring>(shell::arg args, mml::string equation, double result, std::string logfile)</argsstring>
+        <name>save_result</name>
+        <param>
+          <type>shell::arg</type>
+          <declname>args</declname>
+        </param>
+        <param>
+          <type>mml::string</type>
+          <declname>equation</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>result</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>logfile</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/logging.hpp" line="43" column="6" declfile="include/mml-math/logging.hpp" declline="43" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1rechner_1ad780938d04a50376b2275f9ecb60348f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::rechner::reset_logfile</definition>
+        <argsstring>(shell::arg args, std::string logfile)</argsstring>
+        <name>reset_logfile</name>
+        <param>
+          <type>shell::arg</type>
+          <declname>args</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>logfile</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Logfile zurücksetzen </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Arguments from the shell </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Logfile </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/logging.hpp" line="52" column="6" bodyfile="src/logging.cpp" bodystart="48" bodyend="53" declfile="include/mml-math/logging.hpp" declline="52" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1rechner_1aa7e8d1b0097e770c6861d4ba84d3abcb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>mml::string</type>
+        <definition>mml::string mml::rechner::matrix_calculation</definition>
+        <argsstring>(mml::shell::arg args, mml::string matrix)</argsstring>
+        <name>matrix_calculation</name>
+        <param>
+          <type>mml::shell::arg</type>
+          <declname>args</declname>
+        </param>
+        <param>
+          <type>mml::string</type>
+          <declname>matrix</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/matrix.hpp" line="18" column="13" bodyfile="src/matrix.cpp" bodystart="6" bodyend="135" declfile="include/mml-math/matrix.hpp" declline="18" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1rechner_1a7ad8a5ca3bef3c3cb259cb15dd19d8ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>mml::string</type>
+        <definition>mml::string mml::rechner::matrix_addition</definition>
+        <argsstring>(mml::string matrix1, mml::string matrix2, char op=&apos;+&apos;, bool ausgabe=false)</argsstring>
+        <name>matrix_addition</name>
+        <param>
+          <type>mml::string</type>
+          <declname>matrix1</declname>
+        </param>
+        <param>
+          <type>mml::string</type>
+          <declname>matrix2</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>op</declname>
+          <defval>&apos;+&apos;</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>ausgabe</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Matrix addieren oder subtrahieren</para>
+</simplesect>
+<simplesect kind="return"><para>Erebnis als String </para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/matrix.hpp" line="26" column="13" bodyfile="src/matrix.cpp" bodystart="138" bodyend="304" declfile="include/mml-math/matrix.hpp" declline="26" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1rechner_1a3313ff0e1b497c22410d0bf283aeacb9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>mml::string</type>
+        <definition>mml::string mml::rechner::matrix_adjunct</definition>
+        <argsstring>(mml::string matrix, bool ausgabe=false)</argsstring>
+        <name>matrix_adjunct</name>
+        <param>
+          <type>mml::string</type>
+          <declname>matrix</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>ausgabe</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Adjunkte einer Matrix bestimmen (wird für Inverses benötigt)</para>
+</simplesect>
+<simplesect kind="return"><para>Erebnis als String </para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/matrix.hpp" line="33" column="13" bodyfile="src/matrix.cpp" bodystart="307" bodyend="390" declfile="include/mml-math/matrix.hpp" declline="33" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1rechner_1a47b46c269fda6c52418248e89236185e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double mml::rechner::matrix_determinante</definition>
+        <argsstring>(string matrix, const bool ausgabe)</argsstring>
+        <name>matrix_determinante</name>
+        <param>
+          <type>string</type>
+          <declname>matrix</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>ausgabe</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Determinante einer Matrix bestimmen</para>
+</simplesect>
+<simplesect kind="return"><para>Erebnis als double </para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/matrix.hpp" line="40" column="8" declfile="include/mml-math/matrix.hpp" declline="40" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1rechner_1aac779ec8d1bee867677e2c1ffa3d3ae6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>mml::string</type>
+        <definition>mml::string mml::rechner::matrix_inverse</definition>
+        <argsstring>(mml::string matrix, bool ausgabe=false)</argsstring>
+        <name>matrix_inverse</name>
+        <param>
+          <type>mml::string</type>
+          <declname>matrix</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>ausgabe</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Inverse einer Matrix bestimmen</para>
+</simplesect>
+<simplesect kind="return"><para>Erebnis als String </para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/matrix.hpp" line="47" column="13" bodyfile="src/matrix.cpp" bodystart="546" bodyend="655" declfile="include/mml-math/matrix.hpp" declline="47" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1rechner_1a9de3e85b04169b971c3f1ddd2994bc4a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>mml::string</type>
+        <definition>mml::string mml::rechner::matrix_multiply</definition>
+        <argsstring>(mml::string matrix1, mml::string matrix2, bool ausgabe=false)</argsstring>
+        <name>matrix_multiply</name>
+        <param>
+          <type>mml::string</type>
+          <declname>matrix1</declname>
+        </param>
+        <param>
+          <type>mml::string</type>
+          <declname>matrix2</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>ausgabe</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Matrizen multiplizieren</para>
+</simplesect>
+<simplesect kind="return"><para>Erebnis als String </para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/matrix.hpp" line="54" column="13" bodyfile="src/matrix.cpp" bodystart="659" bodyend="818" declfile="include/mml-math/matrix.hpp" declline="54" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1rechner_1a6f6e8aac5469ee795a1ecad532fb1cbb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>mml::string</type>
+        <definition>mml::string mml::rechner::matrix_smaller</definition>
+        <argsstring>(mml::string matrix, uint32_t row, uint32_t column, bool ausgabe=false)</argsstring>
+        <name>matrix_smaller</name>
+        <param>
+          <type>mml::string</type>
+          <declname>matrix</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>column</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>ausgabe</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Matrix ohne bestimmte Zeile und Linie</para>
+</simplesect>
+<simplesect kind="return"><para>Erebnis als String </para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/matrix.hpp" line="61" column="13" bodyfile="src/matrix.cpp" bodystart="920" bodyend="1027" declfile="include/mml-math/matrix.hpp" declline="61" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1rechner_1a853ab35fc6e00ecc969aeeb640f7d245" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::rechner::matrix_print</definition>
+        <argsstring>(mml::string matrix)</argsstring>
+        <name>matrix_print</name>
+        <param>
+          <type>mml::string</type>
+          <declname>matrix</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Matrix ausgeben</para>
+</simplesect>
+<simplesect kind="return"><para>Erebnis als String </para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/matrix.hpp" line="68" column="6" bodyfile="src/matrix.cpp" bodystart="820" bodyend="918" declfile="include/mml-math/matrix.hpp" declline="68" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1rechner_1ac9bc053bc3e19c8d4526afee6f189db0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>mml::string</type>
+        <definition>mml::string mml::rechner::matrix_transposed</definition>
+        <argsstring>(mml::string matrix, bool ausgabe=false)</argsstring>
+        <name>matrix_transposed</name>
+        <param>
+          <type>mml::string</type>
+          <declname>matrix</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>ausgabe</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Matrix transponieren</para>
+</simplesect>
+<simplesect kind="return"><para>Erebnis als String </para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/matrix.hpp" line="75" column="13" bodyfile="src/matrix.cpp" bodystart="1030" bodyend="1127" declfile="include/mml-math/matrix.hpp" declline="75" declcolumn="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/mml-math/basic_operations.hpp" line="16" column="1"/>
+  </compounddef>
+</doxygen>

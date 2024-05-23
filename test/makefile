@@ -19,7 +19,7 @@ LIBRARY = -L../lib
 LDFLAGS = -lmml -lmml-math
 target debug   : override CFLAGS = $(CFLAGS_GDB)
 
-SRC = $(wildcard ./src/*.cpp *.cpp )
+SRC = $(wildcard *.cpp )
 OBJ = $(SRC:%.cpp=%.o)
 DST =  $(SRC:%.cpp=%.x)
 
@@ -38,10 +38,11 @@ debug: $(DST)
 %.x: %.o
 	$(GCC) $< $(CFLAGS) $(INCLUDE) $(LIBRARY) $(LDFLAGS) -o $@
 
-test:
+test: $(DST)
 	@for i in $(DST) ;\
 	do\
 		./$$i;\
+		sleep 2;\
 	done
 	
 

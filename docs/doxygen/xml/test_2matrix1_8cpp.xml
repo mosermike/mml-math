@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="test_2matrix1_8cpp" kind="file" language="C++">
+    <compoundname>matrix1.cpp</compoundname>
+    <includes refid="matrix1_8hpp" local="no">mml-math/matrix1.hpp</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">mml.hpp</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>test/matrix1.cpp</label>
+        <link refid="test_2matrix1_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>mml.hpp</label>
+      </node>
+      <node id="2">
+        <label>mml-math/matrix1.hpp</label>
+        <link refid="matrix1_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>vector</label>
+      </node>
+      <node id="5">
+        <label>iostream</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="test_2matrix1_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>()</argsstring>
+        <name>main</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Performing test for the matrix calculations </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="test/matrix1.cpp" line="9" column="5" bodyfile="test/matrix1.cpp" bodystart="9" bodyend="20"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="matrix1_8hpp" kindref="compound">mml-math/matrix1.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;mml.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="test_2matrix1_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kindref="member">main</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Performing<sp/>test<sp/>for<sp/>matrix<sp/>calculations&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacemml_1_1matrix_1acfa8f5720be1c70ef4937a24cea4912a" kindref="member">mml::matrix::calc</ref>(</highlight><highlight class="stringliteral">&quot;[[1,0,0],[0,2,1],[3,2,1]]*6*[[2,7,6],[5,3,4],[2,1,4]]*6*[[1,0,0],[0,2,1],[3,2,1]]*6*[[2,7,6],[5,3,4],[2,1,4]]&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacemml_1_1matrix_1acfa8f5720be1c70ef4937a24cea4912a" kindref="member">mml::matrix::calc</ref>(</highlight><highlight class="stringliteral">&quot;[[1,0,0],[0,2,1],[3,2,1]]*[[1,0,0],[0,2,1],[3,2,1]]-[[1,0,0],[0,2,1],[3,2,1]]*[[1,0,0],[0,2,1],[3,2,1]]&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="test/matrix1.cpp"/>
+  </compounddef>
+</doxygen>

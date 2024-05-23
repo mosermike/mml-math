@@ -1,0 +1,448 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classmml_1_1log" kind="class" language="C++" prot="public">
+    <compoundname>mml::log</compoundname>
+    <includes refid="log_8hpp" local="no">log.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classmml_1_1log_1a61ab29dce1138f2ab61595fb615019b4" prot="private" static="no" mutable="no">
+        <type><ref refid="classmml_1_1string" kindref="compound">mml::string</ref></type>
+        <definition>mml::string mml::log::logpath</definition>
+        <argsstring></argsstring>
+        <name>logpath</name>
+        <initializer>= &quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/log.hpp" line="38" column="13" bodyfile="include/mml/log.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmml_1_1log_1abc8ca2efb832ed83a1a1773fe19d7e7e" prot="private" static="no" mutable="no">
+        <type>std::ofstream</type>
+        <definition>std::ofstream mml::log::output</definition>
+        <argsstring></argsstring>
+        <name>output</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/log.hpp" line="39" column="15" bodyfile="include/mml/log.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmml_1_1log_1a3f65b8bb3b61c6ce2cdd595e012fac44" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>mml::log::log</definition>
+        <argsstring>(mml::string path)</argsstring>
+        <name>log</name>
+        <param>
+          <type><ref refid="classmml_1_1string" kindref="compound">mml::string</ref></type>
+          <declname>path</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/log.hpp" line="44" column="1" bodyfile="include/mml/log.hpp" bodystart="44" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1log_1a53b0ce1eb331eef0eed64e6f41b2d01a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>mml::log::log</definition>
+        <argsstring>()</argsstring>
+        <name>log</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/log.hpp" line="55" column="1" bodyfile="include/mml/log.hpp" bodystart="55" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1log_1a9e81b5bdf88da8af532a4c4c26f7b19a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>mml::log::~log</definition>
+        <argsstring>()</argsstring>
+        <name>~log</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/log.hpp" line="58" column="1" bodyfile="include/mml/log.hpp" bodystart="58" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1log_1a253c95b2ce0e92a8c60ffaed841b3379" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmml_1_1log" kindref="compound">mml::log</ref> &amp;</type>
+        <definition>mml::log &amp; mml::log::operator=</definition>
+        <argsstring>(std::string value)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>std::string</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Neue Logfile öffnen;</para>
+</simplesect>
+<simplesect kind="author"><para>Mike</para>
+</simplesect>
+<simplesect kind="author"><para>Mike Moser</para>
+</simplesect>
+Quelldatei args.cpp Enthält verschiedene Funktionen für die Klasse args </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/log.hpp" line="65" column="10" bodyfile="src/log.cpp" bodystart="16" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1log_1a9925165fb0c2429a2e79c539c6152865" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::log::backup</definition>
+        <argsstring>(bool verbose=true, bool Reset=true)</argsstring>
+        <name>backup</name>
+        <param>
+          <type>bool</type>
+          <declname>verbose</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>Reset</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Logdatei sichern</para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/log.hpp" line="93" column="6" bodyfile="src/log.cpp" bodystart="22" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1log_1a19b0de574610fb97b9aafbd507f674f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::log::close</definition>
+        <argsstring>()</argsstring>
+        <name>close</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Logdatei schließen</para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/log.hpp" line="100" column="6" bodyfile="src/log.cpp" bodystart="51" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1log_1a72650d1fb6ec84bed9874d087f542af6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::log::cout</definition>
+        <argsstring>(mml::string value, bool newline=false)</argsstring>
+        <name>cout</name>
+        <param>
+          <type><ref refid="classmml_1_1string" kindref="compound">mml::string</ref></type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>newline</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>in Logdatei schreiben</para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/log.hpp" line="107" column="6" bodyfile="src/log.cpp" bodystart="55" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1log_1a7d52a4a5f893fe34e0f51c2e073ce39c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::log::cout</definition>
+        <argsstring>(double value, bool newline=false)</argsstring>
+        <name>cout</name>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>newline</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/log.hpp" line="109" column="6" bodyfile="src/log.cpp" bodystart="65" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1log_1a5c613fef84b2c896d249f67127445c2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::log::cout</definition>
+        <argsstring>(int value, bool newline=false)</argsstring>
+        <name>cout</name>
+        <param>
+          <type>int</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>newline</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/log.hpp" line="110" column="6" bodyfile="src/log.cpp" bodystart="70" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1log_1a771fce3aeab314bae0a409fb95d5eadf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmml_1_1string" kindref="compound">mml::string</ref></type>
+        <definition>mml::string mml::log::getline</definition>
+        <argsstring>(uint32_t line)</argsstring>
+        <name>getline</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Eine bestimmte Zeile aus der Logdatei zurückgeben</para>
+</simplesect>
+<simplesect kind="return"><para>string </para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/log.hpp" line="119" column="13" bodyfile="src/log.cpp" bodystart="76" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1log_1a2f476b5c6467a8f8b45667fb24067507" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmml_1_1string" kindref="compound">mml::string</ref></type>
+        <definition>mml::string mml::log::getline_back</definition>
+        <argsstring>(uint32_t line)</argsstring>
+        <name>getline_back</name>
+        <param>
+          <type>uint32_t</type>
+          <declname>line</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Eine bestimmte Zeile aus der Logdatei zurückgeben, dabei vom Ende aus Rechnen</para>
+</simplesect>
+<simplesect kind="return"><para>string </para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/log.hpp" line="127" column="13" bodyfile="src/log.cpp" bodystart="84" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1log_1a6914f662b32fb1156cdd66bed86e3891" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmml_1_1string" kindref="compound">mml::string</ref></type>
+        <definition>mml::string mml::log::lastline</definition>
+        <argsstring>()</argsstring>
+        <name>lastline</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Die letzte Zeile aus der Logdatei zurückgeben</para>
+</simplesect>
+<simplesect kind="return"><para>stirng </para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/log.hpp" line="135" column="13" bodyfile="src/log.cpp" bodystart="112" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1log_1ad5079bc3b22102e15a1c4d62e566a63d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::log::header</definition>
+        <argsstring>()</argsstring>
+        <name>header</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Neuen Kopf erstellen</para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/log.hpp" line="141" column="6" bodyfile="src/log.cpp" bodystart="120" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1log_1a52f8a08a6293ec9fcc3c3ce22c4200cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::log::open</definition>
+        <argsstring>(mml::string path=&quot;&quot;)</argsstring>
+        <name>open</name>
+        <param>
+          <type><ref refid="classmml_1_1string" kindref="compound">mml::string</ref></type>
+          <declname>path</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Logdatei öffnen</para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/log.hpp" line="147" column="6" bodyfile="src/log.cpp" bodystart="125" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1log_1a4828b229d2e77a323c1835d7b4b4104d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::log::print</definition>
+        <argsstring>(bool linenumber=false)</argsstring>
+        <name>print</name>
+        <param>
+          <type>bool</type>
+          <declname>linenumber</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Logdatei ausgeben</para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/log.hpp" line="154" column="6" bodyfile="src/log.cpp" bodystart="135" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1log_1ab5481d9ed02f62fd30dc16a24e4f04ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::log::reset</definition>
+        <argsstring>(bool verbose=true)</argsstring>
+        <name>reset</name>
+        <param>
+          <type>bool</type>
+          <declname>verbose</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Logdatei neu erstellen</para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/log.hpp" line="161" column="6" bodyfile="src/log.cpp" bodystart="158" bodyend="166"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classmml_1_1log_1a8fc9c7bb563438b53583937245c17489" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void operator&lt;&lt;</definition>
+        <argsstring>(mml::log &amp;log, const mml::string &amp;String)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type><ref refid="classmml_1_1log" kindref="compound">mml::log</ref> &amp;</type>
+          <declname>log</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classmml_1_1string" kindref="compound">mml::string</ref> &amp;</type>
+          <declname>String</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/log.hpp" line="77" column="8" bodyfile="include/mml/log.hpp" bodystart="77" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="friend" id="classmml_1_1log_1af08163a9d603b51c31615a91ffcc55f2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void operator&lt;&lt;</definition>
+        <argsstring>(mml::log &amp;log, const double &amp;String)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type><ref refid="classmml_1_1log" kindref="compound">mml::log</ref> &amp;</type>
+          <declname>log</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>String</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/log.hpp" line="83" column="8" bodyfile="include/mml/log.hpp" bodystart="83" bodyend="86"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/mml/log.hpp" line="36" column="1" bodyfile="include/mml/log.hpp" bodystart="36" bodyend="164"/>
+    <listofallmembers>
+      <member refid="classmml_1_1log_1a9925165fb0c2429a2e79c539c6152865" prot="public" virt="non-virtual"><scope>mml::log</scope><name>backup</name></member>
+      <member refid="classmml_1_1log_1a19b0de574610fb97b9aafbd507f674f8" prot="public" virt="non-virtual"><scope>mml::log</scope><name>close</name></member>
+      <member refid="classmml_1_1log_1a72650d1fb6ec84bed9874d087f542af6" prot="public" virt="non-virtual"><scope>mml::log</scope><name>cout</name></member>
+      <member refid="classmml_1_1log_1a7d52a4a5f893fe34e0f51c2e073ce39c" prot="public" virt="non-virtual"><scope>mml::log</scope><name>cout</name></member>
+      <member refid="classmml_1_1log_1a5c613fef84b2c896d249f67127445c2a" prot="public" virt="non-virtual"><scope>mml::log</scope><name>cout</name></member>
+      <member refid="classmml_1_1log_1a771fce3aeab314bae0a409fb95d5eadf" prot="public" virt="non-virtual"><scope>mml::log</scope><name>getline</name></member>
+      <member refid="classmml_1_1log_1a2f476b5c6467a8f8b45667fb24067507" prot="public" virt="non-virtual"><scope>mml::log</scope><name>getline_back</name></member>
+      <member refid="classmml_1_1log_1ad5079bc3b22102e15a1c4d62e566a63d" prot="public" virt="non-virtual"><scope>mml::log</scope><name>header</name></member>
+      <member refid="classmml_1_1log_1a6914f662b32fb1156cdd66bed86e3891" prot="public" virt="non-virtual"><scope>mml::log</scope><name>lastline</name></member>
+      <member refid="classmml_1_1log_1a3f65b8bb3b61c6ce2cdd595e012fac44" prot="public" virt="non-virtual"><scope>mml::log</scope><name>log</name></member>
+      <member refid="classmml_1_1log_1a53b0ce1eb331eef0eed64e6f41b2d01a" prot="public" virt="non-virtual"><scope>mml::log</scope><name>log</name></member>
+      <member refid="classmml_1_1log_1a61ab29dce1138f2ab61595fb615019b4" prot="private" virt="non-virtual"><scope>mml::log</scope><name>logpath</name></member>
+      <member refid="classmml_1_1log_1a52f8a08a6293ec9fcc3c3ce22c4200cf" prot="public" virt="non-virtual"><scope>mml::log</scope><name>open</name></member>
+      <member refid="classmml_1_1log_1a8fc9c7bb563438b53583937245c17489" prot="public" virt="non-virtual"><scope>mml::log</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classmml_1_1log_1af08163a9d603b51c31615a91ffcc55f2" prot="public" virt="non-virtual"><scope>mml::log</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classmml_1_1log_1a253c95b2ce0e92a8c60ffaed841b3379" prot="public" virt="non-virtual"><scope>mml::log</scope><name>operator=</name></member>
+      <member refid="classmml_1_1log_1abc8ca2efb832ed83a1a1773fe19d7e7e" prot="private" virt="non-virtual"><scope>mml::log</scope><name>output</name></member>
+      <member refid="classmml_1_1log_1a4828b229d2e77a323c1835d7b4b4104d" prot="public" virt="non-virtual"><scope>mml::log</scope><name>print</name></member>
+      <member refid="classmml_1_1log_1ab5481d9ed02f62fd30dc16a24e4f04ae" prot="public" virt="non-virtual"><scope>mml::log</scope><name>reset</name></member>
+      <member refid="classmml_1_1log_1a9e81b5bdf88da8af532a4c4c26f7b19a" prot="public" virt="non-virtual"><scope>mml::log</scope><name>~log</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

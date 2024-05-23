@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespacemml_1_1thread" kind="namespace" language="C++">
+    <compoundname>mml::thread</compoundname>
+    <innerclass refid="classmml_1_1thread_1_1Thread" prot="public">mml::thread::Thread</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacemml_1_1thread_1a579ddecc00f3ee6fbdd8fe06fd030e95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::thread::sleep</definition>
+        <argsstring>(float s)</argsstring>
+        <name>sleep</name>
+        <param>
+          <type>float</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Aktueller <ref refid="classmml_1_1thread_1_1Thread" kindref="compound">Thread</ref> eine bestimmte Zeit lang stoppen</para>
+</simplesect>
+<itemizedlist>
+<listitem><para>Second <simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+</listitem>
+</itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/Thread.hpp" line="93" column="6" bodyfile="src/Thread.cpp" bodystart="69" bodyend="71" declfile="include/mml/Thread.hpp" declline="93" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/mml/Thread.hpp" line="18" column="1"/>
+  </compounddef>
+</doxygen>

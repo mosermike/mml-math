@@ -1,0 +1,226 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="matrix1_8hpp" kind="file" language="C++">
+    <compoundname>matrix1.hpp</compoundname>
+    <includes local="no">mml.hpp</includes>
+    <includes local="no">vector</includes>
+    <includedby refid="mml-math_8hpp" local="yes">include/mml-math.hpp</includedby>
+    <includedby refid="src_2matrix1_8cpp" local="yes">src/matrix1.cpp</includedby>
+    <includedby refid="test_2matrix_8cpp" local="no">test/matrix.cpp</includedby>
+    <includedby refid="test_2matrix1_8cpp" local="no">test/matrix1.cpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>mml.hpp</label>
+      </node>
+      <node id="1">
+        <label>include/mml-math/matrix1.hpp</label>
+        <link refid="matrix1_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4">
+        <label>test/calc.cpp</label>
+        <link refid="calc_8cpp"/>
+      </node>
+      <node id="8">
+        <label>test/matrix1.cpp</label>
+        <link refid="test_2matrix1_8cpp"/>
+      </node>
+      <node id="2">
+        <label>include/mml-math.hpp</label>
+        <link refid="mml-math_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>test/test1.cpp</label>
+        <link refid="test1_8cpp"/>
+      </node>
+      <node id="1">
+        <label>include/mml-math/matrix1.hpp</label>
+        <link refid="matrix1_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>test/matrix.cpp</label>
+        <link refid="test_2matrix_8cpp"/>
+      </node>
+      <node id="3">
+        <label>calculator/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="6">
+        <label>src/matrix1.cpp</label>
+        <link refid="src_2matrix1_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classmml_1_1matrix_1_1matrix" prot="public">mml::matrix::matrix</innerclass>
+    <innernamespace refid="namespacemml">mml</innernamespace>
+    <innernamespace refid="namespacemml_1_1matrix">mml::matrix</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>mml_math_matrix_hpp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>mml_math_matrix_hpp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;mml.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacemml" kindref="compound">mml</ref><sp/>{</highlight></codeline>
+<codeline lineno="17" refid="namespacemml_1_1matrix" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="classmml_1_1matrix_1_1matrix" kindref="compound">matrix</ref><sp/>{</highlight></codeline>
+<codeline lineno="18" refid="classmml_1_1matrix_1_1matrix" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classmml_1_1matrix_1_1matrix" kindref="compound">matrix</ref>{<sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mml::vector&lt;mml::vector&lt;double&gt;&gt;<sp/>data<sp/>=<sp/>{{0.0f}};</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmml_1_1matrix_1_1matrix" kindref="compound">mml::matrix::matrix</ref><sp/>add(<ref refid="classmml_1_1matrix_1_1matrix" kindref="compound">mml::matrix::matrix</ref><sp/><ref refid="classmml_1_1matrix_1_1matrix" kindref="compound">matrix</ref>);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmml_1_1matrix_1_1matrix" kindref="compound">mml::matrix::matrix</ref><sp/>multiply(<ref refid="classmml_1_1matrix_1_1matrix" kindref="compound">mml::matrix::matrix</ref><sp/><ref refid="classmml_1_1matrix_1_1matrix" kindref="compound">matrix</ref>);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmml_1_1matrix_1_1matrix" kindref="compound">mml::matrix::matrix</ref><sp/>multiply(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>scalar);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmml_1_1matrix_1_1matrix" kindref="compound">mml::matrix::matrix</ref><sp/>sub(<ref refid="classmml_1_1matrix_1_1matrix" kindref="compound">mml::matrix::matrix</ref><sp/><ref refid="classmml_1_1matrix_1_1matrix" kindref="compound">matrix</ref>);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="56" refid="classmml_1_1matrix_1_1matrix_1aa45c8044268d8f6256bf3686d0abe7f7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::size_t<sp/><ref refid="classmml_1_1matrix_1_1matrix_1aa45c8044268d8f6256bf3686d0abe7f7" kindref="member">rows</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="57" refid="classmml_1_1matrix_1_1matrix_1a3759caffa289d8de1ab575f2afb0bd6d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::size_t<sp/><ref refid="classmml_1_1matrix_1_1matrix_1a3759caffa289d8de1ab575f2afb0bd6d" kindref="member">cols</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Constructor<sp/>to<sp/>initialize<sp/>the<sp/>matrix<sp/>with<sp/>given<sp/>dimensions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="classmml_1_1matrix_1_1matrix_1adb1780f55bd9f07ab96b8eed7fd20329" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmml_1_1matrix_1_1matrix_1adb1780f55bd9f07ab96b8eed7fd20329" kindref="member">matrix</ref>(std::size_t<sp/>r,<sp/>std::size_t<sp/>c)<sp/>:<sp/><ref refid="classmml_1_1matrix_1_1matrix_1aa45c8044268d8f6256bf3686d0abe7f7" kindref="member">rows</ref>(r),<sp/><ref refid="classmml_1_1matrix_1_1matrix_1a3759caffa289d8de1ab575f2afb0bd6d" kindref="member">cols</ref>(c)<sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;data<sp/>=<sp/>mml::vector&lt;mml::vector&lt;double&gt;&gt;(r,<sp/>mml::vector&lt;double&gt;(c,0.0));</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="classmml_1_1matrix_1_1matrix_1ae53f1bd3b24e9a8ad440bc35e44f4e02" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmml_1_1matrix_1_1matrix_1ae53f1bd3b24e9a8ad440bc35e44f4e02" kindref="member">matrix</ref>(std::string<sp/>str1)<sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Change<sp/>to<sp/>mml::string</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mml::string<sp/>str(str1);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Perform<sp/>some<sp/>checks<sp/>for<sp/>the<sp/>format</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(str.sub(0,1)<sp/>!=<sp/></highlight><highlight class="stringliteral">&quot;[[&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mml::shell::warn_opt(</highlight><highlight class="stringliteral">&quot;[matrix]<sp/>String<sp/>does<sp/>not<sp/>start<sp/>with<sp/>[[.<sp/>Check<sp/>the<sp/>format!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(str.sub(-2,-1)<sp/>!=<sp/></highlight><highlight class="stringliteral">&quot;]]&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mml::shell::warn_opt(</highlight><highlight class="stringliteral">&quot;[matrix]<sp/>String<sp/>does<sp/>not<sp/>end<sp/>with<sp/>]].<sp/>Check<sp/>the<sp/>format!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Determine<sp/>Number<sp/>of<sp/>rows<sp/>==<sp/>Number<sp/>of<sp/>[</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(uint32_t<sp/>i<sp/>=<sp/>1;<sp/>i<sp/>&lt;<sp/>str.size();<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(str[i]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;[&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmml_1_1matrix_1_1matrix_1aa45c8044268d8f6256bf3686d0abe7f7" kindref="member">rows</ref>++;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Determine<sp/>number<sp/>of<sp/>columns<sp/>from<sp/>first<sp/>row</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mml::string<sp/>temp<sp/>=<sp/>str.sub(1,str.find(</highlight><highlight class="charliteral">&apos;]&apos;</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmml_1_1matrix_1_1matrix_1a3759caffa289d8de1ab575f2afb0bd6d" kindref="member">cols</ref>++;<sp/></highlight><highlight class="comment">//<sp/>First<sp/>entry<sp/>is<sp/>not<sp/>count</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(uint32_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>temp.size();<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(temp[i]<sp/>==<sp/></highlight><highlight class="charliteral">&apos;,&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmml_1_1matrix_1_1matrix_1a3759caffa289d8de1ab575f2afb0bd6d" kindref="member">cols</ref>++;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialise<sp/>2D<sp/>vector</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;data<sp/>=<sp/>mml::vector&lt;mml::vector&lt;double&gt;&gt;(<ref refid="classmml_1_1matrix_1_1matrix_1aa45c8044268d8f6256bf3686d0abe7f7" kindref="member">rows</ref>,<sp/>mml::vector&lt;double&gt;(<ref refid="classmml_1_1matrix_1_1matrix_1a3759caffa289d8de1ab575f2afb0bd6d" kindref="member">cols</ref>,0.0));</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Remove<sp/>first<sp/>[<sp/>and<sp/>last<sp/>]</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>str<sp/>=<sp/>str.sub(1,-2);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Assign<sp/>the<sp/>value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(uint32_t<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/><ref refid="classmml_1_1matrix_1_1matrix_1aa45c8044268d8f6256bf3686d0abe7f7" kindref="member">rows</ref>;<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Find<sp/>the<sp/>first<sp/>row</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::size_t<sp/>temp1<sp/><sp/><sp/>=<sp/>str.find(</highlight><highlight class="charliteral">&apos;[&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::size_t<sp/>temp2<sp/><sp/><sp/>=<sp/>str.find(</highlight><highlight class="charliteral">&apos;]&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Extract<sp/>the<sp/>row<sp/>and<sp/>remove<sp/>it<sp/>from<sp/>the<sp/>string</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp<sp/><sp/><sp/><sp/>=<sp/>str.sub(temp1+1,temp2-1);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>str<sp/>=<sp/>str.substr(temp2+1);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Go<sp/>through<sp/>the<sp/>extracted<sp/>row<sp/>and<sp/>assign<sp/>by<sp/>column</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(uint32_t<sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/><ref refid="classmml_1_1matrix_1_1matrix_1a3759caffa289d8de1ab575f2afb0bd6d" kindref="member">cols</ref>;<sp/>j++)<sp/>{</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Cut<sp/>out<sp/>the<sp/>string<sp/>to<sp/>the<sp/>next<sp/>,<sp/>and<sp/>store<sp/>it<sp/>and<sp/>remove<sp/>this<sp/>part<sp/>from<sp/>the<sp/>string</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(temp.exist(</highlight><highlight class="stringliteral">&quot;,&quot;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data[i][j]<sp/>=<sp/>mml::atof((temp.sub(0,temp.find(</highlight><highlight class="charliteral">&apos;,&apos;</highlight><highlight class="normal">)-1)).str());</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>temp<sp/>=<sp/>temp.substr(temp.find(</highlight><highlight class="charliteral">&apos;,&apos;</highlight><highlight class="normal">)+1);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>If<sp/>last<sp/>&apos;,&apos;<sp/>removed,<sp/>assign<sp/>last<sp/>value</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data[i][j]<sp/>=<sp/>temp.atof();</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Constructor<sp/>with<sp/>=<sp/>a<sp/>2D<sp/>vector</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmml_1_1matrix_1_1matrix_1adb1780f55bd9f07ab96b8eed7fd20329" kindref="member">matrix</ref>(mml::vector&lt;mml::vector&lt;double&gt;&gt;<sp/>temp)<sp/>:<sp/>data(temp),<sp/><ref refid="classmml_1_1matrix_1_1matrix_1aa45c8044268d8f6256bf3686d0abe7f7" kindref="member">rows</ref>(temp.size()),<sp/><ref refid="classmml_1_1matrix_1_1matrix_1a3759caffa289d8de1ab575f2afb0bd6d" kindref="member">cols</ref>(temp[0].size()){};</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmml_1_1matrix_1_1matrix" kindref="compound">mml::matrix::matrix</ref>&amp;<sp/>operator=(mml::vector&lt;mml::vector&lt;double&gt;&gt;<sp/>temp)<sp/>{data<sp/>=<sp/>temp;<sp/><ref refid="classmml_1_1matrix_1_1matrix_1a3759caffa289d8de1ab575f2afb0bd6d" kindref="member">cols</ref>=temp[0].size();<sp/><ref refid="classmml_1_1matrix_1_1matrix_1aa45c8044268d8f6256bf3686d0abe7f7" kindref="member">rows</ref><sp/>=<sp/>temp.size();<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmml_1_1matrix_1_1matrix" kindref="compound">mml::matrix::matrix</ref>&amp;<sp/>operator=(<ref refid="classmml_1_1matrix_1_1matrix" kindref="compound">mml::matrix::matrix</ref><sp/>temp)<sp/>{data<sp/>=<sp/>temp.get_vec();<sp/><ref refid="classmml_1_1matrix_1_1matrix_1aa45c8044268d8f6256bf3686d0abe7f7" kindref="member">rows</ref><sp/>=<sp/>temp.<ref refid="classmml_1_1matrix_1_1matrix_1aa45c8044268d8f6256bf3686d0abe7f7" kindref="member">rows</ref>;<sp/><ref refid="classmml_1_1matrix_1_1matrix_1a3759caffa289d8de1ab575f2afb0bd6d" kindref="member">cols</ref><sp/>=<sp/>temp.<ref refid="classmml_1_1matrix_1_1matrix_1a3759caffa289d8de1ab575f2afb0bd6d" kindref="member">cols</ref>;<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal">&amp;<sp/>operator()(std::size_t<sp/>i,<sp/>std::size_t<sp/>j)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;data[i][j];}</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>operator()(std::string<sp/>str1);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmml_1_1matrix_1_1matrix" kindref="compound">mml::matrix::matrix</ref><sp/>operator*(<ref refid="classmml_1_1matrix_1_1matrix" kindref="compound">mml::matrix::matrix</ref><sp/><ref refid="classmml_1_1matrix_1_1matrix_1adb1780f55bd9f07ab96b8eed7fd20329" kindref="member">matrix</ref>)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1_1rechner_1a1f701177d0c98cff43a4e395f5328cc7" kindref="member">multiply</ref>(<ref refid="classmml_1_1matrix_1_1matrix_1adb1780f55bd9f07ab96b8eed7fd20329" kindref="member">matrix</ref>);}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmml_1_1matrix_1_1matrix" kindref="compound">mml::matrix::matrix</ref><sp/>operator*=(<ref refid="classmml_1_1matrix_1_1matrix" kindref="compound">mml::matrix::matrix</ref><sp/><ref refid="classmml_1_1matrix_1_1matrix_1adb1780f55bd9f07ab96b8eed7fd20329" kindref="member">matrix</ref>)<sp/>{data<sp/>=<sp/><ref refid="namespacemml_1_1rechner_1a1f701177d0c98cff43a4e395f5328cc7" kindref="member">multiply</ref>(<ref refid="classmml_1_1matrix_1_1matrix_1adb1780f55bd9f07ab96b8eed7fd20329" kindref="member">matrix</ref>).get_vec();<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;}</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmml_1_1matrix_1_1matrix" kindref="compound">mml::matrix::matrix</ref><sp/>operator*(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>scalar)<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1_1rechner_1a1f701177d0c98cff43a4e395f5328cc7" kindref="member">multiply</ref>(scalar);}</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmml_1_1matrix_1_1matrix" kindref="compound">mml::matrix::matrix</ref><sp/>operator+(<ref refid="classmml_1_1matrix_1_1matrix" kindref="compound">mml::matrix::matrix</ref><sp/><ref refid="classmml_1_1matrix_1_1matrix_1adb1780f55bd9f07ab96b8eed7fd20329" kindref="member">matrix</ref>){</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1_1rechner_1a8fb791fea6c89ed76525a731bb361a2f" kindref="member">add</ref>(<ref refid="classmml_1_1matrix_1_1matrix_1adb1780f55bd9f07ab96b8eed7fd20329" kindref="member">matrix</ref>);}</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmml_1_1matrix_1_1matrix" kindref="compound">mml::matrix::matrix</ref><sp/>operator+=(<ref refid="classmml_1_1matrix_1_1matrix" kindref="compound">mml::matrix::matrix</ref><sp/><ref refid="classmml_1_1matrix_1_1matrix_1adb1780f55bd9f07ab96b8eed7fd20329" kindref="member">matrix</ref>){data<sp/>=<sp/><ref refid="namespacemml_1_1rechner_1a8fb791fea6c89ed76525a731bb361a2f" kindref="member">add</ref>(<ref refid="classmml_1_1matrix_1_1matrix_1adb1780f55bd9f07ab96b8eed7fd20329" kindref="member">matrix</ref>).get_vec();<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;}</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmml_1_1matrix_1_1matrix" kindref="compound">mml::matrix::matrix</ref><sp/>operator-(<ref refid="classmml_1_1matrix_1_1matrix" kindref="compound">mml::matrix::matrix</ref><sp/><ref refid="classmml_1_1matrix_1_1matrix_1adb1780f55bd9f07ab96b8eed7fd20329" kindref="member">matrix</ref>){</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>sub(<ref refid="classmml_1_1matrix_1_1matrix_1adb1780f55bd9f07ab96b8eed7fd20329" kindref="member">matrix</ref>);}</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmml_1_1matrix_1_1matrix" kindref="compound">mml::matrix::matrix</ref><sp/>operator-=(<ref refid="classmml_1_1matrix_1_1matrix" kindref="compound">mml::matrix::matrix</ref><sp/><ref refid="classmml_1_1matrix_1_1matrix_1adb1780f55bd9f07ab96b8eed7fd20329" kindref="member">matrix</ref>){data<sp/>=<sp/>sub(<ref refid="classmml_1_1matrix_1_1matrix_1adb1780f55bd9f07ab96b8eed7fd20329" kindref="member">matrix</ref>).get_vec();<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;}</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmml_1_1matrix_1_1matrix" kindref="compound">mml::matrix::matrix</ref><sp/>adjugate();</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mml::vector&lt;mml::vector&lt;double&gt;&gt;<sp/>get_vec()<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>data;}</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmml_1_1matrix_1_1matrix" kindref="compound">mml::matrix::matrix</ref><sp/>gauss();</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmml_1_1matrix_1_1matrix" kindref="compound">mml::matrix::matrix</ref><sp/>inverse();</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>det();</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>print();</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmml_1_1matrix_1_1matrix" kindref="compound">mml::matrix::matrix</ref><sp/>reduce(uint32_t<sp/>row,<sp/>uint32_t<sp/>column);</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmml_1_1matrix_1_1matrix" kindref="compound">mml::matrix::matrix</ref><sp/>transpose();</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="259" refid="namespacemml_1_1matrix_1acfa8f5720be1c70ef4937a24cea4912a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmml_1_1matrix_1_1matrix" kindref="compound">mml::matrix::matrix</ref><sp/><ref refid="namespacemml_1_1matrix_1acfa8f5720be1c70ef4937a24cea4912a" kindref="member">calc</ref>(mml::string<sp/>equation);</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"></highlight></codeline>
+<codeline lineno="268" refid="namespacemml_1_1matrix_1a8d603192f1434363b19647d392acee3e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1_1matrix_1a8d603192f1434363b19647d392acee3e" kindref="member">print_2matrix</ref>(<ref refid="classmml_1_1matrix_1_1matrix" kindref="compound">mml::matrix::matrix</ref><sp/>mat1,<sp/>std::string<sp/><ref refid="namespacemml_1_1rechner_1a8fb791fea6c89ed76525a731bb361a2f" kindref="member">add</ref>,<sp/><ref refid="classmml_1_1matrix_1_1matrix" kindref="compound">mml::matrix::matrix</ref><sp/>mat2);</highlight></codeline>
+<codeline lineno="278" refid="namespacemml_1_1matrix_1ab684dc555c3cb69f2aa24b3dfac9d87e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1_1matrix_1ab684dc555c3cb69f2aa24b3dfac9d87e" kindref="member">print_3matrix</ref>(<ref refid="classmml_1_1matrix_1_1matrix" kindref="compound">mml::matrix::matrix</ref><sp/>mat1,<sp/>std::string<sp/>add1,<sp/><ref refid="classmml_1_1matrix_1_1matrix" kindref="compound">mml::matrix::matrix</ref><sp/>mat2,<sp/>std::string<sp/>add2,<sp/><ref refid="classmml_1_1matrix_1_1matrix" kindref="compound">mml::matrix::matrix</ref><sp/>mat3);</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"></highlight></codeline>
+<codeline lineno="285" refid="namespacemml_1_1matrix_1a9c77e2fd5eea181906ac773db59d3295" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmml_1_1matrix_1_1matrix" kindref="compound">mml::matrix::matrix</ref><sp/><ref refid="namespacemml_1_1matrix_1a9c77e2fd5eea181906ac773db59d3295" kindref="member">unity</ref>(std::size_t<sp/>n);</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="288"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"></highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>mml__math__matrix_hpp</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="include/mml-math/matrix1.hpp"/>
+  </compounddef>
+</doxygen>

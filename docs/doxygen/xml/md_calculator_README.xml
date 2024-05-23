@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="md_calculator_README" kind="page">
+    <compoundname>md_calculator_README</compoundname>
+    <title>calculator</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>This c++ programme does simple calculations and matrix calculations such as computing the determinant or the inverse.</para>
+<sect1 id="md_calculator_README_1autotoc_md1">
+<title>Install</title>
+<para>The programm can be installed by simply executing &apos;&apos;&apos; make &apos;&apos;&apos;</para>
+<para>Note that the two libraries mml and mml-math are needed and can be installed her<itemizedlist>
+<listitem><para>libmml : <ulink url="https://github.com/mosermike/mml">github</ulink>, <ulink url="https://gitlab.moser.mywire.org/moser/mml">gitlab</ulink></para>
+</listitem><listitem><para>libmml-math : <ulink url="https://github.com/mosermike/mml-math">github</ulink>, <ulink url="https://gitlab.moser.mywire.org/moser/mml-math">gitlab</ulink> If you want to install the executing script somewhere, execute &apos;&apos;&apos; make install DST=[path to installation directory] &apos;&apos;&apos;</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md_calculator_README_1autotoc_md2">
+<title>Usage</title>
+<para>The code itself can be executed as &apos;&apos;&apos; ./calc.x -c 1+1 &apos;&apos;&apos; and it prints the result. Note, that when you are using brackets, write the equation as &quot;(1+1)&quot; with the quote signs.</para>
+</sect1>
+<sect1 id="md_calculator_README_1autotoc_md3">
+<title>Constants</title>
+<para>TODO</para>
+</sect1>
+<sect1 id="md_calculator_README_1autotoc_md4">
+<title>Uninstall</title>
+<para>To uninstall any created files, simply execute &apos;&apos;&apos; make uninstall DST=[path to installation directory]. &apos;&apos;&apos;</para>
+</sect1>
+<sect1 id="md_calculator_README_1autotoc_md5">
+<title>Matrix Calculations</title>
+<para>TODO</para>
+</sect1>
+<sect1 id="md_calculator_README_1autotoc_md6">
+<title>Project status</title>
+<para>Ongoing (beta version) </para>
+</sect1>
+    </detaileddescription>
+    <location file="calculator/README.md"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.1" xml:lang="en-US">
+  <compound refid="classmml_1_1matrix_1_1matrix" kind="class"><name>mml::matrix::matrix</name>
+    <member refid="classmml_1_1matrix_1_1matrix_1a1d0d3765873259cdf59c8258de5f288a" kind="variable"><name>data</name></member>
+    <member refid="classmml_1_1matrix_1_1matrix_1aa45c8044268d8f6256bf3686d0abe7f7" kind="variable"><name>rows</name></member>
+    <member refid="classmml_1_1matrix_1_1matrix_1a3759caffa289d8de1ab575f2afb0bd6d" kind="variable"><name>cols</name></member>
+    <member refid="classmml_1_1matrix_1_1matrix_1abe56e3add9f49fc0b23b458bddc6ca19" kind="function"><name>add</name></member>
+    <member refid="classmml_1_1matrix_1_1matrix_1a142e0a968d8c8852eed2ce286847cb16" kind="function"><name>multiply</name></member>
+    <member refid="classmml_1_1matrix_1_1matrix_1a4d64cdb249f2bb11b3b58d0a9c6766b4" kind="function"><name>multiply</name></member>
+    <member refid="classmml_1_1matrix_1_1matrix_1af382597fba49eccaf6957956badee173" kind="function"><name>sub</name></member>
+    <member refid="classmml_1_1matrix_1_1matrix_1adb1780f55bd9f07ab96b8eed7fd20329" kind="function"><name>matrix</name></member>
+    <member refid="classmml_1_1matrix_1_1matrix_1ae53f1bd3b24e9a8ad440bc35e44f4e02" kind="function"><name>matrix</name></member>
+  </compound>
+  <compound refid="namespaceconf" kind="namespace"><name>conf</name>
+    <member refid="namespaceconf_1a45653c983098153b78e33600e39230eb" kind="variable"><name>project</name></member>
+    <member refid="namespaceconf_1a33fa97cf51dcb25970fbf53f10159589" kind="variable"><name>copyright</name></member>
+    <member refid="namespaceconf_1a637c239d256432248aa8d9f3ab0b8c52" kind="variable"><name>author</name></member>
+    <member refid="namespaceconf_1ae850ae634911b713e036b43894fdd525" kind="variable"><name>templates_path</name></member>
+    <member refid="namespaceconf_1a7ad48fb6f3e9b129c02346ea0d3527c1" kind="variable"><name>exclude_patterns</name></member>
+    <member refid="namespaceconf_1ae475e080536acb271a0a0efe56c3ba42" kind="variable"><name>extensions</name></member>
+    <member refid="namespaceconf_1a332f430461432dc465213f884a1e4967" kind="variable"><name>shell</name></member>
+    <member refid="namespaceconf_1acb47d2c0c2904fa7d36b63142533f383" kind="variable"><name>breathe_projects</name></member>
+    <member refid="namespaceconf_1a6eba2d2c7ae923054b1c49e686ec89b9" kind="variable"><name>breathe_default_project</name></member>
+    <member refid="namespaceconf_1a7f1b143ff25817758abd21a7db110510" kind="variable"><name>html_theme</name></member>
+    <member refid="namespaceconf_1af4fb5d8851ccaade135c2668dd3ced41" kind="variable"><name>html_static_path</name></member>
+  </compound>
+  <compound refid="namespacemml" kind="namespace"><name>mml</name>
+  </compound>
+  <compound refid="namespacemml_1_1matrix" kind="namespace"><name>mml::matrix</name>
+    <member refid="namespacemml_1_1matrix_1acfa8f5720be1c70ef4937a24cea4912a" kind="function"><name>calc</name></member>
+    <member refid="namespacemml_1_1matrix_1a8d603192f1434363b19647d392acee3e" kind="function"><name>print_2matrix</name></member>
+    <member refid="namespacemml_1_1matrix_1ab684dc555c3cb69f2aa24b3dfac9d87e" kind="function"><name>print_3matrix</name></member>
+    <member refid="namespacemml_1_1matrix_1a9c77e2fd5eea181906ac773db59d3295" kind="function"><name>unity</name></member>
+  </compound>
+  <compound refid="namespacemml_1_1rechner" kind="namespace"><name>mml::rechner</name>
+    <member refid="namespacemml_1_1rechner_1a8fb791fea6c89ed76525a731bb361a2f" kind="function"><name>add</name></member>
+    <member refid="namespacemml_1_1rechner_1a18e519bbf2f66dac7f5057c4d2b0243a" kind="function"><name>calculate</name></member>
+    <member refid="namespacemml_1_1rechner_1a114f8707b5ebd54263ffd2123b46deaa" kind="function"><name>calculations</name></member>
+    <member refid="namespacemml_1_1rechner_1ae38c88f173cb93aa5a57980646075067" kind="function"><name>calculate_intern</name></member>
+    <member refid="namespacemml_1_1rechner_1a1f701177d0c98cff43a4e395f5328cc7" kind="function"><name>multiply</name></member>
+    <member refid="namespacemml_1_1rechner_1a603581c9b71bbc4ed0e17fc104d49f06" kind="function"><name>summation</name></member>
+    <member refid="namespacemml_1_1rechner_1a5141578fde449117642c5c9b2c4c3399" kind="function"><name>operations</name></member>
+    <member refid="namespacemml_1_1rechner_1ad23025f3e5d5166e5f8db42d912bf448" kind="function"><name>pos_bracket</name></member>
+    <member refid="namespacemml_1_1rechner_1aebc2f71019d64ef26f91be9b8d86ec0d" kind="function"><name>rad_or_grad</name></member>
+    <member refid="namespacemml_1_1rechner_1a8470177a5cbf53bf5e23bab2be6bd040" kind="function"><name>grad_or_rad</name></member>
+    <member refid="namespacemml_1_1rechner_1a9b68ec5ee55ae9f92b827e81c2d3914c" kind="function"><name>rechnung</name></member>
+    <member refid="namespacemml_1_1rechner_1ae5b75e6332404d3b16b105eb20cb720b" kind="function"><name>replace</name></member>
+    <member refid="namespacemml_1_1rechner_1ae12dc270ab8df302b28cb23db2ca5cba" kind="function"><name>backup_logfile</name></member>
+    <member refid="namespacemml_1_1rechner_1a649dd4cd86801d2c6b36580041636a45" kind="function"><name>delete_zeros</name></member>
+    <member refid="namespacemml_1_1rechner_1a96b844e16c756f7599cf5c7674c15a5e" kind="function"><name>save_matrix</name></member>
+    <member refid="namespacemml_1_1rechner_1a1d6654f4dd0e7291ab5862dacb8b9a94" kind="function"><name>save_result</name></member>
+    <member refid="namespacemml_1_1rechner_1ad780938d04a50376b2275f9ecb60348f" kind="function"><name>reset_logfile</name></member>
+    <member refid="namespacemml_1_1rechner_1aa7e8d1b0097e770c6861d4ba84d3abcb" kind="function"><name>matrix_calculation</name></member>
+    <member refid="namespacemml_1_1rechner_1a7ad8a5ca3bef3c3cb259cb15dd19d8ad" kind="function"><name>matrix_addition</name></member>
+    <member refid="namespacemml_1_1rechner_1a3313ff0e1b497c22410d0bf283aeacb9" kind="function"><name>matrix_adjunct</name></member>
+    <member refid="namespacemml_1_1rechner_1a47b46c269fda6c52418248e89236185e" kind="function"><name>matrix_determinante</name></member>
+    <member refid="namespacemml_1_1rechner_1aac779ec8d1bee867677e2c1ffa3d3ae6" kind="function"><name>matrix_inverse</name></member>
+    <member refid="namespacemml_1_1rechner_1a9de3e85b04169b971c3f1ddd2994bc4a" kind="function"><name>matrix_multiply</name></member>
+    <member refid="namespacemml_1_1rechner_1a6f6e8aac5469ee795a1ecad532fb1cbb" kind="function"><name>matrix_smaller</name></member>
+    <member refid="namespacemml_1_1rechner_1a853ab35fc6e00ecc969aeeb640f7d245" kind="function"><name>matrix_print</name></member>
+    <member refid="namespacemml_1_1rechner_1ac9bc053bc3e19c8d4526afee6f189db0" kind="function"><name>matrix_transposed</name></member>
+  </compound>
+  <compound refid="main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="main_8cpp_1aebdcb723b52214cd0d7e46652e945efb" kind="define"><name>calc_log</name></member>
+    <member refid="main_8cpp_1a97ee70a8770dc30d06c744b24eb2fcfc" kind="function"><name>help</name></member>
+    <member refid="main_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="calculator_2README_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="README_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="conf_8py" kind="file"><name>conf.py</name>
+  </compound>
+  <compound refid="mml-math_8hpp" kind="file"><name>mml-math.hpp</name>
+    <member refid="mml-math_8hpp_1a98f58c903192dcd1909fda8df409260c" kind="define"><name>__MML_MATH_HPP__</name></member>
+  </compound>
+  <compound refid="basic__operations_8hpp" kind="file"><name>basic_operations.hpp</name>
+  </compound>
+  <compound refid="derivate_8hpp" kind="file"><name>derivate.hpp</name>
+  </compound>
+  <compound refid="functions_8hpp" kind="file"><name>functions.hpp</name>
+  </compound>
+  <compound refid="logging_8hpp" kind="file"><name>logging.hpp</name>
+  </compound>
+  <compound refid="matrix_8hpp" kind="file"><name>matrix.hpp</name>
+  </compound>
+  <compound refid="matrix1_8hpp" kind="file"><name>matrix1.hpp</name>
+  </compound>
+  <compound refid="basic__operations_8cpp" kind="file"><name>basic_operations.cpp</name>
+    <member refid="basic__operations_8cpp_1ac6a7a9b42cbc40afa2b524aadd2610e6" kind="function"><name>derivate_old</name></member>
+  </compound>
+  <compound refid="derivate_8cpp" kind="file"><name>derivate.cpp</name>
+  </compound>
+  <compound refid="functions_8cpp" kind="file"><name>functions.cpp</name>
+  </compound>
+  <compound refid="logging_8cpp" kind="file"><name>logging.cpp</name>
+  </compound>
+  <compound refid="src_2matrix_8cpp" kind="file"><name>matrix.cpp</name>
+  </compound>
+  <compound refid="test_2matrix_8cpp" kind="file"><name>matrix.cpp</name>
+    <member refid="test_2matrix_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="src_2matrix1_8cpp" kind="file"><name>matrix1.cpp</name>
+  </compound>
+  <compound refid="test_2matrix1_8cpp" kind="file"><name>matrix1.cpp</name>
+    <member refid="test_2matrix1_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="calc_8cpp" kind="file"><name>calc.cpp</name>
+    <member refid="calc_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="test1_8cpp" kind="file"><name>test1.cpp</name>
+    <member refid="test1_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="md_calculator_README" kind="page"><name>md_calculator_README</name>
+  </compound>
+  <compound refid="md_README" kind="page"><name>md_README</name>
+  </compound>
+  <compound refid="dir_46ec98a0eaec3dba456c3e63c7772753" kind="dir"><name>calculator</name>
+  </compound>
+  <compound refid="dir_49e56c817e5e54854c35e136979f97ca" kind="dir"><name>docs</name>
+  </compound>
+  <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>include</name>
+  </compound>
+  <compound refid="dir_4df3cc2f4cbcc224b52c93ff08d975ae" kind="dir"><name>include/mml-math</name>
+  </compound>
+  <compound refid="dir_1ab31cb45db5038bdda41b72d8600e0e" kind="dir"><name>docs/source</name>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
+  </compound>
+  <compound refid="dir_13e138d54eb8818da29c3992edef070a" kind="dir"><name>test</name>
+  </compound>
+</doxygenindex>

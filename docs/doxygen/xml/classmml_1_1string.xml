@@ -1,0 +1,1587 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classmml_1_1string" kind="class" language="C++" prot="public">
+    <compoundname>mml::string</compoundname>
+    <includes refid="standards_8hpp" local="no">standards.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classmml_1_1string_1a8835de31377f2c4441fb88a724b3d269" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string mml::string::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <initializer>= &quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/standards.hpp" line="36" column="13" bodyfile="include/mml/standards.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmml_1_1string_1a85dc98333607d441a7ef28dc0bd0281a" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string mml::string::temp</definition>
+        <argsstring></argsstring>
+        <name>temp</name>
+        <initializer>= &quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/standards.hpp" line="37" column="13" bodyfile="include/mml/standards.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classmml_1_1string_1a1e72bd0d0e35cc359b256916fd57da2a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename templ</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classmml_1_1string" kindref="compound">mml::string</ref></type>
+        <definition>mml::string mml::string::to_mml</definition>
+        <argsstring>(templ val)</argsstring>
+        <name>to_mml</name>
+        <param>
+          <type>templ</type>
+          <declname>val</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/standards.hpp" line="40" column="25" bodyfile="include/mml/standards.hpp" bodystart="40" bodyend="47"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmml_1_1string_1a624785c3fee6ef75b50a3569b5234b5f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename templ</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>mml::string::string</definition>
+        <argsstring>(templ str)</argsstring>
+        <name>string</name>
+        <param>
+          <type>templ</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>templ</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/standards.hpp" line="53" column="13" bodyfile="include/mml/standards.hpp" bodystart="53" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1a3b3ab50be8db94f7a37bcb98bd32469a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>mml::string::string</definition>
+        <argsstring>()</argsstring>
+        <name>string</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Instance of the class </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/standards.hpp" line="63" column="1" bodyfile="include/mml/standards.hpp" bodystart="63" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1abf78a337e3fc0d9889f3e138a761f77c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename templ</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classmml_1_1string" kindref="compound">mml::string</ref> &amp;</type>
+        <definition>mml::string&amp; mml::string::operator=</definition>
+        <argsstring>(templ str)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>templ</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Assign the value of the template type with the &apos;=&apos; sign <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>templ</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Class instance </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/standards.hpp" line="70" column="25" bodyfile="include/mml/standards.hpp" bodystart="70" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1ae135c56481a1e24845498efda41aeb84" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename templ</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool mml::string::operator==</definition>
+        <argsstring>(templ Test)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>templ</type>
+          <declname>Test</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Operator equal <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>templ</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/standards.hpp" line="105" column="17" bodyfile="include/mml/standards.hpp" bodystart="105" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1ab04f755c55c2322d6dffca2e12cfa8dd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename templ</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool mml::string::operator!=</definition>
+        <argsstring>(templ Test)</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>templ</type>
+          <declname>Test</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Operator unequal <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>templ</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/standards.hpp" line="112" column="17" bodyfile="include/mml/standards.hpp" bodystart="112" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1aa288bb8a47b47af92f7d3f1462e30cc9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename templ</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classmml_1_1string" kindref="compound">mml::string</ref></type>
+        <definition>mml::string mml::string::operator+</definition>
+        <argsstring>(templ Test)</argsstring>
+        <name>operator+</name>
+        <param>
+          <type>templ</type>
+          <declname>Test</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Operator add somehting at the end of this instance <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>templ</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value to be added </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classmml_1_1string" kindref="compound">mml::string</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/standards.hpp" line="120" column="24" bodyfile="include/mml/standards.hpp" bodystart="120" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1ac30a41095a96b56d5498bea3e129bff1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename templ</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classmml_1_1string" kindref="compound">mml::string</ref></type>
+        <definition>mml::string mml::string::operator+=</definition>
+        <argsstring>(templ Test)</argsstring>
+        <name>operator+=</name>
+        <param>
+          <type>templ</type>
+          <declname>Test</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Operator add a char vector to this string <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>template</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value to be added </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classmml_1_1string" kindref="compound">mml::string</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/standards.hpp" line="128" column="24" bodyfile="include/mml/standards.hpp" bodystart="128" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1a754a104abb34fd9842cd5869566bfdb5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char &amp;</type>
+        <definition>char &amp; mml::string::operator[]</definition>
+        <argsstring>(int index)</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type>int</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return a specific char from the string <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>int</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>char </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/standards.hpp" line="135" column="6" bodyfile="src/string.cpp" bodystart="30" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1a1220627cd229e5914b01ac19eba537e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string &amp;</type>
+        <definition>std::string &amp; mml::string::operator()</definition>
+        <argsstring>()</argsstring>
+        <name>operator()</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/standards.hpp" line="137" column="13" bodyfile="src/string.cpp" bodystart="40" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1a32311b133953994dfef6961c8a1580e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double mml::string::atof</definition>
+        <argsstring>()</argsstring>
+        <name>atof</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Converts this string into a double <simplesect kind="return"><para>double </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/standards.hpp" line="143" column="8" bodyfile="src/string.cpp" bodystart="44" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1a8441ef354393dd5da65206b6f5818087" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mml::string::atoi</definition>
+        <argsstring>()</argsstring>
+        <name>atoi</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Convert this string into an integer</para>
+<para><simplesect kind="return"><para>int </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/standards.hpp" line="150" column="5" bodyfile="src/string.cpp" bodystart="50" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1ae4e537d4e75a0878ea7277f58f0e5907" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * mml::string::c_str</definition>
+        <argsstring>()</argsstring>
+        <name>c_str</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the string as a character pointer</para>
+<para><simplesect kind="return"><para>char* </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/standards.hpp" line="157" column="12" bodyfile="src/string.cpp" bodystart="256" bodyend="258"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1a88471aafcb78a860ec707bb140baa069" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t mml::string::count</definition>
+        <argsstring>(mml::string name)</argsstring>
+        <name>count</name>
+        <param>
+          <type><ref refid="classmml_1_1string" kindref="compound">mml::string</ref></type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Count how often a string appears <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classmml_1_1string" kindref="compound">mml::string</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String which is counted </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>uint32_t </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/standards.hpp" line="165" column="10" bodyfile="src/string.cpp" bodystart="291" bodyend="306"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1a7bcf86627d31a8b085a1a3feaa12bad3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::string::cout</definition>
+        <argsstring>(bool newline=true, std::string text=&quot;&quot;)</argsstring>
+        <name>cout</name>
+        <param>
+          <type>bool</type>
+          <declname>newline</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>text</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Print out the value of this instance <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bool</parametername>
+<parametername>optional</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Print newline. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>std::string</parametername>
+<parametername>optional</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Additional text. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>None </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/standards.hpp" line="173" column="6" bodyfile="src/string.cpp" bodystart="307" bodyend="312"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1a148062ef838673354ed404876f6cb64d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string mml::string::del_letter</definition>
+        <argsstring>(bool save=false)</argsstring>
+        <name>del_letter</name>
+        <param>
+          <type>bool</type>
+          <declname>save</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Delete letters <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bool</parametername>
+<parametername>optional</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Save the changed string in this instance. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/standards.hpp" line="180" column="15" bodyfile="src/string.cpp" bodystart="313" bodyend="322"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1ae9378dc435895b5ad81280364be786ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string mml::string::del_number</definition>
+        <argsstring>(bool save=false)</argsstring>
+        <name>del_number</name>
+        <param>
+          <type>bool</type>
+          <declname>save</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Delete numbers <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bool</parametername>
+<parametername>optional</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Save the changed string in this instance. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/standards.hpp" line="188" column="13" bodyfile="src/string.cpp" bodystart="324" bodyend="333"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1ae6020f11a4948d38de8ef91bfa6d20f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string mml::string::del_space</definition>
+        <argsstring>(bool save=false)</argsstring>
+        <name>del_space</name>
+        <param>
+          <type>bool</type>
+          <declname>save</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Remove everything after the first space <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bool</parametername>
+<parametername>optional</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Save the changed string in this instance. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/standards.hpp" line="195" column="15" bodyfile="src/string.cpp" bodystart="335" bodyend="345"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1ae8e122861dd6eab71021afbe39c4bdef" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool mml::string::empty</definition>
+        <argsstring>()</argsstring>
+        <name>empty</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Checks if the string is empty <simplesect kind="return"><para>bool </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/standards.hpp" line="201" column="8" bodyfile="include/mml/standards.hpp" bodystart="201" bodyend="201"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1ab9889379cbe4368885c9a673f021b52a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool mml::string::exist</definition>
+        <argsstring>(std::string name)</argsstring>
+        <name>exist</name>
+        <param>
+          <type>std::string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check if a string exists <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String to be checked </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/standards.hpp" line="208" column="6" bodyfile="src/string.cpp" bodystart="347" bodyend="349"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1a48e1ff970fa494de2b797ddf358a3c3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool mml::string::exist</definition>
+        <argsstring>(std::string name1, std::string name2, std::string name3=&quot;__________&quot;, std::string name4=&quot;__________&quot;)</argsstring>
+        <name>exist</name>
+        <param>
+          <type>std::string</type>
+          <declname>name1</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>name2</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>name3</declname>
+          <defval>&quot;__________&quot;</defval>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>name4</declname>
+          <defval>&quot;__________&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Check if one <emphasis>or</emphasis> another string exists <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String to be checked </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Second String to be checked. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>string</parametername>
+<parametername>optional</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Third String to be checked. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>string</parametername>
+<parametername>optional</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Fourth String to be checked.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/standards.hpp" line="219" column="6" bodyfile="src/string.cpp" bodystart="352" bodyend="354"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1a1033fe9d14c9bd1d6ca6f95702f8d586" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t mml::string::find</definition>
+        <argsstring>(char letter, std::size_t old=0)</argsstring>
+        <name>find</name>
+        <param>
+          <type>char</type>
+          <declname>letter</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>old</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Position of the first appearance of a character after a start position</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>char</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size_t</parametername>
+<parametername>optional</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value from where to search for the char. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Position </para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/standards.hpp" line="229" column="13" bodyfile="include/mml/standards.hpp" bodystart="229" bodyend="229"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1ac273292618a768ff100f9e4dfa397009" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t mml::string::find</definition>
+        <argsstring>(mml::string name, std::size_t old=0)</argsstring>
+        <name>find</name>
+        <param>
+          <type><ref refid="classmml_1_1string" kindref="compound">mml::string</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>old</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Position of the first appearance of a string after a start position</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size_t</parametername>
+<parametername>optional</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value from where to search for the char. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Position </para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/standards.hpp" line="238" column="13" bodyfile="include/mml/standards.hpp" bodystart="238" bodyend="238"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1a41759a0809cc18124733db34fabca24d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t mml::string::find_back</definition>
+        <argsstring>(mml::string name, std::size_t pos=0, std::size_t low=0)</argsstring>
+        <name>find_back</name>
+        <param>
+          <type><ref refid="classmml_1_1string" kindref="compound">mml::string</ref></type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>pos</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>low</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Check if a string exists but starting from the right side</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String to look for </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>std::size_t</parametername>
+<parametername>optional</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value from where to search for the string. 0 means that it is not used. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>std::size_t</parametername>
+<parametername>optional</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Lower limit to which point is searched for. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::size_t </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/standards.hpp" line="249" column="13" bodyfile="src/string.cpp" bodystart="55" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1a44600a161f7ad1c5daa8e343d4a99cf0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::string::getline</definition>
+        <argsstring>(std::ifstream &amp;input)</argsstring>
+        <name>getline</name>
+        <param>
+          <type>std::ifstream &amp;</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reads a line from an input file stream and assigns it to the instance <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>std::ifstream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>None </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/standards.hpp" line="257" column="6" bodyfile="src/string.cpp" bodystart="275" bodyend="277"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1adf5cf7012f74a47aab5b0c4fc6c2842f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string mml::string::getline</definition>
+        <argsstring>(std::string input, std::size_t line=0)</argsstring>
+        <name>getline</name>
+        <param>
+          <type>std::string</type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>line</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Reads a line from a file <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>File name </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>std::size_t</parametername>
+<parametername>optional</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Line number. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::tring </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/standards.hpp" line="266" column="13" bodyfile="src/string.cpp" bodystart="280" bodyend="289"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1a9b735c067f74a7b4e324e19157338814" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string mml::string::getValue</definition>
+        <argsstring>()</argsstring>
+        <name>getValue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get the value of this instance <simplesect kind="return"><para>std::string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/standards.hpp" line="273" column="13" bodyfile="src/string.cpp" bodystart="234" bodyend="236"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1a9f82d0c2131c9165e05adb386b233d21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t mml::string::hash</definition>
+        <argsstring>()</argsstring>
+        <name>hash</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a hash value of this instance. This hash value can then be used for example in an switch ... case with strings by using hash values.</para>
+<para><simplesect kind="return"><para>uint32_t </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/standards.hpp" line="281" column="10" bodyfile="src/string.cpp" bodystart="265" bodyend="267"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1ab1cb57d6df67cdb8948ca8110cf4f8bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::string::log</definition>
+        <argsstring>(std::string logpath)</argsstring>
+        <name>log</name>
+        <param>
+          <type>std::string</type>
+          <declname>logpath</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Writes the value of this instance into a log file <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>std::string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Path to the logfile </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>None </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/standards.hpp" line="288" column="6" bodyfile="src/string.cpp" bodystart="67" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1aa35374da20cb9c18df75aa3897066ecf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string mml::string::lower</definition>
+        <argsstring>()</argsstring>
+        <name>lower</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Transforms all letters into low case letters <simplesect kind="return"><para>std::string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/standards.hpp" line="294" column="13" bodyfile="src/string.cpp" bodystart="93" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1a9363392d3205da96b9eb63ec3d4fb242" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt; std::string &gt; mml::string::ls</definition>
+        <argsstring>(std::string name_include, std::string name_exclude, std::vector&lt; std::string &gt; &amp;directories, bool recursive=false, bool all=false)</argsstring>
+        <name>ls</name>
+        <param>
+          <type>std::string</type>
+          <declname>name_include</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>name_exclude</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; std::string &gt; &amp;</type>
+          <declname>directories</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>recursive</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>all</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>List all files and directories in a path. Directories end with &apos;/&apos; in the entry <simplesect kind="note"><para>If name_include or name_exclude is detected for a directory, all the elements in this directory are either included or excluded, respectively. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>std::string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Only list files or directories which include this string in the name. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>std::string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Exclude files or directories with this string in the name </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>std::vector&lt;std::string&gt;</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Reference to a vector where the directories are added </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bool</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Check directory recursively </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bool</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Also list hidden files </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::vector&lt;std::string&gt; </para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/standards.hpp" line="307" column="13" bodyfile="src/string.cpp" bodystart="100" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1a126fa2767c6b4d20e7d7afa66e4feff5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt; std::string &gt; mml::string::ls</definition>
+        <argsstring>(std::string name_include=&quot;&quot;, std::string name_exclude=&quot;&quot;, bool recursive=false, bool all=false)</argsstring>
+        <name>ls</name>
+        <param>
+          <type>std::string</type>
+          <declname>name_include</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>name_exclude</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>recursive</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>all</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>List all files and directories in a path. Directories end with &apos;/&apos; in the entry <simplesect kind="note"><para>If name_include or name_exclude is detected for a directory, all the elements in this directory are either included or excluded, respectively. </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>std::string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Only list files or directories which include this string in the name. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>std::string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Exclude files or directories with this string in the name </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bool</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Check directory recursively </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bool</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Also list hidden files </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::vector&lt;std::string&gt; </para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/standards.hpp" line="319" column="13" bodyfile="src/string.cpp" bodystart="167" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1a774c2bf7511d6c23cd25c8c8cda6bb06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool mml::string::mkdir_p</definition>
+        <argsstring>()</argsstring>
+        <name>mkdir_p</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create directory with creating parent directories <simplesect kind="return"><para>bool </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/standards.hpp" line="325" column="6" bodyfile="src/string.cpp" bodystart="196" bodyend="226"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1a97fa3ac4e196573c2ee3f39fdbb5ed5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool mml::string::remove</definition>
+        <argsstring>()</argsstring>
+        <name>remove</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Remove the file with the value of the instance <simplesect kind="return"><para>bool </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/standards.hpp" line="331" column="6" bodyfile="src/string.cpp" bodystart="228" bodyend="231"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1a4b493ce495806a4dba04b14ae7a87347" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>std::string</type>
+        <definition>std::string mml::string::replace</definition>
+        <argsstring>(T str_old, T str_new, std::size_t pos=0)</argsstring>
+        <name>replace</name>
+        <param>
+          <type>T</type>
+          <declname>str_old</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>str_new</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>pos</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Replace sth in the string with sth else <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>templ</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Replace this value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>temp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Replaced with this value </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size_t</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Start from this position to replace </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/standards.hpp" line="340" column="25" bodyfile="include/mml/standards.hpp" bodystart="340" bodyend="357"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1a66452b29f6a4e98839344c675f2cd164" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t mml::string::rfind</definition>
+        <argsstring>(char letter)</argsstring>
+        <name>rfind</name>
+        <param>
+          <type>char</type>
+          <declname>letter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get position of last occurance of a character <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>char</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value to be found </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>std::size_t </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/standards.hpp" line="364" column="13" bodyfile="include/mml/standards.hpp" bodystart="364" bodyend="364"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1a82b51347412abdd14a5538cc8c869a13" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t mml::string::size</definition>
+        <argsstring>()</argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Compute size of the string <simplesect kind="return"><para>std::size_t </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/standards.hpp" line="371" column="13" bodyfile="src/string.cpp" bodystart="238" bodyend="240"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1a71a3dae3f16e17a67c213ee643a80587" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmml_1_1string" kindref="compound">mml::string</ref></type>
+        <definition>mml::string mml::string::substr</definition>
+        <argsstring>(std::size_t pos1, std::size_t length1)</argsstring>
+        <name>substr</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>pos1</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>length1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create substring <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pos1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Start position </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Length of the string </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classmml_1_1string" kindref="compound">mml::string</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/standards.hpp" line="379" column="13" bodyfile="src/string.cpp" bodystart="176" bodyend="178"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1a422be5ccc494f3b1ed6039e84b229a17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmml_1_1string" kindref="compound">mml::string</ref></type>
+        <definition>mml::string mml::string::substr</definition>
+        <argsstring>(std::size_t pos1)</argsstring>
+        <name>substr</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>pos1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Create a substring starting from this position to the end <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pos1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Start position to the end </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classmml_1_1string" kindref="compound">mml::string</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/standards.hpp" line="386" column="13" bodyfile="src/string.cpp" bodystart="180" bodyend="183"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1a1fb3525866e3386db11ec4b1c2ec2a36" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmml_1_1string" kindref="compound">mml::string</ref></type>
+        <definition>mml::string mml::string::sub</definition>
+        <argsstring>(std::size_t beg, std::size_t end)</argsstring>
+        <name>sub</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>beg</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+<para>Create a substring starting and ending of specific positions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>beg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Start of the new string </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>End of the new string </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classmml_1_1string" kindref="compound">mml::string</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/standards.hpp" line="394" column="13" bodyfile="src/string.cpp" bodystart="185" bodyend="194"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1a2006997f5084941e91472f8eaedb41c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mml::string::stoi</definition>
+        <argsstring>()</argsstring>
+        <name>stoi</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Transform this instance to an integer <simplesect kind="return"><para>int </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/standards.hpp" line="400" column="5" bodyfile="src/string.cpp" bodystart="261" bodyend="263"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1a16e0e25728c0b409616bfcf53f817a81" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string mml::string::str</definition>
+        <argsstring>()</argsstring>
+        <name>str</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Return the value of this instance as a std::string <simplesect kind="return"><para>std::string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/standards.hpp" line="406" column="13" bodyfile="src/string.cpp" bodystart="242" bodyend="244"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1a8e237d1326516f2d4e09006b55569d7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::string::writeline</definition>
+        <argsstring>(std::ofstream &amp;output)</argsstring>
+        <name>writeline</name>
+        <param>
+          <type>std::ofstream &amp;</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Write this instance into the end of a file <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>std::ofstream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Write to this output file stream </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>None </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/standards.hpp" line="413" column="6" bodyfile="src/string.cpp" bodystart="246" bodyend="248"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1aeb572bc17c49db9a0b358b1ce81af4e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::string::writeline</definition>
+        <argsstring>(std::string output)</argsstring>
+        <name>writeline</name>
+        <param>
+          <type>std::string</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Write this instance into the end of a file <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>std::string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Path to the file </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>None </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/standards.hpp" line="420" column="6" bodyfile="src/string.cpp" bodystart="250" bodyend="254"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1string_1a11756fff9d0e1677b4404c98ac98d435" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>mml::string::~string</definition>
+        <argsstring>()</argsstring>
+        <name>~string</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/standards.hpp" line="422" column="1" bodyfile="include/mml/standards.hpp" bodystart="422" bodyend="422"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classmml_1_1string_1a2cc8c87a16d53c8ebaacfd0eb0fa1c5f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;out, const string &amp;String)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classmml_1_1string" kindref="compound">string</ref> &amp;</type>
+          <declname>String</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Output the value of the string via a stream <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ostream </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/standards.hpp" line="85" column="8" bodyfile="include/mml/standards.hpp" bodystart="85" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="friend" id="classmml_1_1string_1a5f49a70c3fdd792a1913cf41ad043da0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::istream &amp;</type>
+        <definition>std::istream&amp; operator&gt;&gt;</definition>
+        <argsstring>(std::istream &amp;in, string &amp;String)</argsstring>
+        <name>operator&gt;&gt;</name>
+        <param>
+          <type>std::istream &amp;</type>
+          <declname>in</declname>
+        </param>
+        <param>
+          <type><ref refid="classmml_1_1string" kindref="compound">string</ref> &amp;</type>
+          <declname>String</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Input the value of the string via a stream <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>ostream </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/standards.hpp" line="95" column="21" bodyfile="include/mml/standards.hpp" bodystart="95" bodyend="98"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Class string which adds additional functions to std::string </para>
+    </detaileddescription>
+    <location file="include/mml/standards.hpp" line="33" column="1" bodyfile="include/mml/standards.hpp" bodystart="33" bodyend="423"/>
+    <listofallmembers>
+      <member refid="classmml_1_1string_1a32311b133953994dfef6961c8a1580e8" prot="public" virt="non-virtual"><scope>mml::string</scope><name>atof</name></member>
+      <member refid="classmml_1_1string_1a8441ef354393dd5da65206b6f5818087" prot="public" virt="non-virtual"><scope>mml::string</scope><name>atoi</name></member>
+      <member refid="classmml_1_1string_1ae4e537d4e75a0878ea7277f58f0e5907" prot="public" virt="non-virtual"><scope>mml::string</scope><name>c_str</name></member>
+      <member refid="classmml_1_1string_1a88471aafcb78a860ec707bb140baa069" prot="public" virt="non-virtual"><scope>mml::string</scope><name>count</name></member>
+      <member refid="classmml_1_1string_1a7bcf86627d31a8b085a1a3feaa12bad3" prot="public" virt="non-virtual"><scope>mml::string</scope><name>cout</name></member>
+      <member refid="classmml_1_1string_1a148062ef838673354ed404876f6cb64d" prot="public" virt="non-virtual"><scope>mml::string</scope><name>del_letter</name></member>
+      <member refid="classmml_1_1string_1ae9378dc435895b5ad81280364be786ec" prot="public" virt="non-virtual"><scope>mml::string</scope><name>del_number</name></member>
+      <member refid="classmml_1_1string_1ae6020f11a4948d38de8ef91bfa6d20f6" prot="public" virt="non-virtual"><scope>mml::string</scope><name>del_space</name></member>
+      <member refid="classmml_1_1string_1ae8e122861dd6eab71021afbe39c4bdef" prot="public" virt="non-virtual"><scope>mml::string</scope><name>empty</name></member>
+      <member refid="classmml_1_1string_1ab9889379cbe4368885c9a673f021b52a" prot="public" virt="non-virtual"><scope>mml::string</scope><name>exist</name></member>
+      <member refid="classmml_1_1string_1a48e1ff970fa494de2b797ddf358a3c3e" prot="public" virt="non-virtual"><scope>mml::string</scope><name>exist</name></member>
+      <member refid="classmml_1_1string_1a1033fe9d14c9bd1d6ca6f95702f8d586" prot="public" virt="non-virtual"><scope>mml::string</scope><name>find</name></member>
+      <member refid="classmml_1_1string_1ac273292618a768ff100f9e4dfa397009" prot="public" virt="non-virtual"><scope>mml::string</scope><name>find</name></member>
+      <member refid="classmml_1_1string_1a41759a0809cc18124733db34fabca24d" prot="public" virt="non-virtual"><scope>mml::string</scope><name>find_back</name></member>
+      <member refid="classmml_1_1string_1a44600a161f7ad1c5daa8e343d4a99cf0" prot="public" virt="non-virtual"><scope>mml::string</scope><name>getline</name></member>
+      <member refid="classmml_1_1string_1adf5cf7012f74a47aab5b0c4fc6c2842f" prot="public" virt="non-virtual"><scope>mml::string</scope><name>getline</name></member>
+      <member refid="classmml_1_1string_1a9b735c067f74a7b4e324e19157338814" prot="public" virt="non-virtual"><scope>mml::string</scope><name>getValue</name></member>
+      <member refid="classmml_1_1string_1a9f82d0c2131c9165e05adb386b233d21" prot="public" virt="non-virtual"><scope>mml::string</scope><name>hash</name></member>
+      <member refid="classmml_1_1string_1ab1cb57d6df67cdb8948ca8110cf4f8bc" prot="public" virt="non-virtual"><scope>mml::string</scope><name>log</name></member>
+      <member refid="classmml_1_1string_1aa35374da20cb9c18df75aa3897066ecf" prot="public" virt="non-virtual"><scope>mml::string</scope><name>lower</name></member>
+      <member refid="classmml_1_1string_1a9363392d3205da96b9eb63ec3d4fb242" prot="public" virt="non-virtual"><scope>mml::string</scope><name>ls</name></member>
+      <member refid="classmml_1_1string_1a126fa2767c6b4d20e7d7afa66e4feff5" prot="public" virt="non-virtual"><scope>mml::string</scope><name>ls</name></member>
+      <member refid="classmml_1_1string_1a774c2bf7511d6c23cd25c8c8cda6bb06" prot="public" virt="non-virtual"><scope>mml::string</scope><name>mkdir_p</name></member>
+      <member refid="classmml_1_1string_1ab04f755c55c2322d6dffca2e12cfa8dd" prot="public" virt="non-virtual"><scope>mml::string</scope><name>operator!=</name></member>
+      <member refid="classmml_1_1string_1a1220627cd229e5914b01ac19eba537e0" prot="public" virt="non-virtual"><scope>mml::string</scope><name>operator()</name></member>
+      <member refid="classmml_1_1string_1aa288bb8a47b47af92f7d3f1462e30cc9" prot="public" virt="non-virtual"><scope>mml::string</scope><name>operator+</name></member>
+      <member refid="classmml_1_1string_1ac30a41095a96b56d5498bea3e129bff1" prot="public" virt="non-virtual"><scope>mml::string</scope><name>operator+=</name></member>
+      <member refid="classmml_1_1string_1a2cc8c87a16d53c8ebaacfd0eb0fa1c5f" prot="public" virt="non-virtual"><scope>mml::string</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classmml_1_1string_1abf78a337e3fc0d9889f3e138a761f77c" prot="public" virt="non-virtual"><scope>mml::string</scope><name>operator=</name></member>
+      <member refid="classmml_1_1string_1ae135c56481a1e24845498efda41aeb84" prot="public" virt="non-virtual"><scope>mml::string</scope><name>operator==</name></member>
+      <member refid="classmml_1_1string_1a5f49a70c3fdd792a1913cf41ad043da0" prot="public" virt="non-virtual"><scope>mml::string</scope><name>operator&gt;&gt;</name></member>
+      <member refid="classmml_1_1string_1a754a104abb34fd9842cd5869566bfdb5" prot="public" virt="non-virtual"><scope>mml::string</scope><name>operator[]</name></member>
+      <member refid="classmml_1_1string_1a97fa3ac4e196573c2ee3f39fdbb5ed5e" prot="public" virt="non-virtual"><scope>mml::string</scope><name>remove</name></member>
+      <member refid="classmml_1_1string_1a4b493ce495806a4dba04b14ae7a87347" prot="public" virt="non-virtual"><scope>mml::string</scope><name>replace</name></member>
+      <member refid="classmml_1_1string_1a66452b29f6a4e98839344c675f2cd164" prot="public" virt="non-virtual"><scope>mml::string</scope><name>rfind</name></member>
+      <member refid="classmml_1_1string_1a82b51347412abdd14a5538cc8c869a13" prot="public" virt="non-virtual"><scope>mml::string</scope><name>size</name></member>
+      <member refid="classmml_1_1string_1a2006997f5084941e91472f8eaedb41c9" prot="public" virt="non-virtual"><scope>mml::string</scope><name>stoi</name></member>
+      <member refid="classmml_1_1string_1a16e0e25728c0b409616bfcf53f817a81" prot="public" virt="non-virtual"><scope>mml::string</scope><name>str</name></member>
+      <member refid="classmml_1_1string_1a624785c3fee6ef75b50a3569b5234b5f" prot="public" virt="non-virtual"><scope>mml::string</scope><name>string</name></member>
+      <member refid="classmml_1_1string_1a3b3ab50be8db94f7a37bcb98bd32469a" prot="public" virt="non-virtual"><scope>mml::string</scope><name>string</name></member>
+      <member refid="classmml_1_1string_1a1fb3525866e3386db11ec4b1c2ec2a36" prot="public" virt="non-virtual"><scope>mml::string</scope><name>sub</name></member>
+      <member refid="classmml_1_1string_1a71a3dae3f16e17a67c213ee643a80587" prot="public" virt="non-virtual"><scope>mml::string</scope><name>substr</name></member>
+      <member refid="classmml_1_1string_1a422be5ccc494f3b1ed6039e84b229a17" prot="public" virt="non-virtual"><scope>mml::string</scope><name>substr</name></member>
+      <member refid="classmml_1_1string_1a85dc98333607d441a7ef28dc0bd0281a" prot="private" virt="non-virtual"><scope>mml::string</scope><name>temp</name></member>
+      <member refid="classmml_1_1string_1a1e72bd0d0e35cc359b256916fd57da2a" prot="private" virt="non-virtual"><scope>mml::string</scope><name>to_mml</name></member>
+      <member refid="classmml_1_1string_1a8835de31377f2c4441fb88a724b3d269" prot="private" virt="non-virtual"><scope>mml::string</scope><name>value</name></member>
+      <member refid="classmml_1_1string_1a8e237d1326516f2d4e09006b55569d7d" prot="public" virt="non-virtual"><scope>mml::string</scope><name>writeline</name></member>
+      <member refid="classmml_1_1string_1aeb572bc17c49db9a0b358b1ce81af4e0" prot="public" virt="non-virtual"><scope>mml::string</scope><name>writeline</name></member>
+      <member refid="classmml_1_1string_1a11756fff9d0e1677b4404c98ac98d435" prot="public" virt="non-virtual"><scope>mml::string</scope><name>~string</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

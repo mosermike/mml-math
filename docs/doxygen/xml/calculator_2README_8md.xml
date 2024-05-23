@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="calculator_2README_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>calculator</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>c++<sp/>programme<sp/>does<sp/>simple<sp/>calculations<sp/>and<sp/>matrix<sp/>calculations<sp/>such<sp/>as<sp/>computing<sp/>the<sp/>determinant<sp/>or<sp/>the<sp/>inverse.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Install</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>programm<sp/>can<sp/>be<sp/>installed<sp/>by<sp/>simply<sp/>executing</highlight></codeline>
+<codeline><highlight class="normal">&apos;&apos;&apos;</highlight></codeline>
+<codeline><highlight class="normal">make<sp/></highlight></codeline>
+<codeline><highlight class="normal">&apos;&apos;&apos;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Note<sp/>that<sp/>the<sp/>two<sp/>libraries<sp/>mml<sp/>and<sp/>mml-math<sp/>are<sp/>needed<sp/>and<sp/>can<sp/>be<sp/>installed<sp/>her</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>libmml<sp/>:<sp/>[github](https://github.com/mosermike/mml),<sp/>[gitlab](https://gitlab.moser.mywire.org/moser/mml)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>libmml-math<sp/>:<sp/>[github](https://github.com/mosermike/mml-math),<sp/>[gitlab](https://gitlab.moser.mywire.org/moser/mml-math)</highlight></codeline>
+<codeline><highlight class="normal">If<sp/>you<sp/>want<sp/>to<sp/>install<sp/>the<sp/>executing<sp/>script<sp/>somewhere,<sp/>execute</highlight></codeline>
+<codeline><highlight class="normal">&apos;&apos;&apos;</highlight></codeline>
+<codeline><highlight class="normal">make<sp/>install<sp/>DST=[path<sp/>to<sp/>installation<sp/>directory]</highlight></codeline>
+<codeline><highlight class="normal">&apos;&apos;&apos;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Usage</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>code<sp/>itself<sp/>can<sp/>be<sp/>executed<sp/>as</highlight></codeline>
+<codeline><highlight class="normal">&apos;&apos;&apos;</highlight></codeline>
+<codeline><highlight class="normal">./calc.x<sp/>-c<sp/>1+1</highlight></codeline>
+<codeline><highlight class="normal">&apos;&apos;&apos;</highlight></codeline>
+<codeline><highlight class="normal">and<sp/>it<sp/>prints<sp/>the<sp/>result.<sp/>Note,<sp/>that<sp/>when<sp/>you<sp/>are<sp/>using<sp/>brackets,<sp/>write<sp/>the<sp/>equation<sp/>as<sp/>&quot;(1+1)&quot;<sp/>with<sp/>the<sp/>quote<sp/>signs.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Constants</highlight></codeline>
+<codeline><highlight class="normal">TODO</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Uninstall</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">To<sp/>uninstall<sp/>any<sp/>created<sp/>files,<sp/>simply<sp/>execute</highlight></codeline>
+<codeline><highlight class="normal">&apos;&apos;&apos;</highlight></codeline>
+<codeline><highlight class="normal">make<sp/>uninstall<sp/>DST=[path<sp/>to<sp/>installation<sp/>directory].</highlight></codeline>
+<codeline><highlight class="normal">&apos;&apos;&apos;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Matrix<sp/>Calculations</highlight></codeline>
+<codeline><highlight class="normal">TODO</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Project<sp/>status</highlight></codeline>
+<codeline><highlight class="normal">Ongoing<sp/>(beta<sp/>version)</highlight></codeline>
+    </programlisting>
+    <location file="calculator/README.md"/>
+  </compounddef>
+</doxygen>

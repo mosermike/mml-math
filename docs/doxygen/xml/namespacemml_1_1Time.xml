@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespacemml_1_1Time" kind="namespace" language="C++">
+    <compoundname>mml::Time</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacemml_1_1Time_1a0ff6eeb0cc0e67a279ff712c220008a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmml_1_1string" kindref="compound">mml::string</ref></type>
+        <definition>mml::string mml::Time::to_date</definition>
+        <argsstring>(time_t time)</argsstring>
+        <name>to_date</name>
+        <param>
+          <type>time_t</type>
+          <declname>time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>time_t in Datumformat</para>
+</simplesect>
+<simplesect kind="return"><para>string </para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/Timer.hpp" line="138" column="13" bodyfile="src/Timer.cpp" bodystart="170" bodyend="191" declfile="include/mml/Timer.hpp" declline="138" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1Time_1a86882094da3e5e01f7224ff27dc81855" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>time_t</type>
+        <definition>time_t mml::Time::to_time</definition>
+        <argsstring>(std::string date)</argsstring>
+        <name>to_time</name>
+        <param>
+          <type>std::string</type>
+          <declname>date</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Datumformat (DD.MM.YYYY HH:MM.SS) in time_t</para>
+</simplesect>
+<simplesect kind="return"><para>time_t </para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/Timer.hpp" line="145" column="8" bodyfile="src/Timer.cpp" bodystart="194" bodyend="203" declfile="include/mml/Timer.hpp" declline="145" declcolumn="8"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/mml/Timer.hpp" line="131" column="1"/>
+  </compounddef>
+</doxygen>

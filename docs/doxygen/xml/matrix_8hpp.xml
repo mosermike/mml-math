@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="matrix_8hpp" kind="file" language="C++">
+    <compoundname>matrix.hpp</compoundname>
+    <includes local="no">mml.hpp</includes>
+    <includedby refid="mml-math_8hpp" local="yes">include/mml-math.hpp</includedby>
+    <includedby refid="src_2matrix_8cpp" local="yes">src/matrix.cpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>mml.hpp</label>
+      </node>
+      <node id="1">
+        <label>include/mml-math/matrix.hpp</label>
+        <link refid="matrix_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4">
+        <label>test/calc.cpp</label>
+        <link refid="calc_8cpp"/>
+      </node>
+      <node id="6">
+        <label>src/matrix.cpp</label>
+        <link refid="src_2matrix_8cpp"/>
+      </node>
+      <node id="2">
+        <label>include/mml-math.hpp</label>
+        <link refid="mml-math_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>test/test1.cpp</label>
+        <link refid="test1_8cpp"/>
+      </node>
+      <node id="1">
+        <label>include/mml-math/matrix.hpp</label>
+        <link refid="matrix_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>calculator/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespacemml">mml</innernamespace>
+    <innernamespace refid="namespacemml_1_1rechner">mml::rechner</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Mike</para>
+</simplesect>
+<simplesect kind="note"><para></para>
+</simplesect>
+<simplesect kind="author"><para>Mike Moser</para>
+</simplesect>
+<simplesect kind="note"><para>Matrix with calculations </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__math_matrix_hpp__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__math_matrix_hpp__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;mml.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacemml" kindref="compound">mml</ref><sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">rechner<sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mml::string<sp/><ref refid="namespacemml_1_1rechner_1aa7e8d1b0097e770c6861d4ba84d3abcb" kindref="member">matrix_calculation</ref>(mml::shell::arg<sp/>args,<sp/>mml::string<sp/>matrix);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mml::string<sp/><ref refid="namespacemml_1_1rechner_1a7ad8a5ca3bef3c3cb259cb15dd19d8ad" kindref="member">matrix_addition</ref>(mml::string<sp/>matrix1,<sp/>mml::string<sp/>matrix2,<sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>op<sp/>=<sp/></highlight><highlight class="charliteral">&apos;+&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>ausgabe<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mml::string<sp/><ref refid="namespacemml_1_1rechner_1a3313ff0e1b497c22410d0bf283aeacb9" kindref="member">matrix_adjunct</ref>(mml::string<sp/>matrix,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>ausgabe<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="40" refid="namespacemml_1_1rechner_1a47b46c269fda6c52418248e89236185e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1_1rechner_1a47b46c269fda6c52418248e89236185e" kindref="member">matrix_determinante</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>matrix,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>ausgabe);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mml::string<sp/><ref refid="namespacemml_1_1rechner_1aac779ec8d1bee867677e2c1ffa3d3ae6" kindref="member">matrix_inverse</ref>(mml::string<sp/>matrix,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>ausgabe<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mml::string<sp/><ref refid="namespacemml_1_1rechner_1a9de3e85b04169b971c3f1ddd2994bc4a" kindref="member">matrix_multiply</ref>(mml::string<sp/>matrix1,<sp/>mml::string<sp/>matrix2,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>ausgabe<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mml::string<sp/><ref refid="namespacemml_1_1rechner_1a6f6e8aac5469ee795a1ecad532fb1cbb" kindref="member">matrix_smaller</ref>(mml::string<sp/>matrix,<sp/>uint32_t<sp/>row,<sp/>uint32_t<sp/>column,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>ausgabe<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1_1rechner_1a853ab35fc6e00ecc969aeeb640f7d245" kindref="member">matrix_print</ref>(mml::string<sp/>matrix);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mml::string<sp/><ref refid="namespacemml_1_1rechner_1ac9bc053bc3e19c8d4526afee6f189db0" kindref="member">matrix_transposed</ref>(mml::string<sp/>matrix,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>ausgabe<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>__matrix_hpp__</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="include/mml-math/matrix.hpp"/>
+  </compounddef>
+</doxygen>

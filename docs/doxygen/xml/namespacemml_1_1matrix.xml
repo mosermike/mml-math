@@ -1,0 +1,203 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespacemml_1_1matrix" kind="namespace" language="C++">
+    <compoundname>mml::matrix</compoundname>
+    <innerclass refid="classmml_1_1matrix_1_1matrix" prot="public">mml::matrix::matrix</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacemml_1_1matrix_1acfa8f5720be1c70ef4937a24cea4912a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmml_1_1matrix_1_1matrix" kindref="compound">mml::matrix::matrix</ref></type>
+        <definition>mml::matrix::matrix mml::matrix::calc</definition>
+        <argsstring>(mml::string equation)</argsstring>
+        <name>calc</name>
+        <param>
+          <type>mml::string</type>
+          <declname>equation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Calculations of matrices <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>equation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Equation to be calculated </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classmml_1_1matrix_1_1matrix" kindref="compound">mml::matrix::matrix</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/matrix1.hpp" line="259" column="21" declfile="include/mml-math/matrix1.hpp" declline="259" declcolumn="21"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1matrix_1a8d603192f1434363b19647d392acee3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::matrix::print_2matrix</definition>
+        <argsstring>(mml::matrix::matrix mat1, std::string add, mml::matrix::matrix mat2)</argsstring>
+        <name>print_2matrix</name>
+        <param>
+          <type><ref refid="classmml_1_1matrix_1_1matrix" kindref="compound">mml::matrix::matrix</ref></type>
+          <declname>mat1</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>add</declname>
+        </param>
+        <param>
+          <type><ref refid="classmml_1_1matrix_1_1matrix" kindref="compound">mml::matrix::matrix</ref></type>
+          <declname>mat2</declname>
+        </param>
+        <briefdescription>
+<para>Print two matrices with a string inbetween. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mat1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First Matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>add</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String between the two matrices </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mat2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Second Matrix </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Mike Moser </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/matrix1.hpp" line="268" column="6" declfile="include/mml-math/matrix1.hpp" declline="268" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1matrix_1ab684dc555c3cb69f2aa24b3dfac9d87e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::matrix::print_3matrix</definition>
+        <argsstring>(mml::matrix::matrix mat1, std::string add1, mml::matrix::matrix mat2, std::string add2, mml::matrix::matrix mat3)</argsstring>
+        <name>print_3matrix</name>
+        <param>
+          <type><ref refid="classmml_1_1matrix_1_1matrix" kindref="compound">mml::matrix::matrix</ref></type>
+          <declname>mat1</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>add1</declname>
+        </param>
+        <param>
+          <type><ref refid="classmml_1_1matrix_1_1matrix" kindref="compound">mml::matrix::matrix</ref></type>
+          <declname>mat2</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>add2</declname>
+        </param>
+        <param>
+          <type><ref refid="classmml_1_1matrix_1_1matrix" kindref="compound">mml::matrix::matrix</ref></type>
+          <declname>mat3</declname>
+        </param>
+        <briefdescription>
+<para>Print two matrices with a string inbetween. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mat1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First Matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>add1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String between the matrices 1 and 2 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mat2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Second Matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>add2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String between the matrices 2 and 3 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mat3</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Third Matrix </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/matrix1.hpp" line="278" column="6" declfile="include/mml-math/matrix1.hpp" declline="278" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1matrix_1a9c77e2fd5eea181906ac773db59d3295" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmml_1_1matrix_1_1matrix" kindref="compound">mml::matrix::matrix</ref></type>
+        <definition>mml::matrix::matrix mml::matrix::unity</definition>
+        <argsstring>(std::size_t n)</argsstring>
+        <name>unity</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Implement a (nxn) unity matrix. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number or rows and columns </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classmml_1_1matrix_1_1matrix" kindref="compound">mml::matrix::matrix</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/matrix1.hpp" line="285" column="21" declfile="include/mml-math/matrix1.hpp" declline="285" declcolumn="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/mml-math/matrix1.hpp" line="17" column="1"/>
+  </compounddef>
+</doxygen>

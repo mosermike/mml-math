@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="basic__operations_8hpp" kind="file" language="C++">
+    <compoundname>basic_operations.hpp</compoundname>
+    <includes local="no">mml.hpp</includes>
+    <includedby refid="mml-math_8hpp" local="yes">include/mml-math.hpp</includedby>
+    <includedby refid="basic__operations_8cpp" local="yes">src/basic_operations.cpp</includedby>
+    <includedby refid="functions_8cpp" local="yes">src/functions.cpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>mml.hpp</label>
+      </node>
+      <node id="1">
+        <label>include/mml-math/basic_operations.hpp</label>
+        <link refid="basic__operations_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4">
+        <label>test/calc.cpp</label>
+        <link refid="calc_8cpp"/>
+      </node>
+      <node id="2">
+        <label>include/mml-math.hpp</label>
+        <link refid="mml-math_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>test/test1.cpp</label>
+        <link refid="test1_8cpp"/>
+      </node>
+      <node id="1">
+        <label>include/mml-math/basic_operations.hpp</label>
+        <link refid="basic__operations_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>calculator/main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="7">
+        <label>src/functions.cpp</label>
+        <link refid="functions_8cpp"/>
+      </node>
+      <node id="6">
+        <label>src/basic_operations.cpp</label>
+        <link refid="basic__operations_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespacemml">mml</innernamespace>
+    <innernamespace refid="namespacemml_1_1rechner">mml::rechner</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Mike</para>
+</simplesect>
+@description Enthält verschiedene Basic Rechenoperationen </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__math_basic_operations_hpp__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__math_basic_operations_hpp__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;mml.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="namespacemml" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacemml" kindref="compound">mml</ref><sp/>{</highlight></codeline>
+<codeline lineno="16" refid="namespacemml_1_1rechner" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">rechner<sp/>{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mml::vector&lt;double&gt;<sp/><ref refid="namespacemml_1_1rechner_1a8fb791fea6c89ed76525a731bb361a2f" kindref="member">add</ref>(mml::shell::arg<sp/>args);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1_1rechner_1a18e519bbf2f66dac7f5057c4d2b0243a" kindref="member">calculate</ref>(mml::shell::arg<sp/>args,<sp/>mml::string<sp/>equation,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1_1rechner_1ae5b75e6332404d3b16b105eb20cb720b" kindref="member">replace</ref><sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;<sp/><ref refid="namespacemml_1_1rechner_1a114f8707b5ebd54263ffd2123b46deaa" kindref="member">calculations</ref>(mml::shell::arg<sp/>args,<sp/>std::vector&lt;mml::string&gt;<sp/>&amp;equations);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="49" refid="namespacemml_1_1rechner_1ae38c88f173cb93aa5a57980646075067" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1_1rechner_1ae38c88f173cb93aa5a57980646075067" kindref="member">calculate_intern</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>equation,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>verbose=</highlight><highlight class="keyword">false</highlight><highlight class="normal">,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1_1rechner_1ae5b75e6332404d3b16b105eb20cb720b" kindref="member">replace</ref>=</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1_1rechner_1a1f701177d0c98cff43a4e395f5328cc7" kindref="member">multiply</ref>(mml::shell::arg<sp/>args,<sp/>mml::string,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1_1rechner_1ae5b75e6332404d3b16b105eb20cb720b" kindref="member">replace</ref>);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1_1rechner_1a603581c9b71bbc4ed0e17fc104d49f06" kindref="member">summation</ref>(mml::shell::arg<sp/>args,<sp/>mml::string<sp/>equation,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1_1rechner_1ae5b75e6332404d3b16b105eb20cb720b" kindref="member">replace</ref>);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="include/mml-math/basic_operations.hpp"/>
+  </compounddef>
+</doxygen>

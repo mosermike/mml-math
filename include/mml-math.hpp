@@ -30,6 +30,5 @@ namespace mml{
 #include "mml-math/functions.hpp"
 #include "mml-math/logging.hpp"
 #include "mml-math/matrix.hpp"
-#include "mml-math/matrix1.hpp"
 
 #endif

@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_4df3cc2f4cbcc224b52c93ff08d975ae" kind="dir">
+    <compoundname>include/mml-math</compoundname>
+    <innerfile refid="basic__operations_8hpp">basic_operations.hpp</innerfile>
+    <innerfile refid="derivate_8hpp">derivate.hpp</innerfile>
+    <innerfile refid="functions_8hpp">functions.hpp</innerfile>
+    <innerfile refid="logging_8hpp">logging.hpp</innerfile>
+    <innerfile refid="matrix_8hpp">matrix.hpp</innerfile>
+    <innerfile refid="matrix1_8hpp">matrix1.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/mml-math/"/>
+  </compounddef>
+</doxygen>

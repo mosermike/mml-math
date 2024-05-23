@@ -1,0 +1,322 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespacemml_1_1shell" kind="namespace" language="C++">
+    <compoundname>mml::shell</compoundname>
+    <innerclass refid="classmml_1_1shell_1_1arg" prot="public">mml::shell::arg</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacemml_1_1shell_1a7cc39c00b4f3c918c1380a04fbd180f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::shell::error</definition>
+        <argsstring>(std::string text)</argsstring>
+        <name>error</name>
+        <param>
+          <type>std::string</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Ausgabe eines Errors</para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/log.hpp" line="33" column="6" bodyfile="src/shell.cpp" bodystart="182" bodyend="187" declfile="include/mml/log.hpp" declline="33" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1shell_1ab1339179fc2b533a1b07704d734a3006" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::shell::background</definition>
+        <argsstring>(string colour)</argsstring>
+        <name>background</name>
+        <param>
+          <type><ref refid="classmml_1_1string" kindref="compound">string</ref></type>
+          <declname>colour</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Hintergrund ändern</para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/shell.hpp" line="251" column="6" bodyfile="src/shell.cpp" bodystart="78" bodyend="99" declfile="include/mml/shell.hpp" declline="251" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1shell_1a0f52651c4d20d63a2276d13239c00189" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::shell::chapter</definition>
+        <argsstring>(std::string text, bool newline=true)</argsstring>
+        <name>chapter</name>
+        <param>
+          <type>std::string</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>newline</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Hilfeseiteausgabe eines Kapitels</para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/shell.hpp" line="258" column="6" bodyfile="src/shell.cpp" bodystart="102" bodyend="108" declfile="include/mml/shell.hpp" declline="258" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1shell_1a6fdea2a309969573d0f01bf2bc832e04" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::shell::cout</definition>
+        <argsstring>(mml::string text, bool newline=true, std::string colour=&quot;lightgreen&quot;)</argsstring>
+        <name>cout</name>
+        <param>
+          <type><ref refid="classmml_1_1string" kindref="compound">mml::string</ref></type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>newline</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>colour</declname>
+          <defval>&quot;lightgreen&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Ausgabe mit Werten in Klammern in einer Farbe</para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/shell.hpp" line="265" column="6" bodyfile="src/shell.cpp" bodystart="110" bodyend="137" declfile="include/mml/shell.hpp" declline="265" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1shell_1a4edbe4309f804bb4d8552b8f5734c9f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::shell::formation</definition>
+        <argsstring>(string format1)</argsstring>
+        <name>formation</name>
+        <param>
+          <type><ref refid="classmml_1_1string" kindref="compound">string</ref></type>
+          <declname>format1</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Formatierung ändern</para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/shell.hpp" line="278" column="6" bodyfile="src/shell.cpp" bodystart="57" bodyend="77" declfile="include/mml/shell.hpp" declline="278" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1shell_1a6c84d770587829ca7dc7c8147329d139" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::shell::letter</definition>
+        <argsstring>(string colour)</argsstring>
+        <name>letter</name>
+        <param>
+          <type><ref refid="classmml_1_1string" kindref="compound">string</ref></type>
+          <declname>colour</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Schriftfarbe ändern</para>
+</simplesect>
+<simplesect kind="return"><para></para>
+</simplesect>
+<simplesect kind="author"><para>Mike</para>
+</simplesect>
+<simplesect kind="author"><para>Mike Moser</para>
+</simplesect>
+Programm <ref refid="shell_8cpp" kindref="compound">shell.cpp</ref> Enthält verschiedene Funktionen </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/shell.hpp" line="286" column="6" bodyfile="src/shell.cpp" bodystart="26" bodyend="55" declfile="include/mml/shell.hpp" declline="286" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1shell_1a00c8e2a2ee520b8270b9f8898906231b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::shell::normal</definition>
+        <argsstring>()</argsstring>
+        <name>normal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Alle Änderungen an der Ausgabe zurücksetzen</para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/shell.hpp" line="293" column="6" bodyfile="src/shell.cpp" bodystart="139" bodyend="141" declfile="include/mml/shell.hpp" declline="293" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1shell_1adbd82f8c931de0e11499c651fcbbce70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::shell::note</definition>
+        <argsstring>(std::string text, bool newline=true)</argsstring>
+        <name>note</name>
+        <param>
+          <type>std::string</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>newline</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Eine Notiz ausgeben</para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/shell.hpp" line="300" column="6" bodyfile="src/shell.cpp" bodystart="143" bodyend="150" declfile="include/mml/shell.hpp" declline="300" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1shell_1a8b511d7cd5acf56b224558cf2ab59034" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::shell::option</definition>
+        <argsstring>(std::string chapter, std::string option)</argsstring>
+        <name>option</name>
+        <param>
+          <type>std::string</type>
+          <declname>chapter</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>option</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Finden von übergebenen Argumente(n)</para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+<simplesect kind="note"><para>Ausgabe einer Option von einer Hilfeseite</para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/shell.hpp" line="318" column="6" bodyfile="src/shell.cpp" bodystart="155" bodyend="160" declfile="include/mml/shell.hpp" declline="318" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1shell_1a1a1a82593cac384a3d698003740cd408" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string mml::shell::password</definition>
+        <argsstring>(std::string ausgabe, std::string source)</argsstring>
+        <name>password</name>
+        <param>
+          <type>std::string</type>
+          <declname>ausgabe</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Eingabe eines verdeckten Strings</para>
+</simplesect>
+<simplesect kind="return"><para>eingegebener String </para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/shell.hpp" line="326" column="13" bodyfile="src/shell.cpp" bodystart="192" bodyend="196" declfile="include/mml/shell.hpp" declline="326" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1shell_1a1beda25649ea427bb646ea6be704904c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::shell::warn</definition>
+        <argsstring>(std::string text, bool newline=true)</argsstring>
+        <name>warn</name>
+        <param>
+          <type>std::string</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>newline</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Ausgabe einer Warnung mit exit(warn)W und ohne exit (warn_opt)</para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/shell.hpp" line="333" column="6" bodyfile="src/shell.cpp" bodystart="163" bodyend="170" declfile="include/mml/shell.hpp" declline="333" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1shell_1ad39babde10f8181169d97a1600e30cb8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::shell::warn_opt</definition>
+        <argsstring>(std::string text, bool newline=true)</argsstring>
+        <name>warn_opt</name>
+        <param>
+          <type>std::string</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>newline</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Ausgabe einer Warnung mit exit(warn)W und ohne exit (warn_opt)</para>
+</simplesect>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml/shell.hpp" line="339" column="6" bodyfile="src/shell.cpp" bodystart="173" bodyend="180" declfile="include/mml/shell.hpp" declline="339" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/mml/functions.hpp" line="22" column="1"/>
+  </compounddef>
+</doxygen>

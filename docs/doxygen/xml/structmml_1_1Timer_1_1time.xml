@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structmml_1_1Timer_1_1time" kind="struct" language="C++" prot="public">
+    <compoundname>mml::Timer::time</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmml_1_1Timer_1_1time_1a7c172c1fcfbe0cec0b61779a7b043939" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mml::Timer::time::hour</definition>
+        <argsstring></argsstring>
+        <name>hour</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Timer.cpp" line="107" column="5" bodyfile="src/Timer.cpp" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmml_1_1Timer_1_1time_1a60cd200f356c67c734151223b207b020" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mml::Timer::time::minute</definition>
+        <argsstring></argsstring>
+        <name>minute</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Timer.cpp" line="108" column="5" bodyfile="src/Timer.cpp" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmml_1_1Timer_1_1time_1a6190991cf408697e03b5d62c9fb39a26" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mml::Timer::time::second</definition>
+        <argsstring></argsstring>
+        <name>second</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Timer.cpp" line="109" column="5" bodyfile="src/Timer.cpp" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmml_1_1Timer_1_1time_1ae133dc0013e7e3f980cae478e59c4e10" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mml::Timer::time::miliseconds</definition>
+        <argsstring></argsstring>
+        <name>miliseconds</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Timer.cpp" line="110" column="5" bodyfile="src/Timer.cpp" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmml_1_1Timer_1_1time_1aaee92b490e609704efa02d978205fef5" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int mml::Timer::time::microseconds</definition>
+        <argsstring></argsstring>
+        <name>microseconds</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/Timer.cpp" line="111" column="5" bodyfile="src/Timer.cpp" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/Timer.cpp" line="106" column="1" bodyfile="src/Timer.cpp" bodystart="106" bodyend="112"/>
+    <listofallmembers>
+      <member refid="structmml_1_1Timer_1_1time_1a7c172c1fcfbe0cec0b61779a7b043939" prot="public" virt="non-virtual"><scope>mml::Timer::time</scope><name>hour</name></member>
+      <member refid="structmml_1_1Timer_1_1time_1aaee92b490e609704efa02d978205fef5" prot="public" virt="non-virtual"><scope>mml::Timer::time</scope><name>microseconds</name></member>
+      <member refid="structmml_1_1Timer_1_1time_1ae133dc0013e7e3f980cae478e59c4e10" prot="public" virt="non-virtual"><scope>mml::Timer::time</scope><name>miliseconds</name></member>
+      <member refid="structmml_1_1Timer_1_1time_1a60cd200f356c67c734151223b207b020" prot="public" virt="non-virtual"><scope>mml::Timer::time</scope><name>minute</name></member>
+      <member refid="structmml_1_1Timer_1_1time_1a6190991cf408697e03b5d62c9fb39a26" prot="public" virt="non-virtual"><scope>mml::Timer::time</scope><name>second</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

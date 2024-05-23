@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="dir_b3565b2f926c3c7337ec426a161a271f" kind="dir">
+    <compoundname>include/mml</compoundname>
+    <innerfile refid="definitions_8hpp">definitions.hpp</innerfile>
+    <innerfile refid="file_8hpp">file.hpp</innerfile>
+    <innerfile refid="functions_8hpp">functions.hpp</innerfile>
+    <innerfile refid="help_8hpp">help.hpp</innerfile>
+    <innerfile refid="log_8hpp">log.hpp</innerfile>
+    <innerfile refid="shell_8hpp">shell.hpp</innerfile>
+    <innerfile refid="standards_8hpp">standards.hpp</innerfile>
+    <innerfile refid="Thread_8hpp">Thread.hpp</innerfile>
+    <innerfile refid="Timer_8hpp">Timer.hpp</innerfile>
+    <innerfile refid="Unix_8hpp">Unix.hpp</innerfile>
+    <innerfile refid="vector_8hpp">vector.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/mml/"/>
+  </compounddef>
+</doxygen>
