@@ -9,12 +9,10 @@ mml::matrix::matrix mml::matrix::matrix::add(mml::matrix::matrix mat) {
 	// Check if addition is possible
 	// ===============================
 	if(rows != mat.rows) {
-		mml::shell::warn_opt("[matrix::add] Number of rows different (" + std::to_string(rows) + " vs. " + std::to_string(mat.rows) + ")!");
-		return res;
+		throw std::runtime_error("[matrix::add] Number of rows different (" + std::to_string(rows) + " vs. " + std::to_string(mat.rows) + ")!");
 	}
 	if(cols != mat.cols) {
-		mml::shell::warn_opt("[matrix::add] Number of columns different (" + std::to_string(cols) + " vs. " + std::to_string(mat.cols) + ")!");
-		return res;
+		throw std::runtime_error("[matrix::add] Number of columns different (" + std::to_string(cols) + " vs. " + std::to_string(mat.cols) + ")!");
 	}
 
 	for(uint32_t i = 0; i < rows; i++) {
@@ -50,7 +48,7 @@ double mml::matrix::matrix::det() {
 	// Check if determinant is defined
 	// ===============================
 	if(cols != rows)
-		mml::shell::warn("| Determinant not defined!");	
+		throw std::logic_error("| Determinant not defined!");	
 	
 	// Check if one column is 0
 	for (uint16_t i = 0; i < rows; i++) {
@@ -421,12 +419,10 @@ mml::matrix::matrix mml::matrix::matrix::reduce(uint32_t row, uint32_t column) {
 	matrix red(rows-1,cols-1);	
 
 	if(row >= rows) {
-		mml::shell::warn_opt("[matrix::red] Selected row " + std::to_string(row) + " exceeds the number of rows " + std::to_string(rows) + "!");
-		return red;
+		throw std::runtime_error("[matrix::red] Selected row " + std::to_string(row) + " exceeds the number of rows " + std::to_string(rows) + "!");
 	}
 	if(column >= cols) {
-		mml::shell::warn_opt("[matrix::red] Selected column " + std::to_string(column) + " exceeds the number of columns " + std::to_string(cols) + "!");
-		return red;
+		throw std::runtime_error("[matrix::red] Selected column " + std::to_string(column) + " exceeds the number of columns " + std::to_string(cols) + "!");
 	}
 
 	
@@ -459,12 +455,10 @@ mml::matrix::matrix mml::matrix::matrix::sub(mml::matrix::matrix mat) {
 	// Check if subtraction is possible
 	// ================================
 	if(rows != mat.rows) {
-		mml::shell::warn_opt("[matrix::sub] Number of rows different (" + std::to_string(rows) + " vs. " + std::to_string(mat.rows) + ")!");
-		return res;
+		throw std::runtime_error("[matrix::sub] Number of rows different (" + std::to_string(rows) + " vs. " + std::to_string(mat.rows) + ")!");
 	}
 	if(cols != mat.cols) {
-		mml::shell::warn_opt("[matrix::sub] Number of columns different (" + std::to_string(cols) + " vs. " + std::to_string(mat.cols) + ")!");
-		return res;
+		throw std::runtime_error("[matrix::sub] Number of columns different (" + std::to_string(cols) + " vs. " + std::to_string(mat.cols) + ")!");
 	}
 
 	for(uint32_t i = 0; i < rows; i++) {
@@ -477,7 +471,7 @@ mml::matrix::matrix mml::matrix::matrix::sub(mml::matrix::matrix mat) {
 }
 
 
-mml::matrix::matrix mml::matrix::matrix::transpose() {
+mml::matrix::matrix mml::matrix::matrix::transpose() noexcept {
 
 	matrix tra(cols,rows);
 

@@ -6,11 +6,13 @@
 #include <iostream>
 
 int main() {
-	std::cout << "====================================" << std::endl;
-	std::cout << "= Performing test for calculations =" << std::endl;
-	std::cout << "====================================" << std::endl;
+	std::cout << "╭──────────────────────────────────╮" << std::endl;
+	std::cout << "│ Performing test for calculations │" << std::endl;
+	std::cout << "╰──────────────────────────────────╯" << std::endl;
 
-	std::cout << "------------------------------------------------------" << std::endl;
+	std::cout << std::endl;
+	std::cout << "─────────────────────────────────────────────────────" << std::endl;
+	std::cout << std::endl;
 
 	mml::string test;
 	test = "If you can see this without any numbers, then you succesfully installed any dependencies132!";
@@ -24,7 +26,9 @@ int main() {
 	else
 	 	std::cout << "No, there is something not working!"<< std::endl;
 
-	std::cout << "------------------------------------------------------" << std::endl;
+	std::cout << std::endl;
+	std::cout << "─────────────────────────────────────────────────────" << std::endl;
+	std::cout << std::endl;
 	std::cout << "Testing of math library starts by calculating (2^(3)+2)*3 ..." << std::endl;
 	result = mml::rechner::calculate({"-c"},"(2^(3)+2)*3");
 	std::cout << "The result is " << result << ". Is it 30? ";

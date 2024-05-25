@@ -23,6 +23,7 @@ namespace mml {
 			 * @param matrix Matrix which is added
 			 * @return result
 			 * @author Mike Moser
+			 * @throw runtime_error : if rows or cols are not equal
 			 */
 			mml::matrix::matrix add(mml::matrix::matrix matrix);
 
@@ -47,6 +48,7 @@ namespace mml {
 			 * @param matrix Matrix which is subtracted
 			 * @return result
 			 * @author Mike Moser
+			 * @throw runtime_error : if rows or cols are not equal
 			 */
 			mml::matrix::matrix sub(mml::matrix::matrix matrix);
 
@@ -166,33 +168,35 @@ namespace mml {
 			void operator()(std::string str1);
 
 			/**
-		 	* @brief Multiply this matrix with another one from the right side
-		 	* @param matrix Matrix to be multiplied
-		 	* @return New matrix
-		 	*/
+		 	 * @brief Multiply this matrix with another one from the right side
+		 	 * @param matrix Matrix to be multiplied
+		 	 * @return New matrix
+		 	 */
 			mml::matrix::matrix operator*(mml::matrix::matrix matrix) {return multiply(matrix);}
 			mml::matrix::matrix operator*=(mml::matrix::matrix matrix) {data = multiply(matrix).get_vec(); return *this;}
 
 			/**
-		 	* @brief Multiply this matrix with a scalar
-		 	* @param scalar Scalar
-		 	* @return new matrix
-		 	*/
+		 	 * @brief Multiply this matrix with a scalar
+		 	 * @param scalar Scalar
+		 	 * @return new matrix
+		 	 */
 			mml::matrix::matrix operator*(double scalar) {return multiply(scalar);}
 
 			/**
-		 	* @brief Add another matrix from the right side
-		 	* @param matrix Matrix to be added
-		 	* @return New matrix
-		 	*/
+		 	 * @brief Add another matrix from the right side
+		 	 * @param matrix Matrix to be added
+		 	 * @return New matrix
+			 * @throw runtime_error : if rows or cols are not equal
+		 	 */
 			mml::matrix::matrix operator+(mml::matrix::matrix matrix){return add(matrix);}
 			mml::matrix::matrix operator+=(mml::matrix::matrix matrix){data = add(matrix).get_vec(); return *this;}
 
 			/**
-		 	* @brief Subtract another matrix from this one from the right side
-		 	* @param matrix Matrix to be substracted
-		 	* @return New matrix
-		 	*/
+		 	 * @brief Subtract another matrix from this one from the right side
+		 	 * @param matrix Matrix to be substracted
+		 	 * @return New matrix
+			 * @throw runtime_error : if rows or cols are not equal
+		 	 */
 			mml::matrix::matrix operator-(mml::matrix::matrix matrix){return sub(matrix);}
 			mml::matrix::matrix operator-=(mml::matrix::matrix matrix){data = sub(matrix).get_vec(); return *this;}
 
@@ -223,6 +227,7 @@ namespace mml {
 			/**
 			 * @brief Compute determinant of the matrix
 			 * @return double 
+			 * @throw logic_error : if rows != cols
 			 */
 			double det();
 			
@@ -237,15 +242,17 @@ namespace mml {
 			 * @param row to be removed
 			 * @param column to be removed
 			 * @return Reduced matrix
+			 * @throw runtime_error : if row or column exceeds the matrix
 			 */
 			mml::matrix::matrix reduce(uint32_t row, uint32_t column);
+
 			/**
 			 * @note Matrix transposed
 			 * 
 			 * @return transposed matrix
 			 * @author Mike
 			 */
-			mml::matrix::matrix transpose();
+			mml::matrix::matrix transpose() noexcept;
 			
 		};
 		

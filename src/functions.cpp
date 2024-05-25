@@ -397,7 +397,7 @@ mml::string mml::rechner:: replace(mml::shell::arg args, mml::string equation) {
 				case  3  : equation = equation.replace((std::string) "k","*" + std::to_string(pow(10,praefix)))	; break;
 				case  6  : equation = equation.replace((std::string) "M","*" + std::to_string(pow(10,praefix)))	; break;
 				case  9  : equation = equation.replace((std::string) "G","*" + std::to_string(pow(10,praefix)))	; break;
-				case  12 : equation = equation = equation.replace((std::string) "T","*" + std::to_string(pow(10,praefix)))	; break;
+				case  12 : equation = equation.replace((std::string) "T","*" + std::to_string(pow(10,praefix)))	; break;
 				default  : break;
 			}
 			

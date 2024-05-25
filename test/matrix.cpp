@@ -9,12 +9,12 @@
 int main() {
 
 	
-	std::cout << "===========================================" << std::endl;
-	std::cout << "= Performing test for matrix calculations =" << std::endl;
-	std::cout << "===========================================" << std::endl;
+	std::cout << "╭─────────────────────────────────────────╮" << std::endl;
+	std::cout << "│ Performing test for matrix calculations │" << std::endl;
+	std::cout << "╰─────────────────────────────────────────╯" << std::endl;
 
 	std::cout << std::endl;
-	std::cout << "------------------------------------------------------" << std::endl;
+	std::cout << "─────────────────────────────────────────────────────" << std::endl;
 	std::cout << std::endl;
 
  	mml::matrix::matrix mat1(3,3);
@@ -28,7 +28,7 @@ int main() {
 	mml::matrix::matrix mat33("[[20,0,0],[100,3,0],[1000,0,4]]");
 
 	std::cout << std::endl;
-	std::cout << "------------------------------------------------------" << std::endl;
+	std::cout << "─────────────────────────────────────────────────────" << std::endl;
 	std::cout << std::endl;
 	mml::matrix::matrix mat4 = mat2*mat33;
 	
@@ -36,7 +36,7 @@ int main() {
 	mml::matrix::print_3matrix(mat2," * ",mat33, " = ", mat4);
 
 	std::cout << std::endl;
-	std::cout << "------------------------------------------------------" << std::endl;
+	std::cout << "─────────────────────────────────────────────────────" << std::endl;
 	std::cout << std::endl;
 	mml::matrix::matrix mat5("[[3,2,0],[1,1,1],[1,2,3]]");
 	mat5.print();
@@ -49,7 +49,7 @@ int main() {
 		std::cout << "No! There might be a bug. Please report it!" << std::endl;
 	
 	std::cout << std::endl;
-	std::cout << "------------------------------------------------------" << std::endl;
+	std::cout << "─────────────────────────────────────────────────────" << std::endl;
 	std::cout << std::endl;
 	
 	

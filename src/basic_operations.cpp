@@ -47,7 +47,7 @@ mml::vector<double> mml::rechner::add(mml::shell::arg args) {
 				values.pop_back();
 				continue;
 			}
-			temp_s.replace(",",".",true);
+			temp_s = temp_s.replace(",",".");
 			temp_d = mml::rechner::calculate_intern(temp_s);
 			values.push_back(temp_d);
 		}
@@ -153,7 +153,7 @@ double mml::rechner::calculate(mml::shell::arg args, mml::string equation, bool 
 			// Berechnung:
 			temp = mml::rechner::multiply(args,equation.substr(before + 1, after - before - 1), false);
 			
-			equation.replace(equation.substr(before + 1, after - before - 1), temp, true);
+			equation = equation.replace(equation.substr(before + 1, after - before - 1), temp);
 			
 			mal = equation.find("*");
 			
@@ -201,7 +201,7 @@ double mml::rechner::calculate(mml::shell::arg args, mml::string equation, bool 
 			temp = multiply(args,equation.substr(before + 1, after - before - 1),false);
 			
 			// Ersetzen
-			equation.replace(equation.substr(before + 1, after - before - 1), temp, true);
+			equation = equation.replace(equation.substr(before + 1, after - before - 1), temp);
 			
 			teilen = equation.find("/");
 			
@@ -263,7 +263,7 @@ std::vector<double> mml::rechner::calculations(mml::shell::arg args, std::vector
 						}
 					}
 					
-					equation = equation.replace("r" + mml::to_string(temp).str(), std::to_string(results[temp - 1]));
+					equation = equation = equation.replace("r" + mml::to_string(temp).str(), std::to_string(results[temp - 1]));
 					
 					pos = equation.find("r");
 				} while(mml::range(pos));
@@ -387,7 +387,7 @@ double mml::rechner::calculate_intern(mml::string equation, bool verbose, bool r
 			// Berechnung:
 			temp = mml::to_string(mml::rechner::multiply(args,equation.substr(before + 1, after - before - 1), false));
 			
-			equation.replace(equation.substr(before + 1, after - before - 1), temp, true);
+			equation = equation.replace(equation.substr(before + 1, after - before - 1), temp);
 			
 			mal = equation.find("*");
 			
@@ -435,7 +435,7 @@ double mml::rechner::calculate_intern(mml::string equation, bool verbose, bool r
 			temp = mml::to_string(mml::rechner::multiply(args,equation.substr(before + 1, after - before - 1),false));
 			
 			// Ersetzen
-			equation.replace(equation.substr(before + 1, after - before - 1), temp, true);
+			equation = equation.replace(equation.substr(before + 1, after - before - 1), temp);
 			
 			teilen = equation.find("/");
 			

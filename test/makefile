@@ -23,7 +23,7 @@ SRC = $(wildcard *.cpp )
 OBJ = $(SRC:%.cpp=%.o)
 DST =  $(SRC:%.cpp=%.x)
 
-.SECONDARY: $(OBJ) # Keep the object files
+#.SECONDARY: $(OBJ) # Keep the object files
 
 all: $(DST)
 
