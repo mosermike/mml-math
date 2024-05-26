@@ -247,3 +247,17 @@ double mml::math::shunting_yard_algorithm::evaluate_postfix(bool verbose) {
     this->result = values.top();
     return result;
 }
+
+double mml::math::shunting_yard_algorithm::evaluate(bool verbose) {
+    // Transform string to infix
+    equation_to_infix();
+
+    // Transform infix to postfix
+	infix_to_postfix();
+
+    // Evaluate postfix
+	double result = evaluate_postfix();
+
+    return result;
+
+}

@@ -1,5 +1,7 @@
 /**
  * @brief Shunting Yard Algorithm
+ * @cite https://en.wikipedia.org/wiki/Shunting_yard_algorithm
+ * @author Mike Moser
 */
 
 #include <iostream>
@@ -8,6 +10,8 @@
 #include <map>
 #include <mml/standards.hpp>
 #include <mml/vector.hpp>
+
+// TODO look at logb
 
 #ifndef mml_math_shunting_yard_hpp
 #define mml_math_shunting_yard_hpp
@@ -32,6 +36,9 @@ namespace mml {
                 {"sin",{0, 2*M_PI, [](double x) { return std::sin(x); }}},
                 {"cos",{0, 2*M_PI, [](double x) { return std::cos(x); }}},
                 {"tan",{0, 2*M_PI, [](double x) { return std::tan(x); }}},
+                {"asin",{-1, 1, [](double x) { return std::asin(x); }}},
+                {"acos",{-1, 1, [](double x) { return std::acos(x); }}},
+                {"atan",{-1, 1, [](double x) { return std::atan(x); }}},
             };
 
             public:
@@ -92,9 +99,10 @@ namespace mml {
 
             /**
              * @brief Evaluates the string and returns the result
+             * @param verbose Verbose output (optional)
              * @return double
             */
-            double evaluate();
+            double evaluate(bool verbose = false);
         };
     }
 }

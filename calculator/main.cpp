@@ -1,43 +1,10 @@
 /**
- * : @author Mike Moser
- * : @date 22.05.2024
- * : @version 4
- * : @name calculator
- * : @file main.cpp
- * : 
- * : Version history:
- * : @version  4     (22.05.2024) Big changes for the matrix calculations
- * : @version  3.0.4 (07.01.2024) Fixed some bugs
- * : @version  3.0.3 (27.01.2023) Determinantenberechnung korrigiert; Korrektur, wenn eine Matrix ohne Anfangs- bzw. Endklammer übergeben wird.
- * : @version  3.0.2 (06.09.2022) Atomare Masseneinheit hinzugefügt, logb todo gelöscht => einfach als log(x)/log(b) berechnen, Log Datei nur 0 löschen nach dem Komma
- * : @version  3.0.1 (04.03.2022) Bracket Problem gelöst (bracket check); arcsin, arccos, sqrt domain error hinzugefügt, grad <=> rad korrigiert
- * : @version  3.0   (17.09.2021) Komplette Operatoren überarbeitet und ein paar Fehler behoben.
- * : @version  2.5.5 (03.02.2021) Grad zu Radiant, Radiant zu Grad, arcsin, arccos, arctan hinzugefügt
- * : @version  2.5.4 (30.10.2020) Verbesserungen, Gauß-Verfahren korrigiert bei Nullspalte, logging verbessert, old_add reingemacht
- * : @version  2.5.3 (08.07.2020) Logging für Matrix
- * : @version  2.5.2 (30.04.2020) Fehlerüberarbeitung summation neu gemacht, da mittlerer Term ignoriert
- * : @version  2.5.1 (14.04.2020) Fehlerüberarbeitung
- * ; @version  2.5   (07.03.2020) Logdatei überarbeitet durch Klasse log
- * : @version  2.4   (22.12.2019) Kommentarfunktion für die logdatei
- * : @version  2.3   (10.08.2019) Logdatei implementiert mit Ausgabe über -l, --logfile
- * : @version  2.2   (14.03.2019) Physikalische Konstanten hinzugefügt, -u überarbeitet mit anstatt , , getArg implementiert
- * : @version  2.1   (27.02.2019) pos_bracket überarbeitet und verbessert, Klammerbehandlung hinzugefügt, --calculations erstellt, --cs mit alten Resultaten und ersetzen von o ohne -o bei --cs,
- * : 							  save_result als inline, calculations erstellt mit Übernahme von den Ergebnissen bei -cs
- * : @version  2.0   (22.02.2019) Funktion replace und add_oldresult, sqrt integriert, ^ integriert, si-präfixe, mehrere Variablen verwenden; log, ln, log2, logb, exp, sin, cos, tan integriert,
- * : 							  calculate erstellt, -t hinzugefügt
- * : @version  1.6   (17.02.2019) e Funktion hinzugefügt, exponentenfunktion durch pow ersetzt, if Bedingungen für pi und ki hinzugefügt
- * : @version  1.5   (10.12.2018) Pi Funktion hinzugefügt für basic_operations, sowie Verbesserungen von -s und -m, Übernahme der alten Werte, Variable x verwenden, mml::string integriert
- * : @version  1.4   (09.11.2018) basic_operations.hpp erstellt mit -s und -m
- * : @version  1.3   (01.11.2018) Grenzen angepasst, die erlaubt sind. Hat bei der Multiplikation 9 nicht erlaubt
- * : @version  1.2   (15.10.2018) Neue Funktion rechnen mit Exponenten zur Basis, Hilfeseite nach Muster, uintX_t angepasst
- * : @version  1.1   (22.05.2018) Ableiten einer einfachen Funktion
- * : @version  1.0   (21.05.2018)
- * :
- * :
- * : @details:
- * : Berechnung von verschiedenen Sachen mit der Konsole
- * : 
- * :
+ * @author Mike Moser
+ * @date 26.05.2024
+ * @name calculator
+ * @file main.cpp
+ * @version 1
+ * @details Computations of different things with the console
 */
 
 #include <iostream>
@@ -45,6 +12,7 @@
 #include <string>
 #include <fstream>
 #include <iomanip>	// setprecision
+#include <signal.h>
 #include <mml.hpp>
 #include "mml-math.hpp"
 
@@ -52,80 +20,186 @@
 #define calc_log 		"./calc.log"
 #endif
 
-// NOTE Rechner
-// TODO Bruchform ausgeben
-// TODO log(12) in -cs geht nicht (behoben, aber nur notlösung => works no?)
-// TODO nachschauen welche Variablen gehen und welche nicht => Warnung ausgeben
-// TODO grad in rad umrechner
-// TODO Warnung wenn Buchstabe in Rechnung : rechnung -c asd
-// TODO look at logb
-// TODO Ausgaben werden gekürzt
-
-// NOTE Matrix
-// TODO Matrix old rechnung (bzw. in matrixform ausgeben temporär)
-// TODO Matrixnorm
-// TODO Skalarmultiplikation matrix
-// TODO rechner -m "[0,0,1]*[[0,2,0],[3,0,2],[0,3,0]]"
-
 /**
 * @note Help Page
 * @return None
-* @author Mike Moser
 */
 void help() {
 
-	mml::help::header("Führt verschiedene Berechungen durch.");
+	mml::help::header("Computes different things by using the shell.");
 	
-	std::cout << "\tDieses Programm führt verschiedene Berechnungen durch abhängig von den Argumenten." << std::endl;
-	std::cout << "\tBei der Verwendung von Klammern sind Anführunszeichen notwendig bei der Gleichung."	<< std::endl << std::endl;
-	std::cout << "\tErforderliche Argumente für lange Optionen sind auch für kurze erforderlich." << std::endl;
-	mml::shell::option("-a, --adjunct" , "Adjunkte einer Matrix berechnen. Mit -m Matrix übergeben");
-	mml::shell::option("-c, --calculate" , "Gleichung lösen mit allen Operatoren.");
-	mml::shell::option("-cs, --calculations" , "Mehrere verschiedene Gleichungen lösen mit allen Operatoren.");
-	mml::shell::option("-d, --det" , "Determinante einer Matrix berechnen. Mit -m Matrix übergeben");
-	mml::shell::option("    --grad" , "Ausgabe oder Angabe in Grad in Abhängigkeit des Operators.");
-	mml::shell::option("-h, --help" , "Ausgabe dieser Hilfe.");
-	mml::shell::option("-i, --inverse" , "Inverse einer Matrix berechnen. Mit -m Matrix übergeben");
-	mml::shell::option("-k, --comment"  , "Kommentar in die Logdatei hinter Rechnung.");
-	mml::shell::option("-l, --log"  , "Ausgabe der Logdatei.");
-	mml::shell::option("-lr, --log_reset", "Zurücksetzen der Logdatei");
-	mml::shell::option("-lb, --log_backup", "Backup der Logdatei");
-	mml::shell::option("-m, --matrix" , "Multiplzieren und Addieren von Matrizen.Matrixform [[1.,Reihe],[2.,Reihe]]");
-	mml::shell::option("-ml, --matrix-latex" , "Format in Latex. (Achtung Matrix endet und startet mit '|')");
-	mml::shell::option("-t, --timer", "Ausgabe der Dauer der Berechnung");
-	mml::shell::option("-tr, --transpose" , "Transponierte einer Matrix berechnen. Mit -m Matrix übergeben");
-	mml::shell::option("-u" , "Wertzuweisung einer oder mehreren unbekannten Variable(n) mit Trennzeichen ':' in der Gleichung. z.B. -u x=2");
-	mml::shell::chapter("Verfügbare Operationen:", true);
-	mml::shell::option("+" , "Addition verschiedener Werte.");
-	mml::shell::option("-" , "Subtrahieren verschiedener Werte.");
-	mml::shell::option("*", "Multiplikation verschiedener Werte.");
-	mml::shell::option("/" , "Dividieren von zwei Zahlen(alt).");
-	mml::shell::option("//" , "Dividieren von mehreren Zahlen(alt).");
-	mml::shell::option("d" , "Ableiten einer Funktion. Direkt als Parameter übergeben(alt).");
-	mml::shell::option("^" , "Multiplizieren einer Basis zu einem Exponenten.");
-	mml::shell::option("^(" , "Multiplizieren einer Basis zu einem Exponenten.");
-	mml::shell::option("exp(x)" , "Berechnen von exp^(x).");
-	mml::shell::option("sin(x)" , "sin berechnen von x.");
-	mml::shell::option("cos(x)" , "cos berechnen von x.");
-	mml::shell::option("tan(x)" , "tan berechnen von x.");
-	mml::shell::option("arcsin(x)" , "arcsin berechnen von x.");
-	mml::shell::option("arccos(x)" , "arccos berechnen von x.");
-	mml::shell::option("arctan(x)" , "arctan berechnen von x.");
-	mml::shell::option("ln(x)" , "logarithmus naturalis berechnen von x.");
-	mml::shell::option("log(x)" , "10er Logarithmus berechnen von x.");
-	mml::shell::option("log2(x)" , "2er Logarithmus berechnen von x.");
-	mml::shell::option("logb(x)" , "Logarithmus zur Basis b berechnen von x.");
-	mml::shell::option("sqrt(x)" , "Wurzel ziehen von x.");
+	std::cout << "\tThis program executes calculations depending on arguments." << std::endl;
+	std::cout << "\tBy the use of brackets, quotation marks are necessary."	<< std::endl << std::endl;
+	std::cout << "\tNecessary arguments for long options are also necessary for short ones." << std::endl;
+	mml::shell::option("-a, --adjugate" , "Computes adjugate of a matrix given as -m [...].");
+	mml::shell::option("-c, --calculate" , "Solves an equation.");
+	mml::shell::option("-cs, --calculations" , "Solves many equations.");
+	mml::shell::option("-d, --det" , "Computes the determinant of a matrix given as -m [...].");
+	mml::shell::option("-h, --help" , "Prints this help.");
+	mml::shell::option("-i, --inverse" , "Computes the inverse of a matrix given as -m [...].");
+	mml::shell::option("-k, --comment"  , "Additional comment to be written into the log file after the equation.");
+	mml::shell::option("-l, --log"  , "Print the log file.");
+	mml::shell::option("-lr, --log_reset", "Resets the logfile.");
+	mml::shell::option("-lb, --log_backup", "Backup of the log file.");
+	mml::shell::option("-m, --matrix" , "Calculation of a matrix equation or the matrix used for other matrix operators. Matrix form [[1.,row],[2.,row]]");
+	mml::shell::option("-ml, --matrix-latex" , "Format in Latex. (beta)");
+	mml::shell::option("-t, --timer", "Prints the duration of the calculation.");
+	mml::shell::option("-tr, --transpose" , "Computes the transpose of a matrix given as -m [...].");
+	//mml::shell::option("-u" , "Wertzuweisung einer oder mehreren unbekannten Variable(n) mit Trennzeichen ':' in der Gleichung. z.B. -u x=2");
+	mml::shell::chapter("Existing operators:", true);
+	mml::shell::option("+" , "Addition.");
+	mml::shell::option("-" , "Subtraction.");
+	mml::shell::option("*", "Multiplication.");
+	mml::shell::option("/" , "Division.");
+	//mml::shell::option("d" , "Ableiten einer Funktion. Direkt als Parameter übergeben(alt).");
+	mml::shell::option("^" , "Power calculation.");
+	mml::shell::option("exp(x)" , "Computes the exponential funciton of x.");
+	mml::shell::option("sin(x)" , "sin calculations of x (given in rad).");
+	mml::shell::option("cos(x)" , "cos calculations of x (given in rad).");
+	mml::shell::option("tan(x)" , "tan calculations of x (given in rad).");
+	mml::shell::option("asin(x)" , "arcsin calculations of x.");
+	mml::shell::option("acos(x)" , "arccos calculations of x.");
+	mml::shell::option("atan(x)" , "arctan calculations of x.");
+	mml::shell::option("ln(x)" , "logarithm naturalis of x.");
+	mml::shell::option("log(x)" , "10th Logarithm of x.");
+	mml::shell::option("sqrt(x)" , "Square root of x.");
 	std::cout << std::endl;
-	mml::shell::chapter("Optionen bei --calculations:",true);
-	mml::shell::option("rx", "Verwendung des Ergebnisses von Gleichung x, rx wird in der neuen Gleichung ersetzt");
+	mml::shell::chapter("Options of --calculations:",true);
+	mml::shell::option("rx", "use of another result, rx will be replaced in the new equation.");
 	std::cout << std::endl;
-	mml::shell::chapter("Sonstiges:", true);
-	std::cout << "\tVorhandene Konstanten: pi, exp,E , P_c, P_k, P_m, P_e, P_G, P_h, P_µ, P_NA, P_u" << std::endl;
-	std::cout << "\tVorhandene Potenzen:   p, n, µ, m, k, M, G, T oder mit e" << std::endl << std::endl;
+	mml::shell::chapter("Others:", true);
+	std::cout << "\tExisting constants: pi, exp, E, P_c, P_k, P_m, P_e, P_eps, P_G, P_h, P_mu, P_NA, P_u" << std::endl;
 
-	mml::help::foot("3.0.4", "January", 2024);
+	mml::help::foot("1", "May", 2024);
 }
+
+/**
+ * @brief Adds values which are written interactively
+ * @return vector with all the values written
+*/
+mml::vector<double> add() {
+	mml::string				temp_s		= "";
+	mml::vector<double>		values;
+
+	std::cout << "[Addition] Write the values (Finish with 'a', go back with 'z'): " << std::endl;
+		
+	double temp_d = 0.0;
+	for(uint32_t i = 0;; i++) {
+		std::cin >> temp_s;
+		
+		if(temp_s.exist("a")){
+			break;
+		}
+		if(temp_s.exist("z") && values.size() > 0){
+			values.pop_back();
+			continue;
+		}
+		temp_s = temp_s.replace(",",".");
+		temp_s = mml::math::replace(mml::to_string(temp_s));
+		mml::math::shunting_yard_algorithm sh_ya_al(temp_s);
+		temp_d = sh_ya_al.evaluate();
+		values.push_back(temp_d);
+	}
+
+	return values;
+}
+
+double calculate(mml::string equation, bool verbose = false){
+
+	// Write the equation to the algorithm class
+	mml::math::shunting_yard_algorithm sy_algm(equation);
+	
+	// Convert the equation to infix
+	sy_algm.equation_to_infix(verbose);
+	
+	// Convert infix to postfix
+	sy_algm.infix_to_postfix(verbose);
+	
+	// Evaluate postfix
+	double result = sy_algm.evaluate_postfix(verbose);
+	
+	return result;
+}
+	
+/**
+ * @brief Calculates mutliple equations interactively
+ * @param verbose Verbose output
+ * @param equations Reference of a vector where all the equations are put
+ * @return All the results as a vector
+ * @throw invalid_argument : if x in rx is not a number, for using a previous result
+*/
+std::vector<double> calculations(bool verbose, std::vector<mml::string> &equations) {
+	
+	double					result			= 0;
+	mml::string				equation		= "";
+    mml::string				equation_save	= "";
+	std::vector<double>		results;
+	
+		
+		while(1) {
+			std::cout << "Input of the equation " + std::to_string(results.size() + 1) << ": ";
+			
+
+			std::cin >> equation;
+			if(equation == "q")
+				return results;
+			equation_save = equation;
+			
+			// Pressed Ctrl+D
+			if(equation == "") {
+				std::cout << std::endl;
+				kill(getpid(),SIGTERM);
+			}
+
+			// Take old result
+			if(equation.exist("r")) {
+				std::size_t pos = equation.find("r");
+				
+				do {
+					
+					// use of sqrt
+					if(equation[pos+1] == 't') {
+						pos = equation.find("r",pos + 1);
+						continue;
+					}
+					// use of acos
+					if(equation[pos+1] == 'c') {
+						pos = equation.find("r",pos + 1);
+						continue;
+					}
+
+					size_t a = pos+1;
+					std::string num = "";
+					if(std::isalpha(equation[a]))
+						throw std::invalid_argument("Error: Wrong format for option rx! x must be a number!");
+
+					// Add until an operator comes
+					while(mml::is_num(equation[a])) {
+						num += equation[a++];
+						// Catch if the replacement is at the end
+						if(a >= equation.size())
+							break;
+					}
+
+					equation = equation = equation.replace("r" + num, std::to_string(results[std::atoi(num.c_str()) - 1]));
+					
+					pos = equation.find("r");
+				} while(mml::range(pos));
+			}
+			
+			equation = mml::math::replace(equation); // Replacing constants
+			result = calculate(equation, verbose);
+			results.push_back(result);
+			equations.push_back(equation_save);
+			std::cout << "Result: " << result << std::endl;
+			         
+			// Catch ctrl-D:
+			equation = "";
+		}
+	
+	return results;
+}
+
 
 int main(int argc, char **argv) {
 	
@@ -138,14 +212,7 @@ int main(int argc, char **argv) {
 		time.stop();
 		
 	if(args.size() == 1){
-	
-		mml::shell::letter("red");
-		std::cout << "Fehlende Eingabe der gewünschten Operation!" << std::endl;
-		mml::shell::normal();
-		
-		help();
-		
-		return 1;
+		throw std::logic_error("Missing input of the wished operation. Use '-h' for help.");
 	}
 	
 	else if (args.findArg("--help","-h")) {
@@ -153,23 +220,25 @@ int main(int argc, char **argv) {
 		return 0;
 	}
 	
-	else if ((args.findArg("-c","--calculate") /*|| args.findArg("-s","--summation")*/ || args.findArg("-m","--matrix")) && args.size() == 2) {
-		mml::shell::warn("Fehlende Eingabe!");
+	else if ((args.findArg("-c","--calculate") || args.findArg("-m","--matrix")) && args.size() == 2) {
+		throw std::logic_error("Missing Equation!");
 	}
 	
 	else if (args.findArg("-c","--calculate")) {
-		result = mml::rechner::calculate(args,args[args.positionArg("-c") + 1], true);
+		mml::string equation = mml::math::replace(args[args.positionArg("-c") + 1]);
+		result = calculate(equation, args.exist("-v","--verbose"));
         mml::rechner::save_result(args, args[args.positionArg("-c","--calculate") + 1],result,calc_log);
     }
 	
 	else if (args.findArg("-cs","--calculations")) {
 		std::vector<mml::string> equations;
-		std::vector<double> results = mml::rechner::calculations(args, equations);
+		std::vector<double> results = calculations(args.exist("-v","--verbose"), equations);
 		
 		// Save the results and equations
 		for(uint32_t i = 0; i < equations.size(); i++)
 			mml::rechner::save_result(args, equations[i], results[i],calc_log);
 	}
+
 	else if(args.findArg("-m","--matrix")) {
 
 		/**
@@ -262,14 +331,14 @@ int main(int argc, char **argv) {
 			// TODO save matrix
 		}
 		else {
-			mml::matrix::matrix res = mml::matrix::calc(args[args.positionArg("-m","--matrix") + 1]);
+			mml::matrix::matrix res = mml::matrix::calc(args[args.positionArg("-m","--matrix") + 1], args.exist("-v","--verbose"));
 			std::cout << "The result is" << std::endl;
 			res.print();
 			//mml::rechner::save_matrix(args, args[args.positionArg("-m","--matrix") + 1], matrix,calc_log);
 		}
 	}
 	else if (args.findArg("-s","--summation")){
-		mml::vector<double> values = mml::rechner::add(args);
+		mml::vector<double> values = add();
 		result = values.sum();
 		values.log(calc_log, false, "[summation] ", " = " + std::to_string(result));
 	}
@@ -280,7 +349,7 @@ int main(int argc, char **argv) {
 			log.print(args.exist("-v","--verbose","-lv"));
 		}
 		else
-			std::cout << "Es existiert keine Logdatei!" << std::endl;
+			throw std::runtime_error("No existing log file!");
 		return 0;
 		
 	}
@@ -294,21 +363,14 @@ int main(int argc, char **argv) {
 		return 0;
 	}
 	else {
-		result = mml::rechner::calculate(args,args[1]);
+		mml::string equation = mml::math::replace(args[1]);
+		result = calculate(equation, args.exist("-v","--verbose"));
         mml::rechner::save_result(args, args[1],result,calc_log);
     }
 	
-	if ((args.findArg("-c","--calculate") || args.findArg("-s", "--summation") || args.exist("+", "-", "*", "/")) && !args.findArg("-cs", "--calculations") && args.notArg("-m","--matrix")) {
-		if(args.findArg("-p","--digits")) {
-			// TODO betaphase
-			std::cout << "Result (eventually wrong decimal point numbers!): " << std::setprecision(args[args.positionArg("-p","--digits")+1].atoi()) << result << std::endl;
-			
-		}
-		else
-			std::cout << "Result: " << result << std::endl;
-	}
-	
-	
+	if(!args.findArg("-m","--matrix")) {
+		std::cout << "Result: " << result << std::endl;
+		
 	if(args.findArg("-t","--timer"))
 		std::cout << "Calculation time: " << time.range() << std::endl;
 

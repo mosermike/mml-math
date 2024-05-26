@@ -1,13 +1,9 @@
 /**
  * @author Mike Moser
- * 
  * @file math.hpp
- * @note Enthält verschiedene mathematische Funktionen
- * 
+ * @brief Mathematical functions
 */
 
-
-#pragma once
 
 #if __GNUC__
 #if __x86_64__ || __ppc64__
@@ -17,18 +13,13 @@
 #endif
 #endif
 
-#ifndef __MML_MATH_HPP__
-#define __MML_MATH_HPP__
+#ifndef MML_MATH_INCLUDE_MML_MATH_HPP
+#define MML_MATH_INCLUDE_MML_MATH_HPP
 
-namespace mml{
-	namespace rechner{
-		extern double calculate(mml::shell::arg args, mml::string equation, bool replace);
-	}
-}
-#include "mml-math/basic_operations.hpp"
-#include "mml-math/derivate.hpp"
+//#include "mml-math/derivate.hpp"
 #include "mml-math/functions.hpp"
 #include "mml-math/logging.hpp"
 #include "mml-math/matrix.hpp"
+#include "mml-math/shunting_yard_algorithm.hpp"
 
 #endif

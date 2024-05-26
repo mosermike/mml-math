@@ -5,6 +5,10 @@
  * 
 */
 
+
+// TODO Matrixnorm
+// TODO verbose output for debugging
+
 #ifndef mml_math_matrix_hpp
 #define mml_math_matrix_hpp
 
@@ -259,10 +263,11 @@ namespace mml {
 		/**
 		 * @brief Calculations of matrices
 		 * @param equation Equation to be calculated
+		 * @param verbose Verbose output, optional
 		 * @return Matrix result
 		 * @throw logic_error : if operator not defined or format wrong
 		*/
-		mml::matrix::matrix calc(mml::string equation);
+		mml::matrix::matrix calc(mml::string equation, bool verbose = false);
 
 		/**
 		 * @brief Print two matrices with a string inbetween

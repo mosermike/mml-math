@@ -1,19 +1,17 @@
 /**
- * @author Mike
- * 
+ * @author Mike Moser
  * @file derivate.hpp
- * 
- * @description Enthält verschiedene Ableitungsfunktionen
+ * @brief function for derivations
  * 
 */
 
-#ifndef __derivate_hpp__
-#define __derivate_hpp__
+#ifndef mml_math_include_mml_math_derivate_hpp
+#define mml_math_include_mml_math_derivate_hpp
 
 #include <mml.hpp>
 
 namespace mml {
-	namespace rechner {
+	namespace calc {
 		//mml::string derivate(mml::shell::arg args, mml::string function, char variable);
 		
 		

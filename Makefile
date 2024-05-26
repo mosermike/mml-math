@@ -24,14 +24,14 @@ MOBJ = $(MSRC:%.cpp=%.o)
 MDST = libmml-math.a
 MINST = libmml-math.so
 
-HPP = $(wildcard include/*.hpp )
+HPP = $(wildcard include/*.hpp include/mml-math/*.hpp)
 
 default_target : all
 target debug: override CFLAGS = $(CFLAGS_GDB)
 target m.all: override INCLUDE = $(MINCLUDE)
 
 all: $(MDST)
-	@echo "\e[1;32m| Only ${shell cat $(MSRC) $(MHPP)| grep TODO | wc -l} TODOs! \e[0m"
+	@echo "\e[1;32m| Only ${shell cat $(MSRC) $(HPP) | grep TODO | wc -l} TODOs! \e[0m"
 
 install: $(MOBJ)
 	cp -ar include /usr/local/

@@ -158,8 +158,9 @@ mml::matrix::matrix mml::matrix::matrix::multiply(mml::matrix::matrix mat) {
 	// ===================================
 	// Check if multiplication is possible
 	// ===================================
-	if(cols != mat.rows)
-		mml::shell::warn("| Multiplication not possible!");	
+	if(cols != mat.rows) {
+		throw std::logic_error("| Multiplication not possible (" + std::to_string(cols) + " cols vs. " + std::to_string(mat.rows) + " rows) !");	
+	}
 	
 	mml::matrix::matrix res(rows,mat.cols);
 	
@@ -485,10 +486,11 @@ mml::matrix::matrix mml::matrix::matrix::transpose() noexcept {
 	
 }
 
-mml::matrix::matrix mml::matrix::calc(mml::string equation) {
+mml::matrix::matrix mml::matrix::calc(mml::string equation, bool verbose) {
 	mml::vector<mml::matrix::matrix> matrices; // matrices in the same order as they appear in the equation
 	mml::vector<mml::string> operators; // Operators starting from the left
 
+	
 	// Fill matrices vector
 	std::size_t pos = equation.find("[");
 	std::size_t temp = equation.size();
@@ -500,10 +502,16 @@ mml::matrix::matrix mml::matrix::calc(mml::string equation) {
 
 		// Create the class and add it to the vector
 		matrices.push_back(mml::matrix::matrix(equation.sub(i,pos).str())); // Create class instance
-
+		
 		// Remove from string and replace it with  '_'
-		equation = equation.sub(0,i-1) + "_" +  equation.substr(pos+1);
+		// in the start: DO not do sub 0,i-1 because i-1 to the end of the string
+		if(i == 0)
+			equation = "_" +  equation.substr(pos+1).str();
+		else
+			equation = equation.sub(0,i-1) + "_" +  equation.substr(pos+1);
+		
 		temp = equation.size(); // Determine new string size
+
 	}
 	
 	
@@ -543,7 +551,7 @@ mml::matrix::matrix mml::matrix::calc(mml::string equation) {
 			throw std::logic_error("[matrix::calc] Unknown operator " + equation[i]);
 
 	}
-
+	
 	// Replace it now
 	for(mml::string i : to_be_replaced)
 		equation = equation.replace(i,(mml::string)"");
@@ -558,16 +566,20 @@ mml::matrix::matrix mml::matrix::calc(mml::string equation) {
 		if(equation[i] == '*') {
 			if(equation[i-1] == '_' && equation[i+1] == '_') {
 				temp = equation.sub(0,i).count('_')-1; // which matrix on the left side
-				mml::matrix::print_2matrix(matrices[temp]," * ", matrices[temp+1]);
+				if(verbose)
+					mml::matrix::print_2matrix(matrices[temp]," * ", matrices[temp+1]);
 				matrices[temp+1] = matrices[temp]*matrices[temp+1];
 
 				// Erase the used matrix and the used operator from the vectors
 				matrices.erase(temp);
 				operators.erase(temp);
 				
-				
-				equation = equation.sub(0,i-2) + equation.substr(i+1);
-
+				// Replace the equation with the performed operation
+				// if equation from the start, do not do a sub
+				if(i == 1)
+					equation = equation.substr(i+1);
+				else
+					equation = equation.sub(0,i-2) + equation.substr(i+1);
 			}
 			else
 				throw std::logic_error("[matrix::calc] No matrix calculations at position " + std::to_string(i) + " in the equation " + equation.str() + " possible.");
@@ -576,7 +588,7 @@ mml::matrix::matrix mml::matrix::calc(mml::string equation) {
 			i++;
 		
 	}
-
+	
 	i = 0;
 	while((equation.exist("+") || equation.exist("-") )&& i+1 < equation.size()) {
 		if(equation[i] == '+' || equation[i] == '-') {
@@ -592,7 +604,12 @@ mml::matrix::matrix mml::matrix::calc(mml::string equation) {
 				matrices.erase(temp+1);
 				operators.erase(temp);
 				
-				equation = equation.sub(0,i-2) + equation.substr(i+1);
+				// Replace the equation with the performed operation
+				// if equation from the start, do not do a sub
+				if(i == 1)
+					equation = equation.substr(i+1);
+				else
+					equation = equation.sub(0,i-2) + equation.substr(i+1);
 
 			}
 			else
