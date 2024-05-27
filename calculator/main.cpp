@@ -368,7 +368,7 @@ int main(int argc, char **argv) {
         mml::rechner::save_result(args, args[1],result,calc_log);
     }
 	
-	if(!args.findArg("-m","--matrix")) {
+	if(!args.findArg("-m","--matrix"))
 		std::cout << "Result: " << result << std::endl;
 		
 	if(args.findArg("-t","--timer"))
