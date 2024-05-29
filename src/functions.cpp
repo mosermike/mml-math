@@ -37,8 +37,8 @@ mml::string mml::math::replace(mml::string equation) {
 	// Replace e if there is an operator before and after the symbol
 	for(uint32_t i = equation.find('e'); i < equation.size(); i++){
 		if(equation[i] == 'e') {
-			// e at the beginning
-			if(i == 0)
+			// e at the beginning but not part of exp
+			if(i == 0 && equation[i+1] != 'x')
 				equation = mml::to_string(M_E) + equation.substr(1);
 			// e at the end
 			else if(!mml::is_num(equation[i-1]) && i == equation.size()-1) {

@@ -29,6 +29,13 @@ std::vector<mml::string> mml::math::shunting_yard_algorithm::equation_to_infix(b
         char c = equation[i];
         if(mml::is_num(c) || c == '.' || (c == '-' && number.empty()))
             number += c;
+		else if (i < equation.size()-1 && c == 'e' && (equation[i+1] == '-' || mml::is_num(equation[i+1])) ) {
+            number += c;
+			// Also add the next character
+			number += equation[i+1];
+			i++;
+		}
+
         else {
             if (!number.empty()) {
                 infix.push_back(number);
@@ -92,10 +99,17 @@ bool isNumber(const std::string& str) {
             if (hasDecimal) return false; // More than one decimal point
             hasDecimal = true;
         }
-        // Treat other character
-        else {
-            return false; // Invalid character
+
+		// Treat e with 10^
+		else if ((str[i] == '-' || str[i] == '+') && i > 0 && str[i-1] == 'e') {
+            continue;
         }
+        // Treat other character
+        else if (str[i] == 'e')
+			continue;
+        else
+			return false; // Invalid character
+        
     }
 
     // At least one digit must be present
@@ -158,15 +172,20 @@ std::vector<mml::string> mml::math::shunting_yard_algorithm::infix_to_postfix(bo
 }
 
 int mml::math::shunting_yard_algorithm::precedence(mml::string op) noexcept {
-     if (op == "+" || op == "-") {
+    if (op == "+" || op == "-") {
         return 1;
     }
-    if (op == "*" || op == "/") {
+    
+	if (op == "*" || op == "/") {
         return 2;
     }
-    if (op == "^" || op == "log10" || op == "ln") {
+    
+	if (op == "^") {
         return 3;
     }
+
+	if (this->functions.count(op.str()))
+		return 4;
     return 0;
 }
 
