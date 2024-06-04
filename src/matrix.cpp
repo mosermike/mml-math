@@ -328,8 +328,8 @@ void mml::matrix::matrix::print() {
 	
 	for(uint32_t i = 0; i < cols; i++) {
 		for(uint32_t n = 0; n < rows; n++) {
-			if(mml::functions::digits(data[n][i]) > digit1[i])
-				digit1[i] = mml::functions::digits(data[n][i]);
+			if(mml::digits(data[n][i]) > digit1[i])
+				digit1[i] = mml::digits(data[n][i]);
 		}
 	}
 	
@@ -381,7 +381,7 @@ void mml::matrix::matrix::print() {
 				data[i][j] = 0;
 			
 			// Skip so many entries due to different numbers
-			for(uint32_t n = mml::functions::digits(data[i][j]); n <= digit1[j]; n++) {
+			for(uint32_t n = mml::digits(data[i][j]); n <= digit1[j]; n++) {
 				skips++;
 			}
 
@@ -634,14 +634,14 @@ void mml::matrix::print_2matrix(mml::matrix::matrix mat1, std::string add, mml::
 	uint32_t digit2[mat2.cols] = {0};
 	for(uint32_t i = 0; i < mat1.cols; i++) {
 		for(uint32_t n = 0; n < mat1.rows; n++) {
-			if(mml::functions::digits(mat1(n,i)) > digit1[i])
-				digit1[i] = mml::functions::digits(mat1(n,i));
+			if(mml::digits(mat1(n,i)) > digit1[i])
+				digit1[i] = mml::digits(mat1(n,i));
 		}
 	}
 	for(uint32_t i = 0; i < mat2.cols; i++) {
 		for(uint32_t n = 0; n < mat2.rows; n++) {
-			if(mml::functions::digits(mat2(n,i)) > digit2[i])
-				digit2[i] = mml::functions::digits(mat2(n,i));
+			if(mml::digits(mat2(n,i)) > digit2[i])
+				digit2[i] = mml::digits(mat2(n,i));
 		}
 	}
 
@@ -706,7 +706,7 @@ void mml::matrix::print_2matrix(mml::matrix::matrix mat1, std::string add, mml::
 				mat1(i,j) = 0;
 			
 			// Skip so many entries due to different numbers
-			for(uint32_t n = mml::functions::digits(mat1(i,j)); n <= digit1[j]; n++) {
+			for(uint32_t n = mml::digits(mat1(i,j)); n <= digit1[j]; n++) {
 				skips++;
 			}
 
@@ -740,7 +740,7 @@ void mml::matrix::print_2matrix(mml::matrix::matrix mat1, std::string add, mml::
 			if(mat2(i,j) == -0)
 				mat2(i,j) = 0;
 
-			for(uint32_t n = mml::functions::digits(mat2(i,j)); n <= digit2[j]; n++) {
+			for(uint32_t n = mml::digits(mat2(i,j)); n <= digit2[j]; n++) {
 				skips++;
 			}
 			
@@ -784,22 +784,22 @@ void mml::matrix::print_3matrix(mml::matrix::matrix mat1, std::string add1, mml:
 	
 	for(uint32_t i = 0; i < mat1.cols; i++) {
 		for(uint32_t n = 0; n < mat1.rows; n++) {
-			if(mml::functions::digits(mat1(n,i)) > digit1[i])
-				digit1[i] = mml::functions::digits(mat1(n,i));
+			if(mml::digits(mat1(n,i)) > digit1[i])
+				digit1[i] = mml::digits(mat1(n,i));
 		}
 	}
 
 	for(uint32_t i = 0; i < mat2.cols; i++) {
 		for(uint32_t n = 0; n < mat2.rows; n++) {
-			if(mml::functions::digits(mat2(n,i)) > digit2[i])
-				digit2[i] = mml::functions::digits(mat2(n,i));
+			if(mml::digits(mat2(n,i)) > digit2[i])
+				digit2[i] = mml::digits(mat2(n,i));
 		}
 	}
 
 	for(uint32_t i = 0; i < mat3.cols; i++) {
 		for(uint32_t n = 0; n < mat3.rows; n++) {
-			if(mml::functions::digits(mat3(n,i)) > digit3[i])
-				digit3[i] = mml::functions::digits(mat3(n,i));
+			if(mml::digits(mat3(n,i)) > digit3[i])
+				digit3[i] = mml::digits(mat3(n,i));
 		}
 	}
 	
@@ -874,7 +874,7 @@ void mml::matrix::print_3matrix(mml::matrix::matrix mat1, std::string add1, mml:
 			if(mat1(i,j) == -0)
 				mat1(i,j) = 0;
 			
-			for(uint32_t n = mml::functions::digits(mat1(i,j)); n <= digit1[j]; n++)
+			for(uint32_t n = mml::digits(mat1(i,j)); n <= digit1[j]; n++)
 				skips++;
 
 			print[start_mat1_row+1 + i ][start_mat1_col+1 + j + skips] = std::to_string(mat1(i,j));
@@ -905,7 +905,7 @@ void mml::matrix::print_3matrix(mml::matrix::matrix mat1, std::string add1, mml:
 			if(mat2(i,j) == -0)
 				mat2(i,j) = 0;
 			
-			for(uint32_t n = mml::functions::digits(mat2(i,j)); n <= digit2[j]; n++)
+			for(uint32_t n = mml::digits(mat2(i,j)); n <= digit2[j]; n++)
 				skips++;
 
 			print[start_mat2_row+1 + i ][start_mat2_col+1 + j + skips] = std::to_string(mat2(i,j));
@@ -935,7 +935,7 @@ void mml::matrix::print_3matrix(mml::matrix::matrix mat1, std::string add1, mml:
 			if(mat3(i,j) == -0)
 				mat3(i,j) = 0;
 			
-			for(uint32_t n = mml::functions::digits(mat3(i,j)); n <= digit3[j]; n++)
+			for(uint32_t n = mml::digits(mat3(i,j)); n <= digit3[j]; n++)
 				skips++;
 
 			print[start_mat3_row+1 + i ][start_mat3_col+1 + j + skips] = std::to_string(mat3(i,j));
@@ -977,29 +977,29 @@ void mml::matrix::print_4matrix(mml::matrix::matrix mat1, std::string add1, mml:
 	
 	for(uint32_t i = 0; i < mat1.cols; i++) {
 		for(uint32_t n = 0; n < mat1.rows; n++) {
-			if(mml::functions::digits(mat1(n,i)) > digit1[i])
-				digit1[i] = mml::functions::digits(mat1(n,i));
+			if(mml::digits(mat1(n,i)) > digit1[i])
+				digit1[i] = mml::digits(mat1(n,i));
 		}
 	}
 
 	for(uint32_t i = 0; i < mat2.cols; i++) {
 		for(uint32_t n = 0; n < mat2.rows; n++) {
-			if(mml::functions::digits(mat2(n,i)) > digit2[i])
-				digit2[i] = mml::functions::digits(mat2(n,i));
+			if(mml::digits(mat2(n,i)) > digit2[i])
+				digit2[i] = mml::digits(mat2(n,i));
 		}
 	}
 
 	for(uint32_t i = 0; i < mat3.cols; i++) {
 		for(uint32_t n = 0; n < mat3.rows; n++) {
-			if(mml::functions::digits(mat3(n,i)) > digit3[i])
-				digit3[i] = mml::functions::digits(mat3(n,i));
+			if(mml::digits(mat3(n,i)) > digit3[i])
+				digit3[i] = mml::digits(mat3(n,i));
 		}
 	}
 
 	for(uint32_t i = 0; i < mat4.cols; i++) {
 		for(uint32_t n = 0; n < mat4.rows; n++) {
-			if(mml::functions::digits(mat4(n,i)) > digit4[i])
-				digit4[i] = mml::functions::digits(mat4(n,i));
+			if(mml::digits(mat4(n,i)) > digit4[i])
+				digit4[i] = mml::digits(mat4(n,i));
 		}
 	}
 	
@@ -1087,7 +1087,7 @@ void mml::matrix::print_4matrix(mml::matrix::matrix mat1, std::string add1, mml:
 			if(mat1(i,j) == -0)
 				mat1(i,j) = 0;
 			
-			for(uint32_t n = mml::functions::digits(mat1(i,j)); n <= digit1[j]; n++)
+			for(uint32_t n = mml::digits(mat1(i,j)); n <= digit1[j]; n++)
 				skips++;
 
 			print[start_mat1_row+1 + i ][start_mat1_col+1 + j + skips] = std::to_string(mat1(i,j));
@@ -1118,7 +1118,7 @@ void mml::matrix::print_4matrix(mml::matrix::matrix mat1, std::string add1, mml:
 			if(mat2(i,j) == -0)
 				mat2(i,j) = 0;
 			
-			for(uint32_t n = mml::functions::digits(mat2(i,j)); n <= digit2[j]; n++)
+			for(uint32_t n = mml::digits(mat2(i,j)); n <= digit2[j]; n++)
 				skips++;
 
 			print[start_mat2_row+1 + i ][start_mat2_col+1 + j + skips] = std::to_string(mat2(i,j));
@@ -1148,7 +1148,7 @@ void mml::matrix::print_4matrix(mml::matrix::matrix mat1, std::string add1, mml:
 			if(mat3(i,j) == -0)
 				mat3(i,j) = 0;
 			
-			for(uint32_t n = mml::functions::digits(mat3(i,j)); n <= digit3[j]; n++)
+			for(uint32_t n = mml::digits(mat3(i,j)); n <= digit3[j]; n++)
 				skips++;
 
 			print[start_mat3_row+1 + i ][start_mat3_col+1 + j + skips] = std::to_string(mat3(i,j));
@@ -1178,7 +1178,7 @@ void mml::matrix::print_4matrix(mml::matrix::matrix mat1, std::string add1, mml:
 			if(mat4(i,j) == -0)
 				mat4(i,j) = 0;
 			
-			for(uint32_t n = mml::functions::digits(mat4(i,j)); n <= digit4[j]; n++)
+			for(uint32_t n = mml::digits(mat4(i,j)); n <= digit4[j]; n++)
 				skips++;
 
 			print[start_mat4_row+1 + i ][start_mat4_col+1 + j + skips] = std::to_string(mat4(i,j));

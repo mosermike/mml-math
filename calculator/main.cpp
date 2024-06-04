@@ -70,7 +70,7 @@ void help() {
 	mml::shell::chapter("Others:", true);
 	std::cout << "\tExisting constants: pi, exp, E, P_c, P_k, P_m, P_e, P_eps, P_G, P_h, P_mu, P_NA, P_u" << std::endl;
 
-	mml::help::foot("1", "May", 2024);
+	mml::help::foot("1", "May", 2024, "Mike Moser");
 }
 
 /**
@@ -208,46 +208,50 @@ int main(int argc, char **argv) {
 	double				result		= 0;
 	mml::string			matrix		= "";
 	
-	if(args.notArg("-t","--timer"))
+	if(args.nexist("-t","--timer"))
 		time.stop();
 		
 	if(args.size() == 1){
 		throw std::logic_error("Missing input of the wished operation. Use '-h' for help.");
 	}
 	
-	else if (args.findArg("--help","-h")) {
+	else if (args.exist("--help","-h")) {
 		help();
 		return 0;
 	}
-	
-	else if ((args.findArg("-c","--calculate") || args.findArg("-m","--matrix")) && args.size() == 2) {
+	// Missing equation
+	else if ((args.exist("-c","--calculate") || args.exist("-m","--matrix")) && args.size() == 2) {
 		throw std::logic_error("Missing Equation!");
 	}
 	
-	else if (args.findArg("-c","--calculate")) {
-		mml::string equation = mml::math::replace(args[args.positionArg("-c") + 1]);
+	else if (args.exist("-c","--calculate")) {
+		mml::string equation = mml::math::replace(args[args.pos("-c") + 1]);
 		result = calculate(equation, args.exist("-v","--verbose"));
-        mml::rechner::save_result(args, args[args.positionArg("-c","--calculate") + 1],result,calc_log);
+		if(args.exist("-k","--comment"))
+        	mml::math::save_result(args[args.exist("-c","--calculate") + 1],result,calc_log,args[args.pos("-k","--comment")]);
+		else
+			mml::math::save_result(args[args.exist("-c","--calculate") + 1],result,calc_log,"");
     }
 	
-	else if (args.findArg("-cs","--calculations")) {
+	else if (args.exist("-cs","--calculations")) {
 		std::vector<mml::string> equations;
 		std::vector<double> results = calculations(args.exist("-v","--verbose"), equations);
 		
 		// Save the results and equations
-		for(uint32_t i = 0; i < equations.size(); i++)
-			mml::rechner::save_result(args, equations[i], results[i],calc_log);
+		for(uint32_t i = 0; i < equations.size(); i++) {
+				mml::math::save_result(equations[i],results[i],calc_log,"");
+		}
 	}
 
-	else if(args.findArg("-m","--matrix")) {
+	else if(args.exist("-m","--matrix")) {
 
 		/**
 		 * NOTE Transform from latex matric to compatible format
 		 * TODO
 		 */
 		
-		if(args.findArg("-ml","--matrix-latex")) {
-			mml::string temp = args[args.positionArg("-m","--matrix") + 1]; // Line with the matrix calculations
+		if(args.exist("-ml","--matrix-latex")) {
+			mml::string temp = args[args.pos("-m","--matrix") + 1]; // Line with the matrix calculations
 			mml::string temp_s = ""; // string to build the new calculations line
 			bool braket = false;	// to indicate whether the matrix is finished or starts
 			// Build string in compatible format:
@@ -267,14 +271,14 @@ int main(int argc, char **argv) {
 				else
 					temp_s = temp_s.str() + (char) temp[i];
 			}
-			args[args.positionArg("-m","--matrix") + 1] = temp_s;
+			args[args.pos("-m","--matrix") + 1] = temp_s;
 		}
 
-		args[args.positionArg("-m","--matrix") + 1] = args[args.positionArg("-m","--matrix") + 1].replace(" ",""); // Leerzeichen ersetzen, aber Achtung Matrix falsch wenn nicht mit " "
+		args[args.pos("-m","--matrix") + 1] = args[args.pos("-m","--matrix") + 1].replace(" ",""); // Leerzeichen ersetzen, aber Achtung Matrix falsch wenn nicht mit " "
 		
-		if (args.findArg("-a","--adjugate")) {
+		if (args.exist("-a","--adjugate")) {
 			
-			mml::matrix::matrix mat(args[args.positionArg("-m","--matrix") + 1].str());
+			mml::matrix::matrix mat(args[args.pos("-m","--matrix") + 1].str());
 			if(args.exist("-v","--verbose")) {
 				std::cout << "The adjugate of the matrix" << std::endl;
 				mat.print();
@@ -289,7 +293,7 @@ int main(int argc, char **argv) {
 
 		}
 		else if (args.exist("-d","--det")) {
-			mml::matrix::matrix mat(args[args.positionArg("-m","--matrix") + 1].str());
+			mml::matrix::matrix mat(args[args.pos("-m","--matrix") + 1].str());
 			if(args.exist("-v","--verbose")) {
 				std::cout << "The determinant of the matrix" << std::endl;
 				mat.print();
@@ -299,9 +303,9 @@ int main(int argc, char **argv) {
 				std::cout << "The determinant is " << mat.det() << "." << std::endl;
 			// TODO save matrix
 		}
-		else if (args.findArg("-i","--inverse")) {
+		else if (args.exist("-i","--inverse")) {
 			
-			mml::matrix::matrix mat(args[args.positionArg("-m","--matrix") + 1].str());
+			mml::matrix::matrix mat(args[args.pos("-m","--matrix") + 1].str());
 			if(args.exist("-v","--verbose")) {
 				std::cout << "The inverse of the matrix" << std::endl;
 				mat.print();
@@ -315,9 +319,9 @@ int main(int argc, char **argv) {
 			// TODO save matrix
 
 		}
-		else if (args.findArg("-tr","--transpose")) {
+		else if (args.exist("-tr","--transpose")) {
 			
-			mml::matrix::matrix mat(args[args.positionArg("-m","--matrix") + 1].str());
+			mml::matrix::matrix mat(args[args.pos("-m","--matrix") + 1].str());
 			if(args.exist("-v","--verbose")) {
 				std::cout << "The transpose of the matrix" << std::endl;
 				mat.print();
@@ -331,18 +335,21 @@ int main(int argc, char **argv) {
 			// TODO save matrix
 		}
 		else {
-			mml::matrix::matrix res = mml::matrix::calc(args[args.positionArg("-m","--matrix") + 1], args.exist("-v","--verbose"));
+			mml::matrix::matrix res = mml::matrix::calc(args[args.pos("-m","--matrix") + 1], args.exist("-v","--verbose"));
 			std::cout << "The result is" << std::endl;
 			res.print();
-			//mml::rechner::save_matrix(args, args[args.positionArg("-m","--matrix") + 1], matrix,calc_log);
+			if(args.exist("-k","--comment"))
+				mml::math::save_matrix(args[args.pos("-m","--matrix") + 1], matrix,calc_log,args[args.pos("-k","--comment")]);
+			else
+				mml::math::save_matrix(args[args.pos("-m","--matrix") + 1], matrix,calc_log,"");
 		}
 	}
-	else if (args.findArg("-s","--summation")){
+	else if (args.exist("-s","--summation")){
 		mml::vector<double> values = add();
 		result = values.sum();
 		values.log(calc_log, false, "[summation] ", " = " + std::to_string(result));
 	}
-	else if (args.findArg("-l","--log","-lv")) {
+	else if (args.exist("-l","--log","-lv")) {
 		if(mml::Unix::exist(calc_log)) {
 			
 			mml::log log(calc_log);
@@ -353,25 +360,28 @@ int main(int argc, char **argv) {
 		return 0;
 		
 	}
-	else if(args.findArg("-lr", "log_reset")) {
-		mml::rechner::reset_logfile(args,calc_log);
+	else if(args.exist("-lr", "log_reset")) {
+		mml::math::reset_logfile(calc_log,args.exist("-v","--verbose"));
 		return 0;
 	}
 	
-	else if(args.findArg("-lb","--log-backup")) {
-		mml::rechner::backup_logfile(args, calc_log);
+	else if(args.exist("-lb","--log-backup")) {
+		mml::math::backup_logfile(calc_log,args.exist("-v","--verbose"));
 		return 0;
 	}
 	else {
 		mml::string equation = mml::math::replace(args[1]);
 		result = calculate(equation, args.exist("-v","--verbose"));
-        mml::rechner::save_result(args, args[1],result,calc_log);
+		if(args.exist("-k","--comment"))
+        	mml::math::save_result(args[1],result,calc_log,args[args.pos("-k","--comment")]);
+		else
+			mml::math::save_result(args[1],result,calc_log,"");
     }
 	
-	if(!args.findArg("-m","--matrix"))
+	if(!args.exist("-m","--matrix"))
 		std::cout << "Result: " << result << std::endl;
 		
-	if(args.findArg("-t","--timer"))
+	if(args.exist("-t","--timer"))
 		std::cout << "Calculation time: " << time.range() << std::endl;
 
 	return 0;

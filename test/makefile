@@ -28,7 +28,7 @@ DST =  $(SRC:%.cpp=%.x)
 all: $(DST)
 
 clean:
-	rm *.o *.x
+	rm -f *.o *.x
 
 debug: $(DST)
 
@@ -38,7 +38,7 @@ debug: $(DST)
 %.x: %.o
 	$(GCC) $< $(CFLAGS) $(INCLUDE) $(LIBRARY) $(LDFLAGS) -o $@
 
-test: $(DST)
+test: clean $(DST)
 	@for i in $(DST) ;\
 	do\
 		./$$i;\

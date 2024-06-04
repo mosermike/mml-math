@@ -13,14 +13,14 @@
 #include <mml.hpp>
 
 	namespace mml{
-		namespace rechner {
+		namespace math {
 			
 			/**
 			* @brief Logfile backup
 			* @param args Arguments from the shell
 			* @param logfile Logfile
 			*/
-			void backup_logfile(shell::arg args, std::string logfile);
+			void backup_logfile(std::string logfile, bool verbose);
 			
 			/**
 			* @brief Delete zeros at the end
@@ -37,8 +37,8 @@
 			* @param matrix_result result
 			* @param logfile Logfile
 			*/
-			void save_matrix(mml::shell::arg args, mml::string matrix_equation, mml::string matrix_result, std::string logfile);
-			void save_result(shell::arg args, mml::string equation, double result, std::string logfile);
+			void save_matrix(mml::string matrix_equation, mml::string matrix_result, std::string logfile, mml::string comment = "");
+			void save_result(mml::string equation, double result, std::string logfile, mml::string comment = "");
 			
 			
 			/**
@@ -47,7 +47,7 @@
 			* @param string Logfile
 			* @author Mike
 			*/
-			void reset_logfile(shell::arg args, std::string logfile);
+			void reset_logfile(std::string logfile, bool verbose);
 		}
 	}
 #endif
