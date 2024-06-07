@@ -16,10 +16,10 @@ namespace mml {
 		* @brief Replace constants with their values
 		* 
 		* @param equation Equation where constants are replaced
-		* 
+		* @param verbose Verbose what is done
 		* @return Replaced string with the result
 		*/
-		mml::string replace(mml::string equation);
+		mml::string replace(mml::string equation, bool verbose = false);
 		
 	}
 }

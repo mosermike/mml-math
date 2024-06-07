@@ -225,7 +225,7 @@ int main(int argc, char **argv) {
 	}
 	
 	else if (args.exist("-c","--calculate")) {
-		mml::string equation = mml::math::replace(args[args.pos("-c") + 1]);
+		mml::string equation = mml::math::replace(args[args.pos("-c") + 1], args.exist("-v","--verbose"));
 		result = calculate(equation, args.exist("-v","--verbose"));
 		if(args.exist("-k","--comment"))
         	mml::math::save_result(args[args.exist("-c","--calculate") + 1],result,calc_log,args[args.pos("-k","--comment")]);
@@ -370,7 +370,7 @@ int main(int argc, char **argv) {
 		return 0;
 	}
 	else {
-		mml::string equation = mml::math::replace(args[1]);
+		mml::string equation = mml::math::replace(args[1], args.exist("-v","--verbose"));
 		result = calculate(equation, args.exist("-v","--verbose"));
 		if(args.exist("-k","--comment"))
         	mml::math::save_result(args[1],result,calc_log,args[args.pos("-k","--comment")]);

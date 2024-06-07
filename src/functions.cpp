@@ -8,8 +8,10 @@
 #include "../include/mml-math/constants.hpp"
 
 
-mml::string mml::math::replace(mml::string equation) {
+mml::string mml::math::replace(mml::string equation, bool verbose) {
 	
+	if(verbose)
+        std::cout << "[replace] Process equation " << equation << std::endl;
 	// Replace , with .
 	equation = equation.replace(",",".");
 		
@@ -28,6 +30,8 @@ mml::string mml::math::replace(mml::string equation) {
 	equation = equation.replace("P_u", std::to_string(P_u).c_str());
 	equation = equation.replace("P_NA", std::to_string(P_NA).c_str());
 	
+	
+
 	// **********************************
 	// * Replace mathematical constants *
 	// **********************************
@@ -37,6 +41,8 @@ mml::string mml::math::replace(mml::string equation) {
 	// Replace e if there is an operator before and after the symbol
 	for(uint32_t i = equation.find('e'); i < equation.size(); i++){
 		if(equation[i] == 'e') {
+			if(verbose)
+        		std::cout << "[replace] Detected 'e' at position " << i << std::endl;
 			// e at the beginning but not part of exp
 			if(i == 0 && equation[i+1] != 'x')
 				equation = mml::to_string(M_E) + equation.substr(1);
@@ -54,6 +60,9 @@ mml::string mml::math::replace(mml::string equation) {
 		i = equation.find('e',i+1) -1;
 		
 	}
+
+	if(verbose)
+        std::cout << "[replace] Replaced all constants: " << equation << std::endl;
 
 	return equation;
 }

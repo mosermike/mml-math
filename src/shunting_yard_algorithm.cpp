@@ -27,6 +27,7 @@ std::vector<mml::string> mml::math::shunting_yard_algorithm::equation_to_infix(b
     
     for(size_t i = 0; i < equation.size(); i++) {
         char c = equation[i];
+		
         if(mml::is_num(c) || c == '.' || (c == '-' && number.empty()))
             number += c;
 		else if (i < equation.size()-1 && c == 'e' && (equation[i+1] == '-' || mml::is_num(equation[i+1])) ) {
