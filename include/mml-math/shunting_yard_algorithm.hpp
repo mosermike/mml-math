@@ -35,10 +35,10 @@ namespace mml {
                 {"sqrt",{0, std::numeric_limits<double>::infinity(), [](double x) { return std::sqrt(x); }}},
                 {"sin",{-2*M_PI, 2*M_PI, [](double x) { return std::sin(x); }}},
                 {"cos",{-2*M_PI, 2*M_PI, [](double x) { return std::cos(x); }}},
-                {"tan",{-2*M_PI, 2*M_PI, [](double x) { return std::tan(x); }}},
+                {"tan",{-M_PI, M_PI, [](double x) { return std::tan(x); }}},
                 {"asin",{-1, 1, [](double x) { return std::asin(x); }}},
                 {"acos",{-1, 1, [](double x) { return std::acos(x); }}},
-                {"atan",{-1, 1, [](double x) { return std::atan(x); }}},
+                {"atan",{-std::numeric_limits<double>::infinity(), std::numeric_limits<double>::infinity(), [](double x) { return std::atan(x); }}},
             };
 
             public:
