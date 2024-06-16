@@ -59,10 +59,23 @@ namespace mml {
 		public:
 			std::size_t rows = 0;
 			std::size_t cols = 0;
-			// Constructor to initialize the matrix with given dimensions
+			
+			/**
+			 * @brief Initialise empty matrix
+			 * @param rows Number of rows
+			 * @param cols NUmber of columns
+			 * @return Instance of the class
+			*/
 	    	matrix(std::size_t rows, std::size_t cols) : rows(rows), cols(cols) {
 				this->data = mml::vector<mml::vector<double>>(rows, mml::vector<double>(cols,0.0));
 			}
+
+			/**
+			 * @brief Initialise matrix with a 2D vector.
+			 * @param vector 2D Vector
+			 * @return Instance of the class
+			*/
+			matrix(mml::vector<mml::vector<double>>  vec) : rows(vec.size()), cols(vec[0].size()), data(vec) {}
 
 			/**
 			 * @note Initialise matrix with a string. E.g. like this: [[1,1],[1,1]] 
