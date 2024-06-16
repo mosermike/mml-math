@@ -140,9 +140,6 @@ namespace mml {
 				}
 			}
 
-			// Constructor with = a 2D vector
-			matrix(mml::vector<mml::vector<double>> temp) : data(temp), rows(temp.size()), cols(temp[0].size()){};
-
 			/**
 			 * @brief Assign the matrix with a 2D vector
 			 * @param vector<vector> 2D vector
@@ -186,20 +183,54 @@ namespace mml {
 			void operator()(std::string str1);
 
 			/**
+		 	 * @brief Multiply this matrix with a 2D vector from the right side
+		 	 * @param vector 2D vector to be multiplied
+		 	 * @return New matrix
+		 	 */
+			mml::vector<mml::vector<double>> operator*(mml::vector<mml::vector<double>> vec) {return multiply(mml::matrix::matrix(vec));}
+
+			/**
 		 	 * @brief Multiply this matrix with another one from the right side
 		 	 * @param matrix Matrix to be multiplied
 		 	 * @return New matrix
 		 	 */
 			mml::vector<mml::vector<double>> operator*(mml::matrix::matrix matrix) {return multiply(matrix);}
-			mml::matrix::matrix operator*=(mml::matrix::matrix matrix) {data = multiply(matrix); return *this;}
+			
+			/**
+		 	 * @brief Multiply this matrix with another one from the right side to this instance
+		 	 * @param vec Vector to be multiplied
+		 	 * @return copy of this instance
+		 	 */
+			mml::matrix::matrix& operator*=(mml::vector<mml::vector<double>> vec) {data = multiply(mml::matrix::matrix(vec)); return *this;}
 
+			/**
+		 	 * @brief Multiply this matrix with another one from the right side to this instance
+		 	 * @param matrix Matrix to be multiplied
+		 	 * @return Copy of this instance
+		 	 */
+			mml::matrix::matrix& operator*=(mml::matrix::matrix matrix) {data = multiply(matrix); return *this;}
+	
 			/**
 		 	 * @brief Multiply this matrix with a scalar
 		 	 * @param scalar Scalar
 		 	 * @return new matrix
 		 	 */
 			mml::vector<mml::vector<double>> operator*(double scalar) {return multiply(scalar);}
-			mml::matrix::matrix operator*=(double scalar) {data = multiply(scalar); return *this;}
+			
+			/**
+		 	 * @brief Multiply this matrix with a scalar to this instance
+		 	 * @param scalar Scalar
+		 	 * @return this instance
+		 	 */
+			mml::matrix::matrix& operator*=(double scalar) {data = multiply(scalar); return *this;}
+
+			/**
+		 	 * @brief Add a 2D vector from the right side
+		 	 * @param vec 2D vector to be added
+		 	 * @return New matrix
+			 * @throw runtime_error : if rows or cols are not equal
+		 	 */
+			mml::vector<mml::vector<double>> operator+(mml::vector<mml::vector<double>> vector){return add(mml::matrix::matrix(vector));}
 
 			/**
 		 	 * @brief Add another matrix from the right side
@@ -208,7 +239,30 @@ namespace mml {
 			 * @throw runtime_error : if rows or cols are not equal
 		 	 */
 			mml::vector<mml::vector<double>> operator+(mml::matrix::matrix matrix){return add(matrix);}
+
+			/**
+		 	 * @brief Add another matrix from the right side to this instance
+		 	 * @param vec Vector to be added
+		 	 * @return this instance
+			 * @throw runtime_error : if rows or cols are not equal
+		 	 */
+			mml::matrix::matrix operator+=(mml::vector<mml::vector<double>> vec){data = add(mml::matrix::matrix(vec)); return *this;}
+
+			/**
+		 	 * @brief Add another matrix from the right side to this instance
+		 	 * @param matrix Matrix to be added
+		 	 * @return this instance
+			 * @throw runtime_error : if rows or cols are not equal
+		 	 */
 			mml::matrix::matrix operator+=(mml::matrix::matrix matrix){data = add(matrix); return *this;}
+
+			/**
+		 	 * @brief Subtract a 2D vector from this one from the right side
+		 	 * @param vec 2D vector to be substracted
+		 	 * @return New matrix
+			 * @throw runtime_error : if rows or cols are not equal
+		 	 */
+			mml::vector<mml::vector<double>> operator-(mml::vector<mml::vector<double>> vec){return sub(mml::matrix::matrix(vec));}
 
 			/**
 		 	 * @brief Subtract another matrix from this one from the right side
@@ -217,6 +271,21 @@ namespace mml {
 			 * @throw runtime_error : if rows or cols are not equal
 		 	 */
 			mml::vector<mml::vector<double>> operator-(mml::matrix::matrix matrix){return sub(matrix);}
+			
+			/**
+		 	 * @brief Subtract another matrix from this one from the right side to this instance
+		 	 * @param vec 2D vector to be substracted
+		 	 * @return this instance
+			 * @throw runtime_error : if rows or cols are not equal
+		 	 */
+			mml::matrix::matrix operator-=(mml::vector<mml::vector<double>> vec){data = sub(mml::matrix::matrix(vec)); return *this;}
+
+			/**
+		 	 * @brief Subtract another matrix from this one from the right side to this instance
+		 	 * @param matrix Matrix to be substracted
+		 	 * @return this instance
+			 * @throw runtime_error : if rows or cols are not equal
+		 	 */
 			mml::matrix::matrix operator-=(mml::matrix::matrix matrix){data = sub(matrix); return *this;}
 
 			/**
