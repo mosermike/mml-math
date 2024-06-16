@@ -1,7 +1,7 @@
 #include <mml.hpp>
 #include "../include/mml-math/matrix.hpp"
 
-mml::matrix::matrix mml::matrix::matrix::add(mml::matrix::matrix mat) {
+mml::vector<mml::vector<double>> mml::matrix::matrix::add(mml::matrix::matrix mat) {
 	
 	mml::matrix::matrix res(rows,cols);
 
@@ -21,11 +21,11 @@ mml::matrix::matrix mml::matrix::matrix::add(mml::matrix::matrix mat) {
 		}
 	}
 	
-	return res;	
+	return res.data;	
 }
 
 
-mml::matrix::matrix mml::matrix::matrix::adjugate() {
+mml::vector<mml::vector<double>> mml::matrix::matrix::adjugate() {
 	
 	mml::matrix::matrix adj(rows,cols);
 	
@@ -124,13 +124,13 @@ double mml::matrix::matrix::det() {
 	return determinant;
 }
 
-mml::matrix::matrix mml::matrix::matrix::inverse() {
+mml::vector<mml::vector<double>> mml::matrix::matrix::inverse() {
 	
 	// Compute determinant as needed later
 	double Det = det();
 	if(Det == 0) {
 		std::cout << "[inverse] Inverse not defined. Matrix is singular (det = 0)" << std::endl;
-		return *this;
+		return data;
 	}
 	
 	// ===================
@@ -148,12 +148,12 @@ mml::matrix::matrix mml::matrix::matrix::inverse() {
 		}
 	}
 	
-	return inv;
+	return inv.data;
 }
 
 
 
-mml::matrix::matrix mml::matrix::matrix::multiply(mml::matrix::matrix mat) {
+mml::vector<mml::vector<double>> mml::matrix::matrix::multiply(mml::matrix::matrix mat) {
 	
 	// ===================================
 	// Check if multiplication is possible
@@ -178,10 +178,10 @@ mml::matrix::matrix mml::matrix::matrix::multiply(mml::matrix::matrix mat) {
 		}
 	}
 	
-	return res;
+	return res.data;
 }
 
-mml::matrix::matrix mml::matrix::matrix::multiply(double scalar) {
+mml::vector<mml::vector<double>> mml::matrix::matrix::multiply(double scalar) {
 	
 	mml::matrix::matrix res(rows,cols);
 	
@@ -195,7 +195,7 @@ mml::matrix::matrix mml::matrix::matrix::multiply(double scalar) {
 		}
 	}
 	
-	return res;
+	return res.data;
 }
 
 mml::matrix::matrix& mml::matrix::matrix::operator=(std::string str1) {
@@ -415,7 +415,7 @@ void mml::matrix::matrix::print() {
 
 }
 
-mml::matrix::matrix mml::matrix::matrix::reduce(uint32_t row, uint32_t column) {
+mml::vector<mml::vector<double>> mml::matrix::matrix::reduce(uint32_t row, uint32_t column) {
 
 	matrix red(rows-1,cols-1);	
 
@@ -444,11 +444,11 @@ mml::matrix::matrix mml::matrix::matrix::reduce(uint32_t row, uint32_t column) {
 		}
 	}
 	
-	return red;
+	return red.data;
 	
 }
 
-mml::matrix::matrix mml::matrix::matrix::sub(mml::matrix::matrix mat) {
+mml::vector<mml::vector<double>> mml::matrix::matrix::sub(mml::matrix::matrix mat) {
 	
 
 	mml::matrix::matrix res(rows,cols);
@@ -468,11 +468,11 @@ mml::matrix::matrix mml::matrix::matrix::sub(mml::matrix::matrix mat) {
 		}
 	}
 	
-	return res;	
+	return res.data;	
 }
 
 
-mml::matrix::matrix mml::matrix::matrix::transpose() noexcept {
+mml::vector<mml::vector<double>> mml::matrix::matrix::transpose() noexcept {
 
 	matrix tra(cols,rows);
 
@@ -482,11 +482,11 @@ mml::matrix::matrix mml::matrix::matrix::transpose() noexcept {
 		}
 	}
 	
-	return tra;
+	return tra.data;
 	
 }
 
-mml::matrix::matrix mml::matrix::calc(mml::string equation, bool verbose) {
+mml::vector<mml::vector<double>> mml::matrix::calc(mml::string equation, bool verbose) {
 	mml::vector<mml::matrix::matrix> matrices; // matrices in the same order as they appear in the equation
 	mml::vector<mml::string> operators; // Operators starting from the left
 
@@ -620,7 +620,7 @@ mml::matrix::matrix mml::matrix::calc(mml::string equation, bool verbose) {
 		
 	}
 
-	return matrices[0];
+	return matrices[0].vec();
 
 }
 
