@@ -20,7 +20,7 @@ namespace mml {
 		class matrix{ 
 		
 		protected:
-			mml::vector<mml::vector<double>> data = {{0.0f}};
+			mml::vector<mml::vector<double>> data = {{}};
 			
 			/**
 			 * @note Add a matrix from the right side
@@ -59,14 +59,14 @@ namespace mml {
 		public:
 			std::size_t rows = 0;
 			std::size_t cols = 0;
-			
+
 			/**
-			 * @brief Initialise empty matrix
+			 * @brief Initialise empty matrix with a specific form
 			 * @param rows Number of rows
-			 * @param cols NUmber of columns
+			 * @param cols Number of columns
 			 * @return Instance of the class
 			*/
-	    	matrix(std::size_t rows, std::size_t cols) : rows(rows), cols(cols) {
+	    	matrix(std::size_t rows1, std::size_t cols1) : rows(rows1), cols(cols1) {
 				this->data = mml::vector<mml::vector<double>>(rows, mml::vector<double>(cols,0.0));
 			}
 
@@ -75,7 +75,7 @@ namespace mml {
 			 * @param vector 2D Vector
 			 * @return Instance of the class
 			*/
-			matrix(mml::vector<mml::vector<double>>  vec) : rows(vec.size()), cols(vec[0].size()), data(vec) {}
+			matrix(mml::vector<mml::vector<double>>  vec) : data(vec), rows(vec.size()), cols(vec[0].size()) {}
 
 			/**
 			 * @note Initialise matrix with a string. E.g. like this: [[1,1],[1,1]] 
@@ -83,7 +83,7 @@ namespace mml {
 			 * @return Instance of the class with the values from the string
 			 * @author Mike Moser
 			*/
-			matrix(std::string str1) {
+			matrix(std::string str1) : rows(0), cols(0) {
 				// Change to mml::string
 				mml::string str(str1);
 				// Perform some checks for the format
