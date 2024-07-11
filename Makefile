@@ -58,5 +58,6 @@ libmml-math.so: $(MOBJ)
 	$(GCC) -shared -o lib/$(MDST) $(MOBJ) $(MLDFLAGS) $(LIBRARY)
 
 libmml-math.a: $(MOBJ)
+	mkdir -p lib
 	ar rcs lib/$(MDST) $(MOBJ)
 
