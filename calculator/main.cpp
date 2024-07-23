@@ -137,7 +137,7 @@ std::vector<double> calculations(bool verbose, std::vector<mml::string> &equatio
 	
 		
 		while(1) {
-			std::cout << "Input of the equation " + std::to_string(results.size() + 1) << ": ";
+			std::cout << "Input of Equation " + std::to_string(results.size() + 1) << ": ";
 			
 
 			std::cin >> equation;
