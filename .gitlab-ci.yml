@@ -10,8 +10,6 @@ before_script:
 
 build-job:
   stage: build
-  needs:
-    - before_script
   script:
     - make -j9 LIBRARY="-L ./ -L ./mml/" MINCLUDE="-I include -I include/mml-math -I mml/include/"
   artifacts:
