@@ -1,0 +1,25 @@
+variables:
+  LIBRARY_REPO_URL: https://gitlab.moser.mywire.org/moser/mml.git
+
+before_script:
+  - mkdir mml
+  - git clone $LIBRARY_REPO_URL mml
+  - cd mml
+  - make -j9
+  - cd ../
+
+build-job:
+  stage: build
+  script:
+    - make -j9 LIBRARY="-L ./ -L ./mml/" MINCLUDE="-I include -I include/mml-math -I mml/include/"
+  artifacts:
+    paths:
+      - "lib/"
+
+test-job:
+  stage: test
+  dependencies:
+    - build-job
+  script:
+    - cd test
+    - make test -j5
