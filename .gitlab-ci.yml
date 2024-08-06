@@ -3,13 +3,15 @@ variables:
 
 before_script:
   - mkdir mml
-  - git clone $LIBRARY_REPO_URL mml
+  - git clone $LIBRARY_REPO_URL
   - cd mml
   - make -j9
   - cd ../
 
 build-job:
   stage: build
+  needs:
+    - before_script
   script:
     - make -j9 LIBRARY="-L ./ -L ./mml/" MINCLUDE="-I include -I include/mml-math -I mml/include/"
   artifacts:
@@ -18,6 +20,8 @@ build-job:
 
 test-job:
   stage: test
+  needs:
+    - build-job
   dependencies:
     - build-job
   script:
