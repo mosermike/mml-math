@@ -22,4 +22,4 @@ test-job:
     - build-job
   script:
     - cd test
-    - make test -j5
+    - make test -j5 INCLUDE="-I ../include -I ../mml/include/" LIBRARY="-L ../lib -L ../mml/lib/"
