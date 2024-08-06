@@ -204,7 +204,7 @@ std::vector<double> calculations(bool verbose, std::vector<mml::string> &equatio
 int main(int argc, char **argv) {
 	
 	mml::shell::arg		args		(argc,argv);
-	mml::Timer			time		;
+	mml::time::Timer			time		;
 	double				result		= 0;
 	mml::string			matrix		= "";
 	
