@@ -30,7 +30,7 @@ deploy-prod:
   stage: deploy
   script:
     - cd calculator
-    - make
+    - make INCLUDE="-I ../include -I ../mml/include/" LIBRARY="-L ../lib -L ../mml/lib/"
   dependencies:
     - build-job
   environment: production
