@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structmml_1_1math_1_1shunting__yard__algorithm_1_1FunctionInfo" kind="struct" language="C++" prot="private">
+    <compoundname>mml::math::shunting_yard_algorithm::FunctionInfo</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structmml_1_1math_1_1shunting__yard__algorithm_1_1FunctionInfo_1ab52cc53f7881898c3d9cef6c8096c94b" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double mml::math::shunting_yard_algorithm::FunctionInfo::min</definition>
+        <argsstring></argsstring>
+        <name>min</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/shunting_yard_algorithm.hpp" line="25" column="24" bodyfile="include/mml-math/shunting_yard_algorithm.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmml_1_1math_1_1shunting__yard__algorithm_1_1FunctionInfo_1ad6855b7d92dd80f7e88ac970a74fb1d4" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double mml::math::shunting_yard_algorithm::FunctionInfo::max</definition>
+        <argsstring></argsstring>
+        <name>max</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/shunting_yard_algorithm.hpp" line="26" column="24" bodyfile="include/mml-math/shunting_yard_algorithm.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structmml_1_1math_1_1shunting__yard__algorithm_1_1FunctionInfo_1a29df6124f0bdc1cb946db9967b506f48" prot="public" static="no" mutable="no">
+        <type>std::function&lt; double(double)&gt;</type>
+        <definition>std::function&lt;double(double)&gt; mml::math::shunting_yard_algorithm::FunctionInfo::func</definition>
+        <argsstring></argsstring>
+        <name>func</name>
+        <initializer>= [](double x) { return x;}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/shunting_yard_algorithm.hpp" line="27" column="31" bodyfile="include/mml-math/shunting_yard_algorithm.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/mml-math/shunting_yard_algorithm.hpp" line="24" column="13" bodyfile="include/mml-math/shunting_yard_algorithm.hpp" bodystart="24" bodyend="28"/>
+    <listofallmembers>
+      <member refid="structmml_1_1math_1_1shunting__yard__algorithm_1_1FunctionInfo_1a29df6124f0bdc1cb946db9967b506f48" prot="public" virt="non-virtual"><scope>mml::math::shunting_yard_algorithm::FunctionInfo</scope><name>func</name></member>
+      <member refid="structmml_1_1math_1_1shunting__yard__algorithm_1_1FunctionInfo_1ad6855b7d92dd80f7e88ac970a74fb1d4" prot="public" virt="non-virtual"><scope>mml::math::shunting_yard_algorithm::FunctionInfo</scope><name>max</name></member>
+      <member refid="structmml_1_1math_1_1shunting__yard__algorithm_1_1FunctionInfo_1ab52cc53f7881898c3d9cef6c8096c94b" prot="public" virt="non-virtual"><scope>mml::math::shunting_yard_algorithm::FunctionInfo</scope><name>min</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

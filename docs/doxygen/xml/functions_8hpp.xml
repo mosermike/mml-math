@@ -5,7 +5,6 @@
     <includes local="no">iostream</includes>
     <includes local="no">mml.hpp</includes>
     <includedby refid="mml-math_8hpp" local="yes">include/mml-math.hpp</includedby>
-    <includedby refid="basic__operations_8cpp" local="yes">src/basic_operations.cpp</includedby>
     <includedby refid="functions_8cpp" local="yes">src/functions.cpp</includedby>
     <incdepgraph>
       <node id="3">
@@ -24,10 +23,6 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="4">
-        <label>test/calc.cpp</label>
-        <link refid="calc_8cpp"/>
-      </node>
       <node id="2">
         <label>include/mml-math.hpp</label>
         <link refid="mml-math_8hpp"/>
@@ -35,74 +30,55 @@
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
       </node>
-      <node id="5">
-        <label>test/test1.cpp</label>
-        <link refid="test1_8cpp"/>
+      <node id="4">
+        <label>test/calc.cpp</label>
+        <link refid="calc_8cpp"/>
+      </node>
+      <node id="3">
+        <label>calculator/main.cpp</label>
+        <link refid="main_8cpp"/>
       </node>
       <node id="1">
         <label>include/mml-math/functions.hpp</label>
         <link refid="functions_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
+        <childnode refid="5" relation="include">
         </childnode>
       </node>
-      <node id="3">
-        <label>calculator/main.cpp</label>
-        <link refid="main_8cpp"/>
-      </node>
-      <node id="7">
+      <node id="5">
         <label>src/functions.cpp</label>
         <link refid="functions_8cpp"/>
       </node>
-      <node id="6">
-        <label>src/basic_operations.cpp</label>
-        <link refid="basic__operations_8cpp"/>
-      </node>
     </invincdepgraph>
     <innernamespace refid="namespacemml">mml</innernamespace>
-    <innernamespace refid="namespacemml_1_1rechner">mml::rechner</innernamespace>
+    <innernamespace refid="namespacemml_1_1math">mml::math</innernamespace>
     <briefdescription>
+<para>Misc. functions. </para>
     </briefdescription>
     <detaileddescription>
-<para><simplesect kind="author"><para>Mike</para>
+<para><simplesect kind="author"><para>Mike Moser </para>
 </simplesect>
-@description Enthält verschiedene Funktionen </para>
+</para>
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="normal"></highlight></codeline>
-<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__math_functions_hpp__</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__math_functions_hpp__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>mml_math_include_mml_math_functions_hpp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>mml_math_include_mml_math_functions_hpp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;mml.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="12"><highlight class="normal"></highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;mml.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>#include<sp/>&quot;basic_operations.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacemml" kindref="compound">mml</ref><sp/>{</highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">rechner<sp/>{</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>double<sp/>grad_to_rad(double<sp/>grad);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mml::string<sp/><ref refid="namespacemml_1_1rechner_1a5141578fde449117642c5c9b2c4c3399" kindref="member">operations</ref>(mml::shell::arg<sp/>args,<sp/>mml::string<sp/>equation,<sp/>mml::string<sp/>command,<sp/>uint16_t<sp/>tabs);</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::size_t<sp/><ref refid="namespacemml_1_1rechner_1ad23025f3e5d5166e5f8db42d912bf448" kindref="member">pos_bracket</ref>(mml::string<sp/>equation,<sp/>std::size_t<sp/>temp,<sp/>std::size_t<sp/>temp_end);</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1_1rechner_1aebc2f71019d64ef26f91be9b8d86ec0d" kindref="member">rad_or_grad</ref>(mml::shell::arg<sp/>args,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>grad);</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="namespacemml_1_1rechner_1a8470177a5cbf53bf5e23bab2be6bd040" kindref="member">grad_or_rad</ref>(mml::shell::arg<sp/>args,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>grad);<sp/></highlight><highlight class="comment">//<sp/>nach<sp/>Befehl<sp/>wieder<sp/>in<sp/>richtigem<sp/>Format</highlight></codeline>
-<codeline lineno="57"><highlight class="comment"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>double<sp/>rad_to_grad(double<sp/>rad);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mml::string<sp/><ref refid="namespacemml_1_1rechner_1a9b68ec5ee55ae9f92b827e81c2d3914c" kindref="member">rechnung</ref>(mml::shell::arg<sp/>args,<sp/>mml::string<sp/>equation,<sp/>uint16_t<sp/>tabs<sp/>=<sp/>0);</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mml::string<sp/><ref refid="namespacemml_1_1rechner_1ae5b75e6332404d3b16b105eb20cb720b" kindref="member">replace</ref>(mml::shell::arg<sp/>args,<sp/>mml::string<sp/>equation);</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="79"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="80"><highlight class="normal"></highlight></codeline>
-<codeline lineno="81"><highlight class="normal"></highlight></codeline>
-<codeline lineno="82"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacemml" kindref="compound">mml</ref><sp/>{</highlight></codeline>
+<codeline lineno="14" refid="namespacemml_1_1math" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">math<sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>mml::string<sp/><ref refid="namespacemml_1_1math_1a2a36b3bac66cde5568547b3ad798e5bd" kindref="member">replace</ref>(mml::string<sp/>equation,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>verbose<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="include/mml-math/functions.hpp"/>
   </compounddef>

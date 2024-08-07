@@ -1,15 +1,37 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.1" xml:lang="en-US">
+  <compound refid="structmml_1_1math_1_1shunting__yard__algorithm_1_1FunctionInfo" kind="struct"><name>mml::math::shunting_yard_algorithm::FunctionInfo</name>
+    <member refid="structmml_1_1math_1_1shunting__yard__algorithm_1_1FunctionInfo_1ab52cc53f7881898c3d9cef6c8096c94b" kind="variable"><name>min</name></member>
+    <member refid="structmml_1_1math_1_1shunting__yard__algorithm_1_1FunctionInfo_1ad6855b7d92dd80f7e88ac970a74fb1d4" kind="variable"><name>max</name></member>
+    <member refid="structmml_1_1math_1_1shunting__yard__algorithm_1_1FunctionInfo_1a29df6124f0bdc1cb946db9967b506f48" kind="variable"><name>func</name></member>
+  </compound>
   <compound refid="classmml_1_1matrix_1_1matrix" kind="class"><name>mml::matrix::matrix</name>
     <member refid="classmml_1_1matrix_1_1matrix_1a1d0d3765873259cdf59c8258de5f288a" kind="variable"><name>data</name></member>
     <member refid="classmml_1_1matrix_1_1matrix_1aa45c8044268d8f6256bf3686d0abe7f7" kind="variable"><name>rows</name></member>
     <member refid="classmml_1_1matrix_1_1matrix_1a3759caffa289d8de1ab575f2afb0bd6d" kind="variable"><name>cols</name></member>
-    <member refid="classmml_1_1matrix_1_1matrix_1abe56e3add9f49fc0b23b458bddc6ca19" kind="function"><name>add</name></member>
-    <member refid="classmml_1_1matrix_1_1matrix_1a142e0a968d8c8852eed2ce286847cb16" kind="function"><name>multiply</name></member>
-    <member refid="classmml_1_1matrix_1_1matrix_1a4d64cdb249f2bb11b3b58d0a9c6766b4" kind="function"><name>multiply</name></member>
-    <member refid="classmml_1_1matrix_1_1matrix_1af382597fba49eccaf6957956badee173" kind="function"><name>sub</name></member>
-    <member refid="classmml_1_1matrix_1_1matrix_1adb1780f55bd9f07ab96b8eed7fd20329" kind="function"><name>matrix</name></member>
+    <member refid="classmml_1_1matrix_1_1matrix_1a03ebda8d5339ad166a3ce55a7adbea89" kind="function"><name>add</name></member>
+    <member refid="classmml_1_1matrix_1_1matrix_1ae0f88afb7c3e3651bcc7229a441d1aeb" kind="function"><name>multiply</name></member>
+    <member refid="classmml_1_1matrix_1_1matrix_1ab9bb72ab1b63e7b912bf3abfb1cf8b8a" kind="function"><name>multiply</name></member>
+    <member refid="classmml_1_1matrix_1_1matrix_1ad69c688df0578cbee332a2cec81e4810" kind="function"><name>sub</name></member>
+    <member refid="classmml_1_1matrix_1_1matrix_1a006a9f949d4a2b54ab9504112694827e" kind="function"><name>matrix</name></member>
+    <member refid="classmml_1_1matrix_1_1matrix_1a2bb4f9f78bcf233f8930f3998f9fd16a" kind="function"><name>matrix</name></member>
     <member refid="classmml_1_1matrix_1_1matrix_1ae53f1bd3b24e9a8ad440bc35e44f4e02" kind="function"><name>matrix</name></member>
+  </compound>
+  <compound refid="classmml_1_1math_1_1shunting__yard__algorithm" kind="class"><name>mml::math::shunting_yard_algorithm</name>
+    <member refid="classmml_1_1math_1_1shunting__yard__algorithm_1a05ee1be918f1a200154393e9d28bf15e" kind="variable"><name>functions</name></member>
+    <member refid="classmml_1_1math_1_1shunting__yard__algorithm_1a4a5d0e37a3262e56778e207491178120" kind="variable"><name>equation</name></member>
+    <member refid="classmml_1_1math_1_1shunting__yard__algorithm_1a9a54d55bbdb438b0df59d561ecd3500b" kind="variable"><name>infix</name></member>
+    <member refid="classmml_1_1math_1_1shunting__yard__algorithm_1a8c7d5293436272ad81ac335ded81516b" kind="variable"><name>postfix</name></member>
+    <member refid="classmml_1_1math_1_1shunting__yard__algorithm_1af8772e5025f2b4cb5d2a2cf1e4bc1757" kind="variable"><name>result</name></member>
+    <member refid="classmml_1_1math_1_1shunting__yard__algorithm_1a15ce32b55218e28e685e8a2ac71baad5" kind="function"><name>shunting_yard_algorithm</name></member>
+    <member refid="classmml_1_1math_1_1shunting__yard__algorithm_1a071d73fd37a7ae383f27f4edc104a1a4" kind="function"><name>shunting_yard_algorithm</name></member>
+    <member refid="classmml_1_1math_1_1shunting__yard__algorithm_1ab17790bb0702e377189ae4c790fb1864" kind="function"><name>shunting_yard_algorithm</name></member>
+    <member refid="classmml_1_1math_1_1shunting__yard__algorithm_1a66339099fda237a18f21bb54cbcd7e70" kind="function"><name>operator=</name></member>
+    <member refid="classmml_1_1math_1_1shunting__yard__algorithm_1a2573cab343d4c5ca7230e9b215f25257" kind="function"><name>equation_to_infix</name></member>
+    <member refid="classmml_1_1math_1_1shunting__yard__algorithm_1af1ce38dd38de7d9ed1f7472a85511823" kind="function"><name>infix_to_postfix</name></member>
+    <member refid="classmml_1_1math_1_1shunting__yard__algorithm_1a376909ef0858656da4af9179b5438667" kind="function"><name>evaluate_postfix</name></member>
+    <member refid="classmml_1_1math_1_1shunting__yard__algorithm_1acb43e97fc972dab508feb426238adee6" kind="function"><name>evaluate</name></member>
+    <member refid="classmml_1_1math_1_1shunting__yard__algorithm_1a5d46b869a8f45b0706d1a231dc73ec12" kind="function"><name>precedence</name></member>
   </compound>
   <compound refid="namespaceconf" kind="namespace"><name>conf</name>
     <member refid="namespaceconf_1a45653c983098153b78e33600e39230eb" kind="variable"><name>project</name></member>
@@ -26,43 +48,29 @@
   </compound>
   <compound refid="namespacemml" kind="namespace"><name>mml</name>
   </compound>
+  <compound refid="namespacemml_1_1calc" kind="namespace"><name>mml::calc</name>
+  </compound>
+  <compound refid="namespacemml_1_1math" kind="namespace"><name>mml::math</name>
+    <member refid="namespacemml_1_1math_1a2a36b3bac66cde5568547b3ad798e5bd" kind="function"><name>replace</name></member>
+    <member refid="namespacemml_1_1math_1ac4a028e138fe10402a2dc2c08a4a1e8f" kind="function"><name>backup_logfile</name></member>
+    <member refid="namespacemml_1_1math_1ab0051356c2391e3319347dd975cd4a3d" kind="function"><name>delete_zeros</name></member>
+    <member refid="namespacemml_1_1math_1a6e8cf95ad2182bfbdf8e2b9f97d8cc93" kind="function"><name>save_matrix</name></member>
+    <member refid="namespacemml_1_1math_1ab9db3e78382bffaebbf2f71d249b2b06" kind="function"><name>save_result</name></member>
+    <member refid="namespacemml_1_1math_1a0193e5ec3d6ac630b5b9fb7ac759a9fd" kind="function"><name>reset_logfile</name></member>
+  </compound>
   <compound refid="namespacemml_1_1matrix" kind="namespace"><name>mml::matrix</name>
-    <member refid="namespacemml_1_1matrix_1acfa8f5720be1c70ef4937a24cea4912a" kind="function"><name>calc</name></member>
+    <member refid="namespacemml_1_1matrix_1a117a966ea2a516072cf521788b9b65d2" kind="function"><name>calc</name></member>
     <member refid="namespacemml_1_1matrix_1a8d603192f1434363b19647d392acee3e" kind="function"><name>print_2matrix</name></member>
     <member refid="namespacemml_1_1matrix_1ab684dc555c3cb69f2aa24b3dfac9d87e" kind="function"><name>print_3matrix</name></member>
+    <member refid="namespacemml_1_1matrix_1ab874d8e13f4e072f2f01c79dbab953fc" kind="function"><name>print_4matrix</name></member>
     <member refid="namespacemml_1_1matrix_1a9c77e2fd5eea181906ac773db59d3295" kind="function"><name>unity</name></member>
-  </compound>
-  <compound refid="namespacemml_1_1rechner" kind="namespace"><name>mml::rechner</name>
-    <member refid="namespacemml_1_1rechner_1a8fb791fea6c89ed76525a731bb361a2f" kind="function"><name>add</name></member>
-    <member refid="namespacemml_1_1rechner_1a18e519bbf2f66dac7f5057c4d2b0243a" kind="function"><name>calculate</name></member>
-    <member refid="namespacemml_1_1rechner_1a114f8707b5ebd54263ffd2123b46deaa" kind="function"><name>calculations</name></member>
-    <member refid="namespacemml_1_1rechner_1ae38c88f173cb93aa5a57980646075067" kind="function"><name>calculate_intern</name></member>
-    <member refid="namespacemml_1_1rechner_1a1f701177d0c98cff43a4e395f5328cc7" kind="function"><name>multiply</name></member>
-    <member refid="namespacemml_1_1rechner_1a603581c9b71bbc4ed0e17fc104d49f06" kind="function"><name>summation</name></member>
-    <member refid="namespacemml_1_1rechner_1a5141578fde449117642c5c9b2c4c3399" kind="function"><name>operations</name></member>
-    <member refid="namespacemml_1_1rechner_1ad23025f3e5d5166e5f8db42d912bf448" kind="function"><name>pos_bracket</name></member>
-    <member refid="namespacemml_1_1rechner_1aebc2f71019d64ef26f91be9b8d86ec0d" kind="function"><name>rad_or_grad</name></member>
-    <member refid="namespacemml_1_1rechner_1a8470177a5cbf53bf5e23bab2be6bd040" kind="function"><name>grad_or_rad</name></member>
-    <member refid="namespacemml_1_1rechner_1a9b68ec5ee55ae9f92b827e81c2d3914c" kind="function"><name>rechnung</name></member>
-    <member refid="namespacemml_1_1rechner_1ae5b75e6332404d3b16b105eb20cb720b" kind="function"><name>replace</name></member>
-    <member refid="namespacemml_1_1rechner_1ae12dc270ab8df302b28cb23db2ca5cba" kind="function"><name>backup_logfile</name></member>
-    <member refid="namespacemml_1_1rechner_1a649dd4cd86801d2c6b36580041636a45" kind="function"><name>delete_zeros</name></member>
-    <member refid="namespacemml_1_1rechner_1a96b844e16c756f7599cf5c7674c15a5e" kind="function"><name>save_matrix</name></member>
-    <member refid="namespacemml_1_1rechner_1a1d6654f4dd0e7291ab5862dacb8b9a94" kind="function"><name>save_result</name></member>
-    <member refid="namespacemml_1_1rechner_1ad780938d04a50376b2275f9ecb60348f" kind="function"><name>reset_logfile</name></member>
-    <member refid="namespacemml_1_1rechner_1aa7e8d1b0097e770c6861d4ba84d3abcb" kind="function"><name>matrix_calculation</name></member>
-    <member refid="namespacemml_1_1rechner_1a7ad8a5ca3bef3c3cb259cb15dd19d8ad" kind="function"><name>matrix_addition</name></member>
-    <member refid="namespacemml_1_1rechner_1a3313ff0e1b497c22410d0bf283aeacb9" kind="function"><name>matrix_adjunct</name></member>
-    <member refid="namespacemml_1_1rechner_1a47b46c269fda6c52418248e89236185e" kind="function"><name>matrix_determinante</name></member>
-    <member refid="namespacemml_1_1rechner_1aac779ec8d1bee867677e2c1ffa3d3ae6" kind="function"><name>matrix_inverse</name></member>
-    <member refid="namespacemml_1_1rechner_1a9de3e85b04169b971c3f1ddd2994bc4a" kind="function"><name>matrix_multiply</name></member>
-    <member refid="namespacemml_1_1rechner_1a6f6e8aac5469ee795a1ecad532fb1cbb" kind="function"><name>matrix_smaller</name></member>
-    <member refid="namespacemml_1_1rechner_1a853ab35fc6e00ecc969aeeb640f7d245" kind="function"><name>matrix_print</name></member>
-    <member refid="namespacemml_1_1rechner_1ac9bc053bc3e19c8d4526afee6f189db0" kind="function"><name>matrix_transposed</name></member>
   </compound>
   <compound refid="main_8cpp" kind="file"><name>main.cpp</name>
     <member refid="main_8cpp_1aebdcb723b52214cd0d7e46652e945efb" kind="define"><name>calc_log</name></member>
     <member refid="main_8cpp_1a97ee70a8770dc30d06c744b24eb2fcfc" kind="function"><name>help</name></member>
+    <member refid="main_8cpp_1ab3e806cafd2bc8a79b74316237ba67f0" kind="function"><name>add</name></member>
+    <member refid="main_8cpp_1adb58abd59e15de5aa097d2d4368e977f" kind="function"><name>calculate</name></member>
+    <member refid="main_8cpp_1a383b5e966d27657ae24fa0d073437ffe" kind="function"><name>calculations</name></member>
     <member refid="main_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
   </compound>
   <compound refid="calculator_2README_8md" kind="file"><name>README.md</name>
@@ -72,22 +80,31 @@
   <compound refid="conf_8py" kind="file"><name>conf.py</name>
   </compound>
   <compound refid="mml-math_8hpp" kind="file"><name>mml-math.hpp</name>
-    <member refid="mml-math_8hpp_1a98f58c903192dcd1909fda8df409260c" kind="define"><name>__MML_MATH_HPP__</name></member>
+    <member refid="mml-math_8hpp_1a9924a4c1311ee062662954a130bda9bc" kind="define"><name>MML_MATH_INCLUDE_MML_MATH_HPP</name></member>
   </compound>
-  <compound refid="basic__operations_8hpp" kind="file"><name>basic_operations.hpp</name>
+  <compound refid="constants_8hpp" kind="file"><name>constants.hpp</name>
+    <member refid="constants_8hpp_1ad82f461176324fe9b53960915169af71" kind="define"><name>P_a0</name></member>
+    <member refid="constants_8hpp_1a335893bb60e8a5d3a6d197ca99d66a39" kind="define"><name>P_c</name></member>
+    <member refid="constants_8hpp_1a2625f62bfcd6804eb1100905bfb123c0" kind="define"><name>P_mu</name></member>
+    <member refid="constants_8hpp_1abcac4a1d59e688627879ce4d46e4ad7b" kind="define"><name>P_e</name></member>
+    <member refid="constants_8hpp_1aacf8baf7f4cae88160cb1190455d8d94" kind="define"><name>P_eps</name></member>
+    <member refid="constants_8hpp_1aece4b668dfc150361219bd54437c1e64" kind="define"><name>P_k</name></member>
+    <member refid="constants_8hpp_1ae36e4286cb081862303f1aefe141e7ce" kind="define"><name>P_h</name></member>
+    <member refid="constants_8hpp_1a2dc997c1aa01cd713247385b7eace11e" kind="define"><name>P_m</name></member>
+    <member refid="constants_8hpp_1a0fa286a619ee028391743a06f25e3cad" kind="define"><name>P_G</name></member>
+    <member refid="constants_8hpp_1adb17e00199c45b0dd8be6a4f51673c69" kind="define"><name>P_u</name></member>
+    <member refid="constants_8hpp_1acdd7a8183a951761a5bdf25a1fc246d7" kind="define"><name>P_NA</name></member>
   </compound>
   <compound refid="derivate_8hpp" kind="file"><name>derivate.hpp</name>
   </compound>
   <compound refid="functions_8hpp" kind="file"><name>functions.hpp</name>
   </compound>
   <compound refid="logging_8hpp" kind="file"><name>logging.hpp</name>
+    <member refid="logging_8hpp_1a14ea2188f256aca6be23f2a69753cb84" kind="define"><name>math_logging_hpp__</name></member>
   </compound>
   <compound refid="matrix_8hpp" kind="file"><name>matrix.hpp</name>
   </compound>
-  <compound refid="matrix1_8hpp" kind="file"><name>matrix1.hpp</name>
-  </compound>
-  <compound refid="basic__operations_8cpp" kind="file"><name>basic_operations.cpp</name>
-    <member refid="basic__operations_8cpp_1ac6a7a9b42cbc40afa2b524aadd2610e6" kind="function"><name>derivate_old</name></member>
+  <compound refid="shunting__yard__algorithm_8hpp" kind="file"><name>shunting_yard_algorithm.hpp</name>
   </compound>
   <compound refid="derivate_8cpp" kind="file"><name>derivate.cpp</name>
   </compound>
@@ -100,16 +117,14 @@
   <compound refid="test_2matrix_8cpp" kind="file"><name>matrix.cpp</name>
     <member refid="test_2matrix_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
   </compound>
-  <compound refid="src_2matrix1_8cpp" kind="file"><name>matrix1.cpp</name>
-  </compound>
-  <compound refid="test_2matrix1_8cpp" kind="file"><name>matrix1.cpp</name>
-    <member refid="test_2matrix1_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  <compound refid="shunting__yard__algorithm_8cpp" kind="file"><name>shunting_yard_algorithm.cpp</name>
+    <member refid="shunting__yard__algorithm_8cpp_1afda0ad2fe37b6d0a7ab0454c308ff59e" kind="function"><name>isNumber</name></member>
   </compound>
   <compound refid="calc_8cpp" kind="file"><name>calc.cpp</name>
     <member refid="calc_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
   </compound>
-  <compound refid="test1_8cpp" kind="file"><name>test1.cpp</name>
-    <member refid="test1_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  <compound refid="sh-ya-algo_8cpp" kind="file"><name>sh-ya-algo.cpp</name>
+    <member refid="sh-ya-algo_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
   </compound>
   <compound refid="md_calculator_README" kind="page"><name>md_calculator_README</name>
   </compound>

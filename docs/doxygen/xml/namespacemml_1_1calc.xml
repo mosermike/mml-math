@@ -1,14 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
-  <compounddef id="dir_13e138d54eb8818da29c3992edef070a" kind="dir">
-    <compoundname>test</compoundname>
-    <innerfile refid="calc_8cpp">calc.cpp</innerfile>
-    <innerfile refid="test_2matrix_8cpp">matrix.cpp</innerfile>
-    <innerfile refid="sh-ya-algo_8cpp">sh-ya-algo.cpp</innerfile>
+  <compounddef id="namespacemml_1_1calc" kind="namespace" language="C++">
+    <compoundname>mml::calc</compoundname>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="test/"/>
+    <location file="include/mml-math/derivate.hpp" line="14" column="1"/>
   </compounddef>
 </doxygen>

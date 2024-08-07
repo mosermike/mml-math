@@ -1,0 +1,265 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="namespacemml_1_1math" kind="namespace" language="C++">
+    <compoundname>mml::math</compoundname>
+    <innerclass refid="classmml_1_1math_1_1shunting__yard__algorithm" prot="public">mml::math::shunting_yard_algorithm</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacemml_1_1math_1a2a36b3bac66cde5568547b3ad798e5bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>mml::string</type>
+        <definition>mml::string mml::math::replace</definition>
+        <argsstring>(mml::string equation, bool verbose=false)</argsstring>
+        <name>replace</name>
+        <param>
+          <type>mml::string</type>
+          <declname>equation</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>verbose</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Replace constants with their values. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>equation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Equation where constants are replaced </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>verbose</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Verbose what is done </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Replaced string with the result </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/functions.hpp" line="22" column="13" bodyfile="src/functions.cpp" bodystart="11" bodyend="68" declfile="include/mml-math/functions.hpp" declline="22" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1math_1ac4a028e138fe10402a2dc2c08a4a1e8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::math::backup_logfile</definition>
+        <argsstring>(std::string logfile, bool verbose)</argsstring>
+        <name>backup_logfile</name>
+        <param>
+          <type>std::string</type>
+          <declname>logfile</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>verbose</declname>
+        </param>
+        <briefdescription>
+<para>Logfile backup. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Arguments from the shell </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>logfile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Logfile </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/logging.hpp" line="23" column="6" bodyfile="src/logging.cpp" bodystart="20" bodyend="24" declfile="include/mml-math/logging.hpp" declline="23" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1math_1ab0051356c2391e3319347dd975cd4a3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>mml::string</type>
+        <definition>mml::string mml::math::delete_zeros</definition>
+        <argsstring>(double equation)</argsstring>
+        <name>delete_zeros</name>
+        <param>
+          <type>double</type>
+          <declname>equation</declname>
+        </param>
+        <briefdescription>
+<para>Delete zeros at the end. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>equation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/logging.hpp" line="30" column="13" bodyfile="src/logging.cpp" bodystart="26" bodyend="46" declfile="include/mml-math/logging.hpp" declline="30" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1math_1a6e8cf95ad2182bfbdf8e2b9f97d8cc93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::math::save_matrix</definition>
+        <argsstring>(mml::string matrix_equation, mml::string matrix_result, std::string logfile, mml::string comment=&quot;&quot;)</argsstring>
+        <name>save_matrix</name>
+        <param>
+          <type>mml::string</type>
+          <declname>matrix_equation</declname>
+        </param>
+        <param>
+          <type>mml::string</type>
+          <declname>matrix_result</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>logfile</declname>
+        </param>
+        <param>
+          <type>mml::string</type>
+          <declname>comment</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Save old result. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Arguments from the shell </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>matrix_equation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>equation </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>matrix_result</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>result </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>logfile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Logfile </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/logging.hpp" line="40" column="6" bodyfile="src/logging.cpp" bodystart="67" bodyend="75" declfile="include/mml-math/logging.hpp" declline="40" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1math_1ab9db3e78382bffaebbf2f71d249b2b06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::math::save_result</definition>
+        <argsstring>(mml::string equation, double result, std::string logfile, mml::string comment=&quot;&quot;)</argsstring>
+        <name>save_result</name>
+        <param>
+          <type>mml::string</type>
+          <declname>equation</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>result</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>logfile</declname>
+        </param>
+        <param>
+          <type>mml::string</type>
+          <declname>comment</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/logging.hpp" line="41" column="6" bodyfile="src/logging.cpp" bodystart="56" bodyend="65" declfile="include/mml-math/logging.hpp" declline="41" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacemml_1_1math_1a0193e5ec3d6ac630b5b9fb7ac759a9fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void mml::math::reset_logfile</definition>
+        <argsstring>(std::string logfile, bool verbose)</argsstring>
+        <name>reset_logfile</name>
+        <param>
+          <type>std::string</type>
+          <declname>logfile</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>verbose</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>Logfile zurücksetzen </para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Arguments from the shell </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>string</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Logfile </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="author"><para>Mike </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/logging.hpp" line="50" column="6" bodyfile="src/logging.cpp" bodystart="48" bodyend="53" declfile="include/mml-math/logging.hpp" declline="50" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/mml-math/functions.hpp" line="14" column="1"/>
+  </compounddef>
+</doxygen>

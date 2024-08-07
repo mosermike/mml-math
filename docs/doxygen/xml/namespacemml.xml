@@ -2,12 +2,17 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="namespacemml" kind="namespace" language="C++">
     <compoundname>mml</compoundname>
+    <innernamespace refid="namespacemml_1_1calc">mml::calc</innernamespace>
+    <innernamespace refid="namespacemml_1_1math">mml::math</innernamespace>
     <innernamespace refid="namespacemml_1_1matrix">mml::matrix</innernamespace>
-    <innernamespace refid="namespacemml_1_1rechner">mml::rechner</innernamespace>
     <briefdescription>
+<para>Shunting Yard Algorithm https://en.wikipedia.org/wiki/Shunting_yard_algorithm. </para>
     </briefdescription>
     <detaileddescription>
+<para><simplesect kind="author"><para>Mike Moser </para>
+</simplesect>
+</para>
     </detaileddescription>
-    <location file="include/mml-math/basic_operations.hpp" line="15" column="1"/>
+    <location file="include/mml-math/derivate.hpp" line="13" column="1"/>
   </compounddef>
 </doxygen>

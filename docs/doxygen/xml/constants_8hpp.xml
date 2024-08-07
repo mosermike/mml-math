@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="constants_8hpp" kind="file" language="C++">
+    <compoundname>constants.hpp</compoundname>
+    <includedby refid="functions_8cpp" local="yes">src/functions.cpp</includedby>
+    <invincdepgraph>
+      <node id="1">
+        <label>include/mml-math/constants.hpp</label>
+        <link refid="constants_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>src/functions.cpp</label>
+        <link refid="functions_8cpp"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="constants_8hpp_1ad82f461176324fe9b53960915169af71" prot="public" static="no">
+        <name>P_a0</name>
+        <initializer>5.29177210544e-11</initializer>
+        <briefdescription>
+<para>Mathematical and physical constants List with useful constants not defined in math.h https://physics.nist.gov/cuu/pdf/wall_2022.pdf. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="author"><para>Mike Moser </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/constants.hpp" line="12" column="9" bodyfile="include/mml-math/constants.hpp" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="constants_8hpp_1a335893bb60e8a5d3a6d197ca99d66a39" prot="public" static="no">
+        <name>P_c</name>
+        <initializer>299792458.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/constants.hpp" line="13" column="9" bodyfile="include/mml-math/constants.hpp" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="constants_8hpp_1a2625f62bfcd6804eb1100905bfb123c0" prot="public" static="no">
+        <name>P_mu</name>
+        <initializer>1.25663706127e-6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/constants.hpp" line="14" column="9" bodyfile="include/mml-math/constants.hpp" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="constants_8hpp_1abcac4a1d59e688627879ce4d46e4ad7b" prot="public" static="no">
+        <name>P_e</name>
+        <initializer>1.602177e-19</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/constants.hpp" line="15" column="9" bodyfile="include/mml-math/constants.hpp" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="constants_8hpp_1aacf8baf7f4cae88160cb1190455d8d94" prot="public" static="no">
+        <name>P_eps</name>
+        <initializer>8.8541878188e-12</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/constants.hpp" line="16" column="9" bodyfile="include/mml-math/constants.hpp" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="constants_8hpp_1aece4b668dfc150361219bd54437c1e64" prot="public" static="no">
+        <name>P_k</name>
+        <initializer>1.380648e-23</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/constants.hpp" line="17" column="9" bodyfile="include/mml-math/constants.hpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="constants_8hpp_1ae36e4286cb081862303f1aefe141e7ce" prot="public" static="no">
+        <name>P_h</name>
+        <initializer>6.62607015e-34</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/constants.hpp" line="18" column="9" bodyfile="include/mml-math/constants.hpp" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="constants_8hpp_1a2dc997c1aa01cd713247385b7eace11e" prot="public" static="no">
+        <name>P_m</name>
+        <initializer>9.1093837139e-31</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/constants.hpp" line="19" column="9" bodyfile="include/mml-math/constants.hpp" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="constants_8hpp_1a0fa286a619ee028391743a06f25e3cad" prot="public" static="no">
+        <name>P_G</name>
+        <initializer>6.67e-11</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/constants.hpp" line="20" column="9" bodyfile="include/mml-math/constants.hpp" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="constants_8hpp_1adb17e00199c45b0dd8be6a4f51673c69" prot="public" static="no">
+        <name>P_u</name>
+        <initializer>1.660539066e-27</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/constants.hpp" line="21" column="9" bodyfile="include/mml-math/constants.hpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="constants_8hpp_1acdd7a8183a951761a5bdf25a1fc246d7" prot="public" static="no">
+        <name>P_NA</name>
+        <initializer>6.02214076e+23</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/constants.hpp" line="22" column="9" bodyfile="include/mml-math/constants.hpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MML_MATH_INCLUDE_MML_MATH_CONSTANTS_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MML_MATH_INCLUDE_MML_MATH_CONSTANTS_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="constants_8hpp_1ad82f461176324fe9b53960915169af71" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>P_a0<sp/>5.29177210544e-11<sp/></highlight><highlight class="comment">//<sp/>Bohr<sp/>radius<sp/>in<sp/>m</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="constants_8hpp_1a335893bb60e8a5d3a6d197ca99d66a39" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>P_c<sp/>299792458.0<sp/></highlight><highlight class="comment">//<sp/>Light<sp/>of<sp/>speed<sp/>in<sp/>m/s</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="constants_8hpp_1a2625f62bfcd6804eb1100905bfb123c0" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>P_mu<sp/>1.25663706127e-6<sp/></highlight><highlight class="comment">//<sp/>Magnetic<sp/>permeability<sp/>N<sp/>/<sp/>A^2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="constants_8hpp_1abcac4a1d59e688627879ce4d46e4ad7b" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>P_e<sp/>1.602177e-19<sp/></highlight><highlight class="comment">//<sp/>Elementary<sp/>charge<sp/>in<sp/>C</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="constants_8hpp_1aacf8baf7f4cae88160cb1190455d8d94" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>P_eps<sp/>8.8541878188e-12<sp/></highlight><highlight class="comment">//<sp/>electric<sp/>permittivity<sp/>in<sp/>F/m</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="constants_8hpp_1aece4b668dfc150361219bd54437c1e64" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>P_k<sp/>1.380648e-23<sp/></highlight><highlight class="comment">//<sp/>Boltzmann<sp/>constant<sp/>in<sp/>J/K</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="constants_8hpp_1ae36e4286cb081862303f1aefe141e7ce" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>P_h<sp/>6.62607015e-34<sp/></highlight><highlight class="comment">//<sp/>Plank<sp/>constant<sp/>in<sp/>Js</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="constants_8hpp_1a2dc997c1aa01cd713247385b7eace11e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>P_m<sp/>9.1093837139e-31<sp/></highlight><highlight class="comment">//<sp/>Electron<sp/>mass<sp/>in<sp/>kg</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="constants_8hpp_1a0fa286a619ee028391743a06f25e3cad" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>P_G<sp/>6.67e-11<sp/></highlight><highlight class="comment">//<sp/>Gravitational<sp/>constant<sp/>in<sp/>N<sp/>m^2<sp/>kg^-2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="constants_8hpp_1adb17e00199c45b0dd8be6a4f51673c69" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>P_u<sp/>1.660539066e-27<sp/></highlight><highlight class="comment">//<sp/>Atomic<sp/>mass<sp/>constant<sp/>in<sp/>kg</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="constants_8hpp_1acdd7a8183a951761a5bdf25a1fc246d7" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>P_NA<sp/>6.02214076e+23<sp/></highlight><highlight class="comment">//<sp/>Avogadro<sp/>constant<sp/>per<sp/>mol</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="include/mml-math/constants.hpp"/>
+  </compounddef>
+</doxygen>

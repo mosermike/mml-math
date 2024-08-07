@@ -2,12 +2,11 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
   <compounddef id="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir">
     <compoundname>src</compoundname>
-    <innerfile refid="basic__operations_8cpp">basic_operations.cpp</innerfile>
     <innerfile refid="derivate_8cpp">derivate.cpp</innerfile>
     <innerfile refid="functions_8cpp">functions.cpp</innerfile>
     <innerfile refid="logging_8cpp">logging.cpp</innerfile>
     <innerfile refid="src_2matrix_8cpp">matrix.cpp</innerfile>
-    <innerfile refid="src_2matrix1_8cpp">matrix1.cpp</innerfile>
+    <innerfile refid="shunting__yard__algorithm_8cpp">shunting_yard_algorithm.cpp</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

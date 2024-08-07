@@ -16,14 +16,14 @@
       <node id="3">
         <label>mml.hpp</label>
       </node>
+      <node id="4">
+        <label>iostream</label>
+      </node>
       <node id="2">
         <label>../include/mml-math/derivate.hpp</label>
         <link refid="derivate_8hpp"/>
         <childnode refid="3" relation="include">
         </childnode>
-      </node>
-      <node id="4">
-        <label>iostream</label>
       </node>
     </incdepgraph>
     <briefdescription>

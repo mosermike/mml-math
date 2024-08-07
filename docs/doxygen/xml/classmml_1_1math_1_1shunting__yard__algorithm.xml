@@ -1,0 +1,391 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classmml_1_1math_1_1shunting__yard__algorithm" kind="class" language="C++" prot="public">
+    <compoundname>mml::math::shunting_yard_algorithm</compoundname>
+    <includes refid="shunting__yard__algorithm_8hpp" local="no">shunting_yard_algorithm.hpp</includes>
+    <innerclass refid="structmml_1_1math_1_1shunting__yard__algorithm_1_1FunctionInfo" prot="private">mml::math::shunting_yard_algorithm::FunctionInfo</innerclass>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classmml_1_1math_1_1shunting__yard__algorithm_1a05ee1be918f1a200154393e9d28bf15e" prot="protected" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, FunctionInfo &gt;</type>
+        <definition>std::unordered_map&lt;std::string, FunctionInfo&gt; mml::math::shunting_yard_algorithm::functions</definition>
+        <argsstring></argsstring>
+        <name>functions</name>
+        <initializer>= {
+                {&quot;exp&quot;,{-std::numeric_limits&lt;double&gt;::infinity(), std::numeric_limits&lt;double&gt;::infinity(), [](double x) { return std::exp(x); }}},
+                {&quot;log10&quot;,{0, std::numeric_limits&lt;double&gt;::infinity(), [](double x) { return std::log10(x); }}},
+                {&quot;ln&quot;,{0, std::numeric_limits&lt;double&gt;::infinity(), [](double x) { return std::log(x); }}},
+                {&quot;sqrt&quot;,{0, std::numeric_limits&lt;double&gt;::infinity(), [](double x) { return std::sqrt(x); }}},
+                {&quot;sin&quot;,{-2*M_PI, 2*M_PI, [](double x) { return std::sin(x); }}},
+                {&quot;cos&quot;,{-2*M_PI, 2*M_PI, [](double x) { return std::cos(x); }}},
+                {&quot;tan&quot;,{-M_PI, M_PI, [](double x) { return std::tan(x); }}},
+                {&quot;asin&quot;,{-1, 1, [](double x) { return std::asin(x); }}},
+                {&quot;acos&quot;,{-1, 1, [](double x) { return std::acos(x); }}},
+                {&quot;atan&quot;,{-std::numeric_limits&lt;double&gt;::infinity(), std::numeric_limits&lt;double&gt;::infinity(), [](double x) { return std::atan(x); }}},
+            }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/shunting_yard_algorithm.hpp" line="31" column="32" bodyfile="include/mml-math/shunting_yard_algorithm.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classmml_1_1math_1_1shunting__yard__algorithm_1a4a5d0e37a3262e56778e207491178120" prot="public" static="no" mutable="no">
+        <type>mml::string</type>
+        <definition>mml::string mml::math::shunting_yard_algorithm::equation</definition>
+        <argsstring></argsstring>
+        <name>equation</name>
+        <initializer>= &quot;&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/shunting_yard_algorithm.hpp" line="45" column="25" bodyfile="include/mml-math/shunting_yard_algorithm.hpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmml_1_1math_1_1shunting__yard__algorithm_1a9a54d55bbdb438b0df59d561ecd3500b" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; mml::string &gt;</type>
+        <definition>std::vector&lt;mml::string&gt; mml::math::shunting_yard_algorithm::infix</definition>
+        <argsstring></argsstring>
+        <name>infix</name>
+        <initializer>= {}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/shunting_yard_algorithm.hpp" line="46" column="25" bodyfile="include/mml-math/shunting_yard_algorithm.hpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmml_1_1math_1_1shunting__yard__algorithm_1a8c7d5293436272ad81ac335ded81516b" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; mml::string &gt;</type>
+        <definition>std::vector&lt;mml::string&gt; mml::math::shunting_yard_algorithm::postfix</definition>
+        <argsstring></argsstring>
+        <name>postfix</name>
+        <initializer>= {}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/shunting_yard_algorithm.hpp" line="47" column="25" bodyfile="include/mml-math/shunting_yard_algorithm.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmml_1_1math_1_1shunting__yard__algorithm_1af8772e5025f2b4cb5d2a2cf1e4bc1757" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double mml::math::shunting_yard_algorithm::result</definition>
+        <argsstring></argsstring>
+        <name>result</name>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/shunting_yard_algorithm.hpp" line="48" column="20" bodyfile="include/mml-math/shunting_yard_algorithm.hpp" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmml_1_1math_1_1shunting__yard__algorithm_1a15ce32b55218e28e685e8a2ac71baad5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>mml::math::shunting_yard_algorithm::shunting_yard_algorithm</definition>
+        <argsstring>(mml::string equation)</argsstring>
+        <name>shunting_yard_algorithm</name>
+        <param>
+          <type>mml::string</type>
+          <declname>equation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/shunting_yard_algorithm.hpp" line="50" column="13" bodyfile="include/mml-math/shunting_yard_algorithm.hpp" bodystart="50" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1math_1_1shunting__yard__algorithm_1a071d73fd37a7ae383f27f4edc104a1a4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>mml::math::shunting_yard_algorithm::shunting_yard_algorithm</definition>
+        <argsstring>(std::vector&lt; mml::string &gt; infix)</argsstring>
+        <name>shunting_yard_algorithm</name>
+        <param>
+          <type>std::vector&lt; mml::string &gt;</type>
+          <declname>infix</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/shunting_yard_algorithm.hpp" line="51" column="13" bodyfile="include/mml-math/shunting_yard_algorithm.hpp" bodystart="51" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1math_1_1shunting__yard__algorithm_1ab17790bb0702e377189ae4c790fb1864" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>mml::math::shunting_yard_algorithm::shunting_yard_algorithm</definition>
+        <argsstring>()</argsstring>
+        <name>shunting_yard_algorithm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/shunting_yard_algorithm.hpp" line="52" column="13" bodyfile="include/mml-math/shunting_yard_algorithm.hpp" bodystart="52" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1math_1_1shunting__yard__algorithm_1a66339099fda237a18f21bb54cbcd7e70" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classmml_1_1math_1_1shunting__yard__algorithm" kindref="compound">shunting_yard_algorithm</ref> &amp;</type>
+        <definition>shunting_yard_algorithm&amp; mml::math::shunting_yard_algorithm::operator=</definition>
+        <argsstring>(mml::string equation)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>mml::string</type>
+          <declname>equation</declname>
+        </param>
+        <briefdescription>
+<para>Assign the class with an equation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>equation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Instance of the class </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/shunting_yard_algorithm.hpp" line="59" column="37" bodyfile="include/mml-math/shunting_yard_algorithm.hpp" bodystart="59" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1math_1_1shunting__yard__algorithm_1a2573cab343d4c5ca7230e9b215f25257" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; mml::string &gt;</type>
+        <definition>std::vector&lt; mml::string &gt; mml::math::shunting_yard_algorithm::equation_to_infix</definition>
+        <argsstring>(bool verbose=false)</argsstring>
+        <name>equation_to_infix</name>
+        <param>
+          <type>bool</type>
+          <declname>verbose</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Converts a string to tokens where numbers are kept together and spaces are ignored. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Source File of the Shunting-Yard-Algorithm.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>verbose</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Verbose output (optional) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Vector filled with the tokens </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>runtime_error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: if equation is empty </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>invalid_argument</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: if unrecognized function or variable </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/shunting_yard_algorithm.hpp" line="71" column="25" bodyfile="src/shunting_yard_algorithm.cpp" bodystart="16" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1math_1_1shunting__yard__algorithm_1af1ce38dd38de7d9ed1f7472a85511823" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; mml::string &gt;</type>
+        <definition>std::vector&lt; mml::string &gt; mml::math::shunting_yard_algorithm::infix_to_postfix</definition>
+        <argsstring>(bool verbose=false)</argsstring>
+        <name>infix_to_postfix</name>
+        <param>
+          <type>bool</type>
+          <declname>verbose</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Converts infix to postfix notation E.g.: &apos;2+3&apos; is converted to &apos;23+&apos;. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>verbose</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Verbose output (optional) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Vector filled with the tokens </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>runtime_error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: if infix is empty </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/shunting_yard_algorithm.hpp" line="80" column="25" bodyfile="src/shunting_yard_algorithm.cpp" bodystart="120" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1math_1_1shunting__yard__algorithm_1a376909ef0858656da4af9179b5438667" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double mml::math::shunting_yard_algorithm::evaluate_postfix</definition>
+        <argsstring>(bool verbose=false)</argsstring>
+        <name>evaluate_postfix</name>
+        <param>
+          <type>bool</type>
+          <declname>verbose</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Evaluates the postfix vector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>verbose</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Verbose output (optional) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>double </para>
+</simplesect>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>out_of_range</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: if value is out of range of a function </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/shunting_yard_algorithm.hpp" line="98" column="20" bodyfile="src/shunting_yard_algorithm.cpp" bodystart="196" bodyend="269"/>
+      </memberdef>
+      <memberdef kind="function" id="classmml_1_1math_1_1shunting__yard__algorithm_1acb43e97fc972dab508feb426238adee6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double mml::math::shunting_yard_algorithm::evaluate</definition>
+        <argsstring>(bool verbose=false)</argsstring>
+        <name>evaluate</name>
+        <param>
+          <type>bool</type>
+          <declname>verbose</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Evaluates the string and returns the result. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>verbose</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Verbose output (optional) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>double </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/shunting_yard_algorithm.hpp" line="105" column="20" bodyfile="src/shunting_yard_algorithm.cpp" bodystart="271" bodyend="283"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classmml_1_1math_1_1shunting__yard__algorithm_1a5d46b869a8f45b0706d1a231dc73ec12" prot="protected" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int mml::math::shunting_yard_algorithm::precedence</definition>
+        <argsstring>(mml::string op) noexcept</argsstring>
+        <name>precedence</name>
+        <param>
+          <type>mml::string</type>
+          <declname>op</declname>
+        </param>
+        <briefdescription>
+<para>Returns the precedence of an operator: The higher the more precedent (* has higher precendence than +) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>op</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Operator </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>int</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="include/mml-math/shunting_yard_algorithm.hpp" line="88" column="17" bodyfile="src/shunting_yard_algorithm.cpp" bodystart="175" bodyend="191"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="include/mml-math/shunting_yard_algorithm.hpp" line="21" column="9" bodyfile="include/mml-math/shunting_yard_algorithm.hpp" bodystart="21" bodyend="106"/>
+    <listofallmembers>
+      <member refid="classmml_1_1math_1_1shunting__yard__algorithm_1a4a5d0e37a3262e56778e207491178120" prot="public" virt="non-virtual"><scope>mml::math::shunting_yard_algorithm</scope><name>equation</name></member>
+      <member refid="classmml_1_1math_1_1shunting__yard__algorithm_1a2573cab343d4c5ca7230e9b215f25257" prot="public" virt="non-virtual"><scope>mml::math::shunting_yard_algorithm</scope><name>equation_to_infix</name></member>
+      <member refid="classmml_1_1math_1_1shunting__yard__algorithm_1acb43e97fc972dab508feb426238adee6" prot="public" virt="non-virtual"><scope>mml::math::shunting_yard_algorithm</scope><name>evaluate</name></member>
+      <member refid="classmml_1_1math_1_1shunting__yard__algorithm_1a376909ef0858656da4af9179b5438667" prot="public" virt="non-virtual"><scope>mml::math::shunting_yard_algorithm</scope><name>evaluate_postfix</name></member>
+      <member refid="classmml_1_1math_1_1shunting__yard__algorithm_1a05ee1be918f1a200154393e9d28bf15e" prot="protected" virt="non-virtual"><scope>mml::math::shunting_yard_algorithm</scope><name>functions</name></member>
+      <member refid="classmml_1_1math_1_1shunting__yard__algorithm_1a9a54d55bbdb438b0df59d561ecd3500b" prot="public" virt="non-virtual"><scope>mml::math::shunting_yard_algorithm</scope><name>infix</name></member>
+      <member refid="classmml_1_1math_1_1shunting__yard__algorithm_1af1ce38dd38de7d9ed1f7472a85511823" prot="public" virt="non-virtual"><scope>mml::math::shunting_yard_algorithm</scope><name>infix_to_postfix</name></member>
+      <member refid="classmml_1_1math_1_1shunting__yard__algorithm_1a66339099fda237a18f21bb54cbcd7e70" prot="public" virt="non-virtual"><scope>mml::math::shunting_yard_algorithm</scope><name>operator=</name></member>
+      <member refid="classmml_1_1math_1_1shunting__yard__algorithm_1a8c7d5293436272ad81ac335ded81516b" prot="public" virt="non-virtual"><scope>mml::math::shunting_yard_algorithm</scope><name>postfix</name></member>
+      <member refid="classmml_1_1math_1_1shunting__yard__algorithm_1a5d46b869a8f45b0706d1a231dc73ec12" prot="protected" virt="non-virtual"><scope>mml::math::shunting_yard_algorithm</scope><name>precedence</name></member>
+      <member refid="classmml_1_1math_1_1shunting__yard__algorithm_1af8772e5025f2b4cb5d2a2cf1e4bc1757" prot="public" virt="non-virtual"><scope>mml::math::shunting_yard_algorithm</scope><name>result</name></member>
+      <member refid="classmml_1_1math_1_1shunting__yard__algorithm_1a15ce32b55218e28e685e8a2ac71baad5" prot="public" virt="non-virtual"><scope>mml::math::shunting_yard_algorithm</scope><name>shunting_yard_algorithm</name></member>
+      <member refid="classmml_1_1math_1_1shunting__yard__algorithm_1a071d73fd37a7ae383f27f4edc104a1a4" prot="public" virt="non-virtual"><scope>mml::math::shunting_yard_algorithm</scope><name>shunting_yard_algorithm</name></member>
+      <member refid="classmml_1_1math_1_1shunting__yard__algorithm_1ab17790bb0702e377189ae4c790fb1864" prot="public" virt="non-virtual"><scope>mml::math::shunting_yard_algorithm</scope><name>shunting_yard_algorithm</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
