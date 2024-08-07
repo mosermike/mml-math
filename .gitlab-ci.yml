@@ -20,8 +20,8 @@ test-calc:
   stage: test
   needs:
     - build-job
-  dependencies:
-    - build-job
+  #dependencies:
+  #  - build-job
   script:
     - cd test
     - make SRC=calc.cpp INCLUDE="-I ../include -I ../mml/include/" LIBRARY="-L ../lib -L ../mml/lib/"
@@ -31,8 +31,8 @@ test-sh-ya-algo:
   stage: test
   needs:
     - build-job
-  dependencies:
-    - build-job
+  #dependencies:
+  #  - build-job
   script:
     - cd test
     - make SRC=sh-ya-algo.cpp INCLUDE="-I ../include -I ../mml/include/" LIBRARY="-L ../lib -L ../mml/lib/"
@@ -54,6 +54,6 @@ deploy-prod:
   script:
     - cd calculator
     - make INCLUDE="-I ../include -I ../mml/include/" LIBRARY="-L ../lib -L ../mml/lib/"
-  dependencies:
+  needs:
     - build-job
   environment: production
