@@ -1,3 +1,9 @@
+stages:
+  - build
+  - test
+  - deploy
+
+
 variables:
   LIBRARY_REPO_URL: https://gitlab.moser.mywire.org/moser/mml.git
 
