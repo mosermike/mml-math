@@ -204,13 +204,15 @@ std::vector<double> calculations(bool verbose, std::vector<mml::string> &equatio
 int main(int argc, char **argv) {
 	
 	mml::shell::arg		args		(argc,argv);
-	mml::time::Timer			time		;
-	double				result		= 0;
-	mml::string			matrix		= "";
+	mml::time::Timer	time		;
+	double			result		= 0;
+	mml::string		matrix		= "";
 	
 	if(args.nexist("-t","--timer"))
 		time.stop();
-		
+	else
+		time.start();
+
 	if(args.size() == 1){
 		throw std::logic_error("Missing input of the wished operation. Use '-h' for help.");
 	}
