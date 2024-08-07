@@ -29,7 +29,8 @@ test-job:
 deploy-prod:
   stage: deploy
   script:
-    - cd calculator make
+    - cd calculator
+    - make
   dependencies:
     - build-job
   environment: production
