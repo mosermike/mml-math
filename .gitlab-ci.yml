@@ -16,7 +16,7 @@ build-job:
     paths:
       - "lib/"
 
-test-job:
+test-calc:
   stage: test
   needs:
     - build-job
@@ -24,7 +24,30 @@ test-job:
     - build-job
   script:
     - cd test
-    - make test -j5 INCLUDE="-I ../include -I ../mml/include/" LIBRARY="-L ../lib -L ../mml/lib/"
+    - make SRC=calc.cpp INCLUDE="-I ../include -I ../mml/include/" LIBRARY="-L ../lib -L ../mml/lib/"
+    - ./calc.x
+
+test-sh-ya-algo:
+  stage: test
+  needs:
+    - build-job
+  dependencies:
+    - build-job
+  script:
+    - cd test
+    - make SRC=sh-ya-algo.cpp INCLUDE="-I ../include -I ../mml/include/" LIBRARY="-L ../lib -L ../mml/lib/"
+    - ./sh-ya-algo.x
+
+test-matrix:
+  stage: test
+  needs:
+    - build-job
+  #dependencies:
+  #  - build-job
+  script:
+    - cd test
+    - make SRC=matrix.cpp INCLUDE="-I ../include -I ../mml/include/" LIBRARY="-L ../lib -L ../mml/lib/"
+    - ./matrix.x
 
 deploy-prod:
   stage: deploy
