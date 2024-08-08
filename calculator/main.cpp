@@ -26,7 +26,7 @@
 */
 void help() {
 
-	mml::help::header("Computes different things by using the shell.");
+	mml::help::header("calc", "Computes different things by using the shell.");
 	
 	std::cout << "\tThis program executes calculations depending on arguments." << std::endl;
 	std::cout << "\tBy the use of brackets, quotation marks are necessary."	<< std::endl << std::endl;
