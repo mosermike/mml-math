@@ -6,6 +6,7 @@ stages:
 
 variables:
   LIBRARY_REPO_URL: https://gitlab.moser.mywire.org/moser/mml.git
+  LIB: $(PWD)
 
 before_script:
   - mkdir mml
@@ -20,6 +21,7 @@ before_script:
 build-job:
   stage: build
   script:
+    - echo $LIB
     - echo $PWD
     - ls mml/build
     - mkdir build
