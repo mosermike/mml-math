@@ -21,7 +21,7 @@ before_script:
 build-job:
   stage: build
   script:
-    - echo $LIB
+    - echo ${LIB}
     - echo $PWD
     - ls mml/build
     - mkdir build
