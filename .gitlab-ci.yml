@@ -22,7 +22,7 @@ build-job:
   stage: build
   script:
     - echo ${LIB}
-    - echo $PWD
+    - echo $PWD | sed 's/mml-math\///'
     - ls mml/build
     - mkdir build
     - cd build
