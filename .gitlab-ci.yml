@@ -9,6 +9,7 @@ variables:
 
 before_script:
   - cd ../
+  - rm -rf mml
   - mkdir mml
   - git clone $LIBRARY_REPO_URL
   - cd mml
