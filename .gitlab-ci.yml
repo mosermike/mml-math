@@ -6,7 +6,7 @@ stages:
 
 variables:
   LIBRARY_REPO_URL: https://gitlab.moser.mywire.org/moser/mml.git
-  LIB: $PWD
+  LIB: ${PWD}
 
 before_script:
   - mkdir mml
