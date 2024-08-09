@@ -404,7 +404,7 @@ void mml::matrix::matrix::print() {
 	// Print to shell
 	for(uint32_t i = 0; i < print.size(); i++) {
 		for(uint32_t j = 0; j < print[0].size(); j++) {
-			if(mml::is_num(print[i][j][0]) || mml::is_num(print[i][j][1]))
+			if(mml::isnum(print[i][j][0]) || mml::isnum(print[i][j][1]))
 				std::cout << std::stof(print[i][j]);
 			else
 				std::cout << print[i][j];
@@ -520,7 +520,7 @@ mml::vector<mml::vector<double>> mml::matrix::calc(mml::string equation, bool ve
 	for(std::size_t i = 0; i < equation.size(); i++) {
 		if(equation[i] == '*' || equation[i] == '/' || equation[i] == '+' || equation[i] == '-')
 			operators.push_back(equation[i]);
-		else if (mml::is_num(equation[i])) {
+		else if (mml::isnum(equation[i])) {
 			
 			// Scalar multiplication to the left
 			if(equation[i-1] == '*' && equation[i-2] == '_') {
@@ -762,7 +762,7 @@ void mml::matrix::print_2matrix(mml::matrix::matrix mat1, std::string add, mml::
 	// Print to shell
 	for(uint32_t i = 0; i < print.size(); i++) {
 		for(uint32_t j = 0; j < print[0].size(); j++) {
-			if(mml::is_num(print[i][j][0]) || mml::is_num(print[i][j][1]))
+			if(mml::isnum(print[i][j][0]) || mml::isnum(print[i][j][1]))
 				std::cout << std::stof(print[i][j]);
 			else
 				std::cout << print[i][j];
@@ -954,7 +954,7 @@ void mml::matrix::print_3matrix(mml::matrix::matrix mat1, std::string add1, mml:
 	// Print to shell
 	for(uint32_t i = 0; i < print.size(); i++) {
 		for(uint32_t j = 0; j < print[0].size(); j++) {
-			if(mml::is_num(print[i][j][0]) || mml::is_num(print[i][j][1]))
+			if(mml::isnum(print[i][j][0]) || mml::isnum(print[i][j][1]))
 				std::cout << std::stof(print[i][j]);
 			else
 				std::cout << print[i][j];
@@ -1198,7 +1198,7 @@ void mml::matrix::print_4matrix(mml::matrix::matrix mat1, std::string add1, mml:
 	// Print to shell
 	for(uint32_t i = 0; i < print.size(); i++) {
 		for(uint32_t j = 0; j < print[0].size(); j++) {
-			if(mml::is_num(print[i][j][0]) || mml::is_num(print[i][j][1]))
+			if(mml::isnum(print[i][j][0]) || mml::isnum(print[i][j][1]))
 				std::cout << std::stof(print[i][j]);
 			else
 				std::cout << print[i][j];

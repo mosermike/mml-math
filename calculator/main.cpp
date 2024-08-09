@@ -174,7 +174,7 @@ std::vector<double> calculations(bool verbose, std::vector<mml::string> &equatio
 						throw std::invalid_argument("Error: Wrong format for option rx! x must be a number!");
 
 					// Add until an operator comes
-					while(mml::is_num(equation[a])) {
+					while(mml::isnum(equation[a])) {
 						num += equation[a++];
 						// Catch if the replacement is at the end
 						if(a >= equation.size())

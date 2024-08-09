@@ -1,7 +1,7 @@
 stages:
   - build
   - test
-  - deploy
+#  - deploy
 
 
 variables:
@@ -11,55 +11,28 @@ before_script:
   - mkdir mml
   - git clone $LIBRARY_REPO_URL
   - cd mml
-  - make -j9
-  - cd ../
+  - mkdir build
+  - cd build
+  - cmake ..
+  - make -j5
+  - cd ../../
 
 build-job:
   stage: build
   script:
-    - make -j9 LIBRARY="-L ./ -L ./mml/" MINCLUDE="-I include -I include/mml-math -I mml/include/"
+    - mkdir build
+    - cd build
+    - cmake .. -DMML_LIBPATH=../mml/build/ -DMML_INCPATH=../mml/include
+    - make -j9
   artifacts:
     paths:
-      - "lib/"
+      - "build/"
 
-test-calc:
+test:
   stage: test
   needs:
     - build-job
-  #dependencies:
-  #  - build-job
   script:
-    - cd test
-    - make SRC=calc.cpp INCLUDE="-I ../include -I ../mml/include/" LIBRARY="-L ../lib -L ../mml/lib/"
-    - ./calc.x
+    - cd build
+    - make test
 
-test-sh-ya-algo:
-  stage: test
-  needs:
-    - build-job
-  #dependencies:
-  #  - build-job
-  script:
-    - cd test
-    - make SRC=sh-ya-algo.cpp INCLUDE="-I ../include -I ../mml/include/" LIBRARY="-L ../lib -L ../mml/lib/"
-    - ./sh-ya-algo.x
-
-test-matrix:
-  stage: test
-  needs:
-    - build-job
-  #dependencies:
-  #  - build-job
-  script:
-    - cd test
-    - make SRC=matrix.cpp INCLUDE="-I ../include -I ../mml/include/" LIBRARY="-L ../lib -L ../mml/lib/"
-    - ./matrix.x
-
-deploy-prod:
-  stage: deploy
-  script:
-    - cd calculator
-    - make INCLUDE="-I ../include -I ../mml/include/" LIBRARY="-L ../lib -L ../mml/lib/"
-  needs:
-    - build-job
-  environment: production

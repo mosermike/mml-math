@@ -1,10 +1,23 @@
 /**
  * Performing test for the matrix calculations
 */
-#include <mml-math/matrix.hpp>
+
 #include <iostream>
 #include <mml.hpp>
+#include <cassert>
 
+#include "mml-math/matrix.hpp"
+
+// Custom assert macro
+#define assert_msg(cond, msg) \
+    do { \
+        if (!(cond)) { \
+            std::cerr << "Assertion failed: (" #cond "), function " << __func__ \
+                      << ", file " << __FILE__ << ", line " << __LINE__ << "." << std::endl \
+                      << "Message: " << msg << std::endl; \
+            std::abort(); \
+        } \
+    } while (false)
 
 int main() {
 
@@ -19,6 +32,8 @@ int main() {
 
  	mml::matrix::matrix mat1(3,3);
 	mat1(0,0) = 1.0;
+	assert_msg(mat1(0,0) == 1.0, "Value assignment to a matrix did not work!");
+
 	std::cout << "The output should be a matrix where only the element (0,0) has the value 1:" << std::endl;
 	mat1.print();
 
@@ -43,10 +58,8 @@ int main() {
 	double det = mat5.det();
 	std::cout << "The determinant of the matrix is " << det << "." << std::endl;
 	std::cout << "Is the result -1? ";
-	if(det == -1.0)
-		std::cout << "Yes! Test passed" <<std::endl;
-	else
-		std::cout << "No! There might be a bug. Please report it!" << std::endl;
+	assert_msg(det == -1.0, "No! There might be a bug. Please report it!");
+	std::cout << "Yes! Test passed" <<std::endl;
 	
 	std::cout << std::endl;
 	std::cout << "─────────────────────────────────────────────────────" << std::endl;
@@ -70,11 +83,9 @@ int main() {
 			}
 		}
 	}
-	if(all_zero)
-		std::cout << "Yes, the result is a zero matrix. Test passed." << std::endl;
-	else
-		std::cout << "No, the result is not a zero matrix! There might be a bug. Please report it!" << std::endl;
-
+	assert_msg(all_zero, "No, the result is not a zero matrix! There might be a bug. Please report it!");
+	std::cout << "Yes, the result is a zero matrix. Test passed." << std::endl;
+	
 	std::cout << std::endl;
 	std::cout << std::endl;
 	std::cout << std::endl;

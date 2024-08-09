@@ -47,12 +47,12 @@ mml::string mml::math::replace(mml::string equation, bool verbose) {
 			if(i == 0 && equation[i+1] != 'x')
 				equation = mml::to_string(M_E) + equation.substr(1);
 			// e at the end
-			else if(!mml::is_num(equation[i-1]) && i == equation.size()-1) {
+			else if(!mml::isnum(equation[i-1]) && i == equation.size()-1) {
 				equation = equation.sub(0,i-1) + mml::to_string(M_E);
 				continue;
 			}
 			// e somewhere else
-			else if(!mml::is_num(equation[i-1]) && (!std::isalnum(equation[i+1])))
+			else if(!mml::isnum(equation[i-1]) && (!std::isalnum(equation[i+1])))
 				equation = equation.sub(0,i-1) + mml::to_string(M_E) + equation.substr(i+1);
 			
 		}
