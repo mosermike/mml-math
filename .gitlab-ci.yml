@@ -20,6 +20,7 @@ before_script:
 build-job:
   stage: build
   script:
+    - echo $PWD
     - mkdir build
     - cd build
     - cmake .. -DMML_LIBPATH=../mml/build/ -DMML_INCPATH=../mml/include
