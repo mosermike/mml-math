@@ -21,6 +21,7 @@ build-job:
   stage: build
   script:
     - echo $PWD
+    - ls mml/build
     - mkdir build
     - cd build
     - cmake .. -DMML_LIBPATH=../mml/build/ -DMML_INCPATH=../mml/include
