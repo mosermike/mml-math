@@ -23,10 +23,11 @@ build-job:
     - mkdir build
     - cd build
     - cmake .. -DMML_LIBPATH=../mml/build/ -DMML_INCPATH=../mml/include
-    - make -j9
+    - make -j5
   artifacts:
     paths:
       - "build/"
+      - "mml/"
 
 test:
   stage: test
