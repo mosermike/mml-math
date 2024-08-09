@@ -6,9 +6,9 @@ stages:
 
 variables:
   LIBRARY_REPO_URL: https://gitlab.moser.mywire.org/moser/mml.git
-  LIB: ${PWD}
 
 before_script:
+  - cd ../
   - mkdir mml
   - git clone $LIBRARY_REPO_URL
   - cd mml
@@ -16,17 +16,16 @@ before_script:
   - cd build
   - cmake ..
   - make -j5
-  - cd ../../
+  - cd ../../mml-math
 
 build-job:
   stage: build
   script:
-    - echo ${LIB}
-    - echo $PWD | sed 's/mml-math//'
     - ls mml/build
     - mkdir build
     - cd build
-    - cmake .. -DMML_LIBPATH=../mml/build/ -DMML_INCPATH=../mml/include
+    - CLEANED_PATH=$(echo "$PWD" | sed 's/mml-math//')
+    - cmake -DMML_LIBPATH=${CLEANED_PATH}/mml/build/ -DMML_INCPATH=${CLEANED_PATH}/mml/include ..
     - make -j5
   artifacts:
     paths:
