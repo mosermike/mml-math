@@ -22,7 +22,6 @@ before_script:
 build-job:
   stage: build
   script:
-    - ls mml/build
     - mkdir build
     - cd build
     - CLEANED_PATH=$(echo "$PWD" | sed 's/mml-math//')
