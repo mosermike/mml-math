@@ -8,8 +8,11 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 # Collect all source files for mml-math
 file(GLOB_RECURSE MML_MATH_SOURCES src/*.cpp)
 
+# Option to choose between shared or static library, default to shared
+option(BUILD_SHARED_LIBS "Build shared libraries by default" ON)
+
 # Create the shared library for mml-math
-add_library(mml-math SHARED ${MML_MATH_SOURCES})
+add_library(mml-math ${MML_MATH_SOURCES})
 
 # Check if MML_PATH is set; otherwise, use default value
 if(NOT DEFINED MML_LIBPATH)
