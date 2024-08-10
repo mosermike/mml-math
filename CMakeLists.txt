@@ -23,17 +23,16 @@ endif()
 set(MML_INCLUDE_DIR "${MML_INCPATH}")
 set(MML_LIBRARY_DIR "${MML_LIBPATH}")
 
-# Specify include directories for consumers of mml-math
+# Include directories for mml-math
 target_include_directories(mml-math
     PUBLIC
-        $<INSTALL_INTERFACE:include>
         $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
+        $<INSTALL_INTERFACE:include>
         ${MML_INCLUDE_DIR}
 )
 
-# Link mml library to mml-math
-link_directories(${MML_LIBRARY_DIR})
-target_link_libraries(mml-math PRIVATE mml)
+# Directly link to the library file
+target_link_libraries(mml-math PRIVATE ${MML_LIBRARY_DIR}/libmml.so)
 
 # Set the output directory for libraries
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/lib)
@@ -41,8 +40,8 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/lib)
 # Add main.cpp as an executable
 add_executable(calc.x calculator/main.cpp)
 target_compile_options(calc.x PRIVATE -Dcalc_log=\"${CMAKE_BINARY_DIR}/calc.log\")
-target_include_directories(calc.x PRIVATE ${MML_INCLUDE_DIR})
-target_link_libraries(calc.x PRIVATE mml-math mml)
+target_include_directories(calc.x PRIVATE -I ${MML_INCLUDE_DIR})
+target_link_libraries(calc.x PRIVATE mml-math ${MML_LIBRARY_DIR}/libmml.so)
 
 # Install the executable
 install(TARGETS calc.x
@@ -97,7 +96,7 @@ file(GLOB_RECURSE MML_MATH_TEST_SOURCES test/*.cpp)
 foreach(TEST_FILE ${MML_MATH_TEST_SOURCES})
     get_filename_component(TEST_NAME ${TEST_FILE} NAME_WE)
     add_executable(${TEST_NAME} ${TEST_FILE})
-    target_link_libraries(${TEST_NAME} mml-math mml)
+    target_link_libraries(${TEST_NAME} mml-math ${MML_LIBRARY_DIR}/libmml.so)
     # Output test executables to the 'tests' directory
     set_target_properties(${TEST_NAME} PROPERTIES
         RUNTIME_OUTPUT_DIRECTORY ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}
