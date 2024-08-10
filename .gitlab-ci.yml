@@ -24,13 +24,13 @@ build-job:
   script:
     - mkdir build
     - cd build
-    - CLEANED_PATH=$(echo "$PWD" | sed 's/mml-math//')
+    - CLEANED_PATH=$(echo "$PWD" | sed 's/mml-math\/build//')
     - cmake -DMML_LIBPATH=${CLEANED_PATH}/mml/build/ -DMML_INCPATH=${CLEANED_PATH}/mml/include ..
     - make -j5
   artifacts:
     paths:
       - "build/"
-      - "mml/"
+      - "../mml/"
 
 test:
   stage: test
