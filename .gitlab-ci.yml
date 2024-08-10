@@ -19,6 +19,8 @@ before_script:
   - make -j5
   - cd ../../mml-math
 
+after_script:
+  - rm -rf ../mml
 build-job:
   stage: build
   script:
