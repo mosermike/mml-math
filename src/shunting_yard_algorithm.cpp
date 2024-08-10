@@ -28,9 +28,11 @@ std::vector<mml::string> mml::math::shunting_yard_algorithm::equation_to_infix(b
     for(size_t i = 0; i < equation.size(); i++) {
         char c = equation[i];
 		
+		// Character is a number, a decimal point or starts with a minus
         if(mml::isnum(c) || c == '.' || (c == '-' && number.empty()))
             number += c;
-		else if (i < equation.size()-1 && c == 'e' && (equation[i+1] == '-' || mml::isnum(equation[i+1])) ) {
+		// Check if e is used as 10^
+		else if (i < equation.size()-1 && c == 'e' && (equation[i+1] == '-' || equation[i+1] == '+' || mml::isnum(equation[i+1])) ) {
             number += c;
 			// Also add the next character
 			number += equation[i+1];

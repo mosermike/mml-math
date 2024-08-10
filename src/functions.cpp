@@ -18,17 +18,17 @@ mml::string mml::math::replace(mml::string equation, bool verbose) {
 	// ******************************
 	// * Replace physical constants *
 	// ******************************
-	equation = equation.replace("P_a0", std::to_string(P_a0).c_str());
-	equation = equation.replace("P_c", std::to_string(P_c).c_str());
-	equation = equation.replace("P_mu", std::to_string(P_mu).c_str());
-	equation = equation.replace("P_eps", std::to_string(P_eps).c_str());
-	equation = equation.replace("P_e", std::to_string(P_e).c_str());
-	equation = equation.replace("P_k", std::to_string(P_k).c_str());
-	equation = equation.replace("P_h", std::to_string(P_h).c_str());
-	equation = equation.replace("P_m", std::to_string(P_m).c_str());
-	equation = equation.replace("P_G", std::to_string(P_G).c_str());
-	equation = equation.replace("P_u", std::to_string(P_u).c_str());
-	equation = equation.replace("P_NA", std::to_string(P_NA).c_str());
+	equation = equation.replace("P_a0", P_a0);
+	equation = equation.replace("P_c", P_c);
+	equation = equation.replace("P_mu", P_mu);
+	equation = equation.replace("P_eps", P_eps);
+	equation = equation.replace("P_e", P_e);
+	equation = equation.replace("P_k", P_k);
+	equation = equation.replace("P_h", P_h);
+	equation = equation.replace("P_m", P_m);
+	equation = equation.replace("P_G", P_G);
+	equation = equation.replace("P_u", P_u);
+	equation = equation.replace("P_NA", P_NA);
 	
 	
 
