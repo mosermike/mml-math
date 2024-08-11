@@ -1,9 +1,10 @@
 #include <mml.hpp>
 #include "../include/mml-math/matrix.hpp"
+#include "../include/mml-math/polyfit.hpp"
 
-mml::vector<mml::vector<double>> mml::matrix::matrix::add(mml::matrix::matrix mat) {
+mml::vector<mml::vector<double>> mml::math::matrix::add(mml::math::matrix mat) {
 	
-	mml::matrix::matrix res(rows,cols);
+	mml::math::matrix res(rows,cols);
 
 	// ===============================
 	// Check if addition is possible
@@ -25,11 +26,11 @@ mml::vector<mml::vector<double>> mml::matrix::matrix::add(mml::matrix::matrix ma
 }
 
 
-mml::vector<mml::vector<double>> mml::matrix::matrix::adjugate() {
+mml::math::matrix mml::math::matrix::adjugate() const {
 	
-	mml::matrix::matrix adj(rows,cols);
+	mml::math::matrix adj(rows,cols);
 	
-	mml::matrix::matrix temp(rows-1,cols-1);
+	mml::math::matrix temp(rows-1,cols-1);
 	for(uint32_t i = 0; i < rows; i++) {
 		for(uint32_t j = 0; j < cols; j++) {
 			temp = reduce(i,j);
@@ -41,7 +42,7 @@ mml::vector<mml::vector<double>> mml::matrix::matrix::adjugate() {
 }
 
 
-double mml::matrix::matrix::det() {
+double mml::math::matrix::det() const {
 	double determinant = 1;
 	
 	// ===============================
@@ -124,7 +125,7 @@ double mml::matrix::matrix::det() {
 	return determinant;
 }
 
-mml::vector<mml::vector<double>> mml::matrix::matrix::inverse() {
+mml::math::matrix mml::math::matrix::inverse() const {
 	
 	// Compute determinant as needed later
 	double Det = det();
@@ -148,12 +149,12 @@ mml::vector<mml::vector<double>> mml::matrix::matrix::inverse() {
 		}
 	}
 	
-	return inv.data;
+	return inv;
 }
 
 
 
-mml::vector<mml::vector<double>> mml::matrix::matrix::multiply(mml::matrix::matrix mat) {
+mml::vector<mml::vector<double>> mml::math::matrix::multiply(mml::math::matrix mat) {
 	
 	// ===================================
 	// Check if multiplication is possible
@@ -162,7 +163,7 @@ mml::vector<mml::vector<double>> mml::matrix::matrix::multiply(mml::matrix::matr
 		throw std::logic_error("| Multiplication not possible (" + std::to_string(cols) + " cols vs. " + std::to_string(mat.rows) + " rows) !");	
 	}
 	
-	mml::matrix::matrix res(rows,mat.cols);
+	mml::math::matrix res(rows,mat.cols);
 	
 	
 	// =====================
@@ -181,9 +182,9 @@ mml::vector<mml::vector<double>> mml::matrix::matrix::multiply(mml::matrix::matr
 	return res.data;
 }
 
-mml::vector<mml::vector<double>> mml::matrix::matrix::multiply(double scalar) {
+mml::vector<mml::vector<double>> mml::math::matrix::multiply(double scalar) {
 	
-	mml::matrix::matrix res(rows,cols);
+	mml::math::matrix res(rows,cols);
 	
 	
 	// =====================
@@ -198,7 +199,7 @@ mml::vector<mml::vector<double>> mml::matrix::matrix::multiply(double scalar) {
 	return res.data;
 }
 
-mml::matrix::matrix& mml::matrix::matrix::operator=(std::string str1) {
+mml::math::matrix& mml::math::matrix::operator=(std::string str1) {
 	// Change to mml::string
 	mml::string str(str1);
 	// Perform some checks for the format
@@ -259,7 +260,7 @@ mml::matrix::matrix& mml::matrix::matrix::operator=(std::string str1) {
 	return *this;
 }
 
-void mml::matrix::matrix::operator()(std::string str1) {
+void mml::math::matrix::operator()(std::string str1) {
 	// Change to mml::string
 	mml::string str(str1);
 	// Perform some checks for the format
@@ -319,8 +320,7 @@ void mml::matrix::matrix::operator()(std::string str1) {
 }
 
 
-void mml::matrix::matrix::print() {
-
+void mml::math::matrix::print() noexcept {
 	// ===================================
 	// Determine Length of biggest numbers
 	// ===================================
@@ -415,7 +415,7 @@ void mml::matrix::matrix::print() {
 
 }
 
-mml::vector<mml::vector<double>> mml::matrix::matrix::reduce(uint32_t row, uint32_t column) {
+mml::math::matrix mml::math::matrix::reduce(uint32_t row, uint32_t column) const {
 
 	matrix red(rows-1,cols-1);	
 
@@ -448,10 +448,10 @@ mml::vector<mml::vector<double>> mml::matrix::matrix::reduce(uint32_t row, uint3
 	
 }
 
-mml::vector<mml::vector<double>> mml::matrix::matrix::sub(mml::matrix::matrix mat) {
+mml::vector<mml::vector<double>> mml::math::matrix::sub(mml::math::matrix mat) {
 	
 
-	mml::matrix::matrix res(rows,cols);
+	mml::math::matrix res(rows,cols);
 	// ================================
 	// Check if subtraction is possible
 	// ================================
@@ -471,8 +471,14 @@ mml::vector<mml::vector<double>> mml::matrix::matrix::sub(mml::matrix::matrix ma
 	return res.data;	
 }
 
+double mml::math::matrix::sum() const noexcept {
+	double sum = 0.0;
+	for(auto i : data)
+		sum = std::accumulate(i.begin(), i.end(),sum);
+	return sum;
+}
 
-mml::vector<mml::vector<double>> mml::matrix::matrix::transpose() noexcept {
+mml::math::matrix mml::math::matrix::transpose() const noexcept {
 
 	matrix tra(cols,rows);
 
@@ -486,8 +492,8 @@ mml::vector<mml::vector<double>> mml::matrix::matrix::transpose() noexcept {
 	
 }
 
-mml::vector<mml::vector<double>> mml::matrix::calc(mml::string equation, bool verbose) {
-	mml::vector<mml::matrix::matrix> matrices; // matrices in the same order as they appear in the equation
+mml::vector<mml::vector<double>> mml::math::matrix_calc(mml::string equation, bool verbose) {
+	mml::vector<mml::math::matrix> matrices; // matrices in the same order as they appear in the equation
 	mml::vector<mml::string> operators; // Operators starting from the left
 
 	
@@ -501,7 +507,7 @@ mml::vector<mml::vector<double>> mml::matrix::calc(mml::string equation, bool ve
 		pos = equation.find("]]",i+1)+1; // Find end of matrix
 
 		// Create the class and add it to the vector
-		matrices.push_back(mml::matrix::matrix(equation.sub(i,pos).str())); // Create class instance
+		matrices.push_back(mml::math::matrix(equation.sub(i,pos).str())); // Create class instance
 		
 		// Remove from string and replace it with  '_'
 		// in the start: DO not do sub 0,i-1 because i-1 to the end of the string
@@ -567,7 +573,7 @@ mml::vector<mml::vector<double>> mml::matrix::calc(mml::string equation, bool ve
 			if(equation[i-1] == '_' && equation[i+1] == '_') {
 				temp = equation.sub(0,i).count('_')-1; // which matrix on the left side
 				if(verbose)
-					mml::matrix::print_2matrix(matrices[temp]," * ", matrices[temp+1]);
+					mml::math::print_2matrix(matrices[temp]," * ", matrices[temp+1]);
 				matrices[temp+1] = matrices[temp]*matrices[temp+1];
 
 				// Erase the used matrix and the used operator from the vectors
@@ -625,7 +631,7 @@ mml::vector<mml::vector<double>> mml::matrix::calc(mml::string equation, bool ve
 }
 
 
-void mml::matrix::print_2matrix(mml::matrix::matrix mat1, std::string add, mml::matrix::matrix mat2) {
+void mml::math::print_2matrix(mml::math::matrix mat1, std::string add, mml::math::matrix mat2) {
 
 	// ===================================
 	// Determine Length of biggest numbers
@@ -773,7 +779,7 @@ void mml::matrix::print_2matrix(mml::matrix::matrix mat1, std::string add, mml::
 
 }
 
-void mml::matrix::print_3matrix(mml::matrix::matrix mat1, std::string add1, mml::matrix::matrix mat2, std::string add2, mml::matrix::matrix mat3) {
+void mml::math::print_3matrix(mml::math::matrix mat1, std::string add1, mml::math::matrix mat2, std::string add2, mml::math::matrix mat3) {
 
 	// ===================================
 	// Determine Length of biggest numbers
@@ -965,7 +971,7 @@ void mml::matrix::print_3matrix(mml::matrix::matrix mat1, std::string add1, mml:
 
 }
 
-void mml::matrix::print_4matrix(mml::matrix::matrix mat1, std::string add1, mml::matrix::matrix mat2, std::string add2, mml::matrix::matrix mat3, std::string add3, mml::matrix::matrix mat4) {
+void mml::math::print_4matrix(mml::math::matrix mat1, std::string add1, mml::math::matrix mat2, std::string add2, mml::math::matrix mat3, std::string add3, mml::math::matrix mat4) {
 
 	// ===================================
 	// Determine Length of biggest numbers
@@ -1210,8 +1216,8 @@ void mml::matrix::print_4matrix(mml::matrix::matrix mat1, std::string add1, mml:
 }
 
 
-mml::matrix::matrix mml::matrix::unity(std::size_t n) {
-	mml::matrix::matrix u(n,n);
+mml::math::matrix mml::math::unity(std::size_t n) {
+	mml::math::matrix u(n,n);
 
 	for(std::size_t i = 0; i < n; n++)
 		u(i,i) = 1.0;

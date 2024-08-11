@@ -9,14 +9,14 @@
 // TODO Matrixnorm
 // TODO verbose output for debugging
 
-#ifndef mml_math_matrix_hpp
-#define mml_math_matrix_hpp
+#ifndef mml_math_include_mml_math_matrix_hpp
+#define mml_math_include_mml_math_matrix_hpp
 
 #include <mml.hpp>
 #include <vector>
 
 namespace mml {
-	namespace matrix {
+	namespace math {
 		class matrix{ 
 		
 		protected:
@@ -29,7 +29,7 @@ namespace mml {
 			 * @author Mike Moser
 			 * @throw runtime_error : if rows or cols are not equal
 			 */
-			mml::vector<mml::vector<double>> add(mml::matrix::matrix matrix);
+			mml::vector<mml::vector<double>> add(mml::math::matrix matrix);
 
 			/**
 		 	* @note Multiply this matrix with another one from the right side
@@ -37,7 +37,7 @@ namespace mml {
 		 	* @return new matrix
 		 	* @author Mike Moser
 		 	*/
-			mml::vector<mml::vector<double>> multiply(mml::matrix::matrix matrix);
+			mml::vector<mml::vector<double>> multiply(mml::math::matrix matrix);
 
 			/**
 		 	* @note Multiply this matrix with a scalar
@@ -54,12 +54,13 @@ namespace mml {
 			 * @author Mike Moser
 			 * @throw runtime_error : if rows or cols are not equal
 			 */
-			mml::vector<mml::vector<double>> sub(mml::matrix::matrix matrix);
+			mml::vector<mml::vector<double>> sub(mml::math::matrix matrix);
 
 		public:
 			std::size_t rows = 0;
 			std::size_t cols = 0;
 
+			matrix() {};
 			/**
 			 * @brief Initialise empty matrix with a specific form
 			 * @param rows Number of rows
@@ -68,6 +69,20 @@ namespace mml {
 			*/
 	    	matrix(std::size_t rows1, std::size_t cols1) : rows(rows1), cols(cols1) {
 				this->data = mml::vector<mml::vector<double>>(rows, mml::vector<double>(cols,0.0));
+			}
+
+			/**
+			 * @brief Initialise matrix with a 1D vector.
+			 * @param vector 1D Vector
+			 * @return Instance of the class
+			*/
+			matrix(std::vector<double>  vec) : rows(vec.size()), cols(1) {
+				this->data = mml::vector<mml::vector<double>>(rows, mml::vector<double>(cols,0.0));
+				// Assign data from the 1D vector
+				for(std::size_t i = 0; i < rows; i++) {
+					this->data[i][0] = vec[i];
+				}
+
 			}
 
 			/**
@@ -146,7 +161,7 @@ namespace mml {
 			 * @return Class instance
 			 * @author Mike Moser
 			*/
-			mml::matrix::matrix& operator=(mml::vector<mml::vector<double>> temp) {data = temp; cols=temp[0].size(); rows = temp.size(); return *this;}
+			mml::math::matrix& operator=(mml::vector<mml::vector<double>> temp) {data = temp; cols=temp[0].size(); rows = temp.size(); return *this;}
 
 			/**
 			 * @brief Assign the values with another class instance
@@ -154,7 +169,7 @@ namespace mml {
 			 * @return Class instance
 			 * @author Mike Moser
 			*/
-			mml::matrix::matrix& operator=(mml::matrix::matrix temp) {data = temp.vec(); rows = temp.rows; cols = temp.cols; return *this;}
+			mml::math::matrix& operator=(mml::math::matrix temp) {data = temp.vec(); rows = temp.rows; cols = temp.cols; return *this;}
 
 			/**
 			 * @note Initialise matrix with a string. E.g. like this: [[1,1],[1,1]] 
@@ -163,7 +178,7 @@ namespace mml {
 			 * @note that only forms of strings are usable
 			 * @author Mike Moser
 			*/
-			mml::matrix::matrix& operator=(std::string str1);
+			mml::math::matrix& operator=(std::string str1);
 			
 			/**
 			 * @brief Return an element of the matrix
@@ -187,42 +202,42 @@ namespace mml {
 		 	 * @param vector 2D vector to be multiplied
 		 	 * @return New matrix
 		 	 */
-			mml::vector<mml::vector<double>> operator*(mml::vector<mml::vector<double>> vec) {return multiply(mml::matrix::matrix(vec));}
+			mml::math::matrix operator*(mml::vector<mml::vector<double>> vec) {return multiply(mml::math::matrix(vec));}
 
 			/**
 		 	 * @brief Multiply this matrix with another one from the right side
 		 	 * @param matrix Matrix to be multiplied
 		 	 * @return New matrix
 		 	 */
-			mml::vector<mml::vector<double>> operator*(mml::matrix::matrix matrix) {return multiply(matrix);}
+			mml::math::matrix operator*(mml::math::matrix matrix) {return multiply(matrix);}
 			
 			/**
 		 	 * @brief Multiply this matrix with another one from the right side to this instance
 		 	 * @param vec Vector to be multiplied
 		 	 * @return copy of this instance
 		 	 */
-			mml::matrix::matrix& operator*=(mml::vector<mml::vector<double>> vec) {data = multiply(mml::matrix::matrix(vec)); return *this;}
+			mml::math::matrix& operator*=(mml::vector<mml::vector<double>> vec) {data = multiply(mml::math::matrix(vec)); return *this;}
 
 			/**
 		 	 * @brief Multiply this matrix with another one from the right side to this instance
 		 	 * @param matrix Matrix to be multiplied
 		 	 * @return Copy of this instance
 		 	 */
-			mml::matrix::matrix& operator*=(mml::matrix::matrix matrix) {data = multiply(matrix); return *this;}
+			mml::math::matrix& operator*=(mml::math::matrix matrix) {data = multiply(matrix); return *this;}
 	
 			/**
 		 	 * @brief Multiply this matrix with a scalar
 		 	 * @param scalar Scalar
 		 	 * @return new matrix
 		 	 */
-			mml::vector<mml::vector<double>> operator*(double scalar) {return multiply(scalar);}
+			mml::math::matrix operator*(double scalar) {return multiply(scalar);}
 			
 			/**
 		 	 * @brief Multiply this matrix with a scalar to this instance
 		 	 * @param scalar Scalar
 		 	 * @return this instance
 		 	 */
-			mml::matrix::matrix& operator*=(double scalar) {data = multiply(scalar); return *this;}
+			mml::math::matrix& operator*=(double scalar) {data = multiply(scalar); return *this;}
 
 			/**
 		 	 * @brief Add a 2D vector from the right side
@@ -230,7 +245,7 @@ namespace mml {
 		 	 * @return New matrix
 			 * @throw runtime_error : if rows or cols are not equal
 		 	 */
-			mml::vector<mml::vector<double>> operator+(mml::vector<mml::vector<double>> vector){return add(mml::matrix::matrix(vector));}
+			mml::math::matrix operator+(mml::vector<mml::vector<double>> vector){return add(mml::math::matrix(vector));}
 
 			/**
 		 	 * @brief Add another matrix from the right side
@@ -238,7 +253,7 @@ namespace mml {
 		 	 * @return New matrix
 			 * @throw runtime_error : if rows or cols are not equal
 		 	 */
-			mml::vector<mml::vector<double>> operator+(mml::matrix::matrix matrix){return add(matrix);}
+			mml::math::matrix operator+(mml::math::matrix matrix){return add(matrix);}
 
 			/**
 		 	 * @brief Add another matrix from the right side to this instance
@@ -246,7 +261,7 @@ namespace mml {
 		 	 * @return this instance
 			 * @throw runtime_error : if rows or cols are not equal
 		 	 */
-			mml::matrix::matrix operator+=(mml::vector<mml::vector<double>> vec){data = add(mml::matrix::matrix(vec)); return *this;}
+			mml::math::matrix operator+=(mml::vector<mml::vector<double>> vec){data = add(mml::math::matrix(vec)); return *this;}
 
 			/**
 		 	 * @brief Add another matrix from the right side to this instance
@@ -254,7 +269,7 @@ namespace mml {
 		 	 * @return this instance
 			 * @throw runtime_error : if rows or cols are not equal
 		 	 */
-			mml::matrix::matrix operator+=(mml::matrix::matrix matrix){data = add(matrix); return *this;}
+			mml::math::matrix operator+=(mml::math::matrix matrix){data = add(matrix); return *this;}
 
 			/**
 		 	 * @brief Subtract a 2D vector from this one from the right side
@@ -262,7 +277,7 @@ namespace mml {
 		 	 * @return New matrix
 			 * @throw runtime_error : if rows or cols are not equal
 		 	 */
-			mml::vector<mml::vector<double>> operator-(mml::vector<mml::vector<double>> vec){return sub(mml::matrix::matrix(vec));}
+			mml::math::matrix operator-(mml::vector<mml::vector<double>> vec){return sub(mml::math::matrix(vec));}
 
 			/**
 		 	 * @brief Subtract another matrix from this one from the right side
@@ -270,7 +285,7 @@ namespace mml {
 		 	 * @return New matrix
 			 * @throw runtime_error : if rows or cols are not equal
 		 	 */
-			mml::vector<mml::vector<double>> operator-(mml::matrix::matrix matrix){return sub(matrix);}
+			mml::math::matrix operator-(mml::math::matrix matrix){return sub(matrix);}
 			
 			/**
 		 	 * @brief Subtract another matrix from this one from the right side to this instance
@@ -278,7 +293,7 @@ namespace mml {
 		 	 * @return this instance
 			 * @throw runtime_error : if rows or cols are not equal
 		 	 */
-			mml::matrix::matrix operator-=(mml::vector<mml::vector<double>> vec){data = sub(mml::matrix::matrix(vec)); return *this;}
+			mml::math::matrix operator-=(mml::vector<mml::vector<double>> vec){data = sub(mml::math::matrix(vec)); return *this;}
 
 			/**
 		 	 * @brief Subtract another matrix from this one from the right side to this instance
@@ -286,38 +301,38 @@ namespace mml {
 		 	 * @return this instance
 			 * @throw runtime_error : if rows or cols are not equal
 		 	 */
-			mml::matrix::matrix operator-=(mml::matrix::matrix matrix){data = sub(matrix); return *this;}
+			mml::math::matrix operator-=(mml::math::matrix matrix){data = sub(matrix); return *this;}
 
 			/**
 			 * @brief Compute the adjugate matrix
 			 * @return result
 		 	*/
-			mml::vector<mml::vector<double>> adjugate();
+			mml::math::matrix adjugate() const;
 
 			/**
 			 * @brief Perform Gauss algorithm
 			 * @return matrix in Gauss form
 			*/
-			mml::vector<mml::vector<double>> gauss();
+			mml::math::matrix gauss() const;
 
 			/**
 			 * @brief Compute Inverse
 			 * @return Inverse Matrix
 			 */
-			mml::vector<mml::vector<double>> inverse();
+			mml::math::matrix inverse() const;
 			
 			/**
 			 * @brief Compute determinant of the matrix
 			 * @return double 
 			 * @throw logic_error : if rows != cols
 			 */
-			double det();
+			double det() const;
 			
 
 			/**
 			 * @brief Print the matrix in a nice-looking format
 			*/
-			void print();
+			void print() noexcept;
 			
 			/**
 			 * @brief Matrix without a specific row and column
@@ -326,13 +341,19 @@ namespace mml {
 			 * @return Reduced matrix
 			 * @throw runtime_error : if row or column exceeds the matrix
 			 */
-			mml::vector<mml::vector<double>> reduce(uint32_t row, uint32_t column);
+			mml::math::matrix reduce(uint32_t row, uint32_t column) const;
+
+			/**
+			 * @brief Summed matrix
+			 * @return Sum of the matrix
+			 */
+			double sum() const noexcept;
 
 			/**
 			 * @brief Matrix transposed
 			 * @return transposed matrix
 			 */
-			mml::vector<mml::vector<double>> transpose() noexcept;
+			mml::math::matrix transpose() const noexcept;
 
 			/**
 			 * @brief Get the vector from this class
@@ -349,7 +370,7 @@ namespace mml {
 		 * @return Matrix result
 		 * @throw logic_error : if operator not defined or format wrong
 		*/
-		mml::vector<mml::vector<double>> calc(mml::string equation, bool verbose = false);
+		mml::vector<mml::vector<double>> matrix_calc(mml::string equation, bool verbose = false);
 
 		/**
 		 * @brief Print two matrices with a string inbetween
@@ -358,7 +379,7 @@ namespace mml {
 		 * @param mat2 Second Matrix
 		 * @author Mike Moser
 		*/
-		void print_2matrix(mml::matrix::matrix mat1, std::string add, mml::matrix::matrix mat2);
+		void print_2matrix(mml::math::matrix mat1, std::string add, mml::math::matrix mat2);
 
 		/**
 		 * @brief Print three matrices with strings inbetween
@@ -369,7 +390,7 @@ namespace mml {
 		 * @param mat3 Third Matrix
 		 
 		*/
-		void print_3matrix(mml::matrix::matrix mat1, std::string add1, mml::matrix::matrix mat2, std::string add2, mml::matrix::matrix mat3);
+		void print_3matrix(mml::math::matrix mat1, std::string add1, mml::math::matrix mat2, std::string add2, mml::math::matrix mat3);
 
 		/**
 		 * @brief Print two matrices with a string inbetween
@@ -381,14 +402,14 @@ namespace mml {
 		 * @param add3 String between the matrices 3 and 4
 		 * @param mat4 Fourth Matrix
 		*/
-		void print_4matrix(mml::matrix::matrix mat1, std::string add1, mml::matrix::matrix mat2, std::string add2, mml::matrix::matrix mat3, std::string add3, mml::matrix::matrix mat4);
+		void print_4matrix(mml::math::matrix mat1, std::string add1, mml::math::matrix mat2, std::string add2, mml::math::matrix mat3, std::string add3, mml::math::matrix mat4);
 
 		/**
 		 * @brief Implement a (nxn) unity matrix
 		 * @param n Number or rows and columns
-		 * @return mml::matrix::matrix
+		 * @return mml::math::matrix
 		*/
-		mml::matrix::matrix unity(std::size_t n);
+		mml::math::matrix unity(std::size_t n);
 	}
 	
 }
