@@ -21,7 +21,7 @@
 #endif
 
 /**
-* @note Help Page
+* @brief Help Page
 * @return None
 */
 void help() {
