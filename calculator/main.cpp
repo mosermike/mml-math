@@ -280,7 +280,7 @@ int main(int argc, char **argv) {
 		
 		if (args.exist("-a","--adjugate")) {
 			
-			mml::matrix::matrix mat(args[args.pos("-m","--matrix") + 1].str());
+			mml::math::matrix mat(args[args.pos("-m","--matrix") + 1].str());
 			if(args.exist("-v","--verbose")) {
 				std::cout << "The adjugate of the matrix" << std::endl;
 				mat.print();
@@ -295,7 +295,7 @@ int main(int argc, char **argv) {
 
 		}
 		else if (args.exist("-d","--det")) {
-			mml::matrix::matrix mat(args[args.pos("-m","--matrix") + 1].str());
+			mml::math::matrix mat(args[args.pos("-m","--matrix") + 1].str());
 			if(args.exist("-v","--verbose")) {
 				std::cout << "The determinant of the matrix" << std::endl;
 				mat.print();
@@ -307,7 +307,7 @@ int main(int argc, char **argv) {
 		}
 		else if (args.exist("-i","--inverse")) {
 			
-			mml::matrix::matrix mat(args[args.pos("-m","--matrix") + 1].str());
+			mml::math::matrix mat(args[args.pos("-m","--matrix") + 1].str());
 			if(args.exist("-v","--verbose")) {
 				std::cout << "The inverse of the matrix" << std::endl;
 				mat.print();
@@ -323,7 +323,7 @@ int main(int argc, char **argv) {
 		}
 		else if (args.exist("-tr","--transpose")) {
 			
-			mml::matrix::matrix mat(args[args.pos("-m","--matrix") + 1].str());
+			mml::math::matrix mat(args[args.pos("-m","--matrix") + 1].str());
 			if(args.exist("-v","--verbose")) {
 				std::cout << "The transpose of the matrix" << std::endl;
 				mat.print();
@@ -337,7 +337,7 @@ int main(int argc, char **argv) {
 			// TODO save matrix
 		}
 		else {
-			mml::matrix::matrix res = mml::matrix::calc(args[args.pos("-m","--matrix") + 1], args.exist("-v","--verbose"));
+			mml::math::matrix res = mml::math::matrix_calc(args[args.pos("-m","--matrix") + 1], args.exist("-v","--verbose"));
 			std::cout << "The result is" << std::endl;
 			res.print();
 			if(args.exist("-k","--comment"))
