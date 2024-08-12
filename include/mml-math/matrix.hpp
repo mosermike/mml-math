@@ -304,6 +304,24 @@ namespace mml {
 			mml::math::matrix operator-=(mml::math::matrix matrix){data = sub(matrix); return *this;}
 
 			/**
+		 	 * @brief Check if two matrices are the same
+		 	 * @param matrix Matrix to be checked
+		 	 * @return true if the same
+		 	 */
+			bool operator==(const mml::math::matrix matrix) const noexcept{
+				return data == matrix.data;
+			}
+
+			/**
+		 	 * @brief Check if two matrices are not the same
+		 	 * @param matrix Matrix to be checked
+		 	 * @return true if the same
+		 	 */
+			bool operator!=(const mml::math::matrix matrix) const noexcept{
+				return data != matrix.data;
+			}
+
+			/**
 			 * @brief Compute the adjugate matrix
 			 * @return result
 		 	*/
