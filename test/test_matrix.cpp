@@ -87,6 +87,16 @@ int main() {
 	std::cout << "Yes, the result is a zero matrix. Test passed." << std::endl;
 	
 	std::cout << std::endl;
+	std::cout << "─────────────────────────────────────────────────────" << std::endl;
+	std::cout << std::endl;
+
+	std::cout << "Testing unity matrix ...";
+	mml::math::matrix I = mml::math::unity(3);
+
+	assert_msg(I(0,0) == 1.0 && I(1,1) == 1.0 && I(2,2) == 1.0 && I.sum() == 3.0, "Creation of unity matrix failed.");
+
+	std::cout << " Passed!" << std::endl;
+	std::cout << std::endl;
 	std::cout << std::endl;
 	std::cout << std::endl;
 

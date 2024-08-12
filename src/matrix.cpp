@@ -1218,8 +1218,9 @@ void mml::math::print_4matrix(mml::math::matrix mat1, std::string add1, mml::mat
 mml::math::matrix mml::math::unity(std::size_t n) {
 	mml::math::matrix u(n,n);
 
-	for(std::size_t i = 0; i < n; n++)
+	for(std::size_t i = 0; i < n; i++) {
 		u(i,i) = 1.0;
+	}
 
 	return u;
 }
