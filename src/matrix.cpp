@@ -1,6 +1,5 @@
 #include <mml.hpp>
 #include "../include/mml-math/matrix.hpp"
-#include "../include/mml-math/polyfit.hpp"
 
 mml::vector<mml::vector<double>> mml::math::matrix::add(mml::math::matrix mat) {
 	
