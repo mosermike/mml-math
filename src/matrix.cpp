@@ -491,6 +491,18 @@ mml::math::matrix mml::math::matrix::transpose() const noexcept {
 	
 }
 
+mml::math::matrix mml::math::diag(mml::math::matrix matrix) {
+	mml::math::matrix diagonal(matrix.rows,matrix.cols);
+	std::size_t min_row_col = (matrix.rows < matrix.cols) ? matrix.rows : matrix.cols;
+
+	for(std::size_t i = 0; i < min_row_col; i++) {
+		diagonal(i,i) = matrix(i,i);
+	}
+
+	return diagonal;
+
+}
+
 mml::vector<mml::vector<double>> mml::math::matrix_calc(mml::string equation, bool verbose) {
 	mml::vector<mml::math::matrix> matrices; // matrices in the same order as they appear in the equation
 	mml::vector<mml::string> operators; // Operators starting from the left

@@ -96,6 +96,17 @@ int main() {
 	assert_msg(I(0,0) == 1.0 && I(1,1) == 1.0 && I(2,2) == 1.0 && I.sum() == 3.0, "Creation of unity matrix failed.");
 
 	std::cout << " Passed!" << std::endl;
+
+	std::cout << std::endl;
+	std::cout << "─────────────────────────────────────────────────────" << std::endl;
+	std::cout << std::endl;
+
+	std::cout << "Testing diagonal matrix ...";
+	mml::math::matrix diag = mml::math::diag(mat1);
+	
+	assert_msg(diag(0,0) == 1.0 && diag(1,1) == 6.0 && diag(2,2) == 3.0 && diag.sum() == 10.0, "Computing diagonal matrix failed.");
+
+	std::cout << " Passed!" << std::endl;
 	std::cout << std::endl;
 	std::cout << std::endl;
 	std::cout << std::endl;

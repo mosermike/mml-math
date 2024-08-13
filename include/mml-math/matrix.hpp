@@ -349,6 +349,7 @@ namespace mml {
 
 			/**
 			 * @brief Print the matrix in a nice-looking format
+			 * @bug Sometimes the print is not aligned => eventually due to precision
 			*/
 			void print() noexcept;
 			
@@ -381,6 +382,13 @@ namespace mml {
 			
 		};
 		
+		/**
+		 * @brief Computes the diagonal matrix
+		 * 
+		 * @param matrix Matrix
+		 * @return mml::math::matrix in diagonal form
+		 */
+		mml::math::matrix diag(mml::math::matrix matrix);
 		/**
 		 * @brief Calculations of matrices
 		 * @param equation Equation to be calculated
