@@ -76,7 +76,7 @@ namespace mml {
 			 * @param vector 1D Vector
 			 * @return Instance of the class
 			*/
-			matrix(std::vector<double>  vec) : rows(vec.size()), cols(1) {
+			matrix(mml::vector<double>  vec) : rows(vec.size()), cols(1) {
 				this->data = mml::vector<mml::vector<double>>(rows, mml::vector<double>(cols,0.0));
 				// Assign data from the 1D vector
 				for(std::size_t i = 0; i < rows; i++) {
@@ -351,7 +351,7 @@ namespace mml {
 			 * @brief Print the matrix in a nice-looking format
 			 * @bug Sometimes the print is not aligned => eventually due to precision
 			*/
-			void print() noexcept;
+			void print() const noexcept ;
 			
 			/**
 			 * @brief Matrix without a specific row and column

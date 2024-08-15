@@ -317,7 +317,7 @@ void mml::math::matrix::operator()(std::string str1) {
 	return;
 }
 
-void mml::math::matrix::print() noexcept {
+void mml::math::matrix::print() const noexcept  {
 	// ===================================
 	// Determine Length of biggest numbers
 	// ===================================
@@ -349,7 +349,7 @@ void mml::math::matrix::print() noexcept {
 
 	// Start and end positions of each matrix
 	std::size_t start_mat1_col = 0;
-	std::size_t start_mat1_row = rows-rows;
+	std::size_t start_mat1_row = rows-rows; // why rows-rows??
 	
 	std::size_t end_mat1_col = start_mat1_col + num_space1 + 2 - 1;
 	std::size_t end_mat1_row = rows+1;
@@ -373,16 +373,18 @@ void mml::math::matrix::print() noexcept {
 		print[start_mat1_row+1 + i][start_mat1_col] = "│";
 
 		for(uint32_t j = 0; j < cols; j++) {
-			// Correction for -0
-			if(data[i][j] == -0)
-				data[i][j] = 0;
+			
 			
 			// Skip so many entries due to different numbers
 			for(uint32_t n = mml::digits(data[i][j]); n <= digit1[j]; n++) {
 				skips++;
 			}
 
-			print[start_mat1_row+1 + i ][start_mat1_col+1 + j + skips] = std::to_string(data[i][j]);
+			// Correction for -0
+			if(data[i][j] == -0)
+				print[start_mat1_row+1 + i ][start_mat1_col+1 + j + skips] = std::to_string(0.0);
+			else
+				print[start_mat1_row+1 + i ][start_mat1_col+1 + j + skips] = std::to_string(data[i][j]);
 		}
 
 		// Delete all additional spaces between the bracket and the last number in a column
