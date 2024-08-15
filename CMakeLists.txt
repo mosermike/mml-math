@@ -41,9 +41,9 @@ target_link_libraries(mml-math PRIVATE ${MML_LIBRARY_DIR}/libmml.so)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_BINARY_DIR}/lib)
 
 # Add main.cpp as an executable
-add_executable(calc.x calculator/main.cpp)
+add_executable(calc.x calculator/main.cpp calculator/logging.cpp)
 target_compile_options(calc.x PRIVATE -Dcalc_log=\"${CMAKE_BINARY_DIR}/calc.log\")
-target_include_directories(calc.x PRIVATE -I ${MML_INCLUDE_DIR})
+target_include_directories(calc.x PRIVATE -I ${MML_INCLUDE_DIR} -I calculator/)
 target_link_libraries(calc.x PRIVATE mml-math ${MML_LIBRARY_DIR}/libmml.so)
 
 # Install the executable

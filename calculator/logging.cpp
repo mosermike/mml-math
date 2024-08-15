@@ -1,29 +1,26 @@
 /**
- * : @author Mike Moser
- * : @date 07.03.2020
- * : @file logging.cpp
- * : 
- * : 
- * : Beschreibung: 
- * : Logging Informationen
- * :
- * :
- * :
- * :
+ * @file logging.cpp
+ * @author Mike Moser
+ * @brief Implementations of the functions from logging.hpp
+ * @version 1.0
+ * @date 2020-03-07
+ * 
+ * @copyright Copyright (c) 2024
+ * 
  */
 
 #include <mml.hpp>
 #include <vector>
 #include <string>
-#include "../include/mml-math/logging.hpp"
+#include "logging.hpp"
 
-void mml::math::backup_logfile(std::string logfile, bool verbose) {
+void backup_logfile(std::string logfile, bool verbose) {
 	
 	mml::log log(logfile);
 	log.backup(verbose);
 }
 
-mml::string mml::math::delete_zeros(double result) {
+mml::string delete_zeros(double result) {
 	
 	mml::string		result_str	= mml::to_string(result);
 	mml::string		temp		= result_str.substr(result_str.find('.')+1);
@@ -45,7 +42,7 @@ mml::string mml::math::delete_zeros(double result) {
 	return temp1 + temp;
 }
 
-void mml::math::reset_logfile(std::string logfile, bool verbose) {
+void reset_logfile(std::string logfile, bool verbose) {
 	
 	mml::log log(logfile);
 	
@@ -53,7 +50,7 @@ void mml::math::reset_logfile(std::string logfile, bool verbose) {
 }
 
 
-void mml::math::save_result(mml::string equation, double result, std::string logfile, mml::string comment) {
+void save_result(mml::string equation, double result, std::string logfile, mml::string comment) {
 	
 	mml::log log(logfile);
 	
@@ -61,10 +58,10 @@ void mml::math::save_result(mml::string equation, double result, std::string log
 	if(comment != "")
 		equation = equation + "  \\\\ " + comment;
 	
-	log << equation;
+	log << equation << std::endl;
 }
 
-void mml::math::save_matrix(mml::string matrix_equation, mml::string matrix_result, std::string logfile, mml::string comment) {
+void save_matrix(mml::string matrix_equation, mml::string matrix_result, std::string logfile, mml::string comment) {
 	
 	mml::log log(logfile);
 	

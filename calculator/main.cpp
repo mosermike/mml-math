@@ -15,6 +15,7 @@
 #include <signal.h>
 #include <mml.hpp>
 #include "mml-math.hpp"
+#include "logging.hpp"
 
 #ifndef calc_log
 #define calc_log 		"./calc.log"
@@ -192,6 +193,8 @@ std::vector<double> calculations(bool verbose, std::vector<mml::string> &equatio
 			results.push_back(result);
 			equations.push_back(equation_save);
 			std::cout << "Result: " << result << std::endl;
+
+			save_result(equation,result,calc_log,"");
 			         
 			// Catch ctrl-D:
 			equation = "";
@@ -230,19 +233,14 @@ int main(int argc, char **argv) {
 		mml::string equation = mml::math::replace(args[args.pos("-c") + 1], args.exist("-v","--verbose"));
 		result = calculate(equation, args.exist("-v","--verbose"));
 		if(args.exist("-k","--comment"))
-        	mml::math::save_result(args[args.exist("-c","--calculate") + 1],result,calc_log,args[args.pos("-k","--comment")]);
+        	save_result(args[args.exist("-c","--calculate") + 1],result,calc_log,args[args.pos("-k","--comment")]);
 		else
-			mml::math::save_result(args[args.exist("-c","--calculate") + 1],result,calc_log,"");
+			save_result(args[args.exist("-c","--calculate") + 1],result,calc_log,"");
     }
 	
 	else if (args.exist("-cs","--calculations")) {
 		std::vector<mml::string> equations;
-		std::vector<double> results = calculations(args.exist("-v","--verbose"), equations);
-		
-		// Save the results and equations
-		for(uint32_t i = 0; i < equations.size(); i++) {
-				mml::math::save_result(equations[i],results[i],calc_log,"");
-		}
+		calculations(args.exist("-v","--verbose"), equations);
 	}
 
 	else if(args.exist("-m","--matrix")) {
@@ -341,9 +339,9 @@ int main(int argc, char **argv) {
 			std::cout << "The result is" << std::endl;
 			res.print();
 			if(args.exist("-k","--comment"))
-				mml::math::save_matrix(args[args.pos("-m","--matrix") + 1], matrix,calc_log,args[args.pos("-k","--comment")]);
+				save_matrix(args[args.pos("-m","--matrix") + 1], matrix,calc_log,args[args.pos("-k","--comment")]);
 			else
-				mml::math::save_matrix(args[args.pos("-m","--matrix") + 1], matrix,calc_log,"");
+				save_matrix(args[args.pos("-m","--matrix") + 1], matrix,calc_log,"");
 		}
 	}
 	else if (args.exist("-s","--summation")){
@@ -363,21 +361,21 @@ int main(int argc, char **argv) {
 		
 	}
 	else if(args.exist("-lr", "log_reset")) {
-		mml::math::reset_logfile(calc_log,args.exist("-v","--verbose"));
+		reset_logfile(calc_log,args.exist("-v","--verbose"));
 		return 0;
 	}
 	
 	else if(args.exist("-lb","--log-backup")) {
-		mml::math::backup_logfile(calc_log,args.exist("-v","--verbose"));
+		backup_logfile(calc_log,args.exist("-v","--verbose"));
 		return 0;
 	}
 	else {
 		mml::string equation = mml::math::replace(args[1], args.exist("-v","--verbose"));
 		result = calculate(equation, args.exist("-v","--verbose"));
 		if(args.exist("-k","--comment"))
-        	mml::math::save_result(args[1],result,calc_log,args[args.pos("-k","--comment")]);
+        	save_result(args[1],result,calc_log,args[args.pos("-k","--comment")]);
 		else
-			mml::math::save_result(args[1],result,calc_log,"");
+			save_result(args[1],result,calc_log,"");
     }
 	
 	if(!args.exist("-m","--matrix"))

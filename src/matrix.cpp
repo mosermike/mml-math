@@ -278,46 +278,44 @@ void mml::math::matrix::operator()(std::string str1) {
 	for(uint32_t i = 1; i < str.size(); i++) {
 		if(str[i] == '[')
 			rows++;
-		}
-		// Determine number of columns from first row
-		mml::string temp = str.sub(1,str.find(']'));
-		cols++; // First entry is not count
-		for(uint32_t i = 0; i < temp.size(); i++) {
-			if(temp[i] == ',')
-				cols++;
-		}
-
-		// Initialise 2D vector
-		this->data = mml::vector<mml::vector<double>>(rows, mml::vector<double>(cols,0.0));
-				
-		// Remove first [ and last ]
-		str = str.sub(1,-2);
-
-		// Assign the value
-		for(uint32_t i = 0; i < rows; i++) {
-			// Find the first row
-			std::size_t temp1	= str.find('[');
-			std::size_t temp2	= str.find(']');
-					
-			// Extract the row and remove it from the string
-			temp	= str.sub(temp1+1,temp2-1);
-			str = str.substr(temp2+1);
-
-			// Go through the extracted row and assign by column
-			for(uint32_t j = 0; j < cols; j++) {
-				// Cut out the string to the next , and store it and remove this part from the string
-				if(temp.exist(",")) {
-					data[i][j] = mml::atof((temp.sub(0,temp.find(',')-1)).str());
-					temp = temp.substr(temp.find(',')+1);
-				}
-				// If last ',' removed, assign last value
-				else
-		data[i][j] = temp.atof();
 	}
-}
+	// Determine number of columns from first row
+	mml::string temp = str.sub(1,str.find(']'));
+	cols++; // First entry is not count
+	for(uint32_t i = 0; i < temp.size(); i++) {
+		if(temp[i] == ',')
+			cols++;
+	}
 
-}
+	// Initialise 2D vector
+	this->data = mml::vector<mml::vector<double>>(rows, mml::vector<double>(cols,0.0));
+				
+	// Remove first [ and last ]
+	str = str.sub(1,-2);
 
+	// Assign the value
+	for(uint32_t i = 0; i < rows; i++) {
+		// Find the first row
+		std::size_t temp1	= str.find('[');
+		std::size_t temp2	= str.find(']');
+					
+		// Extract the row and remove it from the string
+		temp	= str.sub(temp1+1,temp2-1);
+		str = str.substr(temp2+1);
+		// Go through the extracted row and assign by column
+		for(uint32_t j = 0; j < cols; j++) {
+			// Cut out the string to the next , and store it and remove this part from the string
+			if(temp.exist(",")) {
+				data[i][j] = mml::atof((temp.sub(0,temp.find(',')-1)).str());
+				temp = temp.substr(temp.find(',')+1);
+			}
+			// If last ',' removed, assign last value
+			else
+				data[i][j] = temp.atof();
+		}
+	}
+	return;
+}
 
 void mml::math::matrix::print() noexcept {
 	// ===================================
