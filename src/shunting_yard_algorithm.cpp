@@ -13,6 +13,22 @@
 
 #include "mml-math/shunting_yard_algorithm.hpp"
 
+/**
+ * @brief Checks if there is an invalid operator pair
+ * 
+ * If there are two operators after each other, except for '-' in the second position,
+ * the code will print a segmentation error
+ * 
+ * @param equation Equation to be checked
+ * @return true 
+ * @return false 
+ */
+bool invalidOperatorPair(const mml::string& equation) {
+	if(equation.exist("++","+*","+/","+^","**","*+","*/","*^","/+","/*","/^"))
+		return true;
+	return false;
+}
+
 std::vector<mml::string> mml::math::shunting_yard_algorithm::equation_to_infix(bool verbose) {
     mml::string number = "";
 
@@ -21,6 +37,10 @@ std::vector<mml::string> mml::math::shunting_yard_algorithm::equation_to_infix(b
 
     if(verbose)
         std::cout << "[equation_to_infix] Process equation " << equation << std::endl;
+
+	// Check if an operator appears directly after another
+	if(invalidOperatorPair(equation))
+		throw std::invalid_argument("[equation_to_infix] Operator directly after another operator detected.");
 
     // Clear the infix vector
     infix.clear();
