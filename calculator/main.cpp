@@ -339,7 +339,7 @@ int main(int argc, char **argv) {
 			std::cout << "The result is" << std::endl;
 			res.print();
 			if(args.exist("-k","--comment"))
-				save_matrix(args[args.pos("-m","--matrix") + 1], matrix,calc_log,args[args.pos("-k","--comment")]);
+				save_matrix(args[args.pos("-m","--matrix") + 1], matrix,calc_log,args[args.pos("-k","--comment")+1]);
 			else
 				save_matrix(args[args.pos("-m","--matrix") + 1], matrix,calc_log,"");
 		}
@@ -373,7 +373,7 @@ int main(int argc, char **argv) {
 		mml::string equation = mml::math::replace(args[1], args.exist("-v","--verbose"));
 		result = calculate(equation, args.exist("-v","--verbose"));
 		if(args.exist("-k","--comment"))
-        	save_result(args[1],result,calc_log,args[args.pos("-k","--comment")]);
+        	save_result(args[1],result,calc_log,args[args.pos("-k","--comment")+1]);
 		else
 			save_result(args[1],result,calc_log,"");
     }
