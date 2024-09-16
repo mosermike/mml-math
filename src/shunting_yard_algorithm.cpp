@@ -49,8 +49,9 @@ std::vector<mml::string> mml::math::shunting_yard_algorithm::equation_to_infix(b
         char c = equation[i];
 		
 		// Character is a number, a decimal point or starts with a minus
-        if(mml::isnum(c) || c == '.' || (c == '-' && number.empty()))
+        if(mml::isnum(c) || c == '.' || (c == '-' && i == 0) || (c == '-' && number.empty() && infix[infix.size()-1] != ")")) {
             number += c;
+		}
 		// Check if e is used as 10^
 		else if (i < equation.size()-1 && c == 'e' && (equation[i+1] == '-' || equation[i+1] == '+' || mml::isnum(equation[i+1])) ) {
             number += c;
