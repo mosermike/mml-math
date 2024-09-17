@@ -44,6 +44,7 @@ void help() {
 	mml::shell::option("-lb, --log_backup", "Backup of the log file.");
 	mml::shell::option("-m, --matrix" , "Calculation of a matrix equation or the matrix used for other matrix operators. Matrix form [[1.,row],[2.,row]]");
 	mml::shell::option("-ml, --matrix-latex" , "Format in Latex. (beta)");
+	mml::shell::option("-x* [float]","Variable definition of x1, x2, ... . The variable is used in the equation as 'x*', i.e. 'x1','x2',... .");
 	mml::shell::option("-t, --timer", "Prints the duration of the calculation.");
 	mml::shell::option("-tr, --transpose" , "Computes the transpose of a matrix given as -m [...].");
 	//mml::shell::option("-u" , "Wertzuweisung einer oder mehreren unbekannten Variable(n) mit Trennzeichen ':' in der Gleichung. z.B. -u x=2");
@@ -203,6 +204,27 @@ std::vector<double> calculations(bool verbose, std::vector<mml::string> &equatio
 	return results;
 }
 
+/**
+ * @brief Replaces variables in the given equation
+ * 		  The expected format is x* where * is a number from 1 to 100.
+ * 		  The value of the variable is given in a vector as -x1 1 where x1=1.
+ * 
+ * @param equation Equation where the variables are replaced
+ * @param args Vector with arguments (typically from the shell) with the replacing variable definitions
+ * @return mml::string with replaced variables
+ */
+mml::string replace_variables(mml::string equation, mml::vector<mml::string> args) {
+	// Replace the variables by the number
+	for(uint32_t i = 1; i < 101; i++) {
+		if(equation.exist("x" + mml::to_string(i))) {
+			mml::string temp = args[args.find("-x" + mml::to_string(i))+1];
+			equation = equation.replace("x" + mml::to_string(i),temp);
+		}
+	}
+
+	return equation;
+
+}
 
 int main(int argc, char **argv) {
 	
@@ -231,6 +253,10 @@ int main(int argc, char **argv) {
 	
 	else if (args.exist("-c","--calculate")) {
 		mml::string equation = mml::math::replace(args[args.pos("-c") + 1], args.exist("-v","--verbose"));
+
+		// Replace variables
+		equation = replace_variables(equation,args);
+
 		result = calculate(equation, args.exist("-v","--verbose"));
 		if(args.exist("-k","--comment"))
         	save_result(args[args.exist("-c","--calculate") + 1],result,calc_log,args[args.pos("-k","--comment")]);
@@ -336,6 +362,7 @@ int main(int argc, char **argv) {
 		}
 		else {
 			mml::math::matrix res = mml::math::matrix_calc(args[args.pos("-m","--matrix") + 1], args.exist("-v","--verbose"));
+
 			std::cout << "The result is" << std::endl;
 			res.print();
 			if(args.exist("-k","--comment"))
@@ -371,6 +398,9 @@ int main(int argc, char **argv) {
 	}
 	else {
 		mml::string equation = mml::math::replace(args[1], args.exist("-v","--verbose"));
+		// Replace variables
+		equation = replace_variables(equation,args);
+		
 		result = calculate(equation, args.exist("-v","--verbose"));
 		if(args.exist("-k","--comment"))
         	save_result(args[1],result,calc_log,args[args.pos("-k","--comment")+1]);
