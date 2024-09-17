@@ -211,16 +211,22 @@ std::vector<double> calculations(bool verbose, std::vector<mml::string> &equatio
  * 
  * @param equation Equation where the variables are replaced
  * @param args Vector with arguments (typically from the shell) with the replacing variable definitions
+ * @param verbose Verbose output, default false.
  * @return mml::string with replaced variables
  */
-mml::string replace_variables(mml::string equation, mml::vector<mml::string> args) {
+mml::string replace_variables(mml::string equation, mml::vector<mml::string> args, bool verbose = false) {
 	// Replace the variables by the number
+	if(verbose)
+		std::cout << "[replace_variables] Equation before replacement: " << equation << std::endl;
 	for(uint32_t i = 1; i < 101; i++) {
 		if(equation.exist("x" + mml::to_string(i))) {
-			mml::string temp = args[args.find("-x" + mml::to_string(i))+1];
+			mml::string temp = args[args.find("-x" + mml::to_string(i), 0, true)+1];;
 			equation = equation.replace("x" + mml::to_string(i),temp);
 		}
 	}
+
+	if(verbose)
+		std::cout << "[replace_variables] Equation after replacement: " << equation << std::endl;
 
 	return equation;
 
@@ -255,7 +261,8 @@ int main(int argc, char **argv) {
 		mml::string equation = mml::math::replace(args[args.pos("-c") + 1], args.exist("-v","--verbose"));
 
 		// Replace variables
-		equation = replace_variables(equation,args);
+		equation = replace_variables(equation,args, args.exist("-v","--verbose"));
+		args[args.pos("-c") + 1] = equation; // for logging
 
 		result = calculate(equation, args.exist("-v","--verbose"));
 		if(args.exist("-k","--comment"))
@@ -397,9 +404,14 @@ int main(int argc, char **argv) {
 		return 0;
 	}
 	else {
-		mml::string equation = mml::math::replace(args[1], args.exist("-v","--verbose"));
+		mml::string equation = replace_variables(args[1],args, args.exist("-v","--verbose"));
+		args[1] = equation;// for logging
+
+		// Replace known constants
+		equation = mml::math::replace(equation, args.exist("-v","--verbose"));
+
 		// Replace variables
-		equation = replace_variables(equation,args);
+		
 		
 		result = calculate(equation, args.exist("-v","--verbose"));
 		if(args.exist("-k","--comment"))
