@@ -421,7 +421,11 @@ int main(int argc, char **argv) {
     }
 	
 	if(!args.exist("-m","--matrix"))
-		std::cout << "Result: " << result << std::endl;
+		// If smaller than 1e-4, print in 10^ form
+		if(int(abs(result)) > 1 || int(abs(result*1e4))/1e4 > 0)
+			printf("Result %.6f\n", result);
+		else
+			printf("Result %.4E\n", result);
 		
 	if(args.exist("-t","--timer"))
 		std::cout << "Calculation time: " << time.range() << std::endl;
